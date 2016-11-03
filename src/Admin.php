@@ -6,6 +6,7 @@ class Admin
     {
         add_filter('woocommerce_product_data_tabs', [$this, 'registerTab']);
         add_filter('woocommerce_product_data_panels', [$this, 'render']);
+        add_action('save_post', [$this, 'handleSave']);
     }
 
     function registerTab($tabs)
@@ -24,8 +25,8 @@ class Admin
         global $product;
         $key = Meta::$key;
         $meta = Meta::get($product->id);
-        $startDate = $this->formatDate($meta['start-date']);
-        $endDate = $this->formatDate($meta['end-date']);
+        $startDate = $this->formatDate($meta[Meta::$key . 'start-date']);
+        $endDate = $this->formatDate($meta[Meta::$key . 'end-date']);
         $externalLink = $meta['external-link'];
 
         echo "
@@ -48,11 +49,15 @@ class Admin
 
     function formatDate($timestamp)
     {
-        return date('m-d-Y', time());
+        return date('Y-m-d', $timestamp ?: time());
     }
 
-    function update()
+    function handleSave($productId)
     {
+        $key = Meta::$key;
+        $keys = ["$key-start-date", "$key-end-date", "$key-external-link"];
+        $meta = array_intersect_key($_POST, array_flip($keys));
 
+        Meta::update($productId, $meta);
     }
 }

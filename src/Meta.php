@@ -7,12 +7,12 @@ class Meta
 
     static function get($productId)
     {
-
+        return get_post_meta($productId, self::$key, true);
     }
 
     static function update($productId, $meta)
     {
-
+        update_post_meta($productId, self::$key, $meta);
     }
 
     static function updateExpired()
