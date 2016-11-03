@@ -1,0 +1,20 @@
+{
+  "name": "reinvdwoerd/woo-events",
+  "description": "",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Rein van der Woerd",
+      "email": "reinvanderwoerd@me.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "^5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "WooEvents\\": "src/"
+    }
+  }
+}
