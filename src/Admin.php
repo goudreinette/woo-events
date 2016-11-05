@@ -12,9 +12,9 @@ class Admin
     function registerTab($tabs)
     {
         $tabs[Meta::$key] = [
-            'label' => Meta::$name,
+            'label'    => Meta::$name,
             'priority' => 50,
-            'target' => Meta::$key
+            'target'   => Meta::$key
         ];
 
         return $tabs;
@@ -22,26 +22,34 @@ class Admin
 
     function render()
     {
-        global $product;
-        $key = Meta::$key;
-        $meta = Meta::get($product->id);
-        $startDate = $this->formatDate($meta[Meta::$key . 'start-date']);
-        $endDate = $this->formatDate($meta[Meta::$key . 'end-date']);
+        global $post;
+        $key  = Meta::$key;
+        $meta = Meta::get($post->ID);
+
+        $checked      = $meta['enable'] ? 'checked' : '';
+        $startDate    = $this->formatDate($meta['start-date']);
+        $endDate      = $this->formatDate($meta['end-date']);
         $externalLink = $meta['external-link'];
+
+        wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
 
         echo "
             <div id='$key' class='panel woocommerce_options_panel hidden'>
                 <div>
-                    <h3>Start Date</h3>
-                    <input name='$key-start-date' type='date' value='$startDate'>
+                    <span>Enable</span>
+                    <input name='$key-[enable]' type='checkbox' $checked>
                 </div>
                 <div>
-                    <h3>End Date</h3>
-                    <input name='$key-end-date' type='date' value='$endDate'>
+                    <span>Start Date</span>
+                    <input name='$key-[start-date]' type='date' value='$startDate'>
                 </div>
                 <div>
-                    <h3>External link</h3>
-                    <input name='$key-external-link' type='url' value='$externalLink'>
+                    <span>End Date</span>
+                    <input name='$key-[end-date]' type='date' value='$endDate'>
+                </div>
+                <div>
+                    <span>External link</span>
+                    <input name='$key-[external-link]' type='url' value='$externalLink'>
                 </div>
             </div>        
         ";
@@ -54,9 +62,8 @@ class Admin
 
     function handleSave($productId)
     {
-        $key = Meta::$key;
-        $keys = ["$key-start-date", "$key-end-date", "$key-external-link"];
-        $meta = array_intersect_key($_POST, array_flip($keys));
+        $key  = Meta::$key;
+        $meta = $_POST[$key . '-'];
 
         Meta::update($productId, $meta);
     }

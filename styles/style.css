@@ -1,0 +1,15 @@
+/* Admin */
+#woo-events {
+    padding: 10px;
+}
+
+#woo-events div {
+    margin: 10px;
+}
+
+#woo-events span {
+    min-width: 200px;
+    display: inline-block;
+}
+
+/* Shop */
