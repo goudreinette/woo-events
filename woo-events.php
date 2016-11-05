@@ -13,4 +13,5 @@ License: A "Slug" license name e.g. GPL2
 require "vendor/autoload.php";
 
 new Admin;
-new View;
+
+Meta::updateExpired();

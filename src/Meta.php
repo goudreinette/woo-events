@@ -21,7 +21,17 @@ class Meta
 
     static function updateExpired()
     {
+        $products = get_posts(['post_type'        => 'product',
+                               'meta_key'         => 'woo-events',
+                               'numberposts'      => -1,
+                               'suppress_filters' => true]);
 
+        foreach ($products as $product) {
+            $meta = self::get($product->ID);
+            if (time() > strtotime($meta['end-date'])) {
+                wp_set_post_terms($product->ID, 'expired', 'product_cat');
+            }
+        }
     }
 
     static function updatePublicationDate($postId, $date)

@@ -4,7 +4,7 @@ class Admin
 {
     function __construct()
     {
-        $this->m = new \Mustache_Engine(['loader' => new Mustache_Loader_FilesystemLoader(plugin_basename(__FILE__) . '/templates')]);
+        $this->m = new \Mustache_Engine(['loader' => new \Mustache_Loader_FilesystemLoader(plugin_dir_path(__DIR__) . '/templates')]);
         add_filter('woocommerce_product_data_tabs', [$this, 'registerTab']);
         add_filter('woocommerce_product_data_panels', [$this, 'render']);
         add_action('save_post', [$this, 'handleSave']);
@@ -24,10 +24,10 @@ class Admin
     function render()
     {
         global $post;
-        $key  = Meta::$key;
         $meta = Meta::get($post->ID);
 
         $assigns = [
+            'key'          => Meta::$key,
             'checked'      => $meta['enable'] ? 'checked' : '',
             'startTime'    => $meta['start-time'],
             'endTime'      => $meta['end-time'],
@@ -37,8 +37,7 @@ class Admin
         ];
 
         wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
-
-        echo $this->m->render('')
+        echo $this->m->render('admin', $assigns);
     }
 
     function formatDate($date)
