@@ -13,6 +13,10 @@ class Meta
     static function update($productId, $meta)
     {
         update_post_meta($productId, self::$key, $meta);
+
+        if ($meta['enable']) {
+            self::updatePublicationDate($productId, $meta['start-date']);
+        }
     }
 
     static function updateExpired()
@@ -20,8 +24,10 @@ class Meta
 
     }
 
-    static function updatePublicationDate()
+    static function updatePublicationDate($postId, $date)
     {
-
+        $post              = get_post($postId, ARRAY_A);
+        $post['post_date'] = $date;
+        wp_update_post($post);
     }
 }

@@ -4,6 +4,7 @@ class Admin
 {
     function __construct()
     {
+        $this->m = new \Mustache_Engine(['loader' => new Mustache_Loader_FilesystemLoader(plugin_basename(__FILE__) . '/templates')]);
         add_filter('woocommerce_product_data_tabs', [$this, 'registerTab']);
         add_filter('woocommerce_product_data_panels', [$this, 'render']);
         add_action('save_post', [$this, 'handleSave']);
@@ -26,45 +27,32 @@ class Admin
         $key  = Meta::$key;
         $meta = Meta::get($post->ID);
 
-        $checked      = $meta['enable'] ? 'checked' : '';
-        $startDate    = $this->formatDate($meta['start-date']);
-        $endDate      = $this->formatDate($meta['end-date']);
-        $externalLink = $meta['external-link'];
+        $assigns = [
+            'checked'      => $meta['enable'] ? 'checked' : '',
+            'startTime'    => $meta['start-time'],
+            'endTime'      => $meta['end-time'],
+            'externalLink' => $meta['external-link'],
+            'startDate'    => $this->formatDate($meta['start-date']),
+            'endDate'      => $this->formatDate($meta['end-date'])
+        ];
 
         wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
 
-        echo "
-            <div id='$key' class='panel woocommerce_options_panel hidden'>
-                <div>
-                    <span>Enable</span>
-                    <input name='$key-[enable]' type='checkbox' $checked>
-                </div>
-                <div>
-                    <span>Start Date</span>
-                    <input name='$key-[start-date]' type='date' value='$startDate'>
-                </div>
-                <div>
-                    <span>End Date</span>
-                    <input name='$key-[end-date]' type='date' value='$endDate'>
-                </div>
-                <div>
-                    <span>External link</span>
-                    <input name='$key-[external-link]' type='url' value='$externalLink'>
-                </div>
-            </div>        
-        ";
+        echo $this->m->render('')
     }
 
-    function formatDate($timestamp)
+    function formatDate($date)
     {
-        return date('Y-m-d', $timestamp ?: time());
+        return date('Y-m-d', strtotime($date) ?: time());
     }
 
     function handleSave($productId)
     {
-        $key  = Meta::$key;
-        $meta = $_POST[$key . '-'];
+        // Avoid infinite loop
+        remove_action('save_post', [$this, 'handleSave']);
 
+        $key  = Meta::$key;
+        $meta = $_POST[$key];
         Meta::update($productId, $meta);
     }
 }
