@@ -15,7 +15,7 @@ class Meta
         update_post_meta($productId, self::$key, $meta);
 
         if ($meta['enable']) {
-            self::updatePublicationDate($productId, $meta['start-date']);
+            self::updatePublicationDate($productId, $meta['start-date'], $meta['start-time']);
         }
     }
 
@@ -32,10 +32,10 @@ class Meta
         }
     }
 
-    static function updatePublicationDate($postId, $date)
+    static function updatePublicationDate($postId, $date, $time)
     {
         $post              = get_post($postId, ARRAY_A);
-        $post['post_date'] = $date;
+        $post['post_date'] = "$date $time";
         wp_update_post($post);
     }
 
