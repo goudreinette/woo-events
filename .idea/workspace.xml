@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38fb2394-6d15-44eb-9044-3dcf7ad245fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woo-events.php" afterPath="$PROJECT_DIR$/woo-events.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display.php" afterPath="$PROJECT_DIR$/src/Display.php" />
     </list>
     <ignored path="woo-events.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,12 +23,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="woo-events.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/woo-events.php">
+      <file leaf-file-name="Display.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Display.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1357">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1507">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding>
+                <marker date="1478430651034" expanded="true" signature="1263:1392" ph="..." />
+                <marker date="1478430651034" expanded="true" signature="1730:1859" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,9 +64,9 @@
         <option value="$PROJECT_DIR$/styles/style.css" />
         <option value="$PROJECT_DIR$/src/Admin.php" />
         <option value="$PROJECT_DIR$/templates/admin.mustache" />
-        <option value="$PROJECT_DIR$/src/Display.php" />
         <option value="$PROJECT_DIR$/src/Meta.php" />
         <option value="$PROJECT_DIR$/woo-events.php" />
+        <option value="$PROJECT_DIR$/src/Display.php" />
       </list>
     </option>
   </component>
@@ -789,16 +792,16 @@
       <workItem from="1478347219458" duration="1827000" />
       <workItem from="1478359874989" duration="2197000" />
       <workItem from="1478362094194" duration="2260000" />
-      <workItem from="1478426158690" duration="3995000" />
+      <workItem from="1478426158690" duration="4543000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16188000" />
+    <option name="totallyTimeSpent" value="16736000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="42" width="3052" height="3414" extended-state="4" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -809,7 +812,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1474443" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -817,7 +820,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39981812" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39981812" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -846,25 +849,20 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Display.php</url>
-          <line>32</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/Display.php</url>
-          <line>49</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/Meta.php</url>
           <line>37</line>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Display.php</url>
+          <line>71</line>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="33" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2043,20 +2041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <marker date="1478429138158" expanded="true" signature="64:777" ph="..." />
-            <marker date="1478429138158" expanded="true" signature="74:180" ph="..." />
-            <marker date="1478429138158" expanded="true" signature="190:411" ph="..." />
-            <marker date="1478429138158" expanded="true" signature="421:632" ph="..." />
-            <marker date="1478429138158" expanded="true" signature="642:770" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3481">
@@ -2075,30 +2059,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Display.php">
+    <entry file="file://$PROJECT_DIR$/woo-events.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="1357">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <marker date="1478430021014" expanded="true" signature="41:1796" ph="{...}" />
-            <marker date="1478430021014" expanded="true" signature="70:333" ph="{...}" />
-            <marker date="1478430021014" expanded="true" signature="358:722" ph="{...}" />
-            <marker date="1478430021014" expanded="true" signature="471:715" ph="..." />
-            <marker date="1478430021014" expanded="true" signature="761:844" ph="{...}" />
-            <marker date="1478430021014" expanded="true" signature="874:1327" ph="{...}" />
-            <marker date="1478430021014" expanded="true" signature="987:1320" ph="..." />
-            <marker date="1478430021014" expanded="true" signature="1179:1308" ph="..." />
-            <marker date="1478430021014" expanded="true" signature="1359:1794" ph="{...}" />
-            <marker date="1478430021014" expanded="true" signature="1454:1787" ph="..." />
-            <marker date="1478430021014" expanded="true" signature="1646:1775" ph="..." />
+            <marker date="1478430153691" expanded="true" signature="30:243" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/woocommerce/includes/class-wc-product-simple.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1099">
+          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+          <folding>
+            <marker date="1473592372000" expanded="true" signature="38:75" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="81:290" ph=" Simple Product Class. ..." />
+            <marker date="1473592372000" expanded="true" signature="337:2402" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="343:407" ph=" Initialize simple product. ..." />
+            <marker date="1473592372000" expanded="true" signature="452:567" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="574:645" ph=" Get the add to url used mainly in loops. ..." />
+            <marker date="1473592372000" expanded="true" signature="684:933" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="940:1003" ph=" Get the add to cart button text. ..." />
+            <marker date="1473592372000" expanded="true" signature="1043:1257" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="1264:1321" ph=" Get the title of the post. ..." />
+            <marker date="1473592372000" expanded="true" signature="1354:1576" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="1427:1502" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="1583:1688" ph=" Sync grouped products with the children lowest price (so they can be sorted by price accurately). ..." />
+            <marker date="1473592372000" expanded="true" signature="1732:2400" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="1806:2054" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="1813:2053" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="2086:2269" ph="..." />
+            <marker date="1473592372000" expanded="true" signature="2132:2265" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <marker date="1478429138158" expanded="true" signature="64:777" ph="..." />
+            <marker date="1478429138158" expanded="true" signature="74:180" ph="..." />
+            <marker date="1478429138158" expanded="true" signature="190:411" ph="..." />
+            <marker date="1478429138158" expanded="true" signature="421:632" ph="..." />
+            <marker date="1478429138158" expanded="true" signature="642:770" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Meta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1153">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="1684">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding>
             <marker date="1478430120991" expanded="true" signature="38:1380" ph="{...}" />
             <marker date="1478430120991" expanded="true" signature="141:213" ph="{...}" />
@@ -2115,11 +2130,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/woo-events.php">
+    <entry file="file://$PROJECT_DIR$/src/Display.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1357">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="1507">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <marker date="1478430651034" expanded="true" signature="1263:1392" ph="..." />
+            <marker date="1478430651034" expanded="true" signature="1730:1859" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
