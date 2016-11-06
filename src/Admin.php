@@ -29,11 +29,11 @@ class Admin
         $assigns = [
             'key'          => Meta::$key,
             'checked'      => $meta['enable'] ? 'checked' : '',
-            'startTime'    => $meta['start-time'],
-            'endTime'      => $meta['end-time'],
-            'externalLink' => $meta['external-link'],
+            'startTime'    => $this->formatTime($meta['start-time']),
+            'endTime'      => $this->formatTime($meta['end-time']),
             'startDate'    => $this->formatDate($meta['start-date']),
-            'endDate'      => $this->formatDate($meta['end-date'])
+            'endDate'      => $this->formatDate($meta['end-date']),
+            'externalLink' => $meta['external-link'],
         ];
 
         wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
@@ -43,6 +43,11 @@ class Admin
     function formatDate($date)
     {
         return date('Y-m-d', strtotime($date) ?: time());
+    }
+
+    function formatTime($time)
+    {
+        return date('H:i', strtotime($time) ?: time());
     }
 
     function handleSave($productId)

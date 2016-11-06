@@ -10,8 +10,16 @@ Author URI: reinvdwoerd.herokuapp.com
 License: A "Slug" license name e.g. GPL2
 */
 
+
 require "vendor/autoload.php";
 
 new Admin;
-
+new Display;
 Meta::updateExpired();
+
+/**
+ * TODO:
+ * - Cleanup Display
+ * - External link
+ * - Update time
+ */

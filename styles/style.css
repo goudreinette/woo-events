@@ -12,4 +12,9 @@
     display: inline-block;
 }
 
+#woo-events input:first-of-type:not([type='checkbox']) {
+    min-width: 160px;
+    display: inline-block;
+}
+
 /* Shop */

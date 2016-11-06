@@ -21,15 +21,13 @@ class Meta
 
     static function updateExpired()
     {
-        $products = get_posts(['post_type'        => 'product',
-                               'meta_key'         => 'woo-events',
-                               'numberposts'      => -1,
-                               'suppress_filters' => true]);
+        $products = self::getEvents();
 
         foreach ($products as $product) {
             $meta = self::get($product->ID);
             if (time() > strtotime($meta['end-date'])) {
-                wp_set_post_terms($product->ID, 'expired', 'product_cat');
+                $expiredCategory = get_term_by('name', 'expired', 'product_cat');
+                wp_set_post_terms($product->ID, $expiredCategory->term_id, 'product_cat');
             }
         }
     }
@@ -39,5 +37,13 @@ class Meta
         $post              = get_post($postId, ARRAY_A);
         $post['post_date'] = $date;
         wp_update_post($post);
+    }
+
+    static function getEvents()
+    {
+        return get_posts(['post_type'        => 'product',
+                          'meta_key'         => self::$key,
+                          'numberposts'      => -1,
+                          'suppress_filters' => true]);
     }
 }
