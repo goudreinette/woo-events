@@ -10,18 +10,34 @@ class Display
         add_action('woocommerce_order_item_meta_start', [$this, 'emails'], 10, 4);
     }
 
+    /**
+     * Display the event date on shop loop items.
+     */
     function shopLoop()
     {
         global $product;
         $this->display($product->id, 'shoploop');
     }
 
+    /**
+     * Display the event date on single product page.
+     * Optionally redirect.
+     */
     function singleProduct()
     {
         global $product;
+        $meta = Meta::get($product->id);
         $this->display($product->id);
+
+        if ($meta && $meta['external-link']) {
+            wp_enqueue_script('external-link', plugin_dir_url(__DIR__) . '/js/external-link.js');
+            wp_localize_script('external-link', 'external_link', [$meta['external-link']]);
+        }
     }
 
+    /**
+     * Display the event date on emails.
+     */
     function emails($_, $item)
     {
         $this->display($item['product_id']);

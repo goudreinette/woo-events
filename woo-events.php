@@ -19,7 +19,6 @@ Meta::updateExpired();
 
 /**
  * TODO:
- * - Cleanup Display
  * - External link
  * - Expiration
  */
