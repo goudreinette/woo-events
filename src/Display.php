@@ -7,7 +7,7 @@ class Display
         add_action('woocommerce_before_shop_loop_item_title', [$this, 'shopLoop']);
         add_action('woocommerce_single_product_summary', [$this, 'singleProduct']);
         add_action('woocommerce_order_item_meta_start', [$this, 'emails'], 10, 4);
-        add_filter('woocommerce_add_to_cart_redirect', [$this, 'cartUrl'], 10, 4);
+        add_filter('woocommerce_add_to_cart_redirect', [$this, 'cartUrl'], 1000);
 
     }
 
