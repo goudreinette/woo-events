@@ -19,6 +19,5 @@ Meta::updateExpired();
 
 /**
  * TODO:
- * - External link
  * - Expiration
  */
