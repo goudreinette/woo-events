@@ -24,32 +24,18 @@ class Admin
     function render()
     {
         global $post;
-        $meta = Meta::get($post->ID);
+        $meta = Meta::get($post->ID) ?: Meta::$defaults;
 
         $assigns = [
             'key'          => Meta::$key,
-            'checked'      => '',
-            'startTime'    => $this->formatTime(),
-            'endTime'      => $this->formatTime(),
-            'startDate'    => $this->formatDate(),
-            'endDate'      => $this->formatDate(),
-            'externalLink' => '',
+            'checked'      => $meta['enable'] ? 'checked' : '',
+            'startTime'    => $this->formatTime($meta['start-time']),
+            'endTime'      => $this->formatTime($meta['end-time']),
+            'startDate'    => $this->formatDate($meta['start-date']),
+            'endDate'      => $this->formatDate($meta['end-date']),
+            'externalLink' => $meta['external-link'],
         ];
-
-
-        if ($meta) {
-            $assigns = array_merge($assigns, [
-                'key'          => Meta::$key,
-                'checked'      => $meta['enable'] ? 'checked' : '',
-                'startTime'    => $this->formatTime($meta['start-time']),
-                'endTime'      => $this->formatTime($meta['end-time']),
-                'startDate'    => $this->formatDate($meta['start-date']),
-                'endDate'      => $this->formatDate($meta['end-date']),
-                'externalLink' => $meta['external-link'],
-            ]);
-        }
-
-
+        
         wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
         echo $this->m->render('admin', $assigns);
     }
