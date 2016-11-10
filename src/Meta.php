@@ -4,6 +4,9 @@ class Meta
 {
     static $key = "woo-events";
     static $name = "WooEvents";
+    static $defaults = [
+
+    ];
 
     static function get($productId)
     {

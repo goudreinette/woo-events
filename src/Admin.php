@@ -28,24 +28,38 @@ class Admin
 
         $assigns = [
             'key'          => Meta::$key,
-            'checked'      => $meta['enable'] ? 'checked' : '',
-            'startTime'    => $this->formatTime($meta['start-time']),
-            'endTime'      => $this->formatTime($meta['end-time']),
-            'startDate'    => $this->formatDate($meta['start-date']),
-            'endDate'      => $this->formatDate($meta['end-date']),
-            'externalLink' => $meta['external-link'],
+            'checked'      => '',
+            'startTime'    => $this->formatTime(),
+            'endTime'      => $this->formatTime(),
+            'startDate'    => $this->formatDate(),
+            'endDate'      => $this->formatDate(),
+            'externalLink' => '',
         ];
+
+
+        if ($meta) {
+            $assigns = array_merge($assigns, [
+                'key'          => Meta::$key,
+                'checked'      => $meta['enable'] ? 'checked' : '',
+                'startTime'    => $this->formatTime($meta['start-time']),
+                'endTime'      => $this->formatTime($meta['end-time']),
+                'startDate'    => $this->formatDate($meta['start-date']),
+                'endDate'      => $this->formatDate($meta['end-date']),
+                'externalLink' => $meta['external-link'],
+            ]);
+        }
+
 
         wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
         echo $this->m->render('admin', $assigns);
     }
 
-    function formatDate($date)
+    function formatDate($date = null)
     {
         return date('Y-m-d', strtotime($date) ?: time());
     }
 
-    function formatTime($time)
+    function formatTime($time = null)
     {
         return date('H:i', strtotime($time) ?: time());
     }
