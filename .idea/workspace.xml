@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38fb2394-6d15-44eb-9044-3dcf7ad245fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin.php" afterPath="$PROJECT_DIR$/src/Admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Meta.php" afterPath="$PROJECT_DIR$/src/Meta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display.php" afterPath="$PROJECT_DIR$/src/Display.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/style.css" afterPath="$PROJECT_DIR$/styles/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/shoploop.mustache" afterPath="$PROJECT_DIR$/templates/shoploop.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woo-events.php" afterPath="$PROJECT_DIR$/woo-events.php" />
     </list>
     <ignored path="woo-events.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,12 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Admin.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Admin.php">
+      <file leaf-file-name="ccw_class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/calendar_widget/includes/ccw_class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1823">
-              <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-              <folding />
+            <state relative-caret-position="708">
+              <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+              <folding>
+                <marker date="1478778000984" expanded="true" signature="7022:7142" ph="SELECT 1 as wp_posts" />
+                <marker date="1478778000984" expanded="true" signature="11998:12129" ph="..." />
+                <marker date="1478778000984" expanded="true" signature="12122:12129" ph="..." />
+                <marker date="1478778000984" expanded="true" signature="12657:12664" ph="..." />
+                <marker date="1478778000984" expanded="true" signature="14529:14536" ph="..." />
+                <marker date="1478778000984" expanded="true" signature="14631:14872" ph="SELECT DISTI... wp_posts" />
+                <marker date="1478778000984" expanded="true" signature="14912:15431" ph="SELECT DISTI... wp_posts" />
+                <marker date="1478778000984" expanded="true" signature="15059:15305" ph="SELECT tr.ob... wp_prefixterm_relationships" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,16 +71,18 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/View.php" />
         <option value="$PROJECT_DIR$/templates/Admin.php" />
-        <option value="$PROJECT_DIR$/styles/style.css" />
         <option value="$PROJECT_DIR$/templates/admin.mustache" />
-        <option value="$PROJECT_DIR$/templates/shoploop.mustache" />
         <option value="$PROJECT_DIR$/templates/display.mustache" />
         <option value="$PROJECT_DIR$/js/external-link.js" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/src/Display.php" />
-        <option value="$PROJECT_DIR$/woo-events.php" />
         <option value="$PROJECT_DIR$/src/Meta.php" />
         <option value="$PROJECT_DIR$/src/Admin.php" />
+        <option value="$PROJECT_DIR$/../../wordpress/wp-content/plugins/calendar_widget/js/index.js" />
+        <option value="$PROJECT_DIR$/woo-events.php" />
+        <option value="$PROJECT_DIR$/src/Display.php" />
+        <option value="$PROJECT_DIR$/templates/shoploop.mustache" />
+        <option value="$PROJECT_DIR$/styles/style.css" />
+        <option value="$PROJECT_DIR$/../../wordpress/wp-content/plugins/calendar_widget/includes/ccw_class.php" />
       </list>
     </option>
   </component>
@@ -398,6 +412,152 @@
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calendar_widget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wordpress" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugins" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="calendar_widget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -406,6 +566,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,7 +593,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="styles" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -437,17 +611,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="JavaScriptPreferStrict" value="true" />
-    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -787,12 +975,12 @@
       <workItem from="1478426158690" duration="4583000" />
       <workItem from="1478536144987" duration="2191000" />
       <workItem from="1478592259461" duration="140000" />
-      <workItem from="1478772920757" duration="2396000" />
+      <workItem from="1478772920757" duration="5078000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21503000" />
+    <option name="totallyTimeSpent" value="24185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="42" width="3072" height="3414" extended-state="4" />
@@ -810,12 +998,12 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14453125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2639974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39981812" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39981812" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -848,11 +1036,21 @@
           <line>46</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/calendar_widget/includes/ccw_class.php</url>
+          <line>174</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/woo-events.php</url>
+          <line>18</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="37" />
+      <option name="time" value="48" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -877,10 +1075,10 @@
         <state relative-caret-position="1003">
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
-            <marker date="1478773135241" expanded="true" signature="30:243" ph="..." />
-            <marker date="1478773135241" expanded="true" signature="283:315" ph=" Initialize template engine ..." />
-            <marker date="1478773135241" expanded="true" signature="352:449" ph="..." />
-            <marker date="1478773135241" expanded="true" signature="504:531" ph=" Update expired events ..." />
+            <marker date="1478776125751" expanded="true" signature="30:243" ph="..." />
+            <marker date="1478776125751" expanded="true" signature="282:314" ph=" Initialize template engine ..." />
+            <marker date="1478776125751" expanded="true" signature="351:448" ph="..." />
+            <marker date="1478776125751" expanded="true" signature="503:530" ph=" Update expired events ..." />
           </folding>
         </state>
       </provider>
@@ -1019,13 +1217,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/woocommerce/includes/class-wc-product-simple.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1099">
@@ -1044,20 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
           <caret line="216" column="20" selection-start-line="216" selection-start-column="20" selection-end-line="216" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shoploop.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="46" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/display.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1097,41 +1274,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/woo-events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1534">
-          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding>
-            <marker date="1478773135241" expanded="true" signature="30:243" ph="..." />
-            <marker date="1478773135241" expanded="true" signature="283:315" ph=" Initialize template engine ..." />
-            <marker date="1478773135241" expanded="true" signature="352:449" ph="..." />
-            <marker date="1478773135241" expanded="true" signature="504:531" ph=" Update expired events ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Display.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1357">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <marker date="1478773029568" expanded="true" signature="41:1749" ph="{...}" />
-            <marker date="1478773029568" expanded="true" signature="79:372" ph="{...}" />
-            <marker date="1478773029568" expanded="true" signature="381:437" ph=" Display the event date on shop loop items. ..." />
-            <marker date="1478773029568" expanded="true" signature="463:550" ph="{...}" />
-            <marker date="1478773029568" expanded="true" signature="559:647" ph=" Display the event date on single product page. ..." />
-            <marker date="1478773029568" expanded="true" signature="678:1042" ph="{...}" />
-            <marker date="1478773029568" expanded="true" signature="836:1035" ph="..." />
-            <marker date="1478773029568" expanded="true" signature="1051:1098" ph=" Display the event date on emails. ..." />
-            <marker date="1478773029568" expanded="true" signature="1131:1188" ph="{...}" />
-            <marker date="1478773029568" expanded="true" signature="1246:1625" ph="{...}" />
-            <marker date="1478773029568" expanded="true" signature="1333:1618" ph="..." />
-            <marker date="1478773029568" expanded="true" signature="1358:1550" ph="..." />
-            <marker date="1478773029568" expanded="true" signature="1664:1747" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Meta.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1357">
@@ -1153,11 +1295,177 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/calendar_widget/calendar_widget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1478773384248" expanded="false" signature="8:134" ph="..." />
+            <marker date="1478773384248" expanded="true" signature="236:323" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/calendar_widget/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <marker date="1478775684328" expanded="true" signature="33:106" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/js_composer_salient/include/templates/shortcodes/vc_posts_grid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1099">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <marker date="1473592328000" expanded="true" signature="37:52" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="57:416" ph=" Shortcode attributes ..." />
+            <marker date="1473592328000" expanded="true" signature="770:780" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="1020:4109" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="1179:1193" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="1335:3311" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="1461:1497" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="1701:3308" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="1734:3304" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="1797:1850" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="1889:2579" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="1932:2024" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="2063:2221" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="2113:2213" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="2120:2211" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="2229:2272" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="2617:2959" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="2657:2728" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="2769:2857" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="2865:2953" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="2995:3229" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="3033:3072" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="3115:3155" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="3163:3200" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="3319:4023" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="4133:4178" ph=" Css classes for grid and teasers. ..." />
+            <marker date="1473592328000" expanded="true" signature="4279:4395" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="4327:4393" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="5179:7283" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="5207:7247" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="5353:7238" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="5430:5980" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="5728:5894" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="6103:7228" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="6124:6165" ph=" Enqueue js/css ..." />
+            <marker date="1473592328000" expanded="true" signature="6292:7211" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="6338:7058" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="6945:6996" ph="..." />
+            <marker date="1473592328000" expanded="true" signature="7089:7210" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/display.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <marker date="1478537305631" expanded="true" signature="3:97" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1823">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-          <folding />
+        <state relative-caret-position="1587">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <marker date="1478775311588" expanded="true" signature="39:1727" ph="{...}" />
+            <marker date="1478775311588" expanded="true" signature="77:326" ph="{...}" />
+            <marker date="1478775311588" expanded="true" signature="359:541" ph="{...}" />
+            <marker date="1478775311588" expanded="true" signature="395:510" ph="..." />
+            <marker date="1478775311588" expanded="true" signature="564:1270" ph="{...}" />
+            <marker date="1478775311588" expanded="true" signature="671:1116" ph="..." />
+            <marker date="1478775311588" expanded="true" signature="1309:1379" ph="{...}" />
+            <marker date="1478775311588" expanded="true" signature="1418:1486" ph="{...}" />
+            <marker date="1478775311588" expanded="true" signature="1523:1725" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/woo-events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <marker date="1478776125751" expanded="true" signature="30:243" ph="..." />
+            <marker date="1478776125751" expanded="true" signature="282:314" ph=" Initialize template engine ..." />
+            <marker date="1478776125751" expanded="true" signature="351:448" ph="..." />
+            <marker date="1478776125751" expanded="true" signature="503:530" ph=" Update expired events ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1475">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <marker date="1478777310668" expanded="true" signature="41:1939" ph="{...}" />
+            <marker date="1478777310668" expanded="true" signature="79:441" ph="{...}" />
+            <marker date="1478777310668" expanded="true" signature="463:562" ph="{...}" />
+            <marker date="1478777310668" expanded="true" signature="571:627" ph=" Display the event date on shop loop items. ..." />
+            <marker date="1478777310668" expanded="true" signature="653:740" ph="{...}" />
+            <marker date="1478777310668" expanded="true" signature="749:837" ph=" Display the event date on single product page. ..." />
+            <marker date="1478777310668" expanded="true" signature="868:1232" ph="{...}" />
+            <marker date="1478777310668" expanded="true" signature="1026:1225" ph="..." />
+            <marker date="1478777310668" expanded="true" signature="1241:1288" ph=" Display the event date on emails. ..." />
+            <marker date="1478777310668" expanded="true" signature="1321:1378" ph="{...}" />
+            <marker date="1478777310668" expanded="true" signature="1436:1815" ph="{...}" />
+            <marker date="1478777310668" expanded="true" signature="1523:1808" ph="..." />
+            <marker date="1478777310668" expanded="true" signature="1548:1740" ph="..." />
+            <marker date="1478777310668" expanded="true" signature="1854:1937" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <marker date="1478777477204" expanded="true" signature="24:46" ph="{...}" />
+            <marker date="1478777477204" expanded="true" signature="64:85" ph="{...}" />
+            <marker date="1478777477204" expanded="true" signature="104:156" ph="{...}" />
+            <marker date="1478777477204" expanded="true" signature="213:265" ph="{...}" />
+            <marker date="1478777477204" expanded="true" signature="295:381" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shoploop.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+          <folding>
+            <marker date="1478777450508" expanded="true" signature="28:132" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/calendar_widget/includes/ccw_class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="30" column="65" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
+          <folding>
+            <marker date="1478778000984" expanded="true" signature="7022:7142" ph="SELECT 1 as wp_posts" />
+            <marker date="1478778000984" expanded="true" signature="11998:12129" ph="..." />
+            <marker date="1478778000984" expanded="true" signature="12122:12129" ph="..." />
+            <marker date="1478778000984" expanded="true" signature="12657:12664" ph="..." />
+            <marker date="1478778000984" expanded="true" signature="14529:14536" ph="..." />
+            <marker date="1478778000984" expanded="true" signature="14631:14872" ph="SELECT DISTI... wp_posts" />
+            <marker date="1478778000984" expanded="true" signature="14912:15431" ph="SELECT DISTI... wp_posts" />
+            <marker date="1478778000984" expanded="true" signature="15059:15305" ph="SELECT tr.ob... wp_prefixterm_relationships" />
+          </folding>
         </state>
       </provider>
     </entry>

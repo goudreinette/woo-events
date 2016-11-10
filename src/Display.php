@@ -5,9 +5,15 @@ class Display
     function __construct($mustache)
     {
         $this->m = $mustache;
+        add_action('woocommerce_after_shop_loop', [$this, 'style']);
         add_action('woocommerce_before_shop_loop_item_title', [$this, 'shopLoop']);
         add_action('woocommerce_single_product_summary', [$this, 'singleProduct']);
         add_action('woocommerce_order_item_meta_start', [$this, 'emails'], 10, 4);
+    }
+
+    function style()
+    {
+        wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
     }
 
     /**

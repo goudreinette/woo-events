@@ -12,7 +12,6 @@ License: A "Slug" license name e.g. GPL2
 
 
 require "vendor/autoload.php";
-
 /**
  * Initialize template engine
  */
