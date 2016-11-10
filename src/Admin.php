@@ -2,9 +2,9 @@
 
 class Admin
 {
-    function __construct()
+    function __construct($mustache)
     {
-        $this->m = new \Mustache_Engine(['loader' => new \Mustache_Loader_FilesystemLoader(plugin_dir_path(__DIR__) . '/templates')]);
+        $this->m = $mustache;
         add_filter('woocommerce_product_data_tabs', [$this, 'registerTab']);
         add_filter('woocommerce_product_data_panels', [$this, 'render']);
         add_action('save_post', [$this, 'handleSave']);

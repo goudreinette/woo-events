@@ -13,8 +13,19 @@ License: A "Slug" license name e.g. GPL2
 
 require "vendor/autoload.php";
 
-new Admin;
-new Display;
+/**
+ * Initialize template engine
+ */
+$mustache = new \Mustache_Engine([
+    'loader' => new \Mustache_Loader_FilesystemLoader(plugin_dir_path(__FILE__) . '/templates')
+]);
+
+new Admin($mustache);
+new Display($mustache);
+
+/**
+ * Update expired events
+ */
 Meta::updateExpired();
 
 /**
