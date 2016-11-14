@@ -23,7 +23,7 @@ $mustache = new \Mustache_Engine([
 
 new Admin($mustache);
 new Display($mustache);
-new Shortcode();
+new Shortcode($mustache);
 
 /**
  * Update expired events

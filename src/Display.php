@@ -55,16 +55,12 @@ class Display
 
         if ($meta && $meta['enable']) {
             $assigns = [
-                'startDate' => $this->formatDate($meta['start-date'], $meta['start-time']),
-                'endDate'   => $this->formatDate($meta['end-date'], $meta['end-time'])
+                'startDate' => Utils::formatDate($meta['start-date'], $meta['start-time']),
+                'endDate'   => Utils::formatDate($meta['end-date'], $meta['end-time'])
             ];
 
             echo $this->m->render($template, $assigns);
         }
     }
 
-    function formatDate($date, $time)
-    {
-        return date(wc_date_format(), strtotime($date)) . " " . $time;
-    }
 }

@@ -1,0 +1,34 @@
+<div id="woo-event-list">
+    <header id="filter">
+        {{#categories}}
+            <button class="category" data-category="{{.}}">{{.}}</button>
+        {{/categories}}
+    </header>
+
+    <ul id="event-list" class="{{options.layout}}">
+        {{#events}}
+            <li>
+                <div class="image" style="background-image: url({{image}})">
+                    {{#featured}}
+                        <div class="featured">{{featured}}</div>
+                    {{/featured}}
+                </div>
+                <div class="right">
+                    <h3>{{title}}</h3>
+                    <h5 class="date">{{start-date}} - {{end-date}}</h5>
+                    <h4>{{subTitle}}</h4>
+                    <div class="excerpt">{{post_excerpt}}</div>
+                    <div class="bottom">
+                        <div>
+                            <h4 class="price">€{{price}}</h4>
+                            <a class="order" href="{{productUrl}}">{{options.button_text}}</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        {{/events}}
+    </ul>
+</div>
+<script>
+
+</script>

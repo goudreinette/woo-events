@@ -1,0 +1,199 @@
+/**
+ * Styles
+ */
+#woo-event-list {
+    width: 100%;
+}
+
+#woo-event-list > * {
+    box-sizing: border-box;
+}
+
+/* Header */
+#woo-event-list header {
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    padding: 0px 10px;
+}
+
+#woo-event-list header .category {
+    background: none;
+    border: none;
+    height: 100%;
+    padding: 5px 10px;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+#woo-event-list header .category:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#woo-event-list header .category.active {
+    border-bottom: 1px solid black;
+}
+
+/* List */
+#woo-event-list #event-list {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    overflow: auto;
+    transition: all 1s;
+    background-color: white;
+    flex-direction: column;
+}
+
+#woo-event-list #event-list li {
+    margin-bottom: 20px;
+    display: flex;
+    border: 1px solid #eee;
+}
+
+#woo-event-list #event-list li:hover {
+    background-color: #f6f6f6
+}
+
+#woo-event-list #event-list li .image {
+    position: relative;
+    background-position: center;
+}
+
+#woo-event-list .right .bottom div {
+    display: flex;
+    flex-direction: row;
+}
+
+#woo-event-list .order {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    margin-left: auto;
+    font-size: 80%;
+    color: inherit;
+    text-decoration: none;
+}
+
+#woo-event-list .order:hover {
+    border-color: grey;
+}
+
+#woo-event-list .date {
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: grey;
+    font-weight: normal;
+}
+
+#woo-event-list h3 {
+    margin: 0;
+    margin-right: 10px;
+}
+
+#woo-event-list h4 {
+    margin: 0px 0px 20px 0px;
+    color: grey;
+}
+
+#woo-event-list .price {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+    margin-right: 15px;
+}
+
+.hide {
+    display: none !important;
+}
+
+/**
+ * List
+ */
+#woo-event-list .list li {
+    flex-direction: row;
+    height: 220px;
+}
+
+#woo-event-list .list li .image {
+    width: 35%;
+}
+
+#woo-event-list li .image .featured {
+    background-color: black;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70%;
+    top: 5px;
+    left: 5px;
+}
+
+#woo-event-list .list .right {
+    border-left: 1px solid #eee;
+    width: 65%;
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#woo-event-list .list .right .bottom {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    margin-top: 10px;
+    bottom: 20px;
+    width: calc(100% - 45px);
+}
+
+#woo-event-list .list .right div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+/**
+ * Grid
+ */
+#woo-event-list .grid {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#woo-event-list .grid li {
+    flex-direction: column;
+    margin: 10px;
+    height: auto;
+    width: 47%;
+}
+
+#woo-event-list .grid li .image {
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+
+#woo-event-list .grid li .right {
+    padding: 20px;
+}
+
+#woo-event-list .grid li .bottom {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#woo-event-list .grid li .bottom div {
+    flex-direction: row;
+    margin-left: auto;
+}

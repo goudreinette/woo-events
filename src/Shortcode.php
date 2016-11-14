@@ -2,25 +2,50 @@
 
 class Shortcode
 {
-    function __construct()
+    function __construct($mustache)
     {
+        $this->m = $mustache;
         add_shortcode(Meta::$key, [$this, 'shortcode']);
         add_action('vc_before_init', [$this, 'vc']);
     }
 
-    function shortcode($atts)
+    function shortcode($options)
     {
-        $atts = shortcode_atts([
+        $options = shortcode_atts([
             'layout'               => 'List',
             'order'                => 'Ascending',
+            'button_text'          => 'Order',
             'show_category_filter' => true,
             'show_date'            => true,
             'title_color'          => '#000',
-            'subtitle_color'       => '#4c4c4c'
-        ], $atts);
+            'subtitle_color'       => '#666'
+        ], $options);
 
-        echo "<h1>Event List Here!</h1>";
+        $events     = Meta::getEvents();
+        $categories = [];
+        $complete   = [];
 
+        foreach ($events as $event) {
+            $meta                     = Meta::get($event->ID);
+            $eventArray               = array_merge((array)$event, $meta);
+            $product                  = wc_get_product($eventArray['ID']);
+            $eventArray['start-date'] = Utils::formatDate($meta['start-date'], $meta['start-time']);
+            $eventArray['end-date']   = Utils::formatDate($meta['end-date'], $meta['end-time']);
+            $eventArray['price']      = $product->price;
+
+            array_push($complete, $eventArray);
+        }
+
+
+        $assigns = [
+            'categories' => ['All', 'Trips', 'Camping'],
+            'events'     => $complete,
+            'options'    => $options
+        ];
+
+        echo $this->m->render('eventlist', $assigns);
+        wp_enqueue_script('woo-event-list', plugin_dir_url(__DIR__) . '/js/event-list.js');
+        wp_enqueue_style('event-list', plugin_dir_url(__DIR__) . '/styles/event-list.css');
     }
 
     function vc()
@@ -36,7 +61,7 @@ class Shortcode
                     'type'       => 'dropdown',
                     'heading'    => 'Layout',
                     'param_name' => 'layout',
-                    'value'      => ['Grid', 'List'],
+                    'value'      => ['Grid' => 'grid', 'List' => 'list'],
                 ],
                 [
                     'group'      => 'Options',
