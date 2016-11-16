@@ -43,6 +43,7 @@
     transition: all 1s;
     background-color: white;
     flex-direction: column;
+    min-height: 500px;
     transition: all 1s;
 }
 
@@ -106,17 +107,24 @@
 }
 
 #woo-event-list .price {
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 120%;
-    margin-right: 15px;
+    margin: 0 15px 0 0;
 }
 
-.hide {
+#woo-event-list .hide {
     opacity: 0;
-    height: 0;
+    display: flex !important;
+    max-height: 0;
+}
+
+#woo-event-list .hide * {
+    opacity: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-height: 0 !important;
 }
 
 /**
