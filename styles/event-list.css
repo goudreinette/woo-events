@@ -57,7 +57,12 @@
 
 #woo-event-list #event-list li .image {
     position: relative;
-    background-position: center;
+    background: no-repeat center;
+    background-size: cover;
+}
+
+#woo-event-list #event-list li .excerpt {
+
 }
 
 #woo-event-list .right .bottom div {
@@ -86,6 +91,7 @@
     top: 20px;
     color: grey;
     font-weight: normal;
+    font-size: 14px;
 }
 
 #woo-event-list h3 {

@@ -2,8 +2,15 @@
 
 class Utils
 {
-    function formatDate($date, $time)
+    static function formatDate($date, $time)
     {
         return date(wc_date_format(), strtotime($date)) . " " . $time;
+    }
+
+    static function pluck($array, $key)
+    {
+        return array_map(function ($item) use ($key) {
+            return $item->{$key};
+        }, (array)$array);
     }
 }
