@@ -43,12 +43,14 @@
     transition: all 1s;
     background-color: white;
     flex-direction: column;
+    transition: all 1s;
 }
 
 #woo-event-list #event-list li {
     margin-bottom: 20px;
     display: flex;
     border: 1px solid #eee;
+    transition: all 1s;
 }
 
 #woo-event-list #event-list li:hover {
@@ -62,7 +64,7 @@
 }
 
 #woo-event-list #event-list li .excerpt {
-
+    justify-content: flex-start;
 }
 
 #woo-event-list .right .bottom div {
@@ -87,16 +89,15 @@
 #woo-event-list .date {
     margin: 0;
     position: absolute;
-    right: 20px;
-    top: 20px;
+    left: 25px;
+    top: 10px;
     color: grey;
     font-weight: normal;
     font-size: 14px;
 }
 
 #woo-event-list h3 {
-    margin: 0;
-    margin-right: 10px;
+    margin: 20px 10px 0 0;
 }
 
 #woo-event-list h4 {
@@ -114,7 +115,8 @@
 }
 
 .hide {
-    display: none !important;
+    opacity: 0;
+    height: 0;
 }
 
 /**

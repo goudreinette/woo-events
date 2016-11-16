@@ -1,6 +1,7 @@
 <div id="woo-event-list">
 
     <header id="filter">
+        <button class="category active" data-category="all">All</button>
         {{#categories}}
             <button class="category" data-category="{{.}}">{{.}}</button>
         {{/categories}}
@@ -8,7 +9,7 @@
 
     <ul id="event-list" class="{{options.layout}}">
         {{#events}}
-            <li data-category="{{product_cat}}">
+            <li data-category="{{product_cat}}" data-permalink="{{permalink}}">
                 <div class="image" style="background-image: url({{image}})">
                     {{#featured}}
                         <div class="featured">{{featured}}</div>
@@ -17,11 +18,13 @@
                 <div class="right">
                     <h3>{{post_title}}</h3>
                     <h4>{{subTitle}}</h4>
-                    <h5 class="date">{{start-date}} <br/> {{end-date}}</h5>
+                    <h5 class="date">{{start-date}} - {{end-date}}</h5>
                     <div class="excerpt">{{{post_excerpt}}}</div>
                     <div class="bottom">
                         <div>
-                            <h4 class="price">€{{price}}</h4>
+                            {{#price}}
+                                <h4 class="price">€{{price}}</h4>
+                            {{/price}}
                             <a class="order" href="{{productUrl}}">{{options.button_text}}</a>
                         </div>
                     </div>
@@ -31,5 +34,29 @@
     </ul>
 </div>
 <script>
+    const $ = jQuery
 
+
+    $(function () {
+        $('.category').on('click', function (e) {
+            var category = $(e.target).data('category')
+
+            $('.category').toggleClass('active', false)
+            $(e.target).toggleClass('active', true)
+
+            if (category == 'all')
+            {
+                $('#event-list li').toggleClass('hide', false)
+            } else
+            {
+                $('#event-list li').toggleClass('hide', true)
+                $('#event-list li[data-category=' + category + ']').toggleClass('hide', false)
+            }
+        })
+
+        $('#event-list li').on('click', function (e) {
+            var permalink = $(e.target).closest('#event-list li').data('permalink')
+            window.location.assign(permalink)
+        })
+    })
 </script>
