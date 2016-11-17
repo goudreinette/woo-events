@@ -1,11 +1,13 @@
 <div id="woo-event-list">
 
-    <header id="filter">
-        <button class="category active" data-category="all">All</button>
-        {{#categories}}
-            <button class="category" data-category="{{.}}">{{.}}</button>
-        {{/categories}}
-    </header>
+    {{#options.show_category_filter}}
+        <header id="filter">
+            <button class="category active" data-category="all">All</button>
+            {{#categories}}
+                <button class="category" data-category="{{.}}">{{.}}</button>
+            {{/categories}}
+        </header>
+    {{/options.show_category_filter}}
 
     <ul id="event-list" class="{{options.layout}}">
         {{#events}}
@@ -18,13 +20,17 @@
                 <div class="right">
                     <h3>{{post_title}}</h3>
                     <h4>{{subTitle}}</h4>
-                    <h5 class="date">{{start-date}} - {{end-date}}</h5>
+                    {{options.show_date}}
+                    {{#options.show_date}}
+                        <h5 class="date">{{start-date}} - {{end-date}}</h5>
+                    {{/options.show_date}}
                     <div class="excerpt">{{{post_excerpt}}}</div>
                     <div class="bottom">
                         <div>
                             {{#price}}
                                 <h4 class="price">€{{price}}</h4>
                             {{/price}}
+                            <a class="order" href="}}">Add to cart</a>
                             <a class="order" href="{{productUrl}}">{{options.button_text}}</a>
                         </div>
                     </div>

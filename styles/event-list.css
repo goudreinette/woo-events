@@ -43,7 +43,7 @@
     transition: all 1s;
     background-color: white;
     flex-direction: column;
-    min-height: 500px;
+    min-height: 350px;
     transition: all 1s;
 }
 
@@ -51,7 +51,13 @@
     margin-bottom: 20px;
     display: flex;
     border: 1px solid #eee;
-    transition: all 1s;
+    transition: transform cubic-bezier(0.165, 0.840, 0.440, 1.000),
+    opacity,
+    max-height;
+    transform: scale(1);
+    opacity: 1;
+    max-height: 1000px;
+    transition-duration: 1s !important;
 }
 
 #woo-event-list #event-list li:hover {
@@ -99,6 +105,7 @@
 
 #woo-event-list h3 {
     margin: 20px 10px 0 0;
+    cursor: pointer;
 }
 
 #woo-event-list h4 {
@@ -117,14 +124,16 @@
 #woo-event-list .hide {
     opacity: 0;
     display: flex !important;
-    max-height: 0;
+    transition: all 1s;
+    transform: scale(0.95);
+    opacity: 0 !important;
+    max-height: 0 !important;
 }
 
 #woo-event-list .hide * {
     opacity: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
-    max-height: 0 !important;
 }
 
 /**
