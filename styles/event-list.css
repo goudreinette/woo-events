@@ -66,8 +66,24 @@
 
 #woo-event-list #event-list li .image {
     position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+#woo-event-list #event-list li .image .inner {
+    position: relative;
     background: no-repeat center;
     background-size: cover;
+    transition: all 0.5s;
+    height: 100%;
+}
+
+#woo-event-list #event-list li .image:hover {
+    filter: brightness(1.1);
+}
+
+#woo-event-list #event-list li .image .inner:hover {
+    transform: scale(1.1);
 }
 
 #woo-event-list #event-list li .excerpt {

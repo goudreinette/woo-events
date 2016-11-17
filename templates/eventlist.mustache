@@ -12,10 +12,12 @@
     <ul id="event-list" class="{{options.layout}}">
         {{#events}}
             <li data-category="{{product_cat}}" data-permalink="{{permalink}}">
-                <div class="image" style="background-image: url({{image}})">
-                    {{#featured}}
-                        <div class="featured">{{featured}}</div>
-                    {{/featured}}
+                <div class="image">
+                    <div class="inner" style="background-image: url({{image}})">
+                        {{#featured}}
+                            <div class="featured">{{featured}}</div>
+                        {{/featured}}
+                    </div>
                 </div>
                 <div class="right">
                     {{#options.show_date}}
