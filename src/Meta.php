@@ -48,6 +48,23 @@ class Meta
         wp_update_post($post);
     }
 
+    static function getEventsByProductCategory($category)
+    {
+        return get_posts(['post_type'        => 'product',
+                          'meta_query'       => [
+                              'relation' => 'AND',
+                              [
+                                  'key' => self::$key
+                              ],
+                              [
+                                  'key'   => 'product_cat',
+                                  'value' => $category
+                              ]
+                          ],
+                          'numberposts'      => -1,
+                          'suppress_filters' => true]);
+    }
+
     static function getEvents()
     {
         return get_posts(['post_type'        => 'product',

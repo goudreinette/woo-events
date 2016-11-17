@@ -25,8 +25,8 @@
                     {{#options.show_date}}
                         <h5 class="date">{{start-date}} - {{end-date}}</h5>
                     {{/options.show_date}}
-                    <h3>{{post_title}}</h3>
-                    <h4>{{subTitle}}</h4>
+                    <h3 style="color: {{options.title_color}};">{{post_title}}</h3>
+                    <h4 style="color: {{options.subtitle_color}};">{{subTitle}}</h4>
                     <div class="excerpt">{{{post_excerpt}}}</div>
                     <div class="bottom">
                         {{#price}}
@@ -53,11 +53,9 @@
             $('.category').toggleClass('active', false)
             $(e.target).toggleClass('active', true)
 
-            if (category == 'all')
-            {
+            if (category == 'all') {
                 $('#event-list li').toggleClass('hide', false)
-            } else
-            {
+            } else {
                 $('#event-list li').toggleClass('hide', true)
                 $('#event-list li[data-category=' + category + ']').toggleClass('hide', false)
             }

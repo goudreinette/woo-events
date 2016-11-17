@@ -2,11 +2,9 @@
 
 class Utils
 {
-    static function formatDate($date, $time)
-    {
-        return date(wc_date_format(), strtotime($date)) . " " . $time;
-    }
-
+    /**
+     * PHP
+     */
     static function pluck($array, $key)
     {
         return array_map(function ($item) use ($key) {
@@ -16,5 +14,22 @@ class Utils
                 return $item->{$key};
             }
         }, $array);
+    }
+
+    /**
+     * Wordpress
+     */
+    static function formatDate($date, $time)
+    {
+        return date(wc_date_format(), strtotime($date)) . " " . $time;
+    }
+
+    /**
+     * WooCommerce
+     */
+    static function getProductCategories()
+    {
+        $categories = get_categories(['taxonomy' => 'product_cat']);
+        return self::pluck($categories, 'cat_name');
     }
 }

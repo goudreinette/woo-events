@@ -146,18 +146,7 @@
 }
 
 #woo-event-list .hide {
-    opacity: 0;
-    display: flex !important;
-    transition: all 1s;
-    transform: scale(0.95);
-    opacity: 0 !important;
-    max-height: 0 !important;
-}
-
-#woo-event-list .hide * {
-    opacity: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    display: none !important;
 }
 
 /**
