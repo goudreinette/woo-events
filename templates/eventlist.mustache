@@ -18,20 +18,19 @@
                     {{/featured}}
                 </div>
                 <div class="right">
-                    <h3>{{post_title}}</h3>
-                    <h4>{{subTitle}}</h4>
-                    {{options.show_date}}
                     {{#options.show_date}}
                         <h5 class="date">{{start-date}} - {{end-date}}</h5>
                     {{/options.show_date}}
+                    <h3>{{post_title}}</h3>
+                    <h4>{{subTitle}}</h4>
                     <div class="excerpt">{{{post_excerpt}}}</div>
                     <div class="bottom">
+                        {{#price}}
+                            <h4 class="price">€{{price}}</h4>
+                        {{/price}}
                         <div>
-                            {{#price}}
-                                <h4 class="price">€{{price}}</h4>
-                            {{/price}}
-                            <a class="order" href="}}">Add to cart</a>
-                            <a class="order" href="{{productUrl}}">{{options.button_text}}</a>
+                            <a class="order" href="{{add_to_cart_url}}">{{options.add_to_cart_text}}</a>
+                            <a class="order" href="{{permalink}}">{{options.button_text}}</a>
                         </div>
                     </div>
                 </div>

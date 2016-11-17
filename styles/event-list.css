@@ -74,9 +74,8 @@
     justify-content: flex-start;
 }
 
-#woo-event-list .right .bottom div {
-    display: flex;
-    flex-direction: row;
+#woo-event-list .right .bottom {
+    width: 100%;
 }
 
 #woo-event-list .order {
@@ -119,6 +118,7 @@
     align-items: center;
     font-size: 120%;
     margin: 0 15px 0 0;
+    margin-right: auto;
 }
 
 #woo-event-list .hide {
@@ -139,12 +139,12 @@
 /**
  * List
  */
-#woo-event-list .list li {
+#woo-event-list .List li {
     flex-direction: row;
     height: 220px;
 }
 
-#woo-event-list .list li .image {
+#woo-event-list .List li .image {
     width: 35%;
 }
 
@@ -163,7 +163,7 @@
     left: 5px;
 }
 
-#woo-event-list .list .right {
+#woo-event-list .List .right {
     border-left: 1px solid #eee;
     width: 65%;
     padding: 20px 25px;
@@ -172,7 +172,7 @@
     position: relative;
 }
 
-#woo-event-list .list .right .bottom {
+#woo-event-list .List .right .bottom {
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -181,44 +181,61 @@
     width: calc(100% - 45px);
 }
 
-#woo-event-list .list .right div {
+#woo-event-list .List .right .bottom {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    width: 100%;
 }
 
 /**
  * Grid
  */
-#woo-event-list .grid {
+#woo-event-list .Grid {
     justify-content: space-between;
     flex-wrap: wrap;
+    flex-direction: row !important;
 }
 
-#woo-event-list .grid li {
+#woo-event-list .Grid li {
     flex-direction: column;
     margin: 10px;
     height: auto;
     width: 47%;
 }
 
-#woo-event-list .grid li .image {
+#woo-event-list .Grid li.hide {
+    display: none !important;
+}
+
+#woo-event-list .Grid .date {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+#woo-event-list .Grid li .image {
     height: 150px;
     width: 100%;
     border-bottom: 1px solid #eee;
 }
 
-#woo-event-list .grid li .right {
+#woo-event-list .Grid li .right {
     padding: 20px;
 }
 
-#woo-event-list .grid li .bottom {
+#woo-event-list .Grid li .bottom {
     width: 100%;
     margin-top: 20px;
+    display: flex;
+    flex-wrap: nowrap;
 }
 
-#woo-event-list .grid li .bottom div {
+#woo-event-list .Grid li .excerpt {
+    height: 66px;
+}
+
+#woo-event-list .Grid li .bottom div {
     flex-direction: row;
     margin-left: auto;
 }
