@@ -165,11 +165,12 @@
  */
 #woo-event-list .List li {
     flex-direction: row;
-    height: 220px;
+    min-height: 220px;
 }
 
 #woo-event-list .List li .image {
     width: 35%;
+    height: 100% !important;
 }
 
 #woo-event-list li .image .featured {
@@ -222,6 +223,7 @@
 
 #woo-event-list .Grid li {
     flex-direction: column;
+    height: auto !important;
     margin: 10px;
     height: auto;
     width: 47%;

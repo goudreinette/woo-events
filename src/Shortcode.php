@@ -18,6 +18,7 @@ class Shortcode
                                    'show_category_filter' => true,
                                    'show_date'            => true,
                                    'title_color'          => '#000',
+                                   'image_height'         => 150,
                                    'subtitle_color'       => '#666'], $options);
 
         $events     = Meta::getEvents();
@@ -84,6 +85,11 @@ class Shortcode
                                 'heading'    => 'Order Button Text',
                                 'param_name' => 'button_text',
                                 'value'      => 'Order'],
+                               ['group'      => 'Options',
+                                'type'       => 'textfield',
+                                'heading'    => 'Image Height (px)',
+                                'param_name' => 'image_height',
+                                'value'      => 150],
                                ['group'      => 'Options',
                                 'type'       => 'textfield',
                                 'heading'    => 'Add to Cart Button Text',
