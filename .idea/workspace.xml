@@ -28,8 +28,8 @@
       <file leaf-file-name="event-list.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/event-list.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+            <state relative-caret-position="704">
+              <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -107,7 +107,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="27" />
-    <option name="width" value="950" />
+    <option name="width" value="940" />
     <option name="height" value="1053" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -457,9 +457,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -643,11 +643,11 @@
     <option name="totallyTimeSpent" value="32372000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="950" height="1053" extended-state="4" />
+    <frame x="0" y="27" width="940" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22947368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2287234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1105,38 +1105,38 @@
     <entry file="file://$PROJECT_DIR$/templates/eventlist.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
-          <caret line="15" column="79" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
+          <caret line="15" column="43" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
-            <marker date="1479386283038" expanded="true" signature="24:1712" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="62:358" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="92:321" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="196:302" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="412:1705" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="431:1694" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="512:1675" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="548:824" ph="..." />
-            <marker date="1479386283038" expanded="false" signature="596:628" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="629:801" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="666:773" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="860:1657" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="902:1021" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="1215:1634" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="1249:1346" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="1377:1607" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="1721:2524" ph="..." />
-            <marker date="1479386283038" expanded="true" signature="1764:2514" ph="{...}" />
-            <marker date="1479386283038" expanded="true" signature="1814:2307" ph="{...}" />
-            <marker date="1479386283038" expanded="true" signature="2029:2107" ph="{...}" />
-            <marker date="1479386283038" expanded="true" signature="2125:2297" ph="{...}" />
-            <marker date="1479386283038" expanded="true" signature="2366:2507" ph="{...}" />
+            <marker date="1479386730955" expanded="true" signature="24:1760" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="62:358" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="92:321" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="196:302" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="412:1753" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="431:1742" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="512:1723" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="548:872" ph="..." />
+            <marker date="1479386730955" expanded="false" signature="644:676" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="677:849" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="714:821" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="908:1705" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="950:1069" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="1263:1682" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="1297:1394" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="1425:1655" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="1769:2572" ph="..." />
+            <marker date="1479386730955" expanded="true" signature="1812:2562" ph="{...}" />
+            <marker date="1479386730955" expanded="true" signature="1862:2355" ph="{...}" />
+            <marker date="1479386730955" expanded="true" signature="2077:2155" ph="{...}" />
+            <marker date="1479386730955" expanded="true" signature="2173:2345" ph="{...}" />
+            <marker date="1479386730955" expanded="true" signature="2414:2555" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/event-list.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
+        <state relative-caret-position="704">
+          <caret line="89" column="14" selection-start-line="89" selection-start-column="14" selection-end-line="89" selection-end-column="14" />
           <folding />
         </state>
       </provider>

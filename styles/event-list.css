@@ -78,12 +78,20 @@
     height: 100%;
 }
 
-#woo-event-list #event-list li .image:hover {
-    filter: brightness(1.1);
+#woo-event-list #event-list li .image:hover .inner {
+    transform: scale(1.1);
 }
 
-#woo-event-list #event-list li .image .inner:hover {
-    transform: scale(1.1);
+#woo-event-list #event-list li .image .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    z-index: 2;
+}
+
+#woo-event-list #event-list li .image:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #woo-event-list #event-list li .excerpt {
