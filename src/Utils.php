@@ -30,6 +30,6 @@ class Utils
     static function getProductCategories()
     {
         $categories = get_categories(['taxonomy' => 'product_cat']);
-        return self::pluck($categories, 'cat_name');
+        return array_values(self::pluck($categories, 'cat_name'));
     }
 }

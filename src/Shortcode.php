@@ -11,7 +11,7 @@ class Shortcode
 
     function shortcode($options)
     {
-        $options = shortcode_atts([
+        $options = array_merge([
             'layout'               => 'List',
             'order'                => 'Ascending',
             'button_text'          => 'Order',
@@ -68,8 +68,15 @@ class Shortcode
         return $events;
     }
 
+    function chosenParamType($settings, $value)
+    {
+        wp_enqueue_script('chosen', plugin_dir_url(__DIR__) . '/js/chosen.jquery.min.js');
+        return $this->m->render('chosen', ['settings' => $settings, 'value' => $value]);
+    }
+
     function vc()
     {
+        vc_add_shortcode_param('chosen', [$this, 'chosenParamType']);
         vc_map([
             'name'     => 'WooCommerce Event List',
             'base'     => Meta::$key,
@@ -78,17 +85,10 @@ class Shortcode
             'params'   => [
                 [
                     'group'      => 'Query',
-                    'type'       => 'dropdown',
-                    'heading'    => 'Category',
-                    'param_name' => 'category',
-                    'value'      => Utils::getProductCategories(),
-                ],
-                [
-                    'group'      => 'Query',
-                    'type'       => 'dropdown',
-                    'heading'    => 'Show Expired',
-                    'param_name' => 'expired',
-                    'value'      => ['Show', 'Only', 'Hide'],
+                    'type'       => 'chosen',
+                    'heading'    => 'Product Categories',
+                    'param_name' => 'categories',
+                    'value'      => Utils::getProductCategories()
                 ],
                 [
                     'group'      => 'Layout',

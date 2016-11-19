@@ -1,0 +1,28 @@
+<select class="chosen" id="{{settings.param_name}}" name="{{settings.param_name}}" value="{{value}}" multiple>
+    {{#settings.value}}
+        <option value="{{.}}">{{.}}</option>
+    {{/settings.value}}
+</select>
+
+<script>
+    window.$ = window.jQuery
+
+    $(function () {
+        $('.chosen#{{settings.param_name}}').chosen()
+    })
+</script>
+
+<style>
+    .chosen-choices {
+        padding: 5px !important;
+    }
+
+    .chosen-choices input {
+        width: 100% !important;
+    }
+
+    .search-choice {
+        background-image: none !important;
+        background-color: #eee !important;
+    }
+</style>
