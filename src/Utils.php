@@ -7,13 +7,13 @@ class Utils
      */
     static function pluck($array, $key)
     {
-        return array_map(function ($item) use ($key) {
+        return array_values(array_map(function ($item) use ($key) {
             if (is_array($item)) {
                 return $item[$key];
             } else {
                 return $item->{$key};
             }
-        }, $array);
+        }, $array));
     }
 
     /**

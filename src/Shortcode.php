@@ -20,11 +20,13 @@ class Shortcode
             'show_date'            => true,
             'title_color'          => '#000',
             'image_height'         => 150,
-            'subtitle_color'       => '#666'
+            'subtitle_color'       => '#666',
+            'categories'           => ''
         ], $options);
 
         $events     = Meta::getEvents();
         $complete   = $this->sortEvents($this->prepareEvents($events), $options['order']);
+        $complete   = array_values($this->selectEventsByCategories(explode(',', $options['categories']), $complete));
         $categories = array_unique(Utils::pluck($complete, 'product_cat'));
 
         $assigns = [
@@ -68,6 +70,13 @@ class Shortcode
         return $events;
     }
 
+    function selectEventsByCategories($categories, $events)
+    {
+        return array_filter($events, function ($event) use ($categories) {
+            return in_array($event['product_cat'], $categories);
+        });
+    }
+
     function chosenParamType($settings, $value)
     {
         wp_enqueue_script('chosen', plugin_dir_url(__DIR__) . '/js/chosen.jquery.min.js');
@@ -84,11 +93,19 @@ class Shortcode
             'category' => 'WooCommerce',
             'params'   => [
                 [
+                    'group'       => 'Query',
+                    'type'        => 'chosen',
+                    'heading'     => 'Product Categories',
+                    'param_name'  => 'categories',
+                    'save_always' => true,
+                    'value'       => Utils::getProductCategories()
+                ],
+                [
                     'group'      => 'Query',
-                    'type'       => 'chosen',
-                    'heading'    => 'Product Categories',
-                    'param_name' => 'categories',
-                    'value'      => Utils::getProductCategories()
+                    'type'       => 'dropdown',
+                    'heading'    => 'Expired',
+                    'param_name' => 'expired',
+                    'value'      => ['Show', 'Hide', 'Only']
                 ],
                 [
                     'group'      => 'Layout',

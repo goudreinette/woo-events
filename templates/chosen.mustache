@@ -1,20 +1,29 @@
-<select class="chosen" id="{{settings.param_name}}" name="{{settings.param_name}}" value="{{value}}" multiple>
-    {{#settings.value}}
-        <option value="{{.}}">{{.}}</option>
-    {{/settings.value}}
-</select>
+<div>
+    <input type="text" name="{{settings.param_name}}" class="wpb_vc_param_value" style="display: none">
+    <select class="chosen" id="{{settings.param_name}}" multiple>
+        {{#settings.value}}
+            <option value="{{.}}">{{.}}</option>
+        {{/settings.value}}
+    </select>
+</div>
+
 
 <script>
     window.$ = window.jQuery
 
     $(function () {
-        $('.chosen#{{settings.param_name}}').chosen()
+        $('.chosen#{{settings.param_name}}').chosen().change(function () {
+            const value = $(this).val().join(',')
+            $('input[name={{settings.param_name}}]').attr('value', value)
+        })
+
     })
 </script>
 
 <style>
     .chosen-choices {
         padding: 5px !important;
+        border-color: #ddd !important;
     }
 
     .chosen-choices input {
