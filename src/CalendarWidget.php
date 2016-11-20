@@ -48,7 +48,7 @@ class CalendarWidget extends \WP_Widget
                 'year'      => $month->format('Y'),
                 'month'     => $month->format('m'),
                 'localised' => date_i18n('F', $month->getTimestamp()),
-                'days'      => range(1, cal_days_in_month(CAL_GREGORIAN, $month->format('m'), $month->format('Y')))
+                'days'      => array_chunk(range(1, cal_days_in_month(CAL_GREGORIAN, $month->format('m'), $month->format('Y'))), 7)
             ]);
         }
 
@@ -74,8 +74,7 @@ class CalendarWidget extends \WP_Widget
         $monthRangeArray = $this->monthRangeToArray($monthRange);
 
         $assigns = [
-            'months'  => $monthRangeArray,
-            'current' => ''
+            'months' => $monthRangeArray
         ];
 
         $this->view->echo('calendar', $assigns);

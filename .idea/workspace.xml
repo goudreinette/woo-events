@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38fb2394-6d15-44eb-9044-3dcf7ad245fe" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalendarWidget.php" afterPath="$PROJECT_DIR$/src/CalendarWidget.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/calendar.mustache" afterPath="$PROJECT_DIR$/templates/calendar.mustache" />
@@ -26,25 +25,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CalendarWidget.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CalendarWidget.php">
+      <file leaf-file-name="calendar.mustache" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/calendar.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1550">
-              <caret line="86" column="44" lean-forward="false" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
-              <folding>
-                <element signature="e#28#48#0#PHP" expanded="true" />
-                <marker date="1479661301741" expanded="true" signature="4718:4816" ph="SELECT 1 as wp_posts" />
-                <marker date="1479661301741" expanded="true" signature="9952:10083" ph="..." />
-                <marker date="1479661301741" expanded="true" signature="10076:10083" ph="..." />
-                <marker date="1479661301741" expanded="true" signature="10611:10618" ph="..." />
-                <marker date="1479661301741" expanded="true" signature="12483:12490" ph="..." />
-                <marker date="1479661301741" expanded="true" signature="12586:13022" ph="SELECT DISTI... wp_postmeta" />
-                <marker date="1479661301741" expanded="true" signature="13062:13779" ph="SELECT DISTI... wp_postmeta" />
-                <marker date="1479661301741" expanded="true" signature="13307:13556" ph="SELECT tr.ob... wp_prefixterm_relationships" />
-                <marker date="1479661301741" expanded="true" signature="14418:14893" ph="SELECT wp_po... wp_postmeta" />
-                <marker date="1479661301741" expanded="true" signature="14978:15734" ph="SELECT wp_po... wp_postmeta" />
-                <marker date="1479661301741" expanded="true" signature="15262:15511" ph="SELECT tr.ob... wp_prefixterm_relationships" />
-              </folding>
+            <state relative-caret-position="708">
+              <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,6 +50,7 @@
       <find>css/widget</find>
       <find>CCW_PLUGIN_URL</find>
       <find>wp_en</find>
+      <find>border</find>
     </findStrings>
     <replaceStrings>
       <replace>styles/widget</replace>
@@ -107,8 +94,8 @@
         <option value="$PROJECT_DIR$/src/View.php" />
         <option value="$PROJECT_DIR$/woo-events.php" />
         <option value="$PROJECT_DIR$/templates/calendar_admin.mustache" />
-        <option value="$PROJECT_DIR$/templates/calendar.mustache" />
         <option value="$PROJECT_DIR$/src/CalendarWidget.php" />
+        <option value="$PROJECT_DIR$/templates/calendar.mustache" />
       </list>
     </option>
   </component>
@@ -131,7 +118,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="42" />
-    <option name="width" value="3072" />
+    <option name="width" value="3062" />
     <option name="height" value="3414" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -157,8 +144,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -215,7 +203,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -532,7 +519,8 @@
       <workItem from="1479647231850" duration="4000" />
       <workItem from="1479647280581" duration="7303000" />
       <workItem from="1479655949615" duration="38000" />
-      <workItem from="1479656003003" duration="5301000" />
+      <workItem from="1479656003003" duration="5313000" />
+      <workItem from="1479667367988" duration="2646000" />
     </task>
     <task id="LOCAL-00001" summary="VC improvements">
       <created>1479393956839</created>
@@ -583,14 +571,21 @@
       <option name="project" value="LOCAL" />
       <updated>1479654426402</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Calendar frontend work">
+      <created>1479661312661</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1479661312661</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55879000" />
+    <option name="totallyTimeSpent" value="58537000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="42" width="3072" height="3414" extended-state="4" />
+    <frame x="0" y="42" width="3062" height="3414" extended-state="4" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -600,12 +595,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919067" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919067" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1907552" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19072501" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -620,6 +614,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +641,8 @@
     <MESSAGE value="More refactoring" />
     <MESSAGE value="Calendar admin finished" />
     <MESSAGE value="Calendar admin fully finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calendar admin fully finished" />
+    <MESSAGE value="Calendar frontend work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Calendar frontend work" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>$PROJECT_DIR$/../../wordpress</wordpressPath>
@@ -1880,18 +1876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="3" column="103" lean-forward="false" selection-start-line="3" selection-start-column="103" selection-end-line="3" selection-end-column="103" />
-          <folding>
-            <marker date="1479654356610" expanded="true" signature="4:880" ph="..." />
-            <marker date="1479654356610" expanded="true" signature="12:178" ph="..." />
-            <marker date="1479654356610" expanded="true" signature="186:358" ph="..." />
-            <marker date="1479654356610" expanded="false" signature="336:347" ph="..." />
-            <marker date="1479654356610" expanded="true" signature="366:550" ph="..." />
-            <marker date="1479654356610" expanded="false" signature="528:539" ph="..." />
-            <marker date="1479654356610" expanded="true" signature="558:873" ph="..." />
-            <marker date="1479654356610" expanded="false" signature="686:697" ph="..." />
-            <marker date="1479654356610" expanded="true" signature="698:864" ph="..." />
-            <marker date="1479654356610" expanded="true" signature="725:845" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1899,57 +1883,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1062">
           <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CalendarWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2065">
+          <caret line="35" column="50" lean-forward="true" selection-start-line="35" selection-start-column="50" selection-end-line="35" selection-end-column="50" />
           <folding>
-            <marker date="1478429138158" expanded="true" signature="64:777" ph="..." />
-            <marker date="1478429138158" expanded="true" signature="74:180" ph="..." />
-            <marker date="1478429138158" expanded="true" signature="190:411" ph="..." />
-            <marker date="1478429138158" expanded="true" signature="421:632" ph="..." />
-            <marker date="1478429138158" expanded="true" signature="642:770" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="32:68" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="109:19423" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="223:401" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="309:393" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="432:675" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="486:506" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="535:569" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="598:606" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="636:667" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="743:1092" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="1144:1613" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="1215:1581" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="1239:1570" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="1249:1569" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="1732:2498" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="1739:2084" ph="//..." />
+            <marker date="1479668342651" expanded="true" signature="2097:2168" ph=" The range of months that the calendar will cover. ..." />
+            <marker date="1479668342651" expanded="true" signature="2364:2414" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="2548:2876" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="2583:2868" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="2593:2867" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="2634:2853" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="2655:2842" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="2913:4099" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="3176:4035" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="4155:4223" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="4386:8348" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="4664:4990" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="4704:4802" ph="SELECT 1 as wp_posts" />
+            <marker date="1479668342651" expanded="true" signature="4834:4980" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="5357:7535" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="5502:5722" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="5594:5708" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="5763:5929" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="5800:5915" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="5970:6190" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="6062:6176" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="6231:6469" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="6329:6455" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="6507:6555" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="6591:6639" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="6949:7236" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="7244:7525" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="7592:8041" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="8172:8251" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="8259:8340" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="8476:19420" ph="{...}" />
+            <marker date="1479668342651" expanded="true" signature="8781:8896" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="8919:9243" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="9266:9486" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="9494:9633" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="9938:10069" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="10062:10069" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="10152:10241" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="10278:10535" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="10597:10604" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="10634:11357" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="10748:10840" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="11365:11470" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="11569:12294" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="11685:11776" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="12302:12407" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="12469:12476" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="12551:13019" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="12572:13008" ph="SELECT DISTI... wp_postmeta" />
+            <marker date="1479668342651" expanded="true" signature="13027:13776" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="13048:13765" ph="SELECT DISTI... wp_postmeta" />
+            <marker date="1479668342651" expanded="true" signature="13293:13542" ph="SELECT tr.ob... wp_prefixterm_relationships" />
+            <marker date="1479668342651" expanded="true" signature="13811:13852" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="14064:14191" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="14122:14181" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="14199:14239" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="14353:14904" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="14403:14893" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="14404:14879" ph="SELECT wp_po... wp_postmeta" />
+            <marker date="1479668342651" expanded="true" signature="14912:15745" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="14963:15734" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="14964:15720" ph="SELECT wp_po... wp_postmeta" />
+            <marker date="1479668342651" expanded="true" signature="15248:15497" ph="SELECT tr.ob... wp_prefixterm_relationships" />
+            <marker date="1479668342651" expanded="true" signature="15879:17596" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="15944:17586" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="16122:16360" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="16368:16781" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="16414:16729" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="17968:19060" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="19437:19517" ph="..." />
+            <marker date="1479668342651" expanded="true" signature="19466:19516" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/calendar.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="38" lean-forward="true" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
-          <folding>
-            <marker date="1479661282754" expanded="true" signature="39:383" ph="..." />
-            <marker date="1479661282754" expanded="true" signature="54:375" ph="..." />
-            <marker date="1479661282754" expanded="true" signature="127:360" ph="..." />
-            <marker date="1479661282754" expanded="true" signature="145:285" ph="..." />
-            <marker date="1479661282754" expanded="true" signature="323:345" ph="..." />
-            <marker date="1479661282754" expanded="true" signature="392:805" ph="..." />
-            <marker date="1479661282754" expanded="true" signature="413:491" ph="{...}" />
-            <marker date="1479661282754" expanded="true" signature="516:669" ph="{...}" />
-            <marker date="1479661282754" expanded="true" signature="701:734" ph="{...}" />
-            <marker date="1479661282754" expanded="true" signature="747:797" ph="{...}" />
-            <marker date="1479661282754" expanded="true" signature="837:1145" ph="..." />
-            <marker date="1479661282754" expanded="true" signature="880:1134" ph="{...}" />
-            <marker date="1479661282754" expanded="true" signature="925:1071" ph="{&quot;theme&quot;: &quot;tooltipster-shadow&quot;...}" />
-            <marker date="1479661282754" expanded="true" signature="1116:1128" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CalendarWidget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1550">
-          <caret line="86" column="44" lean-forward="false" selection-start-line="86" selection-start-column="44" selection-end-line="86" selection-end-column="44" />
-          <folding>
-            <element signature="e#28#48#0#PHP" expanded="true" />
-            <marker date="1479661301741" expanded="true" signature="4718:4816" ph="SELECT 1 as wp_posts" />
-            <marker date="1479661301741" expanded="true" signature="9952:10083" ph="..." />
-            <marker date="1479661301741" expanded="true" signature="10076:10083" ph="..." />
-            <marker date="1479661301741" expanded="true" signature="10611:10618" ph="..." />
-            <marker date="1479661301741" expanded="true" signature="12483:12490" ph="..." />
-            <marker date="1479661301741" expanded="true" signature="12586:13022" ph="SELECT DISTI... wp_postmeta" />
-            <marker date="1479661301741" expanded="true" signature="13062:13779" ph="SELECT DISTI... wp_postmeta" />
-            <marker date="1479661301741" expanded="true" signature="13307:13556" ph="SELECT tr.ob... wp_prefixterm_relationships" />
-            <marker date="1479661301741" expanded="true" signature="14418:14893" ph="SELECT wp_po... wp_postmeta" />
-            <marker date="1479661301741" expanded="true" signature="14978:15734" ph="SELECT wp_po... wp_postmeta" />
-            <marker date="1479661301741" expanded="true" signature="15262:15511" ph="SELECT tr.ob... wp_prefixterm_relationships" />
-          </folding>
+        <state relative-caret-position="708">
+          <caret line="60" column="18" lean-forward="true" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
