@@ -1,0 +1,20 @@
+<div id="calendar-wrap">
+    {{args.before_widget}}
+
+    {{{output}}}
+
+    {{args.after_widget}}
+</div>
+
+<script language="javascript">
+    window.$ = jQuery
+
+    $(function () {
+        $(".tooltip_interact").tooltipster({
+            theme: "tooltipster-shadow",
+            animation: "grow",
+            contentAsHTML: true,
+            interactive: true
+        });
+    });
+</script>

@@ -1,0 +1,559 @@
+.spb_toggle_content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.widget_calendar #calendar_wrap {
+
+    background-clip: padding-box;
+
+    background-color: #fff;
+
+    border: 1px solid #e4e4e4;
+
+    border-radius: 2px;
+
+    overflow: hidden;
+
+}
+
+#calendar_wrap caption {
+
+    border-bottom: 1px solid #222;
+
+    padding: 7px 0;
+
+}
+
+.widget_calendar table {
+
+    border-collapse: collapse;
+
+    display: table;
+
+    margin-bottom: -2px;
+
+    position: relative;
+
+    table-layout: fixed;
+
+    width: 100%;
+
+}
+
+.widget_calendar th {
+
+    -moz-border-bottom-colors: none;
+
+    -moz-border-left-colors: none;
+
+    -moz-border-right-colors: none;
+
+    -moz-border-top-colors: none;
+
+    border-color: -moz-use-text-color #e4e4e4;
+
+    border-image: none;
+
+    border-style: none solid;
+
+    border-width: 0 1px;
+
+    height: 35px;
+
+    padding-right: 0 !important;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    width: 26px;
+
+}
+
+.widget_calendar th:first-child {
+
+    border-left: 0 none;
+
+}
+
+.widget_calendar th:last-child {
+
+    border-right: 0 none;
+
+}
+
+.widget_calendar tbody tr {
+
+    height: 35px;
+
+}
+
+.widget_calendar tbody tr > td {
+
+    border: 1px solid #e4e4e4;
+
+    color: #444;
+
+    padding: 0;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+}
+
+.widget_calendar tbody tr > td:first-child {
+
+    border-left: 0 none;
+
+}
+
+.widget_calendar tbody tr > td:last-child {
+
+    border-right: 0 none;
+
+}
+
+.widget_calendar tbody tr > td a {
+
+    display: block;
+
+    padding: 6px 0;
+
+}
+
+.sidebar .widget_calendar tbody tr > td a:hover {
+
+    text-decoration: none;
+
+}
+
+.widget_calendar tbody tr > td.pad {
+
+    -moz-border-bottom-colors: none;
+
+    -moz-border-left-colors: none;
+
+    -moz-border-right-colors: none;
+
+    -moz-border-top-colors: none;
+
+    background: transparent url("/wp-content/themes/cardinal/images/scanlines_dark.png") repeat scroll 0 0;
+
+    border-color: #e4e4e4 -moz-use-text-color -moz-use-text-color;
+
+    border-image: none;
+
+    border-style: solid none none;
+
+    border-width: 1px 0 0;
+
+}
+
+.widget_calendar tfoot {
+
+    display: block;
+
+    position: absolute;
+
+    top: 2px;
+
+    width: 100%;
+
+}
+
+.widget_calendar tfoot tr {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+.widget_calendar tfoot td {
+
+    border-color: transparent;
+
+    float: left;
+
+    padding: 5px 0;
+
+}
+
+.widget_calendar tfoot td#prev {
+
+    padding-left: 10px;
+
+    text-align: left;
+
+    width: 40px;
+
+}
+
+.widget_calendar tfoot td#next {
+
+    float: right;
+
+    padding-right: 10px;
+
+    text-align: right;
+
+    width: 40px;
+
+}
+
+.sidebar .widget_calendar tfoot a {
+
+    white-space: nowrap;
+
+}
+
+.widget_calendar tfoot td a:hover {
+
+    text-decoration: none;
+
+}
+
+.widget_ccw_widget #calendar_wrap {
+
+    background-clip: padding-box;
+
+    background-color: #fff;
+
+    border: 1px solid #e4e4e4;
+
+    border-radius: 2px;
+
+    overflow: hidden;
+
+}
+
+.widget_ccw_widget table {
+
+    border-collapse: collapse;
+
+    display: table;
+
+    margin-bottom: -2px;
+
+    position: relative;
+
+    table-layout: fixed;
+
+    width: 100%;
+
+}
+
+.widget_ccw_widget th {
+
+    -moz-border-bottom-colors: none;
+
+    -moz-border-left-colors: none;
+
+    -moz-border-right-colors: none;
+
+    -moz-border-top-colors: none;
+
+    border-color: -moz-use-text-color #e4e4e4;
+
+    border-image: none;
+
+    border-style: none solid;
+
+    border-width: 0 1px;
+
+    height: 35px;
+
+    padding-right: 0 !important;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    width: 26px;
+
+}
+
+.widget_ccw_widget th:first-child {
+
+    border-left: 0 none;
+
+}
+
+.widget_ccw_widget th:last-child {
+
+    border-right: 0 none;
+
+}
+
+.widget_ccw_widget tbody tr {
+
+    height: 35px;
+
+}
+
+.widget_ccw_widget tbody tr > td {
+
+    border: 1px solid #e4e4e4;
+
+    color: #444;
+
+    padding: 0;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+}
+
+.widget_ccw_widget tbody tr > td:first-child {
+
+    border-left: 0 none;
+
+}
+
+.widget_ccw_widget tbody tr > td:last-child {
+
+    border-right: 0 none;
+
+}
+
+.widget_ccw_widget tbody tr > td a {
+
+    display: block;
+
+    padding: 6px 0;
+
+}
+
+.sidebar .widget_ccw_widget tbody tr > td a:hover {
+
+    text-decoration: none;
+
+}
+
+.widget_ccw_widget tbody tr > td.pad {
+
+    -moz-border-bottom-colors: none;
+
+    -moz-border-left-colors: none;
+
+    -moz-border-right-colors: none;
+
+    -moz-border-top-colors: none;
+
+    background: transparent url("/wp-content/themes/cardinal/images/scanlines_dark.png") repeat scroll 0 0;
+
+    border-color: #e4e4e4 -moz-use-text-color -moz-use-text-color;
+
+    border-image: none;
+
+    border-style: solid none none;
+
+    border-width: 1px 0 0;
+
+}
+
+.widget_ccw_widget tfoot {
+
+    display: block;
+
+    position: absolute;
+
+    top: 2px;
+
+    width: 100%;
+
+}
+
+.widget_ccw_widget tfoot tr {
+
+    display: block;
+
+    width: 100%;
+
+}
+
+.widget_ccw_widget tfoot td {
+
+    border-color: transparent;
+
+    float: left;
+
+    padding: 6px 0 5px;
+
+}
+
+.widget_ccw_widget tfoot td#prev {
+
+    padding-left: 10px;
+
+    text-align: left;
+
+    width: 40px;
+
+}
+
+.widget_ccw_widget tfoot td#next {
+
+    float: right;
+
+    padding-right: 50px;
+
+    text-align: right;
+
+    width: 40px;
+
+}
+
+.sidebar .widget_ccw_widget tfoot a {
+
+    white-space: nowrap;
+
+}
+
+.widget_ccw_widget tfoot td a:hover {
+
+    text-decoration: none;
+
+}
+
+
+
+table#wp-calendar tbody td a {
+
+    background-color: #fff;
+
+    color: #fd3d3d;
+
+    font-weight: bold;
+
+}
+
+table#wp-calendar tbody td a:hover {
+
+    background-color: #d5cb29;
+
+    color: #fff;
+
+}
+
+table#wp-calendar tbody td#today a, table#wp-calendar tbody td#today {
+
+    background-color: #fd3d3d;
+
+    color: #fff;
+
+}
+
+table#wp-calendar caption {
+
+    color: #d1392c;
+
+    font-weight: bold !important;
+
+    text-align: center;
+
+}
+
+section#calendar-2.widget {
+
+    background-color: #fff !important;
+
+    border: 0 solid #eeeeee !important;
+
+    border-radius: 0 !important;
+
+    opacity: 0.96;
+
+    padding: 20px 22px;
+
+}
+
+.sidebar-widget-wrap {
+
+    background-color: transparent !important;
+
+}
+
+table#wp-calendar tfoot {
+
+    background: transparent none repeat scroll 0 0;
+
+    border-radius: 0 !important;
+
+    margin-top: -3px;
+
+}
+
+section.widget_ccw_widget {
+
+    background-color: #fff !important;
+
+    border: 0 solid #eeeeee !important;
+
+    border-radius: 0 !important;
+
+    margin-bottom: 20px;
+
+    opacity: 0.96;
+
+    padding: 15px 22px 20px !important;
+
+}
+
+
+
+.widget_ccw_widget tbody tr > td.pad {
+
+    -moz-border-bottom-colors: none;
+
+    -moz-border-left-colors: none;
+
+    -moz-border-right-colors: none;
+
+    -moz-border-top-colors: none;
+
+    background:url('images/scanlines_dark.png');
+
+    border-color: #e4e4e4 -moz-use-text-color -moz-use-text-color;
+
+    border-image: none;
+
+    border-style: solid none none;
+
+    border-width: 1px 0 0;
+
+}
+
+
+
+section.widget_ccw_widget {
+
+    background-color: #fff !important;
+
+    border: 0 solid #eeeeee !important;
+
+    border-radius: 0 !important;
+
+    margin-bottom: 20px;
+
+    opacity: 0.96;
+
+    padding: 15px 22px 20px !important;
+
+}
+
+.hide_time {
+    display: none;
+}
+
+.ccw_month {
+    display: none;
+}
+
+.ccw_month.current {
+    display: none;
+}

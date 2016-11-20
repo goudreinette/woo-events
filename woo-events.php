@@ -12,6 +12,7 @@ License: A "Slug" license name e.g. GPL2
 
 
 require "vendor/autoload.php";
+require "src/ccw_class.php";
 
 
 /**
@@ -24,6 +25,8 @@ $mustache = new \Mustache_Engine([
 new Admin($mustache);
 new Display($mustache);
 new Shortcode($mustache);
+
+global $mustache;
 
 /**
  * Update expired events

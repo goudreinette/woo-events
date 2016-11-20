@@ -28,6 +28,9 @@ class Meta
         }
     }
 
+    /**
+     * @deprecated
+     */
     static function updateExpired()
     {
         $products = self::getEvents();

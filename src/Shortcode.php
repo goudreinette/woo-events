@@ -21,12 +21,14 @@ class Shortcode
             'title_color'          => '#000',
             'image_height'         => 150,
             'subtitle_color'       => '#666',
-            'categories'           => ''
+            'categories'           => '',
+            'expired'              => 'Show'
         ], $options);
 
         $events     = Meta::getEvents();
         $complete   = $this->sortEvents($this->prepareEvents($events), $options['order']);
         $complete   = array_values($this->selectEventsByCategories(explode(',', $options['categories']), $complete));
+        $complete   = array_values($this->filterExpiredEvents($options['expired'], $complete));
         $categories = array_unique(Utils::pluck($complete, 'product_cat'));
 
         $assigns = [
@@ -68,6 +70,27 @@ class Shortcode
         });
 
         return $events;
+    }
+
+    function filterExpiredEvents($filter, $events)
+    {
+        return array_filter($events, function ($event) use ($filter) {
+            $isExpired = $this->isExpired($event);
+
+            switch ($filter) {
+                case 'Show':
+                    return true;
+                case 'Only':
+                    return $isExpired;
+                case 'Hide':
+                    return !$isExpired;
+            }
+        });
+    }
+
+    function isExpired($event)
+    {
+        return time() > strtotime($event['end-date']);
     }
 
     function selectEventsByCategories($categories, $events)
