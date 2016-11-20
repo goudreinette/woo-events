@@ -28,25 +28,54 @@ class CalendarWidget extends \WP_Widget
             ->enqueueScript('widget/jquery.tooltipster.min');
     }
 
+    public function createMonthRange($previousMonths, $nextMonths)
+    {
+        $nextMonths    = $nextMonths + 1;
+        $rangeStart    = new \DateTime("now -$previousMonths months");
+        $rangeEnd      = new \DateTime("now +$nextMonths months");
+        $monthInterval = new \DateInterval('P1M');
+        $range         = new \DatePeriod($rangeStart, $monthInterval, $rangeEnd);
+
+        return $range;
+    }
+
+    public function monthRangeToArray($monthRange)
+    {
+        $result = [];
+
+        foreach ($monthRange as $month) {
+            array_push($result, [
+                'year'      => $month->format('Y'),
+                'month'     => $month->format('m'),
+                'localised' => date_i18n('F', $month->getTimestamp()),
+                'days'      => range(1, cal_days_in_month(CAL_GREGORIAN, $month->format('m'), $month->format('Y')))
+            ]);
+        }
+
+        return $result;
+    }
+
     // Creating widget front-end
     // This is where the action happens
     public function widget($args, $instance)
     {
-        $title = apply_filters('widget_title', $instance['title']);
+//        $title = apply_filters('widget_title', $instance['title']);
+//
+//        // before and after widget arguments are defined by themes
+//        if (!empty($title))
+//            echo $args['before_title'] . $title . $args['after_title'];
+//
+////        $output = $this->cww_get_calendar(true, false, $nextmonths, $previousmonths, $cats);
 
-        $nextmonths     = $instance['nextmonths'];
-        $previousmonths = $instance['previousmonths'];
-        $cats           = $instance['cats'];
-
-        // before and after widget arguments are defined by themes
-        if (!empty($title))
-            echo $args['before_title'] . $title . $args['after_title'];
-
-        $output = $this->cww_get_calendar(true, false, $nextmonths, $previousmonths, $cats);
+        /**
+         * The range of months that the calendar will cover.
+         */
+        $monthRange      = $this->createMonthRange($instance['previousmonths'], $instance['nextmonths']);
+        $monthRangeArray = $this->monthRangeToArray($monthRange);
 
         $assigns = [
-            'args'   => $args,
-            'output' => $output
+            'months'  => $monthRangeArray,
+            'current' => ''
         ];
 
         $this->view->echo('calendar', $assigns);
@@ -64,7 +93,6 @@ class CalendarWidget extends \WP_Widget
         }, (array)$all));
     }
 
-    // Widget Backend
     public function form($instance)
     {
         $title          = $instance['title'] ?: $this->title;
@@ -90,7 +118,6 @@ class CalendarWidget extends \WP_Widget
         $this->view->echo('calendar_admin', $assigns);
     }
 
-    // Updating widget replacing old instances with new
     public function update($newInstance, $oldInstance)
     {
         return array_merge($newInstance, $oldInstance);
@@ -181,7 +208,7 @@ class CalendarWidget extends \WP_Widget
 
             } else {
 
-                $calendar_output .= '<div id="ccw_' . $current_month . '_' . $current_year . '" class="ccw_month" style="display:none;">' . $this->cww_get_month_html($m, $current_month, $current_year, $wp_locale, $posts, $show_next, $show_prev, $cats) . '</div>';
+                $calendar_ouestput .= '<div id="ccw_' . $current_month . '_' . $current_year . '" class="ccw_month" style="display:none;">' . $this->cww_get_month_html($m, $current_month, $current_year, $wp_locale, $posts, $show_next, $show_prev, $cats) . '</div>';
 
             }
         }

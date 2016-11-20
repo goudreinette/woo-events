@@ -1,10 +1,43 @@
-<div id="calendar-wrap">
-    {{args.before_widget}}
+<div id="calendar-wrap" data-current="">
+    {{#months}}
+        <div class="month" data-month="{{month}}" data-year="{{year}}">
+            <nav>
+                <button>Previous</button>
+                <div>{{localised}}</div>
+                <button>Next</button>
+            </nav>
 
-    {{{output}}}
+            <table id="wp-calendar">
 
-    {{args.after_widget}}
+            </table>
+        </div>
+    {{/months}}
 </div>
+
+<style>
+    #calendar-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        height: 500px;
+    }
+
+    #calendar-wrap nav {
+        height: 50px;
+        background-color: #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #calendar-wrap nav button {
+        background: none;
+    }
+
+    .month {
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
 <script language="javascript">
     window.$ = jQuery
@@ -16,5 +49,11 @@
             contentAsHTML: true,
             interactive: true
         });
+
+        $('')
+
+        function update() {
+
+        }
     });
 </script>
