@@ -14,9 +14,9 @@
     <p>
         <label for="{{categories_id}}">Categories:</label> <br/>
         <select name="{{categories_name}}[]" multiple style="width:100%;">
-            {{categories}}
-            <option value="" selected>
-            <option value="">
+            {{#categories}}
+                <option value="{{id}}" {{#selected}}selected{{/selected}}>{{name}}</option>
+            {{/categories}}
         </select>
     </p>
 </div>

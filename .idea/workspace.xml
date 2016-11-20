@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38fb2394-6d15-44eb-9044-3dcf7ad245fe" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/event-list.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin.php" afterPath="$PROJECT_DIR$/src/Admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalendarWidget.php" afterPath="$PROJECT_DIR$/src/CalendarWidget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display.php" afterPath="$PROJECT_DIR$/src/Display.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model.php" afterPath="$PROJECT_DIR$/src/Model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shortcode.php" afterPath="$PROJECT_DIR$/src/Shortcode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View.php" afterPath="$PROJECT_DIR$/src/View.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/calendar_admin.mustache" afterPath="$PROJECT_DIR$/templates/calendar_admin.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woo-events.php" afterPath="$PROJECT_DIR$/woo-events.php" />
     </list>
@@ -35,21 +29,21 @@
       <file leaf-file-name="CalendarWidget.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CalendarWidget.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1062">
-              <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state relative-caret-position="660">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding>
                 <element signature="e#28#48#0#PHP" expanded="true" />
-                <marker date="1479653270764" expanded="true" signature="3730:3828" ph="SELECT 1 as wp_posts" />
-                <marker date="1479653270764" expanded="true" signature="8962:9093" ph="..." />
-                <marker date="1479653270764" expanded="true" signature="9086:9093" ph="..." />
-                <marker date="1479653270764" expanded="true" signature="9621:9628" ph="..." />
-                <marker date="1479653270764" expanded="true" signature="11493:11500" ph="..." />
-                <marker date="1479653270764" expanded="true" signature="11596:12032" ph="SELECT DISTI... wp_postmeta" />
-                <marker date="1479653270764" expanded="true" signature="12072:12789" ph="SELECT DISTI... wp_postmeta" />
-                <marker date="1479653270764" expanded="true" signature="12317:12566" ph="SELECT tr.ob... wp_prefixterm_relationships" />
-                <marker date="1479653270764" expanded="true" signature="13428:13903" ph="SELECT wp_po... wp_postmeta" />
-                <marker date="1479653270764" expanded="true" signature="13988:14744" ph="SELECT wp_po... wp_postmeta" />
-                <marker date="1479653270764" expanded="true" signature="14272:14521" ph="SELECT tr.ob... wp_prefixterm_relationships" />
+                <marker date="1479653881967" expanded="true" signature="3744:3842" ph="SELECT 1 as wp_posts" />
+                <marker date="1479653881967" expanded="true" signature="8976:9107" ph="..." />
+                <marker date="1479653881967" expanded="true" signature="9100:9107" ph="..." />
+                <marker date="1479653881967" expanded="true" signature="9635:9642" ph="..." />
+                <marker date="1479653881967" expanded="true" signature="11507:11514" ph="..." />
+                <marker date="1479653881967" expanded="true" signature="11610:12046" ph="SELECT DISTI... wp_postmeta" />
+                <marker date="1479653881967" expanded="true" signature="12086:12803" ph="SELECT DISTI... wp_postmeta" />
+                <marker date="1479653881967" expanded="true" signature="12331:12580" ph="SELECT tr.ob... wp_prefixterm_relationships" />
+                <marker date="1479653881967" expanded="true" signature="13442:13917" ph="SELECT wp_po... wp_postmeta" />
+                <marker date="1479653881967" expanded="true" signature="14002:14758" ph="SELECT wp_po... wp_postmeta" />
+                <marker date="1479653881967" expanded="true" signature="14286:14535" ph="SELECT tr.ob... wp_prefixterm_relationships" />
               </folding>
             </state>
           </provider>
@@ -111,10 +105,10 @@
         <option value="$PROJECT_DIR$/src/Display.php" />
         <option value="$PROJECT_DIR$/src/Shortcode.php" />
         <option value="$PROJECT_DIR$/src/Model.php" />
-        <option value="$PROJECT_DIR$/templates/calendar_admin.mustache" />
-        <option value="$PROJECT_DIR$/woo-events.php" />
         <option value="$PROJECT_DIR$/src/View.php" />
+        <option value="$PROJECT_DIR$/woo-events.php" />
         <option value="$PROJECT_DIR$/src/CalendarWidget.php" />
+        <option value="$PROJECT_DIR$/templates/calendar_admin.mustache" />
       </list>
     </option>
   </component>
@@ -209,35 +203,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="javascript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -560,7 +526,7 @@
       <workItem from="1479637909450" duration="18000" />
       <workItem from="1479637948160" duration="1727000" />
       <workItem from="1479647231850" duration="4000" />
-      <workItem from="1479647280581" duration="6003000" />
+      <workItem from="1479647280581" duration="6904000" />
     </task>
     <task id="LOCAL-00001" summary="VC improvements">
       <created>1479393956839</created>
@@ -590,11 +556,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479648529095</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="More refactoring">
+      <created>1479653304947</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1479653304947</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49240000" />
+    <option name="totallyTimeSpent" value="50141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="42" width="3042" height="3414" extended-state="4" />
@@ -650,7 +623,8 @@
     <MESSAGE value="Chosen input" />
     <MESSAGE value="Category selection works" />
     <MESSAGE value="Refactor in progress" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor in progress" />
+    <MESSAGE value="More refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="More refactoring" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>$PROJECT_DIR$/../../wordpress</wordpressPath>
@@ -660,14 +634,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/CalendarWidget.php</url>
-          <line>36</line>
-          <option name="timeStamp" value="91" />
+          <line>69</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/CalendarWidget.php</url>
+          <line>89</line>
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="92" />
+      <option name="time" value="95" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -766,13 +745,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -1852,26 +1824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/calendar_admin.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <marker date="1479652704967" expanded="true" signature="4:764" ph="..." />
-            <marker date="1479652704967" expanded="true" signature="12:172" ph="..." />
-            <marker date="1479652704967" expanded="true" signature="180:323" ph="..." />
-            <marker date="1479652704967" expanded="false" signature="301:312" ph="..." />
-            <marker date="1479652704967" expanded="true" signature="331:486" ph="..." />
-            <marker date="1479652704967" expanded="false" signature="464:475" ph="..." />
-            <marker date="1479652704967" expanded="true" signature="494:757" ph="..." />
-            <marker date="1479652704967" expanded="true" signature="622:633" ph="..." />
-            <marker date="1479652704967" expanded="true" signature="634:748" ph="..." />
-            <marker date="1479652704967" expanded="true" signature="700:713" ph="..." />
-            <marker date="1479652704967" expanded="true" signature="730:739" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2360">
@@ -1978,17 +1930,6 @@
             <marker date="1479653083717" expanded="true" signature="17381:17479" ph="..." />
             <marker date="1479653083717" expanded="true" signature="17600:17627" ph="..." />
             <marker date="1479653083717" expanded="true" signature="17701:17840" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/woo-events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding>
-            <marker date="1479652936387" expanded="true" signature="30:243" ph="..." />
-            <marker date="1479652936387" expanded="true" signature="358:374" ph=" Initialize ..." />
           </folding>
         </state>
       </provider>
@@ -2146,23 +2087,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/woo-events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <marker date="1479653382077" expanded="true" signature="30:243" ph="..." />
+            <marker date="1479653382077" expanded="true" signature="357:373" ph=" Initialize ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/calendar_admin.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="14" column="64" lean-forward="true" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
+          <folding>
+            <marker date="1479654182590" expanded="true" signature="4:816" ph="..." />
+            <marker date="1479654182590" expanded="true" signature="12:172" ph="..." />
+            <marker date="1479654182590" expanded="true" signature="180:323" ph="..." />
+            <marker date="1479654182590" expanded="false" signature="301:312" ph="..." />
+            <marker date="1479654182590" expanded="true" signature="331:486" ph="..." />
+            <marker date="1479654182590" expanded="false" signature="464:475" ph="..." />
+            <marker date="1479654182590" expanded="true" signature="494:809" ph="..." />
+            <marker date="1479654182590" expanded="true" signature="622:633" ph="..." />
+            <marker date="1479654182590" expanded="true" signature="634:800" ph="..." />
+            <marker date="1479654182590" expanded="true" signature="661:781" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/CalendarWidget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+        <state relative-caret-position="660">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding>
             <element signature="e#28#48#0#PHP" expanded="true" />
-            <marker date="1479653270764" expanded="true" signature="3730:3828" ph="SELECT 1 as wp_posts" />
-            <marker date="1479653270764" expanded="true" signature="8962:9093" ph="..." />
-            <marker date="1479653270764" expanded="true" signature="9086:9093" ph="..." />
-            <marker date="1479653270764" expanded="true" signature="9621:9628" ph="..." />
-            <marker date="1479653270764" expanded="true" signature="11493:11500" ph="..." />
-            <marker date="1479653270764" expanded="true" signature="11596:12032" ph="SELECT DISTI... wp_postmeta" />
-            <marker date="1479653270764" expanded="true" signature="12072:12789" ph="SELECT DISTI... wp_postmeta" />
-            <marker date="1479653270764" expanded="true" signature="12317:12566" ph="SELECT tr.ob... wp_prefixterm_relationships" />
-            <marker date="1479653270764" expanded="true" signature="13428:13903" ph="SELECT wp_po... wp_postmeta" />
-            <marker date="1479653270764" expanded="true" signature="13988:14744" ph="SELECT wp_po... wp_postmeta" />
-            <marker date="1479653270764" expanded="true" signature="14272:14521" ph="SELECT tr.ob... wp_prefixterm_relationships" />
+            <marker date="1479653881967" expanded="true" signature="3744:3842" ph="SELECT 1 as wp_posts" />
+            <marker date="1479653881967" expanded="true" signature="8976:9107" ph="..." />
+            <marker date="1479653881967" expanded="true" signature="9100:9107" ph="..." />
+            <marker date="1479653881967" expanded="true" signature="9635:9642" ph="..." />
+            <marker date="1479653881967" expanded="true" signature="11507:11514" ph="..." />
+            <marker date="1479653881967" expanded="true" signature="11610:12046" ph="SELECT DISTI... wp_postmeta" />
+            <marker date="1479653881967" expanded="true" signature="12086:12803" ph="SELECT DISTI... wp_postmeta" />
+            <marker date="1479653881967" expanded="true" signature="12331:12580" ph="SELECT tr.ob... wp_prefixterm_relationships" />
+            <marker date="1479653881967" expanded="true" signature="13442:13917" ph="SELECT wp_po... wp_postmeta" />
+            <marker date="1479653881967" expanded="true" signature="14002:14758" ph="SELECT wp_po... wp_postmeta" />
+            <marker date="1479653881967" expanded="true" signature="14286:14535" ph="SELECT tr.ob... wp_prefixterm_relationships" />
           </folding>
         </state>
       </provider>

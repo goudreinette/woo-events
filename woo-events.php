@@ -14,7 +14,7 @@ License: A "Slug" license name e.g. GPL2
 require "vendor/autoload.php";
 require "src/CalendarWidget.php";
 
-$assetsDir = plugin_dir_path(__FILE__);
+$assetsDir = plugin_dir_url(__FILE__);
 
 /**
  * Initialize

@@ -55,19 +55,19 @@ class CalendarWidget extends \WP_Widget
 
     function mergeCategories($all, $selectedIds)
     {
-        return array_map(function ($category) use ($selectedIds) {
+        return array_values(array_map(function ($category) use ($selectedIds) {
             return [
                 'name'     => $category->cat_name,
                 'id'       => $category->term_id,
                 'selected' => in_array($category->term_id, $selectedIds)
             ];
-        }, (array)$all);
+        }, (array)$all));
     }
 
     // Widget Backend
     public function form($instance)
     {
-        $title          = $instance['title'] ?: self::$title;
+        $title          = $instance['title'] ?: $this->title;
         $nextmonths     = $instance['nextmonths'] ?: 3;
         $previousmonths = $instance['previousmonths'] ?: 3;
         $categories     = $instance['categories'] ?: [];
