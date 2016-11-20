@@ -2,9 +2,9 @@
 
 class Admin
 {
-    function __construct($mustache)
+    function __construct(View $view)
     {
-        $this->view = $mustache;
+        $this->view = $view;
         add_filter('woocommerce_product_data_tabs', [$this, 'registerTab']);
         add_filter('woocommerce_product_data_panels', [$this, 'render']);
         add_action('save_post', [$this, 'handleSave']);
@@ -24,20 +24,20 @@ class Admin
     function render()
     {
         global $post;
-        $meta = Model::getMeta($post->ID) ?: Model::$defaults;
+        $view = Model::getMeta($post->ID) ?: Model::$defaults;
 
         $assigns = [
             'key'          => Model::$key,
-            'checked'      => $meta['enable'] ? 'checked' : '',
-            'startTime'    => $this->formatTime($meta['start-time']),
-            'endTime'      => $this->formatTime($meta['end-time']),
-            'startDate'    => $this->formatDate($meta['start-date']),
-            'endDate'      => $this->formatDate($meta['end-date']),
-            'externalLink' => $meta['external-link'],
+            'checked'      => $view['enable'] ? 'checked' : '',
+            'startTime'    => $this->formatTime($view['start-time']),
+            'endTime'      => $this->formatTime($view['end-time']),
+            'startDate'    => $this->formatDate($view['start-date']),
+            'endDate'      => $this->formatDate($view['end-date']),
+            'externalLink' => $view['external-link'],
         ];
 
-        wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
-        echo $this->view->render('admin', $assigns);
+        $this->view->enqueueStyle('style');
+        $this->view->echo('admin', $assigns);
     }
 
     function formatDate($date = null)

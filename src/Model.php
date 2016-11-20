@@ -28,27 +28,16 @@ class Model
         }
     }
 
-    /**
-     * @deprecated
-     */
-    static function updateExpired()
-    {
-        $products = self::getEvents();
-
-        foreach ($products as $product) {
-            $meta = self::getMeta($product->ID);
-            if (time() > strtotime($meta['end-date'])) {
-                $expiredCategory = get_term_by('name', 'expired', 'product_cat');
-                wp_set_post_terms($product->ID, $expiredCategory->term_id, 'product_cat');
-            }
-        }
-    }
-
     static function updatePublicationDate($postId, $date, $time)
     {
         $post              = get_post($postId, ARRAY_A);
         $post['post_date'] = "$date $time";
         wp_update_post($post);
+    }
+
+    static function getCategories()
+    {
+        return get_categories(['taxonomy' => 'product_cat']);
     }
 
     static function getEvents()

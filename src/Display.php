@@ -2,7 +2,7 @@
 
 class Display
 {
-    function __construct($view)
+    function __construct(View $view)
     {
         $this->view = $view;
         add_action('woocommerce_after_shop_loop', [$this, 'style']);
@@ -13,7 +13,7 @@ class Display
 
     function style()
     {
-        wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
+        $this->view->enqueueStyle('style');
     }
 
     /**
@@ -36,8 +36,7 @@ class Display
         $this->display($product->id);
 
         if ($meta && $meta['external-link']) {
-            wp_enqueue_script('external-link', plugin_dir_url(__DIR__) . '/js/external-link.js');
-            wp_localize_script('external-link', 'external_link', [$meta['external-link']]);
+            $this->view->enqueueScript('external-link', ['external-link' => $meta['external-link']]);
         }
     }
 
@@ -59,7 +58,7 @@ class Display
                 'endDate'   => Utils::formatDate($meta['end-date'], $meta['end-time'])
             ];
 
-            echo $this->m->render($template, $assigns);
+            $this->view->echo($template, $assigns);
         }
     }
 

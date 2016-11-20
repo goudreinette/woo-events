@@ -8,18 +8,36 @@ class View
         $this->templateDirectory   = $assetsDirectory . '/templates/';
         $this->javascriptDirectory = $assetsDirectory . '/javascript/';
         $this->stylesheetDirectory = $assetsDirectory . '/stylesheets/';
-        $this->$mustache           = new \Mustache_Engine([
+        $this->mustache            = new \Mustache_Engine([
             'loader' => new \Mustache_Loader_FilesystemLoader($assetsDirectory . '/templates')
         ]);
     }
 
-    function enqueueStyle($stylesheet)
+    function render($template, $assigns)
     {
-        wp_enqueue_style($stylesheet, $this->stylesheetDirectory . $stylesheet);
+        return $this->mustache->render($template, $assigns);
     }
 
-    function enqueueScript($script)
+    function echo ($template, $assigns)
     {
-        wp_enqueue_script($script, $this->javascriptDirectory . $script);
+        echo $this->render($template, $assigns);
+        return $this;
+    }
+
+    function enqueueStyle($stylesheet)
+    {
+        wp_enqueue_style($stylesheet, $this->stylesheetDirectory . $stylesheet . '.css');
+        return $this;
+    }
+
+    function enqueueScript($script, $assigns = null)
+    {
+        wp_enqueue_script($script, $this->javascriptDirectory . $script . '.js');
+
+        if (isset($assigns)) {
+            wp_localize_script($script, 'assigns', $assigns);
+        }
+
+        return $this;
     }
 }

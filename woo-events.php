@@ -12,20 +12,16 @@ License: A "Slug" license name e.g. GPL2
 
 
 require "vendor/autoload.php";
-require "src/ccw_class.php";
+require "src/CalendarWidget.php";
 
 $assetsDir = plugin_dir_path(__FILE__);
 
 /**
- * Initialize template engine
+ * Initialize
  */
+global $view;
 $view = new View($assetsDir);
 
 new Admin($view);
 new Display($view);
 new Shortcode($view);
-
-/**
- * Update expired events
- */
-Model::updateExpired();

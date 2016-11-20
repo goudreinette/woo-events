@@ -1,44 +1,37 @@
-<?php
+<?php namespace WooEvents;
 
-// Creating the widget
-class CalendarWidget extends WP_Widget
+use WooEvents\Model;
+use WooEvents\View;
+
+class CalendarWidget extends \WP_Widget
 {
-    private $url;
-    private $m;
+    public $title = 'Woo Events Calendar';
+    public $key = 'woo-events-calendar';
 
     function __construct()
     {
-        global $mustache;
-        $this->url = plugin_dir_url(__DIR__) . '/';
-        $this->m   = $mustache;
-
+        global $view;
+        $this->view = $view;
         parent::__construct(
-        // Base ID of your widget
-            'ccw_widget',
-
-            // Widget name will appear in UI
-            'Custom Calendar Widget',
-
-            // Widget descriptiond
-            ['description' => __('Custom Calendar widget', 'wooevents'),]
+            $this->key,
+            $this->title,
+            $this->title
         );
-
     }
 
     public function enqueue()
     {
-        wp_enqueue_style('ccw_tooltipster', $this->url . 'styles/widget/tooltipster.css');
-        wp_enqueue_style('ccw_tooltipster_shadow', $this->url . 'styles/widget/themes/tooltipster-shadow.css');
-        wp_enqueue_style('custom_css', $this->url . 'styles/widget/custom.css');
-        wp_enqueue_script('ccw_js', $this->url . 'js/widget/jquery.tooltipster.min.js', ['jquery']);
+        $this->view
+            ->enqueueStyle('widget/tooltipster')
+            ->enqueueStyle('widget/themes/tooltipster-shadow')
+            ->enqueueStyle('custom')
+            ->enqueueScript('widget/jquery.tooltipster.min');
     }
 
     // Creating widget front-end
     // This is where the action happens
     public function widget($args, $instance)
     {
-
-
         $title = apply_filters('widget_title', $instance['title']);
 
         $nextmonths     = $instance['nextmonths'];
@@ -56,120 +49,51 @@ class CalendarWidget extends WP_Widget
             'output' => $output
         ];
 
-        $this->m->render('calendar', $assigns);
+        $this->view->echo('calendar', $assigns);
+        $this->enqueue();
+    }
+
+    function mergeCategories($all, $selectedIds)
+    {
+        return array_map(function ($category) use ($selectedIds) {
+            return [
+                'name'     => $category->cat_name,
+                'id'       => $category->term_id,
+                'selected' => in_array($category->term_id, $selectedIds)
+            ];
+        }, (array)$all);
     }
 
     // Widget Backend
     public function form($instance)
     {
-        if (isset($instance['title'])) {
-            $title = $instance['title'];
-        } else {
-            $title = __('New title', 'wooevents');
-        }
-
-        if (isset($instance['nextmonths'])) {
-            $nextmonths = $instance['nextmonths'];
-        } else {
-            $nextmonths = __(CCW_MONTHS_DEFAULT, 'wooevents');
-        }
-
-        if (isset($instance['previousmonths'])) {
-            $previousmonths = $instance['previousmonths'];
-        } else {
-            $previousmonths = __(CCW_MONTHS_DEFAULT, 'wooevents');
-        }
-
-        if (is_array($instance['cats'])) {
-            $cats = $instance['cats'];
-        } else {
-            $cats = __([], 'wooevents');
-        }
+        $title          = $instance['title'] ?: self::$title;
+        $nextmonths     = $instance['nextmonths'] ?: 3;
+        $previousmonths = $instance['previousmonths'] ?: 3;
+        $categories     = $instance['categories'] ?: [];
 
         $assigns = [
-            'title' => $this->get_field_id('title')
+            'title_name'           => $this->get_field_name('title'),
+            'title_id'             => $this->get_field_id('title'),
+            'title_value'          => esc_attr($title),
+            'nextmonths_name'      => $this->get_field_name('nextmonths'),
+            'nextmonths_id'        => $this->get_field_id('nextmonths'),
+            'nextmonths_value'     => $nextmonths,
+            'previousmonths_name'  => $this->get_field_name('previousmonths'),
+            'previousmonths_id'    => $this->get_field_id('previousmonths'),
+            'previousmonths_value' => $previousmonths,
+            'categories_name'      => $this->get_field_name('categories'),
+            'categories_id'        => $this->get_field_id('categories'),
+            'categories'           => $this->mergeCategories(Model::getCategories(), $categories)
         ];
 
-
-        ?>
-        <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:', 'wooevents'); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
-                   name="<?php echo $this->get_field_name('title'); ?>" type="text"
-                   value="<?php echo esc_attr($title); ?>"/>
-        </p>
-
-        <p>
-            <label for="<?php echo $this->get_field_id('nextmonths'); ?>"><?php _e('# of Next Months:', 'wooevents'); ?></label><br/>
-            <select name="<?php echo $this->get_field_name('nextmonths', 'wooevents'); ?>" style="width:100%;">
-                <?php
-                for ($i = 1; $i <= 12; $i++) {
-                    if ($i == $nextmonths) {
-                        echo '<option value="' . $i . '" selected="selected">' . $i . '</option>';
-                    } else {
-                        echo '<option value="' . $i . '">' . $i . '</option>';
-                    }
-                }
-                ?>
-            </select>
-        </p>
-
-        <p>
-            <label for="<?php echo $this->get_field_id('previousmonths'); ?>"><?php _e('# of Previous Months:'); ?></label>
-            <br/>
-            <select name="<?php echo $this->get_field_name('previousmonths'); ?>" style="width:100%;">
-                <?php
-                for ($i = 1; $i <= CCW_TOTAL_MONTHS; $i++) {
-                    if ($i == $previousmonths) {
-                        echo '<option value="' . $i . '" selected="selected">' . $i . '</option>';
-                    } else {
-                        echo '<option value="' . $i . '">' . $i . '</option>';
-                    }
-                }
-                ?>
-            </select>
-        </p>
-
-        <p>
-            <label for="<?php echo $this->get_field_id('cats'); ?>"><?php _e('Categories:'); ?></label> <br/>
-            <select name="<?php echo $this->get_field_name('cats'); ?>[]" multiple="multiple" style="width:100%;">
-                <?php if (in_array("all", $cats)) { ?>
-                    <option value="all" selected="selected"><?php echo esc_attr(__('All Categories')); ?></option>
-                <?php } else { ?>
-                    <option value="all"><?php echo esc_attr(__('All Categories')); ?></option>
-                <?php } ?>
-                <?php
-                $categories = get_categories(['hide_empty' => 0, 'taxonomy' => 'product_cat']);
-                foreach ($categories as $category) {
-                    if (in_array($category->term_id, $cats)) {
-                        $option = '<option value="' . $category->term_id . '"  selected="selected">';
-                    } else {
-                        $option = '<option value="' . $category->term_id . '">';
-                    }
-                    $option .= $category->cat_name;
-                    $option .= ' (' . $category->category_count . ')';
-                    $option .= '</option>';
-                    echo $option;
-                }
-                ?>
-            </select>
-        </p>
-        <?php
+        $this->view->echo('calendar_admin', $assigns);
     }
 
     // Updating widget replacing old instances with new
-    public function update($new_instance, $old_instance)
+    public function update($newInstance, $oldInstance)
     {
-        $instance                   = [];
-        $instance['title']          = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
-        $instance['nextmonths']     = (!empty($new_instance['nextmonths'])) ? strip_tags($new_instance['nextmonths']) : '';
-        $instance['previousmonths'] = (!empty($new_instance['previousmonths'])) ? strip_tags($new_instance['previousmonths']) : '';
-        $instance['cats']           = (is_array($new_instance['cats'])) ? $new_instance['cats'] : [];
-        if (in_array("all", $instance['cats'])) {
-            unset($instance['cats']);
-            $instance['cats'] = [0 => 'all'];
-        }
-        return $instance;
+        return array_merge($newInstance, $oldInstance);
     }
 
     public function cww_get_calendar($initial = true, $echo = true, $nextmonths = CCW_MONTHS_DEFAULT, $previousmonths = CCW_MONTHS_DEFAULT, $cats = [0 => 'all'])
@@ -529,13 +453,10 @@ class CalendarWidget extends WP_Widget
         return $calendar_output;
     }
 
-} // Class ccw_widget ends here
-
-// Register and load the widget
-function ccw_load_widget()
-{
-    register_widget('ccw_widget');
 }
 
-add_action('widgets_init', 'ccw_load_widget');
+
+add_action('widgets_init', function () {
+    register_widget('WooEvents\CalendarWidget');
+});
 ?>

@@ -1,0 +1,22 @@
+<div>
+    <p>
+        <label for="{{title_id}}">Title</label>
+        <input class="widefat" id="{{title_id}}" name="{{title_name}}" type="text" value="{{title}}"/>
+    </p>
+    <p>
+        <label for="{{nextmonths_id}}"># of Next Months:</label><br/>
+        <input name="{{nextmonths_name}}" style="width:100%;"/>
+    </p>
+    <p>
+        <label for="{{previousmonths_id}}"># of Previous Months:</label><br/>
+        <input name="{{previousmonths_name}}" style="width:100%;"/>
+    </p>
+    <p>
+        <label for="{{categories_id}}">Categories:</label> <br/>
+        <select name="{{categories_name}}[]" multiple style="width:100%;">
+            {{categories}}
+            <option value="" selected>
+            <option value="">
+        </select>
+    </p>
+</div>
