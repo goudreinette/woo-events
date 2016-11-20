@@ -14,21 +14,18 @@ License: A "Slug" license name e.g. GPL2
 require "vendor/autoload.php";
 require "src/ccw_class.php";
 
+$assetsDir = plugin_dir_path(__FILE__);
 
 /**
  * Initialize template engine
  */
-$mustache = new \Mustache_Engine([
-    'loader' => new \Mustache_Loader_FilesystemLoader(plugin_dir_path(__FILE__) . '/templates')
-]);
+$view = new View($assetsDir);
 
-new Admin($mustache);
-new Display($mustache);
-new Shortcode($mustache);
-
-global $mustache;
+new Admin($view);
+new Display($view);
+new Shortcode($view);
 
 /**
  * Update expired events
  */
-Meta::updateExpired();
+Model::updateExpired();

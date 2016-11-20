@@ -2,10 +2,10 @@
 
 class Shortcode
 {
-    function __construct($mustache)
+    function __construct($view)
     {
-        $this->m = $mustache;
-        add_shortcode(Meta::$key, [$this, 'shortcode']);
+        $this->m = $view;
+        add_shortcode(Model::$key, [$this, 'shortcode']);
         add_action('vc_before_init', [$this, 'vc']);
     }
 
@@ -25,7 +25,7 @@ class Shortcode
             'expired'              => 'Show'
         ], $options);
 
-        $events     = Meta::getEvents();
+        $events     = Model::getEvents();
         $complete   = $this->sortEvents($this->prepareEvents($events), $options['order']);
         $complete   = array_values($this->selectEventsByCategories(explode(',', $options['categories']), $complete));
         $complete   = array_values($this->filterExpiredEvents($options['expired'], $complete));
@@ -45,7 +45,7 @@ class Shortcode
     function prepareEvents($events)
     {
         return array_map(function ($event) {
-            $meta                          = Meta::get($event->ID);
+            $meta                          = Model::getMeta($event->ID);
             $eventArray                    = array_merge((array)$event, $meta);
             $product                       = wc_get_product($eventArray['ID']);
             $eventArray['start-date']      = Utils::formatDate($meta['start-date'], $meta['start-time']);
@@ -111,7 +111,7 @@ class Shortcode
         vc_add_shortcode_param('chosen', [$this, 'chosenParamType']);
         vc_map([
             'name'     => 'WooCommerce Event List',
-            'base'     => Meta::$key,
+            'base'     => Model::$key,
             'class'    => '',
             'category' => 'WooCommerce',
             'params'   => [

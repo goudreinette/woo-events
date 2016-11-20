@@ -1,7 +1,7 @@
 <?php
 
 // Creating the widget
-class ccw_widget extends WP_Widget
+class CalendarWidget extends WP_Widget
 {
     private $url;
     private $m;

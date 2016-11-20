@@ -4,7 +4,7 @@ class Admin
 {
     function __construct($mustache)
     {
-        $this->m = $mustache;
+        $this->view = $mustache;
         add_filter('woocommerce_product_data_tabs', [$this, 'registerTab']);
         add_filter('woocommerce_product_data_panels', [$this, 'render']);
         add_action('save_post', [$this, 'handleSave']);
@@ -12,10 +12,10 @@ class Admin
 
     function registerTab($tabs)
     {
-        $tabs[Meta::$key] = [
-            'label'    => Meta::$name,
+        $tabs[Model::$key] = [
+            'label'    => Model::$name,
             'priority' => 50,
-            'target'   => Meta::$key
+            'target'   => Model::$key
         ];
 
         return $tabs;
@@ -24,10 +24,10 @@ class Admin
     function render()
     {
         global $post;
-        $meta = Meta::get($post->ID) ?: Meta::$defaults;
+        $meta = Model::getMeta($post->ID) ?: Model::$defaults;
 
         $assigns = [
-            'key'          => Meta::$key,
+            'key'          => Model::$key,
             'checked'      => $meta['enable'] ? 'checked' : '',
             'startTime'    => $this->formatTime($meta['start-time']),
             'endTime'      => $this->formatTime($meta['end-time']),
@@ -35,9 +35,9 @@ class Admin
             'endDate'      => $this->formatDate($meta['end-date']),
             'externalLink' => $meta['external-link'],
         ];
-        
+
         wp_enqueue_style('woo-events', plugin_dir_url(__DIR__) . '/styles/style.css');
-        echo $this->m->render('admin', $assigns);
+        echo $this->view->render('admin', $assigns);
     }
 
     function formatDate($date = null)
@@ -55,8 +55,8 @@ class Admin
         // Avoid infinite loop
         remove_action('save_post', [$this, 'handleSave']);
 
-        $key  = Meta::$key;
+        $key  = Model::$key;
         $meta = $_POST[$key];
-        Meta::update($productId, $meta);
+        Model::update($productId, $meta);
     }
 }

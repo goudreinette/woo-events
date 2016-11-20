@@ -1,0 +1,25 @@
+<?php namespace WooEvents;
+
+class View
+{
+    function __construct($assetsDirectory)
+    {
+        $this->assetsDirectory     = $assetsDirectory;
+        $this->templateDirectory   = $assetsDirectory . '/templates/';
+        $this->javascriptDirectory = $assetsDirectory . '/javascript/';
+        $this->stylesheetDirectory = $assetsDirectory . '/stylesheets/';
+        $this->$mustache           = new \Mustache_Engine([
+            'loader' => new \Mustache_Loader_FilesystemLoader($assetsDirectory . '/templates')
+        ]);
+    }
+
+    function enqueueStyle($stylesheet)
+    {
+        wp_enqueue_style($stylesheet, $this->stylesheetDirectory . $stylesheet);
+    }
+
+    function enqueueScript($script)
+    {
+        wp_enqueue_script($script, $this->javascriptDirectory . $script);
+    }
+}

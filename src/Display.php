@@ -2,9 +2,9 @@
 
 class Display
 {
-    function __construct($mustache)
+    function __construct($view)
     {
-        $this->m = $mustache;
+        $this->view = $view;
         add_action('woocommerce_after_shop_loop', [$this, 'style']);
         add_action('woocommerce_before_shop_loop_item_title', [$this, 'shopLoop']);
         add_action('woocommerce_single_product_summary', [$this, 'singleProduct']);
@@ -32,7 +32,7 @@ class Display
     function singleProduct()
     {
         global $product;
-        $meta = Meta::get($product->id);
+        $meta = Model::getMeta($product->id);
         $this->display($product->id);
 
         if ($meta && $meta['external-link']) {
@@ -51,7 +51,7 @@ class Display
 
     function display($product_id, $template = 'display')
     {
-        $meta = Meta::get($product_id);
+        $meta = Model::getMeta($product_id);
 
         if ($meta && $meta['enable']) {
             $assigns = [

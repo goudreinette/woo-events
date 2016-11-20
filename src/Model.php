@@ -1,6 +1,6 @@
 <?php namespace WooEvents;
 
-class Meta
+class Model
 {
     static $key = "woo-events";
     static $name = "WooEvents";
@@ -14,7 +14,7 @@ class Meta
         'externalLink' => '',
     ];
 
-    static function get($productId)
+    static function getMeta($productId)
     {
         return get_post_meta($productId, self::$key, true);
     }
@@ -36,7 +36,7 @@ class Meta
         $products = self::getEvents();
 
         foreach ($products as $product) {
-            $meta = self::get($product->ID);
+            $meta = self::getMeta($product->ID);
             if (time() > strtotime($meta['end-date'])) {
                 $expiredCategory = get_term_by('name', 'expired', 'product_cat');
                 wp_set_post_terms($product->ID, $expiredCategory->term_id, 'product_cat');
