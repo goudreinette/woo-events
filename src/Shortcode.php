@@ -13,9 +13,9 @@ class Shortcode
     {
         $options      = vc_map_get_attributes(Model::$key, $options);
         $events       = Model::getEvents();
-        $sorted       = $this->sortEvents($this->prepareEvents($events), $options['order']);
-        $withCategory = array_values($this->selectEventsByCategories(explode(',', $options['categories']), $sorted));
-        $filtered     = array_values($this->filterExpiredEvents($options['expired'], $withCategory));
+        $sorted       = Utils::sortEvents(Utils::prepareEvents($events), $options['order']);
+        $withCategory = array_values(Utils::selectEventsByCategories(explode(',', $options['categories']), $sorted));
+        $filtered     = array_values(Utils::filterExpiredEvents($options['expired'], $withCategory));
         $categories   = array_unique(Utils::pluck($filtered, 'product_cat'));
 
         $assigns = [
@@ -27,64 +27,6 @@ class Shortcode
         $this->view
             ->echo('eventlist', $assigns)
             ->enqueueStyle('event-list');
-    }
-
-    function prepareEvents($events)
-    {
-        return array_map(function ($event) {
-            $meta                          = Model::getMeta($event->ID);
-            $eventArray                    = array_merge((array)$event, $meta);
-            $product                       = wc_get_product($eventArray['ID']);
-            $eventArray['start-date']      = Utils::formatDate($meta['start-date'], $meta['start-time']);
-            $eventArray['end-date']        = Utils::formatDate($meta['end-date'], $meta['end-time']);
-            $eventArray['price']           = $product->price;
-            $eventArray['image']           = wp_get_attachment_image_src(get_post_thumbnail_id($event->ID))[0];
-            $eventArray['post_excerpt']    = substr($eventArray['post_content'], 0, 140) . "...";
-            $eventArray['product_cat']     = wp_get_post_terms($event->ID, 'product_cat')[0]->name;
-            $eventArray['permalink']       = get_permalink($event->ID);
-            $eventArray['add_to_cart_url'] = $product->add_to_cart_url();
-
-            return $eventArray;
-        }, $events);
-    }
-
-    function sortEvents($events, $order)
-    {
-        $orderModifier = $order == 'Ascending' ? 1 : -1;
-
-        usort($events, function ($a, $b) use ($orderModifier) {
-            return (strtotime($a['start-date']) - strtotime($b['start-date'])) * $orderModifier;
-        });
-
-        return $events;
-    }
-
-    function filterExpiredEvents($filter, $events)
-    {
-        return array_filter($events, function ($event) use ($filter) {
-            $isExpired = $this->isExpired($event);
-
-            switch ($filter) {
-                case 'Show':
-                    return true;
-                case 'Only':
-                    return $isExpired;
-                case 'Hide':
-                    return !$isExpired;
-            }
-        });
-    }
-
-    function isExpired($event)
-    {
-        return time() > strtotime($event['end-date']);
-    }
-
-    function selectEventsByCategories($categories, $events)
-    {
-        return array_filter($events, function ($event) use ($categories) {
-            return in_array($event['product_cat'], $categories);
-        });
     }
 
     function chosenParamType($settings, $value)

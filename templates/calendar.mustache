@@ -1,27 +1,40 @@
 <div id="calendar-wrap">
-    {{#months}}
-        <div class="month" data-month="{{month}}" data-year="{{year}}">
-            <nav>
-                <button id="previous">Previous</button>
-                <div>{{localised}} {{year}}</div>
-                <button id="next">Next</button>
-            </nav>
+    <div class="months">
+        {{#months}}
+            <div class="month" data-month="{{month}}" data-year="{{year}}">
+                <nav>
+                    <button id="previous">Previous</button>
+                    <div>{{localised}} {{year}}</div>
+                    <button id="next">Next</button>
+                </nav>
 
-            <table id="calendar">
-            <tr>
-                {{#days}}
-                    <tr>
-                        {{#.}}
-                            <td class="day" colspan="2">
-                                {{.}}
-                            </td>
-                        {{/.}}
+                <table id="calendar">
+                <tr>
+                    {{#days}}
+                        <tr>
+                            {{#.}}
+                                <td class="day" align="center" colspan="7">
+                                    {{.}}
+                                </td>
+                            {{/.}}
+                        </tr>
+                    {{/days}}
                     </tr>
-                {{/days}}
-                </tr>
-            </table>
-        </div>
-    {{/months}}
+                </table>
+            </div>
+        {{/months}}
+    </div>
+    <div class="events">
+        {{#events}}
+            <div class="event">
+                <div class="image"></div>
+                <div class="right">
+                    <h1>{{post_title}}</h1>
+                    <p>{{excerpt}}</p>
+                </div>
+            </div>
+        {{/events}}
+    </div>
 </div>
 
 <style>
@@ -41,8 +54,10 @@
 
     #calendar-wrap nav button {
         background: none;
+        border: none;
     }
 
+    /* Calendar */
     .month {
         width: 100%;
         height: 100%;
@@ -62,9 +77,9 @@
     }
 
     #calendar .day {
-        width: 15%;
         height: 15%;
         border: 1px solid lightgrey;
+        width: 1%;
     }
 
     #calendar tbody {
@@ -78,9 +93,19 @@
     }
 
     #calendar td {
-        padding: 20px;
+        padding: 10px;
         text-align: center;
         font-weight: normal;
+    }
+
+    /* Events */
+    #calendar-wrap .events {
+        width: 100%;
+    }
+
+    #calendar-wrap .event {
+        height: 200px;
+        border: 1px solid grey;
     }
 </style>
 
