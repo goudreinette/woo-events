@@ -25,17 +25,23 @@
                     {{#options.show_date}}
                         <h5 class="date">{{start-date}} - {{end-date}}</h5>
                     {{/options.show_date}}
-                    <h3 style="color: {{options.title_color}};">{{post_title}}</h3>
-                    <h4 style="color: {{options.subtitle_color}};">{{subTitle}}</h4>
+                    <h3>
+                        <a href="{{permalink}}" style="color: {{options.title_color}};">{{post_title}}</a>
+                    </h3>
+                    <h4 style="color: {{options.subtitle_color}};">{{sub-title}}</h4>
                     <div class="excerpt">{{{post_excerpt}}}</div>
                     <div class="bottom">
                         {{#price}}
-                            <h4 class="price">€{{price}}</h4>
+                            {{^external-link}}
+                                <h4 class="price">€{{price}}</h4>
+                            {{/external-link}}
                         {{/price}}
                         <div>
-                            {{^external_link}}
-                                <a class="order" href="{{add_to_cart_url}}">{{options.add_to_cart_text}}</a>
-                            {{/external_link}}
+                            {{^external-link}}
+                                <a class="order"
+                                   href="{{permalink}}?add-to-cart={{ID}}">{{options.add_to_cart_text}}
+                                </a>
+                            {{/external-link}}
                             <a class="order" href="{{permalink}}">{{options.button_text}}</a>
                         </div>
                     </div>

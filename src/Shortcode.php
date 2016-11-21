@@ -12,11 +12,11 @@ class Shortcode
     function shortcode($options)
     {
         $options      = vc_map_get_attributes(Model::$key, $options);
+        $categories   = explode(',', $options['categories']);
         $events       = Model::getEvents();
         $sorted       = Utils::sortEvents(Utils::prepareEvents($events), $options['order']);
-        $withCategory = Utils::selectEventsByCategories(explode(',', $options['categories']), $sorted);
+        $withCategory = Utils::selectEventsByCategories($categories, $sorted);
         $filtered     = Utils::filterExpiredEvents($options['expired'], $withCategory);
-        $categories   = array_values(array_unique(Utils::pluck($filtered, 'product_cat')));
 
         $assigns = [
             'categories' => $categories,

@@ -53,10 +53,10 @@ class Display
         $meta = Model::getMeta($product_id);
 
         if ($meta && $meta['enable']) {
-            $assigns = [
-                'startDate' => Utils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']),
-                'endDate'   => Utils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time'])
-            ];
+            $assigns = array_merge($meta, [
+                'start-date' => Utils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']),
+                'end-date'   => Utils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time'])
+            ]);
 
             $this->view->echo($template, $assigns);
         }

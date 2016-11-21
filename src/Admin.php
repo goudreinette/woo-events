@@ -30,12 +30,12 @@ class Admin
             'key'           => Model::$key,
             'enable'        => $meta['enable'] ? 'checked' : '',
             'has-end'       => $meta['has-end'] ? 'checked' : '',
-            'start-time'    => Utils::formatDate($meta['start-time']),
+            'start-time'    => Utils::formatTime($meta['start-time']),
             'end-time'      => Utils::formatTime($meta['end-time']),
             'start-date'    => Utils::formatDate($meta['start-date']),
-            'end-date'      => Utils::formatTime($meta['end-date']),
+            'end-date'      => Utils::formatDate($meta['end-date']),
             'external-link' => $meta['external-link'],
-            'sub-title'     => $meta['sub-title']
+            'subtitle'      => $meta['subtitle']
         ];
 
         $this->view->enqueueStyle('admin');

@@ -37,15 +37,16 @@ new Shortcode($view);
  *  * Add to cart
  *  * Optie om price en add to cart te hiden
  *  * Externe link
- *  * Subtitle
+ * * Multiple Categories
+ *  Subtitle
  *  End Date
- *  Time
+ *  * Time
  */
 
 /**
  * Test checklist
  * * Order
- *   Color
+ * * Color
  * * Layout
  *   Expired
  */

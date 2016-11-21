@@ -1,4 +1,8 @@
 <h3>
-    <span class='start'>{{startDate}}</span> -
-    <span class='end'>{{endDate}}</span>
+    <span class='start'>{{start-date}}</span>
+    {{#has-end}}
+        <span class='end'> - {{end-date}}</span>
+    {{/has-end}}
+
+    <h5>{{subtitle}}</h5>
 </h3>

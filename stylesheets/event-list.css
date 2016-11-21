@@ -134,6 +134,10 @@
     cursor: pointer;
 }
 
+#woo-event-list h3 a {
+    color: inherit;
+}
+
 #woo-event-list h4 {
     margin: 0px 0px 20px 0px;
     color: grey;
