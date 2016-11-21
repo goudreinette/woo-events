@@ -24,19 +24,21 @@ class Admin
     function render()
     {
         global $post;
-        $view = Model::getMeta($post->ID) ?: Model::$defaults;
+        $meta = Model::getMeta($post->ID) ?: Model::$defaults;
 
         $assigns = [
-            'key'          => Model::$key,
-            'checked'      => $view['enable'] ? 'checked' : '',
-            'startTime'    => Utils::formatDate($view['start-time']),
-            'endTime'      => Utils::formatTime($view['end-time']),
-            'startDate'    => Utils::formatDate($view['start-date']),
-            'endDate'      => Utils::formatTime($view['end-date']),
-            'externalLink' => $view['external-link'],
+            'key'           => Model::$key,
+            'enable'        => $meta['enable'] ? 'checked' : '',
+            'has-end'       => $meta['has-end'] ? 'checked' : '',
+            'start-time'    => Utils::formatDate($meta['start-time']),
+            'end-time'      => Utils::formatTime($meta['end-time']),
+            'start-date'    => Utils::formatDate($meta['start-date']),
+            'end-date'      => Utils::formatTime($meta['end-date']),
+            'external-link' => $meta['external-link'],
+            'sub-title'     => $meta['sub-title']
         ];
 
-        $this->view->enqueueStyle('style');
+        $this->view->enqueueStyle('admin');
         $this->view->echo('admin', $assigns);
     }
 

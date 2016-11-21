@@ -5,13 +5,14 @@ class Model
     static $key = "woo-events";
     static $name = "WooEvents";
     static $defaults = [
-        'key'          => 'woo-events',
-        'checked'      => '',
-        'startTime'    => null,
-        'endTime'      => null,
-        'startDate'    => null,
-        'endDate'      => null,
-        'externalLink' => '',
+        'key'           => 'woo-events',
+        'enable'        => '',
+        'has-end'       => '',
+        'start-time'    => null,
+        'end-time'      => null,
+        'start-date'    => null,
+        'end-date'      => null,
+        'external-link' => '',
     ];
 
     static function getMeta($productId)

@@ -54,8 +54,8 @@ class Display
 
         if ($meta && $meta['enable']) {
             $assigns = [
-                'startDate' => Utils::formatDate($meta['start-date'], $meta['start-time']),
-                'endDate'   => Utils::formatDate($meta['end-date'], $meta['end-time'])
+                'startDate' => Utils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']),
+                'endDate'   => Utils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time'])
             ];
 
             $this->view->echo($template, $assigns);

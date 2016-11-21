@@ -2,27 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38fb2394-6d15-44eb-9044-3dcf7ad245fe" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javascript/calendar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stylesheets/calendar.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/custom.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/timepicker.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/widget/jquery.tooltipster.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/javascript/widget/jquery.tooltipster.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/widget/custom.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/widget/themes/tooltipster-light.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/widget/themes/tooltipster-noir.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/widget/themes/tooltipster-punk.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/widget/themes/tooltipster-shadow.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/widget/tooltipster.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/woo-events.iml" afterPath="$PROJECT_DIR$/.idea/woo-events.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/timepicker.css" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/stylesheets/style.css" afterPath="$PROJECT_DIR$/stylesheets/admin.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalendarWidget.php" afterPath="$PROJECT_DIR$/src/CalendarWidget.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascript/external-link.js" afterPath="$PROJECT_DIR$/javascript/external-link.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin.php" afterPath="$PROJECT_DIR$/src/Admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display.php" afterPath="$PROJECT_DIR$/src/Display.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model.php" afterPath="$PROJECT_DIR$/src/Model.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shortcode.php" afterPath="$PROJECT_DIR$/src/Shortcode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/event-list.css" afterPath="$PROJECT_DIR$/stylesheets/event-list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/calendar.mustache" afterPath="$PROJECT_DIR$/templates/calendar.mustache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/calendar_admin.mustache" afterPath="$PROJECT_DIR$/templates/calendar_admin.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils.php" afterPath="$PROJECT_DIR$/src/Utils.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/admin.mustache" afterPath="$PROJECT_DIR$/templates/admin.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/chosen.mustache" afterPath="$PROJECT_DIR$/templates/chosen.mustache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/eventlist.mustache" afterPath="$PROJECT_DIR$/templates/eventlist.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woo-events.php" afterPath="$PROJECT_DIR$/woo-events.php" />
     </list>
     <ignored path="woo-events.iws" />
@@ -56,11 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="calendar.mustache" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/calendar.mustache">
+      <file leaf-file-name="admin.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stylesheets/admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1357">
-              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="1475">
+              <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -101,7 +92,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/WooEvents.php" />
         <option value="$PROJECT_DIR$/templates/Admin.php" />
-        <option value="$PROJECT_DIR$/templates/admin.mustache" />
         <option value="$PROJECT_DIR$/templates/display.mustache" />
         <option value="$PROJECT_DIR$/js/external-link.js" />
         <option value="$PROJECT_DIR$/composer.json" />
@@ -115,21 +105,24 @@
         <option value="$PROJECT_DIR$/../../wordpress/wp-content/plugins/calendar_widget/js/index.js" />
         <option value="$PROJECT_DIR$/src/Meta.php" />
         <option value="$PROJECT_DIR$/src/ccw_class.php" />
-        <option value="$PROJECT_DIR$/src/Display.php" />
-        <option value="$PROJECT_DIR$/src/Model.php" />
         <option value="$PROJECT_DIR$/src/View.php" />
-        <option value="$PROJECT_DIR$/templates/eventlist.mustache" />
-        <option value="$PROJECT_DIR$/src/Admin.php" />
         <option value="$PROJECT_DIR$/javascript/calendar.js" />
-        <option value="$PROJECT_DIR$/src/Utils.php" />
         <option value="$PROJECT_DIR$/src/CalendarWidget.php" />
         <option value="$PROJECT_DIR$/templates/calendar_admin.mustache" />
         <option value="$PROJECT_DIR$/templates/calendar.mustache" />
         <option value="$PROJECT_DIR$/stylesheets/calendar.css" />
         <option value="$PROJECT_DIR$/stylesheets/event-list.css" />
-        <option value="$PROJECT_DIR$/src/Shortcode.php" />
         <option value="$PROJECT_DIR$/templates/chosen.mustache" />
+        <option value="$PROJECT_DIR$/src/Utils.php" />
+        <option value="$PROJECT_DIR$/src/Shortcode.php" />
+        <option value="$PROJECT_DIR$/templates/eventlist.mustache" />
+        <option value="$PROJECT_DIR$/javascript/external-link.js" />
+        <option value="$PROJECT_DIR$/src/Display.php" />
         <option value="$PROJECT_DIR$/woo-events.php" />
+        <option value="$PROJECT_DIR$/stylesheets/admin.css" />
+        <option value="$PROJECT_DIR$/src/Admin.php" />
+        <option value="$PROJECT_DIR$/src/Model.php" />
+        <option value="$PROJECT_DIR$/templates/admin.mustache" />
       </list>
     </option>
   </component>
@@ -576,7 +569,7 @@
       <workItem from="1479655949615" duration="38000" />
       <workItem from="1479656003003" duration="5313000" />
       <workItem from="1479667367988" duration="2646000" />
-      <workItem from="1479739205201" duration="4620000" />
+      <workItem from="1479739205201" duration="7122000" />
     </task>
     <task id="LOCAL-00001" summary="VC improvements">
       <created>1479393956839</created>
@@ -634,11 +627,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479661312661</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Further Clendar improvements, Calendar form update fix, visual composer multiselect fix">
+      <created>1479743858431</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1479743858431</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63157000" />
+    <option name="totallyTimeSpent" value="65659000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -708,7 +708,8 @@
     <MESSAGE value="Calendar admin fully finished" />
     <MESSAGE value="Calendar frontend work" />
     <MESSAGE value="Removed old code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed old code" />
+    <MESSAGE value="Further Clendar improvements, Calendar form update fix, visual composer multiselect fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Further Clendar improvements, Calendar form update fix, visual composer multiselect fix" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>$PROJECT_DIR$/../../wordpress</wordpressPath>
@@ -721,22 +722,20 @@
           <line>13</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Display.php</url>
+          <line>54</line>
+          <option name="timeStamp" value="107" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="107" />
+      <option name="time" value="108" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../wordpress/wp-includes/post.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1013">
-          <caret line="1572" column="35" lean-forward="false" selection-start-line="1572" selection-start-column="35" selection-end-line="1572" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../wordpress/wp-includes/wp-db.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="659">
@@ -790,13 +789,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/display.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
@@ -826,20 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1191">
           <caret line="225" column="0" lean-forward="false" selection-start-line="225" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1180">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/stylesheets/timepicker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1653,39 +1631,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2360">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="177">
           <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="10" lean-forward="false" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/eventlist.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="34" column="47" lean-forward="false" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1694,102 +1643,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Display.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="761">
-          <caret line="15" column="26" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <marker date="1479649363501" expanded="true" signature="41:1693" ph="{...}" />
-            <marker date="1479649363501" expanded="true" signature="80:441" ph="{...}" />
-            <marker date="1479649363501" expanded="true" signature="463:519" ph="{...}" />
-            <marker date="1479649363501" expanded="true" signature="528:584" ph=" Display the event date on shop loop items. ..." />
-            <marker date="1479649363501" expanded="true" signature="610:697" ph="{...}" />
-            <marker date="1479649363501" expanded="true" signature="706:794" ph=" Display the event date on single product page. ..." />
-            <marker date="1479649363501" expanded="true" signature="825:1106" ph="{...}" />
-            <marker date="1479649363501" expanded="true" signature="988:1099" ph="..." />
-            <marker date="1479649363501" expanded="true" signature="1115:1162" ph=" Display the event date on emails. ..." />
-            <marker date="1479649363501" expanded="true" signature="1195:1252" ph="{...}" />
-            <marker date="1479649363501" expanded="true" signature="1310:1690" ph="{...}" />
-            <marker date="1479649363501" expanded="true" signature="1402:1683" ph="..." />
-            <marker date="1479649363501" expanded="true" signature="1427:1619" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <marker date="1479739195625" expanded="true" signature="39:5413" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="49:66" ph=" PHP ..." />
-            <marker date="1479739195625" expanded="true" signature="108:353" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="143:345" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="153:344" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="182:335" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="217:266" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="274:325" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="362:385" ph=" Wordpress ..." />
-            <marker date="1479739195625" expanded="true" signature="395:504" ph=" @param $previousMonths Integer ..." />
-            <marker date="1479739195625" expanded="true" signature="573:940" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="992:1461" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="1063:1429" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="1087:1418" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="1097:1417" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="1470:1495" ph=" WooCommerce ..." />
-            <marker date="1479739195625" expanded="true" signature="1506:1617" ph=" @param array $args Additional query arguments ..." />
-            <marker date="1479739195625" expanded="true" signature="1672:1840" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="1849:1973" ph=" @param $date String ..." />
-            <marker date="1479739195625" expanded="true" signature="2035:2118" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="2128:2148" ph=" Events ..." />
-            <marker date="1479739195625" expanded="true" signature="2159:2305" ph=" @param $categories Array[String] of category names ..." />
-            <marker date="1479739195625" expanded="true" signature="2374:2552" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="2409:2544" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="2422:2543" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="2468:2542" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="2561:2708" ph=" @param $filter 'Show' or 'Only' or 'Hide' ..." />
-            <marker date="1479739195625" expanded="true" signature="2768:3158" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="2803:3150" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="2845:3149" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="2927:3139" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="2956:2989" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="3018:3057" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="3086:3126" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="3167:3266" ph=" @param $event An event with end-date ..." />
-            <marker date="1479739195625" expanded="true" signature="3306:3373" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="3382:3514" ph=" @param $events Array of events ..." />
-            <marker date="1479739195625" expanded="true" signature="3564:3832" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="3643:3799" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="3692:3798" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="3841:3948" ph=" @param $events Array of products with woo-events meta ..." />
-            <marker date="1479739195625" expanded="true" signature="3993:5181" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="4025:5173" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="4044:5163" ph="..." />
-            <marker date="1479739195625" expanded="true" signature="5227:5297" ph="{...}" />
-            <marker date="1479739195625" expanded="true" signature="5343:5411" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/calendar_admin.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="11" column="63" lean-forward="false" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
-          <folding>
-            <marker date="1479741758198" expanded="true" signature="4:884" ph="..." />
-            <marker date="1479741758198" expanded="true" signature="12:178" ph="..." />
-            <marker date="1479741758198" expanded="true" signature="186:358" ph="..." />
-            <marker date="1479741758198" expanded="false" signature="336:347" ph="..." />
-            <marker date="1479741758198" expanded="true" signature="366:554" ph="..." />
-            <marker date="1479741758198" expanded="false" signature="532:543" ph="..." />
-            <marker date="1479741758198" expanded="true" signature="562:877" ph="..." />
-            <marker date="1479741758198" expanded="false" signature="690:701" ph="..." />
-            <marker date="1479741758198" expanded="true" signature="702:868" ph="..." />
-            <marker date="1479741758198" expanded="true" signature="729:849" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1816,17 +1669,6 @@
             <marker date="1479741634478" expanded="true" signature="2869:2937" ph="{...}" />
             <marker date="1479741634478" expanded="true" signature="2953:3033" ph="..." />
             <marker date="1479741634478" expanded="true" signature="2982:3032" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascript/external-link.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
-          <folding>
-            <marker date="1478537502354" expanded="true" signature="39:203" ph="{...}" />
-            <marker date="1478537502354" expanded="true" signature="86:200" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1893,73 +1735,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/chosen.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1298">
-          <caret line="22" column="72" lean-forward="true" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
-          <folding>
-            <marker date="1479743785671" expanded="true" signature="4:329" ph="..." />
-            <marker date="1479743785671" expanded="false" signature="67:80" ph="..." />
-            <marker date="1479743785671" expanded="true" signature="108:137" ph="..." />
-            <marker date="1479743785671" expanded="true" signature="203:322" ph="..." />
-            <marker date="1479743785671" expanded="true" signature="230:307" ph="..." />
-            <marker date="1479743785671" expanded="true" signature="340:906" ph="..." />
-            <marker date="1479743785671" expanded="true" signature="390:896" ph="{...}" />
-            <marker date="1479743785671" expanded="true" signature="474:677" ph="{...}" />
-            <marker date="1479743785671" expanded="true" signature="753:888" ph="{...}" />
-            <marker date="1479743785671" expanded="true" signature="915:1269" ph="..." />
-            <marker date="1479743785671" expanded="true" signature="939:979" ph="{...}" />
-            <marker date="1479743785671" expanded="true" signature="1001:1080" ph="{...}" />
-            <marker date="1479743785671" expanded="true" signature="1108:1147" ph="{...}" />
-            <marker date="1479743785671" expanded="true" signature="1168:1261" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/woo-events.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <marker date="1479743807215" expanded="true" signature="30:243" ph="..." />
-            <marker date="1479743807215" expanded="true" signature="357:373" ph=" Initialize ..." />
-            <marker date="1479743807215" expanded="true" signature="485:702" ph=" TODO: ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shortcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
-          <folding>
-            <marker date="1479743455341" expanded="true" signature="43:4585" ph="{...}" />
-            <marker date="1479743455341" expanded="true" signature="82:234" ph="{...}" />
-            <marker date="1479743455341" expanded="true" signature="268:1041" ph="{...}" />
-            <marker date="1479743455341" expanded="true" signature="802:928" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="971:992" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="1021:1033" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="1090:1254" ph="{...}" />
-            <marker date="1479743455341" expanded="true" signature="1273:1588" ph="{...}" />
-            <marker date="1479743455341" expanded="true" signature="1365:1580" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="1366:1579" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="1611:4583" ph="{...}" />
-            <marker date="1479743455341" expanded="true" signature="1634:4575" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="1648:1950" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="1966:2207" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="2223:2456" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="2472:2714" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="2730:2967" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="2983:3257" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="3273:3525" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="3541:3799" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="3815:4055" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="4071:4307" ph="..." />
-            <marker date="1479743455341" expanded="true" signature="4323:4565" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/event-list.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -2014,6 +1789,371 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1357">
           <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <marker date="1479742914668" expanded="true" signature="23:1383" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="48:923" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="67:911" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="144:892" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="166:374" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="413:873" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="463:821" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="493:792" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="527:761" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="647:727" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="948:1376" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="967:1364" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="1038:1345" ph="..." />
+            <marker date="1479742914668" expanded="false" signature="1082:1114" ph="..." />
+            <marker date="1479742914668" expanded="true" signature="1157:1326" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/woo-events/src/Utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="103" column="0" lean-forward="true" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <marker date="1479739195625" expanded="true" signature="39:5413" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="49:66" ph=" PHP ..." />
+            <marker date="1479739195625" expanded="true" signature="108:353" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="143:345" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="153:344" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="182:335" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="217:266" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="274:325" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="362:385" ph=" Wordpress ..." />
+            <marker date="1479739195625" expanded="true" signature="395:504" ph=" @param $previousMonths Integer ..." />
+            <marker date="1479739195625" expanded="true" signature="573:940" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="992:1461" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="1063:1429" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="1087:1418" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="1097:1417" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="1470:1495" ph=" WooCommerce ..." />
+            <marker date="1479739195625" expanded="true" signature="1506:1617" ph=" @param array $args Additional query arguments ..." />
+            <marker date="1479739195625" expanded="true" signature="1672:1840" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="1849:1973" ph=" @param $date String ..." />
+            <marker date="1479739195625" expanded="true" signature="2035:2118" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="2128:2148" ph=" Events ..." />
+            <marker date="1479739195625" expanded="true" signature="2159:2305" ph=" @param $categories Array[String] of category names ..." />
+            <marker date="1479739195625" expanded="true" signature="2374:2552" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="2409:2544" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="2422:2543" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="2468:2542" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="2561:2708" ph=" @param $filter 'Show' or 'Only' or 'Hide' ..." />
+            <marker date="1479739195625" expanded="true" signature="2768:3158" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="2803:3150" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="2845:3149" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="2927:3139" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="2956:2989" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="3018:3057" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="3086:3126" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="3167:3266" ph=" @param $event An event with end-date ..." />
+            <marker date="1479739195625" expanded="true" signature="3306:3373" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="3382:3514" ph=" @param $events Array of events ..." />
+            <marker date="1479739195625" expanded="true" signature="3564:3832" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="3643:3799" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="3692:3798" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="3841:3948" ph=" @param $events Array of products with woo-events meta ..." />
+            <marker date="1479739195625" expanded="true" signature="3993:5181" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="4025:5173" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="4044:5163" ph="..." />
+            <marker date="1479739195625" expanded="true" signature="5227:5297" ph="{...}" />
+            <marker date="1479739195625" expanded="true" signature="5343:5411" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascript/external-link.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="9" column="45" lean-forward="true" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
+          <folding>
+            <marker date="1479744484171" expanded="true" signature="39:280" ph="{...}" />
+            <marker date="1479744484171" expanded="true" signature="165:277" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/display.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <marker date="1478537305631" expanded="true" signature="3:97" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/woo-events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="39" column="14" lean-forward="false" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+          <folding>
+            <marker date="1479744714098" expanded="true" signature="30:243" ph="..." />
+            <marker date="1479744714098" expanded="true" signature="357:373" ph=" Initialize ..." />
+            <marker date="1479744714098" expanded="true" signature="485:739" ph=" TODO: ..." />
+            <marker date="1479744714098" expanded="true" signature="746:813" ph=" Test checklist ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/calendar_admin.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="649">
+          <caret line="11" column="63" lean-forward="false" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+          <folding>
+            <marker date="1479741758198" expanded="true" signature="4:884" ph="..." />
+            <marker date="1479741758198" expanded="true" signature="12:178" ph="..." />
+            <marker date="1479741758198" expanded="true" signature="186:358" ph="..." />
+            <marker date="1479741758198" expanded="false" signature="336:347" ph="..." />
+            <marker date="1479741758198" expanded="true" signature="366:554" ph="..." />
+            <marker date="1479741758198" expanded="false" signature="532:543" ph="..." />
+            <marker date="1479741758198" expanded="true" signature="562:877" ph="..." />
+            <marker date="1479741758198" expanded="false" signature="690:701" ph="..." />
+            <marker date="1479741758198" expanded="true" signature="702:868" ph="..." />
+            <marker date="1479741758198" expanded="true" signature="729:849" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/chosen.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1829">
+          <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding>
+            <marker date="1479743873655" expanded="true" signature="4:329" ph="..." />
+            <marker date="1479743873655" expanded="false" signature="67:80" ph="..." />
+            <marker date="1479743873655" expanded="true" signature="108:137" ph="..." />
+            <marker date="1479743873655" expanded="true" signature="203:322" ph="..." />
+            <marker date="1479743873655" expanded="true" signature="230:307" ph="..." />
+            <marker date="1479743873655" expanded="true" signature="340:885" ph="..." />
+            <marker date="1479743873655" expanded="true" signature="390:875" ph="{...}" />
+            <marker date="1479743873655" expanded="true" signature="474:656" ph="{...}" />
+            <marker date="1479743873655" expanded="true" signature="732:867" ph="{...}" />
+            <marker date="1479743873655" expanded="true" signature="894:1248" ph="..." />
+            <marker date="1479743873655" expanded="true" signature="918:958" ph="{...}" />
+            <marker date="1479743873655" expanded="true" signature="980:1059" ph="{...}" />
+            <marker date="1479743873655" expanded="true" signature="1087:1126" ph="{...}" />
+            <marker date="1479743873655" expanded="true" signature="1147:1240" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/timepicker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eventlist.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1174">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding>
+            <marker date="1479744357275" expanded="true" signature="24:2045" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="62:358" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="92:321" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="196:302" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="412:2038" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="431:2027" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="512:2008" ph="..." />
+            <marker date="1479744357275" expanded="false" signature="536:571" ph="..." />
+            <marker date="1479744357275" expanded="false" signature="616:651" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="652:976" ph="..." />
+            <marker date="1479744357275" expanded="false" signature="748:780" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="781:953" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="818:925" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="1012:1990" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="1054:1173" ph="..." />
+            <marker date="1479744357275" expanded="false" signature="1207:1238" ph="..." />
+            <marker date="1479744357275" expanded="false" signature="1291:1325" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="1450:1967" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="1484:1581" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="1612:1940" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="1658:1814" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="2054:2833" ph="..." />
+            <marker date="1479744357275" expanded="true" signature="2097:2823" ph="{...}" />
+            <marker date="1479744357275" expanded="true" signature="2147:2616" ph="{...}" />
+            <marker date="1479744357275" expanded="true" signature="2350:2428" ph="{...}" />
+            <marker date="1479744357275" expanded="true" signature="2434:2606" ph="{...}" />
+            <marker date="1479744357275" expanded="true" signature="2675:2816" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Display.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1115">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <marker date="1479744657048" expanded="true" signature="41:1723" ph="{...}" />
+            <marker date="1479744657048" expanded="true" signature="80:441" ph="{...}" />
+            <marker date="1479744657048" expanded="true" signature="463:519" ph="{...}" />
+            <marker date="1479744657048" expanded="true" signature="528:584" ph=" Display the event date on shop loop items. ..." />
+            <marker date="1479744657048" expanded="true" signature="610:697" ph="{...}" />
+            <marker date="1479744657048" expanded="true" signature="706:794" ph=" Display the event date on single product page. ..." />
+            <marker date="1479744657048" expanded="true" signature="825:1106" ph="{...}" />
+            <marker date="1479744657048" expanded="true" signature="988:1099" ph="..." />
+            <marker date="1479744657048" expanded="true" signature="1115:1162" ph=" Display the event date on emails. ..." />
+            <marker date="1479744657048" expanded="true" signature="1195:1252" ph="{...}" />
+            <marker date="1479744657048" expanded="true" signature="1310:1720" ph="{...}" />
+            <marker date="1479744657048" expanded="true" signature="1402:1713" ph="..." />
+            <marker date="1479744657048" expanded="true" signature="1427:1649" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1233">
+          <caret line="26" column="55" lean-forward="false" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
+          <folding>
+            <marker date="1479745397415" expanded="true" signature="39:1591" ph="{...}" />
+            <marker date="1479745397415" expanded="true" signature="78:326" ph="{...}" />
+            <marker date="1479745397415" expanded="true" signature="359:544" ph="{...}" />
+            <marker date="1479745397415" expanded="true" signature="396:513" ph="..." />
+            <marker date="1479745397415" expanded="true" signature="567:1348" ph="{...}" />
+            <marker date="1479745397415" expanded="true" signature="680:1249" ph="..." />
+            <marker date="1479745397415" expanded="true" signature="1385:1589" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1618">
+          <caret line="151" column="77" lean-forward="true" selection-start-line="151" selection-start-column="77" selection-end-line="151" selection-end-column="77" />
+          <folding>
+            <marker date="1479743954951" expanded="true" signature="39:5427" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="49:66" ph=" PHP ..." />
+            <marker date="1479743954951" expanded="true" signature="108:353" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="143:345" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="153:344" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="182:335" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="217:266" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="274:325" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="362:385" ph=" Wordpress ..." />
+            <marker date="1479743954951" expanded="true" signature="395:504" ph=" @param $previousMonths Integer ..." />
+            <marker date="1479743954951" expanded="true" signature="573:940" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="992:1461" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="1063:1429" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="1087:1418" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="1097:1417" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="1470:1495" ph=" WooCommerce ..." />
+            <marker date="1479743954951" expanded="true" signature="1506:1617" ph=" @param array $args Additional query arguments ..." />
+            <marker date="1479743954951" expanded="true" signature="1672:1840" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="1849:1973" ph=" @param $date String ..." />
+            <marker date="1479743954951" expanded="true" signature="2035:2118" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="2128:2148" ph=" Events ..." />
+            <marker date="1479743954951" expanded="true" signature="2159:2305" ph=" @param $categories Array[String] of category names ..." />
+            <marker date="1479743954951" expanded="true" signature="2374:2552" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="2409:2544" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="2422:2543" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="2468:2542" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="2561:2708" ph=" @param $filter 'Show' or 'Only' or 'Hide' ..." />
+            <marker date="1479743954951" expanded="true" signature="2768:3172" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="2803:3164" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="2816:3163" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="2858:3162" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="2940:3152" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="2969:3002" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="3031:3070" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="3099:3139" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="3181:3280" ph=" @param $event An event with end-date ..." />
+            <marker date="1479743954951" expanded="true" signature="3320:3387" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="3396:3528" ph=" @param $events Array of events ..." />
+            <marker date="1479743954951" expanded="true" signature="3578:3846" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="3657:3813" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="3706:3812" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="3855:3962" ph=" @param $events Array of products with woo-events meta ..." />
+            <marker date="1479743954951" expanded="true" signature="4007:5195" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="4039:5187" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="4058:5177" ph="..." />
+            <marker date="1479743954951" expanded="true" signature="5241:5311" ph="{...}" />
+            <marker date="1479743954951" expanded="true" signature="5357:5425" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <marker date="1479745468678" expanded="true" signature="39:1344" ph="{...}" />
+            <marker date="1479745468678" expanded="true" signature="130:401" ph="..." />
+            <marker date="1479745468678" expanded="true" signature="444:516" ph="{...}" />
+            <marker date="1479745468678" expanded="true" signature="563:769" ph="{...}" />
+            <marker date="1479745468678" expanded="true" signature="658:762" ph="..." />
+            <marker date="1479745468678" expanded="true" signature="835:979" ph="{...}" />
+            <marker date="1479745468678" expanded="true" signature="1016:1090" ph="{...}" />
+            <marker date="1479745468678" expanded="true" signature="1123:1342" ph="{...}" />
+            <marker date="1479745468678" expanded="true" signature="1155:1334" ph="..." />
+            <marker date="1479745468678" expanded="true" signature="1156:1333" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shortcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <marker date="1479744069721" expanded="true" signature="43:4570" ph="{...}" />
+            <marker date="1479744069721" expanded="true" signature="82:234" ph="{...}" />
+            <marker date="1479744069721" expanded="true" signature="268:1026" ph="{...}" />
+            <marker date="1479744069721" expanded="true" signature="787:913" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="956:977" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="1006:1018" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="1075:1239" ph="{...}" />
+            <marker date="1479744069721" expanded="true" signature="1258:1573" ph="{...}" />
+            <marker date="1479744069721" expanded="true" signature="1350:1565" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="1351:1564" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="1596:4568" ph="{...}" />
+            <marker date="1479744069721" expanded="true" signature="1619:4560" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="1633:1935" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="1951:2192" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="2208:2441" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="2457:2699" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="2715:2952" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="2968:3242" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="3258:3510" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="3526:3784" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="3800:4040" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="4056:4292" ph="..." />
+            <marker date="1479744069721" expanded="true" signature="4308:4550" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="826">
+          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <marker date="1479746274568" expanded="true" signature="64:1042" ph="..." />
+            <marker date="1479746274568" expanded="true" signature="74:179" ph="..." />
+            <marker date="1479746274568" expanded="true" signature="189:302" ph="..." />
+            <marker date="1479746274568" expanded="true" signature="312:535" ph="..." />
+            <marker date="1479746274568" expanded="true" signature="557:770" ph="..." />
+            <marker date="1479746274568" expanded="true" signature="780:909" ph="..." />
+            <marker date="1479746274568" expanded="true" signature="919:1035" ph="..." />
+            <marker date="1479746274568" expanded="true" signature="1052:1414" ph="..." />
+            <marker date="1479746274568" expanded="true" signature="1078:1404" ph="{...}" />
+            <marker date="1479746274568" expanded="true" signature="1278:1398" ph="{...}" />
+            <marker date="1479746274568" expanded="true" signature="1423:1484" ph="..." />
+            <marker date="1479746274568" expanded="true" signature="1435:1476" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1475">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
           <folding />
         </state>
       </provider>

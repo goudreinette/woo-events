@@ -5,16 +5,25 @@
 
 #woo-events div {
     margin: 10px;
+    float: left;
+    clear: both;
+    display: flex;
 }
 
 #woo-events span {
     min-width: 200px;
     display: inline-block;
+    float: left;
 }
 
-#woo-events input:first-of-type:not([type='checkbox']) {
-    min-width: 160px;
+#woo-events input {
+    float: right;
+}
+
+#woo-events input:first-of-type:not([type='checkbox']):not([type='time']) {
+    width: 160px;
     display: inline-block;
+    margin-right: 10px;
 }
 
 /* Shop */

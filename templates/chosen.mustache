@@ -14,7 +14,6 @@
 
     $(function () {
         $('.chosen#{{settings.param_name}}').find('option').each(function (i, el) {
-            debugger
             const value = $(el).val()
             if ($('input[name={{settings.param_name}}]').attr('value').includes(value))
                 $(el).attr('selected', true)

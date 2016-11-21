@@ -33,9 +33,19 @@ new Shortcode($view);
  *  *List padding & Width
  *  *h5 a Style
  *  *Fix VC multiselect
- *  Optie om price en add to cart te hiden
- *  Externe link
  *  Testen
+ *  * Add to cart
+ *  * Optie om price en add to cart te hiden
+ *  * Externe link
+ *  * Subtitle
  *  End Date
  *  Time
+ */
+
+/**
+ * Test checklist
+ * * Order
+ *   Color
+ * * Layout
+ *   Expired
  */

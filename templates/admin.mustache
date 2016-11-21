@@ -1,20 +1,50 @@
 <div id='{{key}}' class='panel woocommerce_options_panel hidden'>
     <div>
         <span>Enable</span>
-        <input name='{{key}}[enable]' type='checkbox' {{checked}}>
+        <input name='{{key}}[enable]' type='checkbox' {{enable}}>
+    </div>
+    <div>
+        <span>Has End Date</span>
+        <input name='{{key}}[has-end]' type='checkbox' {{has-end}}>
     </div>
     <div>
         <span>Start Date</span>
-        <input name='{{key}}[start-date]' type='date' value='{{startDate}}'>
-        <input name='{{key}}[start-time]' type='time' max="24:00" min="00:00" value='{{startTime}}'>
+        <input name='{{key}}[start-date]' type='date' value='{{start-date}}'>
+        <input name='{{key}}[start-time]' type='time' max="24:00" min="00:00" value='{{start-time}}'>
     </div>
-    <div>
+    <div class="end">
         <span>End Date</span>
-        <input name='{{key}}[end-date]' type='date' value='{{endDate}}'>
-        <input name='{{key}}[end-time]' type='time' max="24:00" min="00:00" value='{{endTime}}'>
+        <input name='{{key}}[end-date]' type='date' value='{{end-date}}'>
+        <input name='{{key}}[end-time]' type='time' max="24:00" min="00:00" value='{{end-time}}'>
     </div>
     <div>
         <span>External link</span>
-        <input name='{{key}}[external-link]' type='url' value='{{externalLink}}'>
+        <input name='{{key}}[external-link]' type='url' value='{{external-link}}'>
+    </div>
+    <div>
+        <span>Subtitle</span>
+        <input name='{{key}}[subtitle]' type='text' value='{{sub-title}}'>
     </div>
 </div>
+
+<script>
+    jQuery(function ($) {
+        var hasEndCheckbox = $('[name="{{key}}[has-end]"]')
+        var endContainer = $('#{{key}} .end')
+
+        hasEndCheckbox.change(toggleEnd)
+        toggleEnd()
+
+        function toggleEnd() {
+            var hasEnd = hasEndCheckbox.is(':checked')
+            endContainer.toggleClass('hide', !hasEnd)
+        }
+    })
+</script>
+
+<style>
+    .hide {
+        display: none !important;
+    }
+</style>
+

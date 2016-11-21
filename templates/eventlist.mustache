@@ -33,7 +33,9 @@
                             <h4 class="price">€{{price}}</h4>
                         {{/price}}
                         <div>
-                            <a class="order" href="{{add_to_cart_url}}">{{options.add_to_cart_text}}</a>
+                            {{^external_link}}
+                                <a class="order" href="{{add_to_cart_url}}">{{options.add_to_cart_text}}</a>
+                            {{/external_link}}
                             <a class="order" href="{{permalink}}">{{options.button_text}}</a>
                         </div>
                     </div>

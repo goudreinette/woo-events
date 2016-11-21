@@ -14,9 +14,9 @@ class Shortcode
         $options      = vc_map_get_attributes(Model::$key, $options);
         $events       = Model::getEvents();
         $sorted       = Utils::sortEvents(Utils::prepareEvents($events), $options['order']);
-        $withCategory = array_vaMlues(Utils::selectEventsByCategories(explode(',', $options['categories']), $sorted));
-        $filtered     = array_values(Utils::filterExpiredEvents($options['expired'], $withCategory));
-        $categories   = array_unique(Utils::pluck($filtered, 'product_cat'));
+        $withCategory = Utils::selectEventsByCategories(explode(',', $options['categories']), $sorted);
+        $filtered     = Utils::filterExpiredEvents($options['expired'], $withCategory);
+        $categories   = array_values(array_unique(Utils::pluck($filtered, 'product_cat')));
 
         $assigns = [
             'categories' => $categories,

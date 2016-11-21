@@ -99,7 +99,7 @@ class Utils
      */
     static function filterExpiredEvents($filter, $events)
     {
-        return array_filter($events, function ($event) use ($filter) {
+        return array_values(array_filter($events, function ($event) use ($filter) {
             $isExpired = self::isExpired($event);
 
             switch ($filter) {
@@ -110,7 +110,7 @@ class Utils
                 case 'Hide':
                     return !$isExpired;
             }
-        });
+        }));
     }
 
     /**
