@@ -115,6 +115,10 @@
     text-decoration: none;
 }
 
+#woo-event-list .order:first-child {
+    margin-right: 5px;
+}
+
 #woo-event-list .order:hover {
     border-color: grey;
 }
