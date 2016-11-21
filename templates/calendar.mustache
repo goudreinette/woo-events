@@ -13,7 +13,7 @@
                     {{#days}}
                         <tr>
                             {{#.}}
-                                <td class="day" align="center" colspan="7">
+                                <td class="day" align="center" colspan="7" data-start-date="{{year}}-{{month}}-{{.}}">
                                     {{.}}
                                 </td>
                             {{/.}}
@@ -26,11 +26,12 @@
     </div>
     <div class="events">
         {{#events}}
-            <div class="event">
-                <div class="image"></div>
+            <div class="event" data-start-date="{{start-date-only}}">
+                <div class="image" style="background-image: url({{image}})"></div>
                 <div class="right">
-                    <h1>{{post_title}}</h1>
+                    <h3>{{post_title}}</h3>
                     <p>{{excerpt}}</p>
+                    <p>{{start-time}}</p>
                 </div>
             </div>
         {{/events}}
@@ -71,15 +72,29 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        height: 100%;
+        height: calc(100% - 50px);
         border: none;
         margin: 0;
+        background-color: whitesmoke;
     }
 
     #calendar .day {
         height: 15%;
         border: 1px solid lightgrey;
         width: 1%;
+        cursor: default;
+        background: white;
+        padding: 10px;
+        text-align: center;
+        font-weight: normal;
+    }
+
+    #calendar .day.has-event {
+        font-weight: bold;
+    }
+
+    #calendar .day.active {
+        color: slategray;
     }
 
     #calendar tbody {
@@ -92,10 +107,8 @@
         height: 20%;
     }
 
-    #calendar td {
-        padding: 10px;
-        text-align: center;
-        font-weight: normal;
+    #calendar .day:hover {
+        background-color: #f5f5f5;
     }
 
     /* Events */
@@ -106,6 +119,17 @@
     #calendar-wrap .event {
         height: 200px;
         border: 1px solid grey;
+        display: flex;
+    }
+
+    #calendar-wrap .event .image {
+        width: 35%;
+        background-size: cover;
+    }
+
+    #calendar-wrap .event .right {
+        padding-left: 20px;
+        border-left: 1px solid #eee;
     }
 </style>
 
@@ -113,12 +137,20 @@
     window.$ = jQuery
 
     $(function () {
-        $(".tooltip_interact").tooltipster({
-            theme: "tooltipster-shadow",
-            animation: "grow",
-            contentAsHTML: true,
-            interactive: true
-        });
+        $('.events .event').addClass('hidden')
+        $('.events .event').each((i, el) => {
+            const startDate = $(el).data('start-date')
+            const day = $('.day[data-start-date="' + startDate + '"]')
+            day.addClass('has-event')
+        })
+
+        $(document).on('click', '.day', function () {
+            const startDate = $(this).data('start-date')
+            $('.day').removeClass('active')
+            $(this).addClass('active')
+            $('.events .event').addClass('hidden')
+            $('.events .event[data-start-date="' + startDate + '"]').removeClass('hidden')
+        })
 
         $('.month:first-child').toggleClass('active', true)
 

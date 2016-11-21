@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="38fb2394-6d15-44eb-9044-3dcf7ad245fe" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Admin.php" afterPath="$PROJECT_DIR$/src/Admin.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CalendarWidget.php" afterPath="$PROJECT_DIR$/src/CalendarWidget.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shortcode.php" afterPath="$PROJECT_DIR$/src/Shortcode.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils.php" afterPath="$PROJECT_DIR$/src/Utils.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/calendar.mustache" afterPath="$PROJECT_DIR$/templates/calendar.mustache" />
     </list>
@@ -35,11 +35,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CalendarWidget.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/CalendarWidget.php">
+      <file leaf-file-name="calendar.mustache" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/calendar.mustache">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2889">
-              <caret line="108" column="5" lean-forward="false" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+            <state relative-caret-position="474">
+              <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -95,7 +95,6 @@
         <option value="$PROJECT_DIR$/templates/chosen.mustache" />
         <option value="$PROJECT_DIR$/src/Meta.php" />
         <option value="$PROJECT_DIR$/src/ccw_class.php" />
-        <option value="$PROJECT_DIR$/src/Admin.php" />
         <option value="$PROJECT_DIR$/src/Display.php" />
         <option value="$PROJECT_DIR$/src/Model.php" />
         <option value="$PROJECT_DIR$/src/View.php" />
@@ -103,9 +102,10 @@
         <option value="$PROJECT_DIR$/templates/calendar_admin.mustache" />
         <option value="$PROJECT_DIR$/src/Shortcode.php" />
         <option value="$PROJECT_DIR$/templates/eventlist.mustache" />
-        <option value="$PROJECT_DIR$/templates/calendar.mustache" />
-        <option value="$PROJECT_DIR$/src/Utils.php" />
         <option value="$PROJECT_DIR$/src/CalendarWidget.php" />
+        <option value="$PROJECT_DIR$/src/Admin.php" />
+        <option value="$PROJECT_DIR$/src/Utils.php" />
+        <option value="$PROJECT_DIR$/templates/calendar.mustache" />
       </list>
     </option>
   </component>
@@ -140,7 +140,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -153,67 +153,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="woo-events" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
@@ -485,17 +425,20 @@
     <frame x="0" y="27" width="950" height="1053" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28645834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28645834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.500998" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -506,12 +449,9 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.500998" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297969" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,20 +479,14 @@
     <MESSAGE value="Calendar admin finished" />
     <MESSAGE value="Calendar admin fully finished" />
     <MESSAGE value="Calendar frontend work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Calendar frontend work" />
+    <MESSAGE value="Removed old code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed old code" />
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>$PROJECT_DIR$/../../wordpress</wordpressPath>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/CalendarWidget.php</url>
-          <line>66</line>
-          <option name="timeStamp" value="104" />
-        </line-breakpoint>
-      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
@@ -1563,13 +1497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin.mustache">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -1586,29 +1513,139 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/eventlist.mustache">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="27" column="76" lean-forward="false" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/calendar.mustache">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="837">
-          <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="60" column="11" lean-forward="false" selection-start-line="60" selection-start-column="11" selection-end-line="60" selection-end-column="11" />
+        <state relative-caret-position="486">
+          <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+          <folding>
+            <marker date="1479719518466" expanded="true" signature="24:1947" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="62:358" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="92:321" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="196:302" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="412:1940" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="431:1929" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="512:1910" ph="..." />
+            <marker date="1479719518466" expanded="false" signature="536:571" ph="..." />
+            <marker date="1479719518466" expanded="false" signature="616:651" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="652:976" ph="..." />
+            <marker date="1479719518466" expanded="false" signature="748:780" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="781:953" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="818:925" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="1012:1892" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="1054:1173" ph="..." />
+            <marker date="1479719518466" expanded="false" signature="1207:1238" ph="..." />
+            <marker date="1479719518466" expanded="false" signature="1291:1325" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="1450:1869" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="1484:1581" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="1612:1842" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="1956:2735" ph="..." />
+            <marker date="1479719518466" expanded="true" signature="1999:2725" ph="{...}" />
+            <marker date="1479719518466" expanded="true" signature="2049:2518" ph="{...}" />
+            <marker date="1479719518466" expanded="true" signature="2252:2330" ph="{...}" />
+            <marker date="1479719518466" expanded="true" signature="2336:2508" ph="{...}" />
+            <marker date="1479719518466" expanded="true" signature="2577:2718" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CalendarWidget.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2889">
-          <caret line="108" column="5" lean-forward="false" selection-start-line="108" selection-start-column="5" selection-end-line="108" selection-end-column="5" />
+        <state relative-caret-position="339">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1479723917385" expanded="false" signature="32:68" ph="..." />
+            <marker date="1479723917385" expanded="true" signature="109:3026" ph="{...}" />
+            <marker date="1479723917385" expanded="true" signature="223:355" ph="{...}" />
+            <marker date="1479723917385" expanded="true" signature="386:577" ph="{...}" />
+            <marker date="1479723917385" expanded="true" signature="623:1299" ph="{...}" />
+            <marker date="1479723917385" expanded="true" signature="641:712" ph=" The range of months that the calendar will cover. ..." />
+            <marker date="1479723917385" expanded="true" signature="1349:1677" ph="{...}" />
+            <marker date="1479723917385" expanded="true" signature="1384:1669" ph="..." />
+            <marker date="1479723917385" expanded="true" signature="1394:1668" ph="..." />
+            <marker date="1479723917385" expanded="true" signature="1435:1654" ph="..." />
+            <marker date="1479723917385" expanded="true" signature="1456:1643" ph="..." />
+            <marker date="1479723917385" expanded="true" signature="1714:2900" ph="{...}" />
+            <marker date="1479723917385" expanded="true" signature="1977:2836" ph="..." />
+            <marker date="1479723917385" expanded="true" signature="2956:3024" ph="{...}" />
+            <marker date="1479723917385" expanded="true" signature="3040:3120" ph="..." />
+            <marker date="1479723917385" expanded="true" signature="3069:3119" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="34" column="47" lean-forward="false" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
+          <folding>
+            <marker date="1479731673255" expanded="true" signature="39:1468" ph="{...}" />
+            <marker date="1479731673255" expanded="true" signature="78:326" ph="{...}" />
+            <marker date="1479731673255" expanded="true" signature="359:544" ph="{...}" />
+            <marker date="1479731673255" expanded="true" signature="396:513" ph="..." />
+            <marker date="1479731673255" expanded="true" signature="567:1225" ph="{...}" />
+            <marker date="1479731673255" expanded="true" signature="680:1126" ph="..." />
+            <marker date="1479731673255" expanded="true" signature="1262:1466" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="46" column="73" lean-forward="false" selection-start-line="46" selection-start-column="73" selection-end-line="46" selection-end-column="73" />
+          <folding>
+            <marker date="1479732005291" expanded="true" signature="39:5413" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="49:66" ph=" PHP ..." />
+            <marker date="1479732005291" expanded="true" signature="108:353" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="143:345" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="153:344" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="182:335" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="217:266" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="274:325" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="362:385" ph=" Wordpress ..." />
+            <marker date="1479732005291" expanded="true" signature="395:504" ph=" @param $previousMonths Integer ..." />
+            <marker date="1479732005291" expanded="true" signature="573:940" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="992:1461" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="1063:1429" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="1087:1418" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="1097:1417" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="1470:1495" ph=" WooCommerce ..." />
+            <marker date="1479732005291" expanded="true" signature="1506:1617" ph=" @param array $args Additional query arguments ..." />
+            <marker date="1479732005291" expanded="true" signature="1672:1840" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="1849:1973" ph=" @param $date String ..." />
+            <marker date="1479732005291" expanded="true" signature="2035:2118" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="2128:2148" ph=" Events ..." />
+            <marker date="1479732005291" expanded="true" signature="2159:2305" ph=" @param $categories Array[String] of category names ..." />
+            <marker date="1479732005291" expanded="true" signature="2374:2552" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="2409:2544" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="2422:2543" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="2468:2542" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="2561:2708" ph=" @param $filter 'Show' or 'Only' or 'Hide' ..." />
+            <marker date="1479732005291" expanded="true" signature="2768:3158" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="2803:3150" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="2845:3149" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="2927:3139" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="2956:2989" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="3018:3057" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="3086:3126" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="3167:3266" ph=" @param $event An event with end-date ..." />
+            <marker date="1479732005291" expanded="true" signature="3306:3373" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="3382:3514" ph=" @param $events Array of events ..." />
+            <marker date="1479732005291" expanded="true" signature="3564:3832" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="3643:3799" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="3692:3798" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="3841:3948" ph=" @param $events Array of products with woo-events meta ..." />
+            <marker date="1479732005291" expanded="true" signature="3993:5181" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="4025:5173" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="4044:5163" ph="..." />
+            <marker date="1479732005291" expanded="true" signature="5227:5297" ph="{...}" />
+            <marker date="1479732005291" expanded="true" signature="5343:5411" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/calendar.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="111" column="5" lean-forward="true" selection-start-line="111" selection-start-column="5" selection-end-line="111" selection-end-column="5" />
           <folding />
         </state>
       </provider>

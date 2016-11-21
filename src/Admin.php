@@ -29,25 +29,15 @@ class Admin
         $assigns = [
             'key'          => Model::$key,
             'checked'      => $view['enable'] ? 'checked' : '',
-            'startTime'    => $this->formatTime($view['start-time']),
-            'endTime'      => $this->formatTime($view['end-time']),
-            'startDate'    => $this->formatDate($view['start-date']),
-            'endDate'      => $this->formatDate($view['end-date']),
+            'startTime'    => Utils::formatDate($view['start-time']),
+            'endTime'      => Utils::formatTime($view['end-time']),
+            'startDate'    => Utils::formatDate($view['start-date']),
+            'endDate'      => Utils::formatTime($view['end-date']),
             'externalLink' => $view['external-link'],
         ];
 
         $this->view->enqueueStyle('style');
         $this->view->echo('admin', $assigns);
-    }
-
-    function formatDate($date = null)
-    {
-        return date('Y-m-d', strtotime($date) ?: time());
-    }
-
-    function formatTime($time = null)
-    {
-        return date('H:i', strtotime($time) ?: time());
     }
 
     function handleSave($productId)

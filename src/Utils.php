@@ -19,6 +19,37 @@ class Utils
     /**
      * Wordpress
      */
+    /**
+     * @param $previousMonths Integer
+     * @param $nextMonths     Integer
+     * @return \DatePeriod
+     */
+    public function createMonthRange($previousMonths, $nextMonths)
+    {
+        $nextMonths    = $nextMonths + 1;
+        $rangeStart    = new \DateTimeImmutable("now -$previousMonths months");
+        $rangeEnd      = new \DateTimeImmutable("now +$nextMonths months");
+        $monthInterval = new \DateInterval('P1M');
+        $range         = new \DatePeriod($rangeStart, $monthInterval, $rangeEnd);
+
+        return $range;
+    }
+
+    public function monthRangeToArray($monthRange)
+    {
+        $result = [];
+
+        foreach ($monthRange as $month) {
+            array_push($result, [
+                'year'      => $month->format('Y'),
+                'month'     => $month->format('m'),
+                'localised' => date_i18n('F', $month->getTimestamp()),
+                'days'      => array_chunk(range(1, cal_days_in_month(CAL_GREGORIAN, $month->format('m'), $month->format('Y'))), 7)
+            ]);
+        }
+
+        return $result;
+    }
 
     /**
      * WooCommerce
@@ -39,7 +70,7 @@ class Utils
      * @param $time String
      * @return String date formatted to WooCommerce preferences
      */
-    static function formatDate($date, $time)
+    static function formatDateTimeWoocommerce($date, $time)
     {
         return date(wc_date_format(), strtotime($date)) . " " . $time;
     }
@@ -117,8 +148,9 @@ class Utils
             $meta                          = Model::getMeta($event->ID);
             $eventArray                    = array_merge((array)$event, $meta);
             $product                       = wc_get_product($eventArray['ID']);
-            $eventArray['start-date']      = self::formatDate($meta['start-date'], $meta['start-time']);
-            $eventArray['end-date']        = self::formatDate($meta['end-date'], $meta['end-time']);
+            $eventArray['start-date-only'] = self::formatDate($eventArray['start-date']);
+            $eventArray['start-date']      = self::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']);
+            $eventArray['end-date']        = self::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time']);
             $eventArray['price']           = $product->price;
             $eventArray['image']           = wp_get_attachment_image_src(get_post_thumbnail_id($event->ID))[0];
             $eventArray['post_excerpt']    = substr($eventArray['post_content'], 0, 140) . "...";
@@ -128,5 +160,15 @@ class Utils
 
             return $eventArray;
         }, $events);
+    }
+
+    static function formatDate($date = null)
+    {
+        return date('Y-m-d', strtotime($date) ?: time());
+    }
+
+    static function formatTime($time = null)
+    {
+        return date('H:i', strtotime($time) ?: time());
     }
 }

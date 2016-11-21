@@ -20,51 +20,21 @@ class CalendarWidget extends \WP_Widget
         $this->view->enqueueStyle('widget/tooltipster')->enqueueStyle('widget/themes/tooltipster-shadow')->enqueueStyle('custom')->enqueueScript('widget/jquery.tooltipster.min');
     }
 
-    public function createMonthRange($previousMonths, $nextMonths)
-    {
-        $nextMonths    = $nextMonths + 1;
-        $rangeStart    = new \DateTimeImmutable("now -$previousMonths months");
-        $rangeEnd      = new \DateTimeImmutable("now +$nextMonths months");
-        $monthInterval = new \DateInterval('P1M');
-        $range         = new \DatePeriod($rangeStart, $monthInterval, $rangeEnd);
-
-        return $range;
-    }
-
-    public function monthRangeToArray($monthRange)
-    {
-        $result = [];
-
-        foreach ($monthRange as $month) {
-            array_push($result, [
-                'year'      => $month->format('Y'),
-                'month'     => $month->format('m'),
-                'localised' => date_i18n('F', $month->getTimestamp()),
-                'days'      => array_chunk(range(1, cal_days_in_month(CAL_GREGORIAN, $month->format('m'), $month->format('Y'))), 7)
-            ]);
-        }
-
-        return $result;
-    }
-
-    // Creating widget front-end
-    // This is where the action happens
     public function widget($args, $instance)
     {
         /**
          * The range of months that the calendar will cover.
          */
         $categories      = Utils::getProductCategories(['include' => $instance['categories']]);
-        $monthRange      = $this->createMonthRange($instance['previousmonths'], $instance['nextmonths']);
-        $monthRangeArray = $this->monthRangeToArray($monthRange);
+        $monthRange      = Utils::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
+        $monthRangeArray = Utils::monthRangeToArray($monthRange);
         $rawEvents       = Model::getEvents();
         $events          = Utils::selectEventsByCategories($categories, Utils::prepareEvents($rawEvents));
-
-
+        
         $assigns = ['months' => $monthRangeArray, 'events' => $events];
 
-        $this->view->echo('calendar', $assigns);
         $this->enqueue();
+        $this->view->echo('calendar', $assigns);
     }
 
     function mergeCategories($all, $selectedIds)
