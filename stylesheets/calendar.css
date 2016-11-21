@@ -1,0 +1,117 @@
+/* Wrap, Nav */
+#calendar-wrap {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#calendar-wrap nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+#calendar-wrap nav button {
+    background: none;
+    border: none;
+}
+
+/* Calendar */
+.month {
+    width: 100%;
+    height: 100%;
+}
+
+.month:not(.active) {
+    display: none;
+}
+
+#calendar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: calc(100% - 50px);
+    border: none;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+#calendar .day {
+    height: 15%;
+    border: 1px solid lightgrey;
+    width: 1%;
+    cursor: default;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#calendar .day.has-event {
+    font-weight: bold;
+    background-color: #d85757;
+    color: white;
+}
+
+#calendar .day.active.has-event {
+    background-color: #a23435;
+}
+
+#calendar .day.has-event:hover {
+    background-color: #3f3f3f !important;
+}
+
+#calendar .day:hover {
+    background-color: #ddd;
+}
+
+#calendar tbody {
+    box-sizing: border-box;
+    width: calc(100% - 1px);
+    height: 100%;
+}
+
+#calendar tr {
+    height: 20%;
+}
+
+/* Events */
+#calendar-wrap .events {
+    width: 100%;
+}
+
+#calendar-wrap .event {
+    height: 120px;
+    border: 1px solid grey;
+    display: flex;
+}
+
+#calendar-wrap .events > .event:not(.hidden) ~ .event {
+    border-top: none;
+}
+
+#calendar-wrap .event .image {
+    width: 28%;
+    background-size: cover;
+    background-position: center;
+}
+
+#calendar-wrap .event .right {
+    padding-left: 20px;
+    border-left: 1px solid #eee;
+    width: calc(100% - 28%);
+}
+
+#calendar-wrap .event .right .date {
+    color: #595959;
+}
+
+#calendar-wrap .event .right h5 {
+    margin-top: 5px;
+}
+
+#calendar-wrap .event .right h5 a:not(:hover) {
+    color: inherit;
+}

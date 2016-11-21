@@ -2,7 +2,10 @@
  * Styles
  */
 #woo-event-list {
-    width: 100%;
+    width: 60vw;
+    padding: 36px;
+    position: relative;
+    z-index: 2;
 }
 
 #woo-event-list > * {

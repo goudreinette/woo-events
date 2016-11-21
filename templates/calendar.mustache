@@ -4,7 +4,7 @@
             <div class="month" data-month="{{month}}" data-year="{{year}}">
                 <nav>
                     <button id="previous">Previous</button>
-                    <div>{{localised}} {{year}}</div>
+                    <div class="month-year">{{localised}} {{year}}</div>
                     <button id="next">Next</button>
                 </nav>
 
@@ -29,143 +29,10 @@
             <div class="event" data-start-date="{{start-date-only}}">
                 <div class="image" style="background-image: url({{image}})"></div>
                 <div class="right">
-                    <h3>{{post_title}}</h3>
-                    <p>{{excerpt}}</p>
-                    <p>{{start-time}}</p>
+                    <p class="date">{{start-date}} <br/> {{end-date}}</p>
+                    <h5><a href="{{permalink}}">{{post_title}}</a></h5>
                 </div>
             </div>
         {{/events}}
     </div>
 </div>
-
-<style>
-    #calendar-wrap {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    #calendar-wrap nav {
-        height: 50px;
-        background-color: #eee;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 10px;
-    }
-
-    #calendar-wrap nav button {
-        background: none;
-        border: none;
-    }
-
-    /* Calendar */
-    .month {
-        width: 100%;
-        height: 100%;
-    }
-
-    .month:not(.active) {
-        display: none;
-    }
-
-    #calendar {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: calc(100% - 50px);
-        border: none;
-        margin: 0;
-        background-color: whitesmoke;
-    }
-
-    #calendar .day {
-        height: 15%;
-        border: 1px solid lightgrey;
-        width: 1%;
-        cursor: default;
-        background: white;
-        padding: 10px;
-        text-align: center;
-        font-weight: normal;
-    }
-
-    #calendar .day.has-event {
-        font-weight: bold;
-    }
-
-    #calendar .day.active {
-        color: slategray;
-    }
-
-    #calendar tbody {
-        box-sizing: border-box;
-        width: calc(100% - 1px);
-        height: 100%;
-    }
-
-    #calendar tr {
-        height: 20%;
-    }
-
-    #calendar .day:hover {
-        background-color: #f5f5f5;
-    }
-
-    /* Events */
-    #calendar-wrap .events {
-        width: 100%;
-    }
-
-    #calendar-wrap .event {
-        height: 200px;
-        border: 1px solid grey;
-        display: flex;
-    }
-
-    #calendar-wrap .event .image {
-        width: 35%;
-        background-size: cover;
-    }
-
-    #calendar-wrap .event .right {
-        padding-left: 20px;
-        border-left: 1px solid #eee;
-    }
-</style>
-
-<script language="javascript">
-    window.$ = jQuery
-
-    $(function () {
-        $('.events .event').addClass('hidden')
-        $('.events .event').each((i, el) => {
-            const startDate = $(el).data('start-date')
-            const day = $('.day[data-start-date="' + startDate + '"]')
-            day.addClass('has-event')
-        })
-
-        $(document).on('click', '.day', function () {
-            const startDate = $(this).data('start-date')
-            $('.day').removeClass('active')
-            $(this).addClass('active')
-            $('.events .event').addClass('hidden')
-            $('.events .event[data-start-date="' + startDate + '"]').removeClass('hidden')
-        })
-
-        $('.month:first-child').toggleClass('active', true)
-
-        $(document).on('click', '#calendar-wrap #next', function () {
-            $('.month.active:not(:last-child)')
-                    .toggleClass('active', false)
-                    .next()
-                    .toggleClass('active', true)
-        })
-
-        $(document).on('click', '#calendar-wrap #previous', function () {
-            $('.month.active:not(:first-child)')
-                    .toggleClass('active', false)
-                    .prev()
-                    .toggleClass('active', true)
-        })
-    });
-</script>

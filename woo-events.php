@@ -25,3 +25,17 @@ $view = new View($assetsDir);
 new Admin($view);
 new Display($view);
 new Shortcode($view);
+
+/**
+ * TODO:
+ *  *Form van Calendar
+ *  *First Event Border
+ *  *List padding & Width
+ *  *h5 a Style
+ *  *Fix VC multiselect
+ *  Optie om price en add to cart te hiden
+ *  Externe link
+ *  Testen
+ *  End Date
+ *  Time
+ */

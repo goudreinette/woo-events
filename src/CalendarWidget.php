@@ -17,7 +17,9 @@ class CalendarWidget extends \WP_Widget
 
     public function enqueue()
     {
-        $this->view->enqueueStyle('widget/tooltipster')->enqueueStyle('widget/themes/tooltipster-shadow')->enqueueStyle('custom')->enqueueScript('widget/jquery.tooltipster.min');
+        $this->view
+            ->enqueueStyle('calendar')
+            ->enqueueScript('calendar');
     }
 
     public function widget($args, $instance)
@@ -30,7 +32,7 @@ class CalendarWidget extends \WP_Widget
         $monthRangeArray = Utils::monthRangeToArray($monthRange);
         $rawEvents       = Model::getEvents();
         $events          = Utils::selectEventsByCategories($categories, Utils::prepareEvents($rawEvents));
-        
+
         $assigns = ['months' => $monthRangeArray, 'events' => $events];
 
         $this->enqueue();
@@ -75,7 +77,7 @@ class CalendarWidget extends \WP_Widget
 
     public function update($newInstance, $oldInstance)
     {
-        return array_merge($newInstance, $oldInstance);
+        return array_merge($oldInstance, $newInstance);
     }
 }
 
