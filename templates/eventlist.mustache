@@ -23,12 +23,15 @@
                 </div>
                 <div class="right">
                     {{#options.show_date}}
-                        <h5 class="date">{{start-date}} - {{end-date}}</h5>
+                        <h5 class="date">
+                            {{start-date}}
+                            {{#has-end}} - {{end-date}}{{/has-end}}
+                        </h5>
                     {{/options.show_date}}
                     <h3>
                         <a href="{{permalink}}" style="color: {{options.title_color}};">{{post_title}}</a>
                     </h3>
-                    <h4 style="color: {{options.subtitle_color}};">{{sub-title}}</h4>
+                    <h4 style="color: {{options.subtitle_color}};">{{subtitle}}</h4>
                     <div class="excerpt">{{{post_excerpt}}}</div>
                     <div class="bottom">
                         {{#price}}
