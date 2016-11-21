@@ -17,10 +17,11 @@ class Shortcode
         $sorted       = Utils::sortEvents(Utils::prepareEvents($events), $options['order']);
         $withCategory = Utils::selectEventsByCategories($categories, $sorted);
         $filtered     = Utils::filterExpiredEvents($options['expired'], $withCategory);
+        $limited      = Utils::takeIf($options['enable-limit'], $options['limit'], $filtered);
 
         $assigns = [
             'categories' => $categories,
-            'events'     => $filtered,
+            'events'     => $limited,
             'options'    => $options
         ];
 
@@ -64,6 +65,18 @@ class Shortcode
                 'heading'    => 'Expired',
                 'param_name' => 'expired',
                 'value'      => ['Show', 'Hide', 'Only']
+            ],
+            [
+                'group'      => 'Query',
+                'type'       => 'checkbox',
+                'heading'    => 'Enable Limit',
+                'param_name' => 'enable-limit'
+            ],
+            [
+                'group'      => 'Query',
+                'type'       => 'textfield',
+                'heading'    => 'Limit',
+                'param_name' => 'limit'
             ],
             [
                 'group'      => 'Layout',

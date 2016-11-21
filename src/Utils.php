@@ -16,6 +16,15 @@ class Utils
         }, $array));
     }
 
+    static function takeIf($condition, $n, $array)
+    {
+        if ($condition)
+            return array_slice($array, 0, $n);
+        else
+            return $array;
+    }
+
+
     /**
      * Wordpress
      */
@@ -24,7 +33,7 @@ class Utils
      * @param $nextMonths     Integer
      * @return \DatePeriod
      */
-    public function createMonthRange($previousMonths, $nextMonths)
+    static function createMonthRange($previousMonths, $nextMonths)
     {
         $nextMonths    = $nextMonths + 1;
         $rangeStart    = new \DateTimeImmutable("now -$previousMonths months");
@@ -35,7 +44,7 @@ class Utils
         return $range;
     }
 
-    public function monthRangeToArray($monthRange)
+    static function monthRangeToArray($monthRange)
     {
         $result = [];
 
