@@ -58,7 +58,7 @@ class Display
                 'end-date'   => Utils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time'])
             ]);
 
-            $this->view->echo($template, $assigns);
+            $this->view->render($template, $assigns);
         }
     }
 

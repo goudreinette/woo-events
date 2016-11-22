@@ -13,14 +13,14 @@ class View
         ]);
     }
 
-    function render($template, $assigns)
+    function renderString($template, $assigns)
     {
         return $this->mustache->render($template, $assigns);
     }
 
-    function echo ($template, $assigns)
+    function render ($template, $assigns)
     {
-        echo $this->render($template, $assigns);
+        echo $this->renderString($template, $assigns);
         return $this;
     }
 

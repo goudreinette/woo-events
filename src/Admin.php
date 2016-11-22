@@ -39,7 +39,7 @@ class Admin
         ];
 
         $this->view->enqueueStyle('admin');
-        $this->view->echo('admin', $assigns);
+        $this->view->render('admin', $assigns);
     }
 
     function handleSave($productId)

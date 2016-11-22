@@ -112,12 +112,14 @@ class Utils
             $isExpired = self::isExpired($event);
 
             switch ($filter) {
-                case 'Show':
-                    return true;
                 case 'Only':
                     return $isExpired;
                 case 'Hide':
                     return !$isExpired;
+                case 'Show':
+                    return true;
+                default:
+                    return true;
             }
         }));
     }

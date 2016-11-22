@@ -1,8 +1,5 @@
 <?php namespace WooEvents;
 
-use WooEvents\Model;
-use WooEvents\View;
-
 class CalendarWidget extends \WP_Widget
 {
     public $title = 'Woo Events Calendar';
@@ -36,7 +33,7 @@ class CalendarWidget extends \WP_Widget
         $assigns = ['months' => $monthRangeArray, 'events' => $events];
 
         $this->enqueue();
-        $this->view->echo('calendar', $assigns);
+        $this->view->render('calendar', $assigns);
     }
 
     function mergeCategories($all, $selectedIds)
@@ -72,7 +69,7 @@ class CalendarWidget extends \WP_Widget
             'categories'           => $this->mergeCategories(Model::getCategories(), $categories)
         ];
 
-        $this->view->echo('calendar_admin', $assigns);
+        $this->view->render('calendar_admin', $assigns);
     }
 
     public function update($newInstance, $oldInstance)

@@ -26,7 +26,7 @@ class Shortcode
         ];
 
         $this->view
-            ->echo('eventlist', $assigns)
+            ->render('eventlist', $assigns)
             ->enqueueStyle('event-list');
     }
 
