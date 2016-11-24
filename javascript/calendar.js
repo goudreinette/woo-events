@@ -1,20 +1,16 @@
 jQuery(function ($) {
     /**
-     * Start with current month
-     */
-
-    /**
      * Select Days, Show/Hide Event Tickets
      */
     $('.events .event').addClass('hidden')
     $('.events .event').each((i, el) => {
-        const startDate = $(el).data('start-date')
-        const day = $('.day[data-start-date="' + startDate + '"]')
+        var startDate = $(el).data('start-date')
+        var day = $('.day[data-start-date="' + startDate + '"]')
         day.addClass('has-event')
     })
 
     $(document).on('click', '.day', function () {
-        const startDate = $(this).data('start-date')
+        var startDate = $(this).data('start-date')
         $('.day').removeClass('active')
         $(this).addClass('active')
         $('.events .event').addClass('hidden')
@@ -24,19 +20,27 @@ jQuery(function ($) {
     /**
      * Next/Previous Month
      */
-    $('.month:first-child').toggleClass('active', true)
-
     $(document).on('click', '#calendar-wrap #next', function () {
-        const nextMonthText = $('.month.active:not(:last-child)')
+        $('.month.active:not(:last-child)')
             .toggleClass('active', false)
             .next()
             .toggleClass('active', true)
     })
 
     $(document).on('click', '#calendar-wrap #previous', function () {
-        const prevMonthText = $('.month.active:not(:first-child)')
+        $('.month.active:not(:first-child)')
             .toggleClass('active', false)
             .prev()
             .toggleClass('active', true)
     })
+
+    /**
+     * Start with current month
+     */
+    var now = new Date()
+    var month = now.getMonth() + 1
+    var year = now.getFullYear()
+
+    $('[data-month=' + month + ']' + '[data-year=' + year + ']')
+        .toggleClass('active', true)
 });
