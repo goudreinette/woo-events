@@ -2,8 +2,6 @@
  * Styles
  */
 #woo-event-list {
-    width: 60vw;
-    padding: 36px;
     position: relative;
     z-index: 2;
 }

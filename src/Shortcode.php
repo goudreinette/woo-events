@@ -27,7 +27,8 @@ class Shortcode
 
         $this->view
             ->render('eventlist', $assigns)
-            ->enqueueStyle('event-list');
+            ->enqueueStyle('event-list')
+            ->enqueueScript('event-list');
     }
 
     function chosenParamType($settings, $value)

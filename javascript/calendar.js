@@ -1,4 +1,7 @@
 jQuery(function ($) {
+    /**
+     * Start with current month
+     */
 
     /**
      * Select Days, Show/Hide Event Tickets
