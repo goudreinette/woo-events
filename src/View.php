@@ -5,11 +5,11 @@ class View
     function __construct($assetsDirectory)
     {
         $this->assetsDirectory     = $assetsDirectory;
-        $this->templateDirectory   = $assetsDirectory . '/templates/';
-        $this->javascriptDirectory = $assetsDirectory . '/javascript/';
-        $this->stylesheetDirectory = $assetsDirectory . '/stylesheets/';
+        $this->templateDirectory   = $assetsDirectory . 'templates/';
+        $this->javascriptDirectory = $assetsDirectory . 'javascript/';
+        $this->stylesheetDirectory = $assetsDirectory . 'stylesheets/';
         $this->mustache            = new \Mustache_Engine([
-            'loader' => new \Mustache_Loader_FilesystemLoader($assetsDirectory . '/templates')
+            'loader' => new \Mustache_Loader_FilesystemLoader($this->templateDirectory)
         ]);
     }
 
@@ -18,7 +18,7 @@ class View
         return $this->mustache->render($template, $assigns);
     }
 
-    function render ($template, $assigns)
+    function render($template, $assigns)
     {
         echo $this->renderString($template, $assigns);
         return $this;

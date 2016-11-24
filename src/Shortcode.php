@@ -33,7 +33,8 @@ class Shortcode
 
     function chosenParamType($settings, $value)
     {
-        $this->view->enqueueScript('chosen.jquery.min.js');
+        $this->view->enqueueScript('chosen');
+        $this->view->enqueueScript('vc-chosen');
         return $this->view->renderString('chosen', ['settings' => $settings, 'value' => $value]);
     }
 
