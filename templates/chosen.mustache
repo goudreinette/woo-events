@@ -10,9 +10,12 @@
 
 
 <script>
-    window.$ = window.jQuery
+    jQuery(function ($) {
+        /**
+         * Chrome bug
+         */
 
-    $(function () {
+        
         $('.chosen#{{settings.param_name}}').find('option').each(function (i, el) {
             const value = $(el).val()
             if ($('input[name={{settings.param_name}}]').attr('value').includes(value))

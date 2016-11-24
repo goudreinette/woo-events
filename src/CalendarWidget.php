@@ -25,8 +25,8 @@ class CalendarWidget extends \WP_Widget
          * The range of months that the calendar will cover.
          */
         $categories      = Utils::getProductCategories(['include' => $instance['categories']]);
-        $monthRange      = Utils::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
-        $monthRangeArray = Utils::monthRangeToArray($monthRange);
+        $monthRange      = DateUtils::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
+        $monthRangeArray = DateUtils::monthRangeToArray($monthRange);
         $rawEvents       = Model::getEvents();
         $events          = Utils::selectEventsByCategories($categories, Utils::prepareEvents($rawEvents));
 
