@@ -72,7 +72,7 @@
             }
         })
 
-        $('#event-list li h3').on('click', function (e) {
+        $('#event-list li h3, #event-list li .image').on('click', function (e) {
             var permalink = $(e.target).closest('#event-list li').data('permalink')
             window.location.assign(permalink)
         })

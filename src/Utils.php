@@ -48,7 +48,8 @@ class Utils
      */
     static function formatDateTimeWoocommerce($date, $time)
     {
-        return date(wc_date_format(), strtotime($date)) . " " . $time;
+        $formatted = date(wc_date_format(), strtotime($date));
+        return "$formatted, $time uur";
     }
 
 

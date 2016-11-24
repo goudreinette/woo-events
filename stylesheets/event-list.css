@@ -71,6 +71,7 @@
     position: relative;
     overflow: hidden;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 #woo-event-list #event-list li .image .inner {

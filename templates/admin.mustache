@@ -9,13 +9,11 @@
     </div>
     <div>
         <span>Start Date</span>
-        <input name='{{key}}[start-date]' type='date' value='{{start-date}}'>
-        <input name='{{key}}[start-time]' type='time' max="24:00" min="00:00" value='{{start-time}}'>
+        <input name='{{key}}[start-date]' type='text' value='{{start-date}} {{start-time}}'>
     </div>
     <div class="end">
         <span>End Date</span>
-        <input name='{{key}}[end-date]' type='date' value='{{end-date}}'>
-        <input name='{{key}}[end-time]' type='time' max="24:00" min="00:00" value='{{end-time}}'>
+        <input name='{{key}}[end-date]' type='text' value='{{end-date}} {{end-time}}'>
     </div>
     <div>
         <span>External link</span>
@@ -29,6 +27,9 @@
 
 <script>
     jQuery(function ($) {
+        /**
+         * Show/Hide the end date input
+         */
         var hasEndCheckbox = $('[name="{{key}}[has-end]"]')
         var endContainer = $('#{{key}} .end')
 
@@ -39,6 +40,16 @@
             var hasEnd = hasEndCheckbox.is(':checked')
             endContainer.toggleClass('hide', !hasEnd)
         }
+
+        /**
+         * Datepicker
+         */
+        $('[name="{{key}}[start-date]"], [name="{{key}}[end-date]"]').datepicker({
+            language: 'en',
+            timepicker: 'true',
+            timeFormat: 'hh:ii',
+            dateFormat: 'yyyy-mm-dd'
+        })
     })
 </script>
 
