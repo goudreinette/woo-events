@@ -1,6 +1,4 @@
-const $ = window.jQuery
-
-$(function () {
+jQuery(function ($) {
     $('form.cart button').text('Bekijken')
     $('.quantity, .add_to_wishlist, .price-container').remove()
 
@@ -9,4 +7,9 @@ $(function () {
         e.stopPropagation()
         location.assign(assigns['external-link'])
     })
+
+    /**
+     * Uncode fixes
+     */
+    $('.uncont > .date').insertBefore($('.uncont .product_title'))
 })

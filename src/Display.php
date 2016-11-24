@@ -30,14 +30,14 @@ class Display
      * Display the event date on single product page.
      * Optionally redirect.
      */
-    function singleProduct()
+    function singleProduct($item)
     {
         global $product;
         $meta = Model::getMeta($product->id);
         $this->display($product->id);
 
         if ($meta && $meta['external-link']) {
-            $this->view->enqueueScript('external-link', ['external-link' => $meta['external-link']]);
+            $this->view->enqueueScript('single-product', ['external-link' => $meta['external-link']]);
         }
     }
 
