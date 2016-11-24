@@ -39,6 +39,7 @@ class Shortcode
     function vc()
     {
         $this->view->enqueueScript('chosen');
+        $this->view->enqueueStyle('chosen');
         vc_add_shortcode_param('chosen', [$this, 'chosenParamType']);
         vc_map([
             'name'     => 'WooCommerce Event List',
