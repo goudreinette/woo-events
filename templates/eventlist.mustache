@@ -12,8 +12,8 @@
     <ul id="event-list" class="{{options.layout}}">
         {{#events}}
             <li data-category="{{product_cat}}" data-permalink="{{permalink}}"
-                style="height: {{options.image_height}}px;">
-                <div class="image" style="height: {{options.image_height}}px;">
+                data-proportion="{{options.image_proportion}}">
+                <div class="image">
                     <div class="overlay"></div>
                     <div class="inner" style="background-image: url({{image}})">
                         {{#featured}}

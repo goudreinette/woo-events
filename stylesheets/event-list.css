@@ -1,4 +1,11 @@
 /**
+ * Customer Fixes
+ */
+#woo-event-list ~ .single-internal-gutter {
+    display: none;
+}
+
+/**
  * Styles
  */
 #woo-event-list {
@@ -38,7 +45,7 @@
 #woo-event-list #event-list {
     list-style: none;
     margin: 0;
-    padding: 20px;
+    padding: 20px 0px;
     display: flex;
     overflow: auto;
     transition: all 1s;

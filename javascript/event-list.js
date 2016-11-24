@@ -2,8 +2,8 @@ jQuery(function ($) {
     /**
      * Placement
      */
-    window.eventlist = $('.vc_row > #woo-event-list')
-    window.column = eventlist.next('.vc_column_container').find('.wpb_wrapper')
+    var eventlist = $('.vc_row > #woo-event-list')
+    var column = eventlist.next('.vc_column_container').find('.wpb_wrapper')
     eventlist.detach().appendTo(column)
 
     /**
@@ -30,4 +30,13 @@ jQuery(function ($) {
         var permalink = $(e.target).closest('#event-list li').data('permalink')
         window.location.assign(permalink)
     })
+
+    /**
+     * Image Proportions
+     */
+    var proportion = $('#event-list li').data('proportion')
+    var width = $('#event-list li .image').width()
+    var height = width * proportion
+
+    $('#event-list li').height(height)
 })

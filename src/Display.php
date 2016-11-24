@@ -8,6 +8,7 @@ class Display
         add_action('woocommerce_after_shop_loop', [$this, 'style']);
         add_action('woocommerce_before_shop_loop_item_title', [$this, 'shopLoop']);
         add_action('woocommerce_single_product_summary', [$this, 'singleProduct']);
+        add_filter('woocommerce_cart_item_name', [$this, 'cart'], 10, 2);
         add_action('woocommerce_order_item_meta_start', [$this, 'emails'], 10, 4);
     }
 
@@ -37,6 +38,26 @@ class Display
 
         if ($meta && $meta['external-link']) {
             $this->view->enqueueScript('external-link', ['external-link' => $meta['external-link']]);
+        }
+    }
+
+    /**
+     * Duplication
+     */
+    function cart($name, $item)
+    {
+        $meta = Model::getMeta($item['product_id']);
+
+        if ($meta && $meta['enable']) {
+            $assigns = array_merge($meta, [
+                'start-date' => Utils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']),
+                'end-date'   => Utils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time']),
+                'name'       => $name
+            ]);
+
+            return $this->view->renderString('cart', $assigns);
+        } else {
+            return $name;
         }
     }
 

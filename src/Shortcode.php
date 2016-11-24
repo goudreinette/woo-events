@@ -33,13 +33,12 @@ class Shortcode
 
     function chosenParamType($settings, $value)
     {
-        $this->view->enqueueScript('chosen');
-        $this->view->enqueueScript('vc-chosen');
         return $this->view->renderString('chosen', ['settings' => $settings, 'value' => $value]);
     }
 
     function vc()
     {
+        $this->view->enqueueScript('chosen');
         vc_add_shortcode_param('chosen', [$this, 'chosenParamType']);
         vc_map([
             'name'     => 'WooCommerce Event List',
@@ -96,10 +95,10 @@ class Shortcode
             ],
             [
                 'group'      => 'Layout',
-                'type'       => 'textfield',
-                'heading'    => 'Image Height (px)',
-                'param_name' => 'image_height',
-                'value'      => 150
+                'type'       => 'dropdown',
+                'heading'    => 'Image Proportion (width:height)',
+                'param_name' => 'image_proportion',
+                'value'      => ['1:1' => 1, '2:3' => 1.66, '4:3' => 0.75]
             ],
             [
                 'group'      => 'Layout',
