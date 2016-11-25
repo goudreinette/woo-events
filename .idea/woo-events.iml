@@ -13,11 +13,13 @@
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/mustache/mustache" />
+          <root url="file://$MODULE_DIR$/../../wordpress" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/mustache/mustache" />
+          <root url="file://$MODULE_DIR$/../../wordpress" />
         </SOURCES>
       </library>
     </orderEntry>
