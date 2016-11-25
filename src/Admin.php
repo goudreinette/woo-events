@@ -63,8 +63,14 @@ class Admin
 
         $meta['start-date'] = $start[0];
         $meta['start-time'] = $start[1];
-        $meta['end-date']   = $end[0];
-        $meta['end-time']   = $end[1];
+
+        if (!$meta['has-end']) {
+            $meta['end-date'] = $start[0];
+            $meta['end-time'] = $start[1];
+        } else {
+            $meta['end-date'] = $end[0];
+            $meta['end-time'] = $end[1];
+        }
 
         return $meta;
     }
