@@ -192,6 +192,7 @@
     font-size: 70%;
     top: 5px;
     left: 5px;
+    z-index: 2;
 }
 
 #woo-event-list .List .right {
