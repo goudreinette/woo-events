@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38fb2394-6d15-44eb-9044-3dcf7ad245fe" name="Default" comment="">
+<<<<<<< Updated upstream
       <change type="MOVED" beforePath="$PROJECT_DIR$/javascript/external-link.js" afterPath="$PROJECT_DIR$/javascript/single-product.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display.php" afterPath="$PROJECT_DIR$/src/Display.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/chosen.css" afterPath="$PROJECT_DIR$/stylesheets/chosen.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/chosen.mustache" afterPath="$PROJECT_DIR$/templates/chosen.mustache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/display.mustache" afterPath="$PROJECT_DIR$/templates/display.mustache" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/calendar.mustache" afterPath="$PROJECT_DIR$/templates/calendar.mustache" />
+>>>>>>> Stashed changes
     </list>
     <ignored path="woo-events.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,11 +44,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< Updated upstream
       <file leaf-file-name="display.mustache" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/display.mustache">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="413">
               <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+=======
+      <file leaf-file-name="calendar.mustache" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/calendar.mustache">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+>>>>>>> Stashed changes
               <folding />
             </state>
           </provider>
@@ -108,7 +120,19 @@
         <option value="$PROJECT_DIR$/stylesheets/admin.css" />
         <option value="$PROJECT_DIR$/src/Model.php" />
         <option value="$PROJECT_DIR$/javascript/external-link.js" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/templates/calendar.mustache" />
+=======
+        <option value="$PROJECT_DIR$/templates/display.mustache" />
+        <option value="$PROJECT_DIR$/templates/admin.mustache" />
+        <option value="$PROJECT_DIR$/templates/eventlist.mustache" />
+        <option value="$PROJECT_DIR$/stylesheets/event-list.css" />
+        <option value="$PROJECT_DIR$/src/Admin.php" />
+        <option value="$PROJECT_DIR$/src/View.php" />
+        <option value="$PROJECT_DIR$/src/Display.php" />
+        <option value="$PROJECT_DIR$/woo-events.php" />
+        <option value="$PROJECT_DIR$/src/Utils.php" />
+>>>>>>> Stashed changes
         <option value="$PROJECT_DIR$/src/CalendarWidget.php" />
         <option value="$PROJECT_DIR$/src/Utils.php" />
         <option value="$PROJECT_DIR$/src/DateUtils.php" />
@@ -124,11 +148,15 @@
         <option value="$PROJECT_DIR$/javascript/event-list.js" />
         <option value="$PROJECT_DIR$/templates/cart.mustache" />
         <option value="$PROJECT_DIR$/templates/chosen.mustache" />
+<<<<<<< Updated upstream
         <option value="$PROJECT_DIR$/src/Shortcode.php" />
         <option value="$PROJECT_DIR$/stylesheets/chosen.css" />
         <option value="$PROJECT_DIR$/src/Display.php" />
         <option value="$PROJECT_DIR$/templates/display.mustache" />
         <option value="$PROJECT_DIR$/javascript/single-product.js" />
+=======
+        <option value="$PROJECT_DIR$/templates/calendar.mustache" />
+>>>>>>> Stashed changes
       </list>
     </option>
   </component>
@@ -804,6 +832,7 @@
     <frame x="0" y="42" width="3072" height="3414" extended-state="4" />
     <editor active="true" />
     <layout>
+<<<<<<< Updated upstream
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -820,6 +849,19 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49984843" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.246875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263473" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+>>>>>>> Stashed changes
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -829,9 +871,18 @@
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32828128" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283433" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> Stashed changes
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -965,6 +1016,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/stylesheets/admin.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1475">
@@ -980,6 +1032,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../wordpress/wp-includes/media.php">
+=======
+    <entry file="file://$PROJECT_DIR$/templates/eventlist.mustache">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="625">
           <caret line="797" column="63" lean-forward="true" selection-start-line="797" selection-start-column="63" selection-end-line="797" selection-end-column="63" />
@@ -1146,15 +1201,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/event-list.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="767">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+=======
+        <state relative-caret-position="108">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin.mustache">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="761">
           <caret line="15" column="78" lean-forward="false" selection-start-line="15" selection-start-column="78" selection-end-line="15" selection-end-column="78" />
+=======
+        <state relative-caret-position="27">
+          <caret line="1" column="69" lean-forward="false" selection-start-line="1" selection-start-column="69" selection-end-line="1" selection-end-column="69" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -1181,6 +1246,7 @@
         <state relative-caret-position="2287">
           <caret line="45" column="38" lean-forward="false" selection-start-line="45" selection-start-column="38" selection-end-line="45" selection-end-column="38" />
           <folding>
+<<<<<<< Updated upstream
             <marker date="1479992635627" expanded="true" signature="43:5151" ph="{...}" />
             <marker date="1479992635627" expanded="true" signature="82:234" ph="{...}" />
             <marker date="1479992635627" expanded="true" signature="268:1109" ph="{...}" />
@@ -1207,6 +1273,16 @@
             <marker date="1479992635627" expanded="true" signature="4381:4621" ph="..." />
             <marker date="1479992635627" expanded="true" signature="4637:4873" ph="..." />
             <marker date="1479992635627" expanded="true" signature="4889:5131" ph="..." />
+=======
+            <marker date="1479932917546" expanded="true" signature="54:163" ph=" @param $previousMonths Integer ..." />
+            <marker date="1479932917546" expanded="true" signature="239:606" ph="{...}" />
+            <marker date="1479932917546" expanded="true" signature="665:1134" ph="{...}" />
+            <marker date="1479932917546" expanded="true" signature="736:1102" ph="..." />
+            <marker date="1479932917546" expanded="true" signature="760:1091" ph="..." />
+            <marker date="1479932917546" expanded="true" signature="770:1090" ph="..." />
+            <marker date="1479932917546" expanded="true" signature="1187:1257" ph="{...}" />
+            <marker date="1479932917546" expanded="true" signature="1310:1378" ph="{...}" />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1216,6 +1292,7 @@
         <state relative-caret-position="1559">
           <caret line="480" column="44" lean-forward="false" selection-start-line="480" selection-start-column="44" selection-end-line="480" selection-end-column="44" />
           <folding>
+<<<<<<< Updated upstream
             <marker date="1479992664831" expanded="true" signature="0:372" ph="/*...*/" />
             <marker date="1479992664831" expanded="true" signature="410:595" ph="{...}" />
             <marker date="1479992664831" expanded="true" signature="617:717" ph="{...}" />
@@ -1287,12 +1364,54 @@
             <marker date="1479992664831" expanded="true" signature="13060:13099" ph="{...}" />
             <marker date="1479992664831" expanded="true" signature="13292:13871" ph="{...}" />
             <marker date="1479992664831" expanded="true" signature="13700:13869" ph="{...}" />
+=======
+            <marker date="1479932816749" expanded="true" signature="49:66" ph=" PHP ..." />
+            <marker date="1479932816749" expanded="true" signature="108:353" ph="{...}" />
+            <marker date="1479932816749" expanded="true" signature="143:345" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="153:344" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="182:335" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="217:266" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="274:325" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="405:528" ph="{...}" />
+            <marker date="1479932816749" expanded="true" signature="540:565" ph=" WooCommerce ..." />
+            <marker date="1479932816749" expanded="true" signature="576:687" ph=" @param array $args Additional query arguments ..." />
+            <marker date="1479932816749" expanded="true" signature="742:910" ph="{...}" />
+            <marker date="1479932816749" expanded="true" signature="919:1043" ph=" @param $date String ..." />
+            <marker date="1479932816749" expanded="true" signature="1105:1188" ph="{...}" />
+            <marker date="1479932816749" expanded="true" signature="1198:1218" ph=" Events ..." />
+            <marker date="1479932816749" expanded="true" signature="1229:1375" ph=" @param $categories Array[String] of category names ..." />
+            <marker date="1479932816749" expanded="true" signature="1444:1622" ph="{...}" />
+            <marker date="1479932816749" expanded="true" signature="1479:1614" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="1492:1613" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="1538:1612" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="1631:1778" ph=" @param $filter 'Show' or 'Only' or 'Hide' ..." />
+            <marker date="1479932816749" expanded="true" signature="1838:2300" ph="{...}" />
+            <marker date="1479932816749" expanded="true" signature="1873:2292" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="1886:2291" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="1928:2290" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="2010:2280" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="2039:2078" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="2107:2147" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="2176:2209" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="2234:2267" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="2309:2408" ph=" @param $event An event with end-date ..." />
+            <marker date="1479932816749" expanded="true" signature="2448:2515" ph="{...}" />
+            <marker date="1479932816749" expanded="true" signature="2524:2656" ph=" @param $events Array of events ..." />
+            <marker date="1479932816749" expanded="true" signature="2706:2974" ph="{...}" />
+            <marker date="1479932816749" expanded="true" signature="2785:2941" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="2834:2940" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="2983:3090" ph=" @param $events Array of products with woo-events meta ..." />
+            <marker date="1479932816749" expanded="true" signature="3135:4338" ph="{...}" />
+            <marker date="1479932816749" expanded="true" signature="3167:4330" ph="..." />
+            <marker date="1479932816749" expanded="true" signature="3186:4320" ph="..." />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/javascript/single-product.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="826">
           <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
           <folding>
@@ -1300,6 +1419,10 @@
             <marker date="1479993408397" expanded="true" signature="175:287" ph="{...}" />
             <marker date="1479993408397" expanded="true" signature="294:325" ph="/** Uncode fixes ...*/" />
           </folding>
+=======
+        <state relative-caret-position="625">
+          <caret line="797" column="63" lean-forward="true" selection-start-line="797" selection-start-column="63" selection-end-line="797" selection-end-column="63" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -1308,6 +1431,7 @@
         <state relative-caret-position="1711">
           <caret line="29" column="53" lean-forward="true" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
           <folding>
+<<<<<<< Updated upstream
             <marker date="1479993101891" expanded="true" signature="41:2429" ph="{...}" />
             <marker date="1479993101891" expanded="true" signature="80:515" ph="{...}" />
             <marker date="1479993101891" expanded="true" signature="537:593" ph="{...}" />
@@ -1328,6 +1452,15 @@
             <marker date="1479993101891" expanded="true" signature="2084:2419" ph="..." />
             <marker date="1479993101891" expanded="true" signature="2120:2353" ph="..." />
             <marker date="1479993101891" expanded="true" signature="2128:2352" ph="..." />
+=======
+            <marker date="1479807088359" expanded="true" signature="83:533" ph="{...}" />
+            <marker date="1479807088359" expanded="true" signature="420:524" ph="..." />
+            <marker date="1479807088359" expanded="true" signature="581:654" ph="{...}" />
+            <marker date="1479807088359" expanded="true" signature="697:786" ph="{...}" />
+            <marker date="1479807088359" expanded="true" signature="826:950" ph="{...}" />
+            <marker date="1479807088359" expanded="true" signature="1004:1225" ph="{...}" />
+            <marker date="1479807088359" expanded="true" signature="1124:1195" ph="..." />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
@@ -1337,6 +1470,7 @@
         <state relative-caret-position="2031">
           <caret line="545" column="62" lean-forward="false" selection-start-line="545" selection-start-column="62" selection-end-line="545" selection-end-column="62" />
           <folding>
+<<<<<<< Updated upstream
             <marker date="1479992479147" expanded="true" signature="4:329" ph="..." />
             <marker date="1479992479147" expanded="false" signature="67:80" ph="..." />
             <marker date="1479992479147" expanded="true" signature="108:137" ph="..." />
@@ -1423,14 +1557,80 @@
             <marker date="1479992479147" expanded="true" signature="15970:16017" ph="{...}" />
             <marker date="1479992479147" expanded="true" signature="16222:16849" ph="{...}" />
             <marker date="1479992479147" expanded="true" signature="16658:16843" ph="{...}" />
+=======
+            <marker date="1479933385752" expanded="true" signature="82:234" ph="{...}" />
+            <marker date="1479933385752" expanded="true" signature="268:1067" ph="{...}" />
+            <marker date="1479933385752" expanded="true" signature="827:952" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="997:1018" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="1047:1059" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="1116:1286" ph="{...}" />
+            <marker date="1479933385752" expanded="true" signature="1305:1620" ph="{...}" />
+            <marker date="1479933385752" expanded="true" signature="1397:1612" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="1398:1611" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="1643:5020" ph="{...}" />
+            <marker date="1479933385752" expanded="true" signature="1666:5012" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="1680:1982" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="1998:2239" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="2255:2448" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="2464:2644" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="2660:2893" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="2909:3151" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="3167:3404" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="3420:3694" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="3710:3962" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="3978:4236" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="4252:4492" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="4508:4744" ph="..." />
+            <marker date="1479933385752" expanded="true" signature="4760:5002" ph="..." />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/display.mustache">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="413">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+=======
+        <state relative-caret-position="513">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding>
+            <marker date="1479933636242" expanded="true" signature="4:329" ph="..." />
+            <marker date="1479933636242" expanded="false" signature="67:80" ph="..." />
+            <marker date="1479933636242" expanded="true" signature="108:137" ph="..." />
+            <marker date="1479933636242" expanded="true" signature="203:322" ph="..." />
+            <marker date="1479933636242" expanded="true" signature="230:307" ph="..." />
+            <marker date="1479933636242" expanded="true" signature="340:917" ph="..." />
+            <marker date="1479933636242" expanded="true" signature="366:907" ph="{...}" />
+            <marker date="1479933636242" expanded="true" signature="376:413" ph="/** Chrome bug ...*/" />
+            <marker date="1479933636242" expanded="true" signature="506:688" ph="{...}" />
+            <marker date="1479933636242" expanded="true" signature="764:899" ph="{...}" />
+            <marker date="1479933636242" expanded="true" signature="926:1280" ph="..." />
+            <marker date="1479933636242" expanded="true" signature="950:990" ph="{...}" />
+            <marker date="1479933636242" expanded="true" signature="1012:1091" ph="{...}" />
+            <marker date="1479933636242" expanded="true" signature="1119:1158" ph="{...}" />
+            <marker date="1479933636242" expanded="true" signature="1179:1272" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/display.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding>
+            <marker date="1479806569706" expanded="true" signature="3:165" ph="..." />
+            <marker date="1479806569706" expanded="true" signature="65:131" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/calendar.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="21" column="19" lean-forward="false" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+>>>>>>> Stashed changes
           <folding />
         </state>
       </provider>

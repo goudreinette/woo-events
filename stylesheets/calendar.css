@@ -38,7 +38,12 @@
     background-color: whitesmoke;
 }
 
-#calendar .day {
+#calendar td:not(.day) {
+    border: 1px solid #ccc;
+    background: white;
+}
+
+#calendar .day, #calendar th {
     height: 15%;
     border: 1px solid lightgrey;
     width: 1%;
