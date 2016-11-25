@@ -15,11 +15,10 @@
                 data-proportion="{{options.image_proportion}}">
                 <div class="image">
                     <div class="overlay"></div>
-                    <div class="inner" style="background-image: url({{image}})">
-                        {{#featured}}
-                            <div class="featured">{{featured}}</div>
-                        {{/featured}}
-                    </div>
+                    {{#featured}}
+                        <div class="featured">{{featured}}</div>
+                    {{/featured}}
+                    <div class="inner" style="background-image: url({{image}})"></div>
                 </div>
                 <div class="right">
                     {{#options.show_date}}

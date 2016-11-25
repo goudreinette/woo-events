@@ -14,9 +14,9 @@ class Shortcode
         $options      = vc_map_get_attributes(Model::$key, $options);
         $categories   = explode(',', $options['categories']);
         $events       = Model::getEvents();
-        $sorted       = Utils::sortEvents(Utils::prepareEvents($events), $options['order']);
-        $withCategory = Utils::selectEventsByCategories($categories, $sorted);
-        $filtered     = Utils::filterExpiredEvents($options['expired'], $withCategory);
+        $sorted       = EventUtils::sortEvents(EventUtils::prepareEvents($events), $options['order']);
+        $withCategory = EventUtils::selectEventsByCategories($categories, $sorted);
+        $filtered     = EventUtils::filterExpiredEvents($options['expired'], $withCategory);
         $limited      = Utils::takeIf($options['enable-limit'], $options['limit'], $filtered);
 
         $assigns = [
@@ -59,7 +59,7 @@ class Shortcode
                 'heading'     => 'Product Categories',
                 'param_name'  => 'categories',
                 'save_always' => true,
-                'value'       => Utils::getProductCategories()
+                'value'       => WooUtils::getProductCategories()
             ],
             [
                 'group'      => 'Query',

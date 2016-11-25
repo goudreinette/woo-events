@@ -50,8 +50,8 @@ class Display
 
         if ($meta && $meta['enable']) {
             $assigns = array_merge($meta, [
-                'start-date' => Utils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']),
-                'end-date'   => Utils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time']),
+                'start-date' => WooUtils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']),
+                'end-date'   => WooUtils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time']),
                 'name'       => $name
             ]);
 
