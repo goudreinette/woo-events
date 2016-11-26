@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5eda457f-e004-46f7-bad5-78514e865161" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/stylesheets/chosen.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DateUtils.php" afterPath="$PROJECT_DIR$/src/DateUtils.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shortcode.php" afterPath="$PROJECT_DIR$/src/Shortcode.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Utils.php" afterPath="$PROJECT_DIR$/src/Utils.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WooUtils.php" afterPath="$PROJECT_DIR$/src/WooUtils.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/calendar.css" afterPath="$PROJECT_DIR$/stylesheets/calendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/event-list.css" afterPath="$PROJECT_DIR$/stylesheets/event-list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/eventlist.mustache" afterPath="$PROJECT_DIR$/templates/eventlist.mustache" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="eventlist.mustache" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/eventlist.mustache">
+      <file leaf-file-name="Shortcode.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Shortcode.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1121">
-              <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="708">
+              <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -67,7 +60,6 @@
         <option value="$PROJECT_DIR$/vendor/utils/DateUtils.php" />
         <option value="$PROJECT_DIR$/vendor/utils/Utils.php" />
         <option value="$PROJECT_DIR$/vendor/utils/WooUtils.php" />
-        <option value="$PROJECT_DIR$/src/Shortcode.php" />
         <option value="$PROJECT_DIR$/stylesheets/calendar.css" />
         <option value="$PROJECT_DIR$/src/WooUtils.php" />
         <option value="$PROJECT_DIR$/src/Utils.php" />
@@ -75,6 +67,7 @@
         <option value="$PROJECT_DIR$/stylesheets/build/event-list.css" />
         <option value="$PROJECT_DIR$/stylesheets/event-list.css" />
         <option value="$PROJECT_DIR$/templates/eventlist.mustache" />
+        <option value="$PROJECT_DIR$/src/Shortcode.php" />
       </list>
     </option>
   </component>
@@ -543,7 +536,7 @@
       <option name="presentableId" value="Default" />
       <updated>1480175633054</updated>
       <workItem from="1480175635199" duration="434000" />
-      <workItem from="1480176117103" duration="3101000" />
+      <workItem from="1480176117103" duration="3183000" />
     </task>
     <task id="LOCAL-00001" summary="Prefixed">
       <created>1480176540722</created>
@@ -566,11 +559,18 @@
       <option name="project" value="LOCAL" />
       <updated>1480177470293</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Responsive grid">
+      <created>1480179230400</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1480179230400</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3535000" />
+    <option name="totallyTimeSpent" value="3617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="42" width="3072" height="3414" extended-state="4" />
@@ -614,7 +614,8 @@
     <MESSAGE value="Prefixed" />
     <MESSAGE value="postcss" />
     <MESSAGE value="Restored calendar css" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restored calendar css" />
+    <MESSAGE value="Responsive grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="Responsive grid" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -845,41 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Shortcode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <marker date="1480177817351" expanded="true" signature="44:4577" ph="{...}" />
-            <marker date="1480177817351" expanded="true" signature="83:235" ph="{...}" />
-            <marker date="1480177817351" expanded="true" signature="269:1270" ph="{...}" />
-            <marker date="1480177817351" expanded="true" signature="750:784" ph=" Translations ..." />
-            <marker date="1480177817351" expanded="true" signature="818:964" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="829:963" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="988:1113" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="1158:1179" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="1208:1220" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="1250:1262" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="1319:1429" ph="{...}" />
-            <marker date="1480177817351" expanded="true" signature="1448:1854" ph="{...}" />
-            <marker date="1480177817351" expanded="true" signature="1631:1846" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="1632:1845" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="1877:4575" ph="{...}" />
-            <marker date="1480177817351" expanded="true" signature="1900:4567" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="1914:2219" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="2235:2428" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="2444:2624" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="2640:2922" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="2938:3180" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="3196:3489" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="3505:3779" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="3795:4047" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="4063:4299" ph="..." />
-            <marker date="1480177817351" expanded="true" signature="4315:4557" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/WooUtils.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1084,6 +1050,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1121">
           <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding>
+            <marker date="1480179201171" expanded="true" signature="24:2328" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="62:358" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="92:321" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="196:302" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="397:2321" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="416:2310" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="510:2291" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="609:900" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="690:789" ph="..." />
+            <marker date="1480179201171" expanded="false" signature="838:870" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="936:2273" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="978:1204" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="1021:1162" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="1230:1363" ph="..." />
+            <marker date="1480179201171" expanded="false" signature="1287:1318" ph="..." />
+            <marker date="1480179201171" expanded="false" signature="1396:1430" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="1555:2250" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="1589:1784" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="1636:1749" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="1815:2223" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="1861:2098" ph="..." />
+            <marker date="1480179201171" expanded="true" signature="1912:2052" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Shortcode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
           <folding />
         </state>
       </provider>

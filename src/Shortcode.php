@@ -84,13 +84,6 @@ class Shortcode
             [
                 'group'      => 'Layout',
                 'type'       => 'dropdown',
-                'heading'    => 'Layout',
-                'param_name' => 'layout',
-                'value'      => ['Grid' => 'Grid col-sm-12 col-md-6', 'List' => 'List col-sm-12'],
-            ],
-            [
-                'group'      => 'Layout',
-                'type'       => 'dropdown',
                 'heading'    => 'Order',
                 'param_name' => 'order',
                 'value'      => ['Ascending', 'Descending'],
