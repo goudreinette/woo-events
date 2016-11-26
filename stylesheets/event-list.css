@@ -59,13 +59,8 @@
     margin-bottom: 20px;
     display: flex;
     border: 1px solid #eee;
-    transition: transform cubic-bezier(0.165, 0.840, 0.440, 1.000),
-    opacity,
-    max-height;
-    transform: scale(1);
-    opacity: 1;
+    transition: all 1s;
     max-height: 1000px;
-    transition-duration: 1s !important;
 }
 
 #woo-event-list #event-list li:hover {
@@ -163,18 +158,17 @@
 }
 
 #woo-event-list .hide {
-    display: none !important;
+    height: 0 !important;
 }
 
 /**
  * List
  */
-#woo-event-list .List li {
-    flex-direction: row;
-    min-height: 220px;
+#woo-event-list li.List {
+    min-height: 220px !important;
 }
 
-#woo-event-list .List li .image {
+#woo-event-list li.List .image {
     width: 35%;
     height: 100% !important;
 }
@@ -222,21 +216,16 @@
 /**
  * Grid
  */
-#woo-event-list .Grid {
-    justify-content: space-between;
-    flex-wrap: wrap;
-    flex-direction: row !important;
-}
 
-#woo-event-list .Grid li {
-    flex-direction: column;
+#woo-event-list li.Grid {
     height: auto !important;
     margin: 10px;
     height: auto;
     width: 47%;
+    float: left;
 }
 
-#woo-event-list .Grid li.hide {
+#woo-event-list li.hide.Grid {
     display: none !important;
 }
 
@@ -247,28 +236,28 @@
     top: 0;
 }
 
-#woo-event-list .Grid li .image {
+#woo-event-list li.Grid .image {
     height: 150px;
     width: 100%;
     border-bottom: 1px solid #eee;
 }
 
-#woo-event-list .Grid li .right {
+#woo-event-list li.Grid .right {
     padding: 20px;
 }
 
-#woo-event-list .Grid li .bottom {
+#woo-event-list li.Grid .bottom {
     width: 100%;
     margin-top: 20px;
     display: flex;
     flex-wrap: nowrap;
 }
 
-#woo-event-list .Grid li .excerpt {
+#woo-event-list li.Grid .excerpt {
     height: 66px;
 }
 
-#woo-event-list .Grid li .bottom div {
+#woo-event-list li.Grid .bottom div {
     flex-direction: row;
     margin-left: auto;
 }

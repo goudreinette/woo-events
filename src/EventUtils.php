@@ -79,7 +79,7 @@ class EventUtils
             $eventArray['price']           = $product->price;
             $eventArray['image']           = wp_get_attachment_image_src(get_post_thumbnail_id($event->ID), 'medium')[0];
             $eventArray['featured']        = WooUtils::featuredText($product);
-            $eventArray['post_excerpt']    = substr($product->post->post_excerpt, 0, 140) . "...";
+            $eventArray['post_excerpt']    = substr($product->post->post_excerpt, 0, 100) . "...";
             $eventArray['product_cat']     = wp_get_post_terms($event->ID, 'product_cat')[0]->name;
             $eventArray['permalink']       = get_permalink($event->ID);
             $eventArray['add_to_cart_url'] = $product->add_to_cart_url();

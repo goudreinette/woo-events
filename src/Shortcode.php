@@ -85,7 +85,7 @@ class Shortcode
                 'type'       => 'dropdown',
                 'heading'    => 'Layout',
                 'param_name' => 'layout',
-                'value'      => ['Grid', 'List'],
+                'value'      => ['Grid' => 'Grid col-sm-12 col-md-6', 'List' => 'List col-sm-12'],
             ],
             [
                 'group'      => 'Layout',

@@ -34,9 +34,9 @@ jQuery(function ($) {
     /**
      * Image Proportions
      */
-    var proportion = $('#event-list li').data('proportion')
-    var width = $('#event-list li .image').width()
-    var height = width * proportion
-
-    $('#event-list li').height(height)
+    // var proportion = $('#event-list li').data('proportion')
+    // var width = $('#event-list li .image').width()
+    // var height = width * proportion
+    //
+    // $('#event-list li').height(height)
 })

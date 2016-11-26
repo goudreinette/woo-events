@@ -9,9 +9,9 @@
         </header>
     {{/options.show_category_filter}}
 
-    <ul id="event-list" class="{{options.layout}}">
+    <ul id="event-list" class="row">
         {{#events}}
-            <li data-category="{{product_cat}}" data-permalink="{{permalink}}"
+            <li data-category="{{product_cat}}" data-permalink="{{permalink}}" class="{{options.layout}}"
                 data-proportion="{{options.image_proportion}}">
                 <div class="image">
                     <div class="overlay"></div>

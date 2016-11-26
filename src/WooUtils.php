@@ -20,7 +20,7 @@ class WooUtils
      */
     public static function formatDateTimeWoocommerce($date, $time)
     {
-        $formatted = date(wc_date_format(), strtotime($date));
+        $formatted = date_i18n(wc_date_format(), strtotime($date));
         return "$formatted, $time uur";
     }
 
