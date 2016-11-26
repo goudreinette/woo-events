@@ -1,54 +1,54 @@
-<?php namespace WooEvents;
+<?php namespace Utils;
 
 
-class DateUtils
+/**
+ * @param $previousMonths Integer
+ * @param $nextMonths     Integer
+ * @return \DatePeriod
+ */
+function createMonthRange($previousMonths, $nextMonths)
 {
-    /**
-     * @param $previousMonths Integer
-     * @param $nextMonths     Integer
-     * @return \DatePeriod
-     */
-    public static function createMonthRange($previousMonths, $nextMonths)
-    {
-        $nextMonths    = $nextMonths + 1;
-        $rangeStart    = new \DateTimeImmutable("now -$previousMonths months");
-        $rangeEnd      = new \DateTimeImmutable("now +$nextMonths months");
-        $monthInterval = new \DateInterval('P1M');
-        $range         = new \DatePeriod($rangeStart, $monthInterval, $rangeEnd);
+    $nextMonths    = $nextMonths + 1;
+    $rangeStart    = new \DateTimeImmutable("now -$previousMonths months");
+    $rangeEnd      = new \DateTimeImmutable("now +$nextMonths months");
+    $monthInterval = new \DateInterval('P1M');
+    $range         = new \DatePeriod($rangeStart, $monthInterval, $rangeEnd);
 
-        return $range;
+    return $range;
+}
+
+function monthRangeToArray($monthRange)
+{
+    $result = [];
+
+    foreach ($monthRange as $month) {
+        array_push($result, [
+            'year'      => $month->format('Y'),
+            'month'     => $month->format('m'),
+            'localised' => date_i18n('F', $month->getTimestamp()),
+            'days'      => generateMonthDays($month)
+        ]);
     }
 
-    public static function monthRangeToArray($monthRange)
-    {
-        $result = [];
+    return $result;
+}
 
-        foreach ($monthRange as $month) {
-            array_push($result, [
-                'year'      => $month->format('Y'),
-                'month'     => $month->format('m'),
-                'localised' => date_i18n('F', $month->getTimestamp()),
-                'days'      => array_chunk(array_map(function ($day) {
-                    return sprintf("%02d", $day);
-                }, range(1, cal_days_in_month(CAL_GREGORIAN, $month->format('m'), $month->format('Y')))), 7)
-            ]);
-        }
+function generateMonthDays($month)
+{
+    $daysInMonth = cal_days_in_month(CAL_GREGORIAN, $month->format('m'), $month->format('Y'));
+    $dayRange    = range(1, $daysInMonth);
 
-        return $result;
-    }
+    return array_chunk(array_map(function ($day) {
+        return sprintf("%02d", $day);
+    }, $dayRange), 7);
+}
 
-    public static function makeDay()
-    {
+function formatDate($date = null)
+{
+    return date('Y-m-d', strtotime($date) ?: time());
+}
 
-    }
-
-    public static function formatDate($date = null)
-    {
-        return date('Y-m-d', strtotime($date) ?: time());
-    }
-
-    public static function formatTime($time = null)
-    {
-        return date('H:i', strtotime($time) ?: time());
-    }
+function formatTime($time = null)
+{
+    return date('H:i', strtotime($time) ?: time());
 }

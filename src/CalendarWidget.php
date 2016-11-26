@@ -1,5 +1,7 @@
 <?php namespace WooEvents;
 
+use Utils;
+
 class CalendarWidget extends \WP_Widget
 {
     public $title = 'Woo Events Calendar';
@@ -25,10 +27,10 @@ class CalendarWidget extends \WP_Widget
          * The range of months that the calendar will cover.
          */
         $categories      = WooUtils::getProductCategories(['include' => $instance['categories']]);
-        $monthRange      = DateUtils::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
-        $monthRangeArray = DateUtils::monthRangeToArray($monthRange);
+        $monthRange      = Utils\createMonthRange($instance['previousmonths'], $instance['nextmonths']);
+        $monthRangeArray = Utils\monthRangeToArray($monthRange);
         $rawEvents       = Model::getEvents();
-        $events          = EventUtils::selectEventsByCategories($categories, EventUtils::prepareEvents($rawEvents));
+        $events          = selectEventsByCategories($categories, prepareEvents($rawEvents));
 
         $assigns = ['months' => $monthRangeArray, 'events' => $events];
 

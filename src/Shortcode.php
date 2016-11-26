@@ -1,5 +1,6 @@
 <?php namespace WooEvents;
 
+use Utils;
 
 class Shortcode
 {
@@ -15,9 +16,9 @@ class Shortcode
         $options      = vc_map_get_attributes(Model::$key, $options);
         $categories   = explode(',', $options['categories']);
         $events       = Model::getEvents();
-        $sorted       = EventUtils::sortEvents(EventUtils::prepareEvents($events), $options['order']);
-        $withCategory = EventUtils::selectEventsByCategories($categories, $sorted);
-        $limited      = Utils::takeIf($options['enable-limit'], $options['limit'], $withCategory);
+        $sorted       = sortEvents(prepareEvents($events), $options['order']);
+        $withCategory = selectEventsByCategories($categories, $sorted);
+        $limited      = Utils\takeIf($options['enable-limit'], $options['limit'], $withCategory);
 
         /**
          * Translations

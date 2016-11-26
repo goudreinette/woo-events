@@ -26,6 +26,8 @@ class WooUtils
 
     /**
      * Events
+     * @param \WC_Product $product
+     * @return string
      */
     public static function featuredText(\WC_Product $product)
     {

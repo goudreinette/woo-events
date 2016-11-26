@@ -8,6 +8,7 @@ Version: 1.0
 Author: reinvdwoerd
 Author URI: reinvdwoerd.herokuapp.com
 License: A "Slug" license name e.g. GPL2
+Text Domain: woo-events
 */
 
 
@@ -32,4 +33,11 @@ new Shortcode($view);
  */
 add_action('init', function () {
     Model::updateExpired();
+});
+
+/**
+ * Translations
+ */
+add_action('plugins_loaded', function () {
+    load_plugin_textdomain('woo-events', false, dirname(plugin_basename(__FILE__)));
 });
