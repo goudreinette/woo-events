@@ -19,6 +19,14 @@ class Shortcode
         $filtered     = EventUtils::filterExpiredEvents($options['expired'], $withCategory);
         $limited      = Utils::takeIf($options['enable-limit'], $options['limit'], $filtered);
 
+        /**
+         * Translations
+         */
+        $options = array_merge($options, [
+            'order_text'       => __('Order', Model::$key),
+            'add_to_cart_text' => __('Add to Cart', Model::$key)
+        ]);
+
         $assigns = [
             'categories' => $categories,
             'events'     => $limited,
@@ -114,20 +122,6 @@ class Shortcode
                 'heading'    => 'Date',
                 'param_name' => 'show_date',
                 'value'      => ['Show' => 'show', 'Hide' => false]
-            ],
-            [
-                'group'      => 'Layout',
-                'type'       => 'textfield',
-                'heading'    => 'Add to Cart Button Text',
-                'param_name' => 'add_to_cart_text',
-                'value'      => 'Add to Cart',
-            ],
-            [
-                'group'      => 'Layout',
-                'type'       => 'textfield',
-                'heading'    => 'Order Button Text',
-                'param_name' => 'button_text',
-                'value'      => 'Order'
             ],
             [
                 'group'      => 'Colors',

@@ -3,7 +3,7 @@ jQuery(function ($) {
      * Select Days, Show/Hide Event Tickets
      */
     $('.events .event').addClass('hidden')
-    $('.events .event').each((i, el) => {
+    $('.events .event').each(function (i, el) {
         var startDate = $(el).data('start-date')
         var day = $('.day[data-start-date="' + startDate + '"]')
         day.addClass('has-event')

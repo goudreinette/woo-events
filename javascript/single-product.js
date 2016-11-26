@@ -1,5 +1,5 @@
 jQuery(function ($) {
-    $('form.cart button').text('Bekijken')
+    $('form.cart button').text(assigns['external-link-text'])
     $('.quantity, .add_to_wishlist, .price-container').remove()
 
     $('form.cart button').click(function (e) {
