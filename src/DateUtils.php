@@ -28,11 +28,18 @@ class DateUtils
                 'year'      => $month->format('Y'),
                 'month'     => $month->format('m'),
                 'localised' => date_i18n('F', $month->getTimestamp()),
-                'days'      => array_chunk(range(1, cal_days_in_month(CAL_GREGORIAN, $month->format('m'), $month->format('Y'))), 7)
+                'days'      => array_chunk(array_map(function ($day) {
+                    return sprintf("%02d", $day);
+                }, range(1, cal_days_in_month(CAL_GREGORIAN, $month->format('m'), $month->format('Y')))), 7)
             ]);
         }
 
         return $result;
+    }
+
+    public static function makeDay()
+    {
+
     }
 
     public static function formatDate($date = null)

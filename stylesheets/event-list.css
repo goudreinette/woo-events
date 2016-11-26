@@ -72,6 +72,7 @@
     overflow: hidden;
     transition: all 0.5s;
     cursor: pointer;
+    min-height: 220px !important;
 }
 
 #woo-event-list #event-list li .image .inner {
@@ -80,6 +81,7 @@
     background-size: cover;
     transition: all 0.5s;
     height: 100%;
+    min-height: 220px !important;
 }
 
 #woo-event-list #event-list li .image:hover .inner {
