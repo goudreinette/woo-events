@@ -73,6 +73,10 @@
     font-weight: normal;
 }
 
+#calendar .day.today {
+    font-weight: bold;
+}
+
 #calendar .day.has-event {
     font-weight: bold;
     background-color: #d85757;

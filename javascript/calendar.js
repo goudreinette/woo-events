@@ -38,9 +38,16 @@ jQuery(function ($) {
      * Start with current month
      */
     var now = new Date()
+    var day = now.getDate()
     var month = now.getMonth() + 1
     var year = now.getFullYear()
 
     $('[data-month=' + month + ']' + '[data-year=' + year + ']')
         .toggleClass('active', true)
+
+    /**
+     * Highlight today
+     */
+    var today = year + '-' + month + '-' + day
+    $('[data-start-date=' + today + ']').addClass('today')
 });
