@@ -33,10 +33,10 @@ class Admin
             'enable'           => $meta['enable'] ? 'checked' : '',
             'has-end'          => $meta['has-end'] ? 'checked' : '',
             'hide-add-to-cart' => $meta['hide-add-to-cart'] ? 'checked' : '',
-            'start-time'       => Utils\formatTime($meta['start-time']),
-            'end-time'         => Utils\formatTime($meta['end-time']),
-            'start-date'       => Utils\formatDate($meta['start-date']),
-            'end-date'         => Utils\formatDate($meta['end-date'])
+            'start-time'       => DateUtils::formatTime($meta['start-time']),
+            'end-time'         => DateUtils::formatTime($meta['end-time']),
+            'start-date'       => DateUtils::formatDate($meta['start-date']),
+            'end-date'         => DateUtils::formatDate($meta['end-date'])
         ]);
 
         $this->view->enqueueStyle('admin');

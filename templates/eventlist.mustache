@@ -16,7 +16,7 @@
                 <div class="image">
                     <div class="overlay"></div>
                     {{#featured}}
-                        <div class="featured">{{featured}}</div>
+                        <div class="featured {{featured}}">{{featured}}</div>
                     {{/featured}}
                     <div class="inner" style="background-image: url({{image}})"></div>
                 </div>
@@ -35,7 +35,7 @@
                     <div class="bottom">
                         {{#price}}
                             {{^external-link}}
-                                <h4 class="price">€{{price}}</h4>
+                                <h4 class="price">€ {{price}}</h4>
                             {{/external-link}}
                         {{/price}}
                         <div>
