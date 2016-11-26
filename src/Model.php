@@ -36,9 +36,9 @@ class Model
         wp_update_post($post);
     }
 
-    static function getCategories()
+    static function getCategories($args = [])
     {
-        return get_categories(['taxonomy' => 'product_cat']);
+        return get_categories(array_merge(['taxonomy' => 'product_cat'], $args));
     }
 
     static function getEvents()
@@ -49,5 +49,26 @@ class Model
             'numberposts'      => -1,
             'suppress_filters' => true
         ]);
+    }
+
+    /**
+     * If an event is expired, add the expired category.
+     * Else, remove it
+     */
+    static function updateExpired()
+    {
+        $expiredCategory = self::getCategories(['name' => 'expired', 'fields' => 'ids']);
+
+        foreach (self::getEvents() as $event) {
+            $meta       = self::getMeta($event->ID);
+            $categories = wp_get_object_terms([$event->ID], 'product_cat', ['fields' => 'ids']);
+
+            if (EventUtils::isExpired($meta))
+                $categories = array_merge($categories, $expiredCategory);
+            else
+                $categories = array_diff($categories, $expiredCategory);
+
+            wp_set_post_terms($event->ID, $categories, 'product_cat');
+        }
     }
 }

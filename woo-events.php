@@ -25,3 +25,11 @@ $view = new View($assetsDir);
 new Admin($view);
 new Display($view);
 new Shortcode($view);
+
+
+/**
+ * Update expired events
+ */
+add_action('init', function () {
+    Model::updateExpired();
+});
