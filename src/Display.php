@@ -39,7 +39,7 @@ class Display
         if ($meta && $meta['external-link']) {
             $this->view->enqueueScript('single-product', [
                 'external-link'      => $meta['external-link'],
-                'external-link-text' => __('View', Model::$key)
+                'external-link-text' => __('View Event', 'woo-events')
             ]);
         }
     }

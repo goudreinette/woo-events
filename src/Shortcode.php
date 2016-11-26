@@ -23,8 +23,8 @@ class Shortcode
          * Translations
          */
         $options = array_merge($options, [
-            'order_text'       => __('Order', Model::$key),
-            'add_to_cart_text' => __('Add to Cart', Model::$key)
+            'order_text'       => __('Order', 'woo-events'),
+            'add_to_cart_text' => __('Add to Cart', 'woo-events')
         ]);
 
         $assigns = [
