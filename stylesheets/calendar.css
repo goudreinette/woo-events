@@ -53,6 +53,10 @@
     background-color: whitesmoke;
 }
 
+#calendar td {
+    padding: 10px 0;
+}
+
 #calendar td:not(.day) {
     border: 1px solid #ccc;
     background: white;

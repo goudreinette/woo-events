@@ -1,5 +1,6 @@
 <?php namespace WooEvents;
 
+
 class Shortcode
 {
     function __construct(View $view)

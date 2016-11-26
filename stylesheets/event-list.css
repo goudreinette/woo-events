@@ -135,6 +135,14 @@
     font-size: 14px;
 }
 
+#woo-event-list .date br {
+    display: none !important;
+}
+
+#woo-event-list .date span {
+    display: inline;
+}
+
 #woo-event-list h3 {
     margin: 20px 10px 0 0;
     cursor: pointer;
@@ -217,47 +225,54 @@
 /**
  * Grid
  */
+@media (max-width: 500px) {
+    #woo-event-list li {
+        margin: 10px;
+        height: auto;
+        flex-direction: column;
+        display: flex;
+    }
 
-#woo-event-list li.Grid {
-    margin: 10px;
-    height: auto;
-    width: 47%;
-    float: left;
-}
+    #woo-event-list li.hide {
+        display: none !important;
+    }
 
-#woo-event-list li.hide.Grid {
-    display: none !important;
-}
+    #woo-event-list .date {
+        display: block;
+        position: relative;
+        left: 0;
+        top: 0;
+    }
 
-#woo-event-list .Grid .date {
-    display: block;
-    position: relative;
-    left: 0;
-    top: 0;
-}
+    #woo-event-list .date br {
+        display: block;
+    }
 
-#woo-event-list li.Grid .image {
-    height: 150px;
-    width: 100%;
-    border-bottom: 1px solid #eee;
-}
+    #woo-event-list li .image {
+        height: 150px;
+        width: 100% !important;
+        border-bottom: 1px solid #eee;
+    }
 
-#woo-event-list li.Grid .right {
-    padding: 20px;
-}
+    #woo-event-list li .right {
+        padding: 20px;
+        width: 100% !important;
+        height: 250px !important;
+    }
 
-#woo-event-list li.Grid .bottom {
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: nowrap;
-}
+    #woo-event-list li .bottom {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
 
-#woo-event-list li.Grid .excerpt {
-    height: 66px;
-}
+    #woo-event-list li .excerpt {
+        height: 66px;
+    }
 
-#woo-event-list li.Grid .bottom div {
-    flex-direction: row;
-    margin-left: auto;
+    #woo-event-list li .bottom div {
+        flex-direction: row;
+        margin-left: auto;
+    }
 }
