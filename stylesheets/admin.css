@@ -7,8 +7,6 @@
     margin: 10px;
     float: left;
     clear: both;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 }
 
