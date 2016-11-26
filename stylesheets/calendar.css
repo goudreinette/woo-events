@@ -1,15 +1,24 @@
 /* Wrap, Nav */
 #calendar-wrap {
     margin-top: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 #calendar-wrap nav {
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 0 10px;
 }
 
@@ -29,9 +38,15 @@
 }
 
 #calendar {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     height: calc(100% - 50px);
     border: none;
     margin: 0;
@@ -90,6 +105,8 @@
 #calendar-wrap .event {
     height: 120px;
     border: 1px solid grey;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 

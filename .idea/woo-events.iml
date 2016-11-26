@@ -26,12 +26,14 @@
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/mustache/mustache" />
           <root url="file://$MODULE_DIR$/../../wordpress" />
+          <root url="file://$MODULE_DIR$/../../../lib/php" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/composer" />
           <root url="file://$MODULE_DIR$/vendor/mustache/mustache" />
           <root url="file://$MODULE_DIR$/../../wordpress" />
+          <root url="file://$MODULE_DIR$/../../../lib/php" />
         </SOURCES>
       </library>
     </orderEntry>
