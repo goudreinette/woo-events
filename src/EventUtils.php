@@ -76,7 +76,7 @@ class EventUtils
             $eventArray['start-date-only'] = DateUtils::formatDate($eventArray['start-date']);
             $eventArray['start-date']      = WooUtils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']);
             $eventArray['end-date']        = WooUtils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time']);
-            $eventArray['price']           = $product->get_price();
+            $eventArray['price']           = $product->get_price_html();
             $eventArray['image']           = wp_get_attachment_image_src(get_post_thumbnail_id($event->ID), 'medium')[0];
             $eventArray['featured']        = WooUtils::featuredText($product);
             $eventArray['post_excerpt']    = substr($product->post->post_excerpt, 0, 100) . "...";
