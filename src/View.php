@@ -7,7 +7,7 @@ class View
         $this->assetsDirectory     = $assetsDirectory;
         $this->templateDirectory   = $assetsDirectory . 'templates/';
         $this->javascriptDirectory = $assetsDirectory . 'javascript/';
-        $this->stylesheetDirectory = $assetsDirectory . 'stylesheets/build';
+        $this->stylesheetDirectory = $assetsDirectory . 'stylesheets/build/';
         $this->mustache            = new \Mustache_Engine([
             'loader' => new \Mustache_Loader_FilesystemLoader($this->templateDirectory)
         ]);
