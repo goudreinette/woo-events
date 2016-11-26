@@ -6,6 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5eda457f-e004-46f7-bad5-78514e865161" name="Default" comment="">
+<<<<<<< HEAD
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Event.php" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/EventUtils.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
@@ -18,6 +19,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WooUtils.php" afterPath="$PROJECT_DIR$/src/WooUtils.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/event-list.css" afterPath="$PROJECT_DIR$/stylesheets/event-list.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/woo-events.php" afterPath="$PROJECT_DIR$/woo-events.php" />
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Display.php" afterPath="$PROJECT_DIR$/src/Display.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Shortcode.php" afterPath="$PROJECT_DIR$/src/Shortcode.php" />
+>>>>>>> parent of dfab1af... hide add to cart
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +45,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="Shortcode.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Shortcode.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="767">
               <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+=======
+      <file leaf-file-name="Display.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Display.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1534">
+              <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+>>>>>>> parent of dfab1af... hide add to cart
               <folding />
             </state>
           </provider>
@@ -76,6 +90,7 @@
         <option value="$PROJECT_DIR$/vendor/utils/Utils.php" />
         <option value="$PROJECT_DIR$/vendor/utils/WooUtils.php" />
         <option value="$PROJECT_DIR$/stylesheets/calendar.css" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/Display.php" />
         <option value="$PROJECT_DIR$/src/WooEvents/Event.php" />
         <option value="$PROJECT_DIR$/src/AllEvents.php" />
@@ -93,6 +108,16 @@
         <option value="$PROJECT_DIR$/src/CalendarWidget.php" />
         <option value="$PROJECT_DIR$/src/Event.php" />
         <option value="$PROJECT_DIR$/src/Shortcode.php" />
+=======
+        <option value="$PROJECT_DIR$/src/WooUtils.php" />
+        <option value="$PROJECT_DIR$/src/Utils.php" />
+        <option value="$PROJECT_DIR$/src/DateUtils.php" />
+        <option value="$PROJECT_DIR$/stylesheets/build/event-list.css" />
+        <option value="$PROJECT_DIR$/stylesheets/event-list.css" />
+        <option value="$PROJECT_DIR$/templates/eventlist.mustache" />
+        <option value="$PROJECT_DIR$/src/Shortcode.php" />
+        <option value="$PROJECT_DIR$/src/Display.php" />
+>>>>>>> parent of dfab1af... hide add to cart
       </list>
     </option>
   </component>
@@ -102,11 +127,14 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+<<<<<<< HEAD
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="ba631e6b-f545-4013-b498-93ea4c57e5ff" name="localhost" />
     </servers>
   </component>
+=======
+>>>>>>> parent of dfab1af... hide add to cart
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7">
     <include_path>
       <path value="$PROJECT_DIR$/../../wordpress" />
@@ -128,55 +156,11 @@
             <id />
           </State>
           <State>
-            <id>Code SmellPHP</id>
-          </State>
-          <State>
-            <id>Code StylePHP</id>
-          </State>
-          <State>
-            <id>Control FlowPHP</id>
-          </State>
-          <State>
             <id>File Watchers</id>
           </State>
-          <State>
-            <id>GeneralPHP</id>
-          </State>
-          <State>
-            <id>Naming conventionsPHP</id>
-          </State>
-          <State>
-            <id>PHP</id>
-          </State>
-          <State>
-            <id>PHP Strict StandardsPHP</id>
-          </State>
-          <State>
-            <id>PHPDocPHP</id>
-          </State>
-          <State>
-            <id>Probable bugsPHP</id>
-          </State>
-          <State>
-            <id>Type compatibilityPHP</id>
-          </State>
-          <State>
-            <id>UndefinedPHP</id>
-          </State>
-          <State>
-            <id>UnusedPHP</id>
-          </State>
         </expanded-state>
-        <selected-state>
-          <State>
-            <id>Application Server Specific Inspections</id>
-          </State>
-        </selected-state>
       </profile-state>
     </entry>
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -193,6 +177,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+>>>>>>> parent of dfab1af... hide add to cart
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -201,8 +191,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -212,6 +202,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="woo-events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -277,23 +289,29 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
+=======
+>>>>>>> parent of dfab1af... hide add to cart
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../wordpress" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js.eslint.eslintPackage" value="/usr/lib/node_modules/eslint" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+<<<<<<< HEAD
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="SearchEverywhereHistoryKey" value="getEve&#9;null&#9;null" />
+=======
+>>>>>>> parent of dfab1af... hide add to cart
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -593,10 +611,14 @@
       <updated>1480175633054</updated>
       <workItem from="1480175635199" duration="434000" />
       <workItem from="1480176117103" duration="3220000" />
+<<<<<<< HEAD
       <workItem from="1480179728948" duration="203000" />
       <workItem from="1480185389939" duration="2985000" />
       <workItem from="1480188981274" duration="1918000" />
       <workItem from="1480199902000" duration="1224000" />
+=======
+      <workItem from="1480179728948" duration="192000" />
+>>>>>>> parent of dfab1af... hide add to cart
     </task>
     <task id="LOCAL-00001" summary="Prefixed">
       <created>1480176540722</created>
@@ -633,6 +655,7 @@
       <option name="project" value="LOCAL" />
       <updated>1480179319906</updated>
     </task>
+<<<<<<< HEAD
     <task id="LOCAL-00006" summary="Translations">
       <created>1480179928037</created>
       <option name="number" value="00006" />
@@ -659,6 +682,13 @@
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="9984000" />
+=======
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3846000" />
+>>>>>>> parent of dfab1af... hide add to cart
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="42" width="3062" height="3414" extended-state="4" />
@@ -676,9 +706,14 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297969" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22338341" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24722403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> parent of dfab1af... hide add to cart
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -688,9 +723,16 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39981812" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> parent of dfab1af... hide add to cart
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,6 +749,7 @@
     <MESSAGE value="Restored calendar css" />
     <MESSAGE value="Responsive grid" />
     <MESSAGE value="Removed parameterized layout" />
+<<<<<<< HEAD
     <MESSAGE value="Translations" />
     <MESSAGE value="hide add to cart" />
     <MESSAGE value="hide add to cart fix" />
@@ -714,6 +757,9 @@
   </component>
   <component name="WordPressConfiguration" enabled="true">
     <wordpressPath>$PROJECT_DIR$/../../wordpress</wordpressPath>
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="Removed parameterized layout" />
+>>>>>>> parent of dfab1af... hide add to cart
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -734,6 +780,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/woo-events.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2124">
@@ -800,11 +847,43 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> parent of dfab1af... hide add to cart
     <entry file="file://$PROJECT_DIR$/src/Shortcode.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3894">
           <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+<<<<<<< HEAD
           <folding />
+=======
+          <folding>
+            <marker date="1480179880161" expanded="true" signature="44:4281" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="83:235" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="269:1272" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="750:784" ph=" Translations ..." />
+            <marker date="1480179880161" expanded="true" signature="818:966" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="829:965" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="990:1115" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1160:1181" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1210:1222" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1252:1264" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1321:1431" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="1450:1856" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="1633:1848" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1634:1847" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1879:4279" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="1902:4271" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1916:2221" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="2237:2430" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="2446:2626" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="2642:2884" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="2900:3193" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="3209:3483" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="3499:3751" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="3767:4003" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="4019:4261" ph="..." />
+          </folding>
+>>>>>>> parent of dfab1af... hide add to cart
         </state>
       </provider>
     </entry>
@@ -817,6 +896,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/event-list-original.css" />
     <entry file="file://$PROJECT_DIR$/stylesheets/chosen.css" />
+    <entry file="file://$PROJECT_DIR$/woo-events.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding>
+            <marker date="1480175079931" expanded="true" signature="30:242" ph="..." />
+            <marker date="1480175079931" expanded="true" signature="356:372" ph=" Initialize ..." />
+            <marker date="1480175079931" expanded="true" signature="485:512" ph=" Update expired events ..." />
+            <marker date="1480175079931" expanded="true" signature="526:577" ph="..." />
+            <marker date="1480175079931" expanded="true" signature="547:576" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
@@ -839,6 +932,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/calendar.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-650">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/build/calendar.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="938">
@@ -846,6 +946,50 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/src/EventUtils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1480155954168" expanded="true" signature="55:201" ph=" @param $categories Array[String] of category names ..." />
+            <marker date="1480155954168" expanded="true" signature="277:455" ph="{...}" />
+            <marker date="1480155954168" expanded="true" signature="312:447" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="325:446" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="371:445" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="464:611" ph=" @param $filter 'Show' or 'Only' or 'Hide' ..." />
+            <marker date="1480155954168" expanded="true" signature="678:1140" ph="{...}" />
+            <marker date="1480155954168" expanded="true" signature="713:1132" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="726:1131" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="768:1130" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="850:1120" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="879:918" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="947:987" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="1016:1049" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="1074:1107" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="1149:1248" ph=" @param $event An event with end-date ..." />
+            <marker date="1480155954168" expanded="true" signature="1295:1362" ph="{...}" />
+            <marker date="1480155954168" expanded="true" signature="1371:1503" ph=" @param $events Array of events ..." />
+            <marker date="1480155954168" expanded="true" signature="1560:1828" ph="{...}" />
+            <marker date="1480155954168" expanded="true" signature="1639:1795" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="1688:1794" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="1837:1944" ph=" @param $events Array of products with woo-events meta ..." />
+            <marker date="1480155954168" expanded="true" signature="1996:3287" ph="{...}" />
+            <marker date="1480155954168" expanded="true" signature="2028:3279" ph="..." />
+            <marker date="1480155954168" expanded="true" signature="2047:3269" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/woo-events/src/Utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> parent of dfab1af... hide add to cart
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -897,10 +1041,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/eventlist.mustache">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1121">
+          <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/../../wordpress/wp-includes/l10n.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1689">
           <caret line="691" column="0" lean-forward="true" selection-start-line="691" selection-start-column="0" selection-end-line="691" selection-end-column="0" />
+=======
+        <state relative-caret-position="1099">
+          <caret line="171" column="9" lean-forward="false" selection-start-line="171" selection-start-column="9" selection-end-line="171" selection-end-column="9" />
+>>>>>>> parent of dfab1af... hide add to cart
           <folding>
             <marker date="1469033852000" expanded="false" signature="9:96" ph=" Core Translation API ..." />
             <marker date="1469033852000" expanded="true" signature="103:780" ph=" Retrieves the current locale. ..." />
@@ -1046,6 +1202,31 @@
             <marker date="1469033852000" expanded="true" signature="37523:37779" ph="..." />
             <marker date="1469033852000" expanded="true" signature="37910:37928" ph="..." />
           </folding>
+<<<<<<< HEAD
+=======
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="4" column="11" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+          <folding>
+            <marker date="1480175272891" expanded="true" signature="39:2101" ph="{...}" />
+            <marker date="1480175272891" expanded="true" signature="130:401" ph="..." />
+            <marker date="1480175272891" expanded="true" signature="444:516" ph="{...}" />
+            <marker date="1480175272891" expanded="true" signature="563:769" ph="{...}" />
+            <marker date="1480175272891" expanded="true" signature="658:762" ph="..." />
+            <marker date="1480175272891" expanded="true" signature="835:979" ph="{...}" />
+            <marker date="1480175272891" expanded="true" signature="1026:1120" ph="{...}" />
+            <marker date="1480175272891" expanded="true" signature="1153:1372" ph="{...}" />
+            <marker date="1480175272891" expanded="true" signature="1185:1364" ph="..." />
+            <marker date="1480175272891" expanded="true" signature="1186:1363" ph="..." />
+            <marker date="1480175272891" expanded="true" signature="1381:1467" ph=" If an event is expired, add the expired category. ..." />
+            <marker date="1480175272891" expanded="true" signature="1505:2099" ph="{...}" />
+            <marker date="1480175272891" expanded="true" signature="1650:2092" ph="..." />
+          </folding>
+>>>>>>> parent of dfab1af... hide add to cart
         </state>
       </provider>
     </entry>
@@ -1054,6 +1235,7 @@
         <state relative-caret-position="2124">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
+<<<<<<< HEAD
             <marker date="1480190891350" expanded="true" signature="30:266" ph="..." />
             <marker date="1480190891350" expanded="true" signature="380:396" ph=" Initialize ..." />
             <marker date="1480190891350" expanded="true" signature="509:536" ph=" Update expired events ..." />
@@ -1062,12 +1244,40 @@
             <marker date="1480190891350" expanded="true" signature="608:626" ph=" Translations ..." />
             <marker date="1480190891350" expanded="true" signature="640:758" ph="..." />
             <marker date="1480190891350" expanded="true" signature="671:757" ph="..." />
+=======
+            <marker date="1480179880161" expanded="true" signature="44:4281" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="83:235" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="269:1272" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="750:784" ph=" Translations ..." />
+            <marker date="1480179880161" expanded="true" signature="818:966" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="829:965" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="990:1115" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1160:1181" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1210:1222" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1252:1264" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1321:1431" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="1450:1856" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="1633:1848" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1634:1847" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1879:4279" ph="{...}" />
+            <marker date="1480179880161" expanded="true" signature="1902:4271" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="1916:2221" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="2237:2430" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="2446:2626" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="2642:2884" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="2900:3193" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="3209:3483" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="3499:3751" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="3767:4003" ph="..." />
+            <marker date="1480179880161" expanded="true" signature="4019:4261" ph="..." />
+>>>>>>> parent of dfab1af... hide add to cart
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../../wordpress/wp-content/plugins/woo-events/src/Utils.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="118">
           <caret line="2" column="6" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding>
@@ -1717,85 +1927,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="767">
           <caret line="58" column="11" lean-forward="true" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
+=======
+        <state relative-caret-position="1534">
+          <caret line="41" column="70" lean-forward="false" selection-start-line="41" selection-start-column="70" selection-end-line="41" selection-end-column="70" />
+>>>>>>> parent of dfab1af... hide add to cart
           <folding />
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>bundler (v1.13.2, ruby-2.3.1-p112) [gem]</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>IDE SDK</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>woo-events</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
