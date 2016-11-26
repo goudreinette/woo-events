@@ -32,10 +32,15 @@ class View
 
     function enqueueScript($script, $assigns = null)
     {
-        wp_enqueue_script($script, $this->javascriptDirectory . $script . '.js');
+        /**
+         * Avoid conflicts
+         */
+        $scriptHash = $script . random_int(0, 999);
+
+        wp_enqueue_script($scriptHash, $this->javascriptDirectory . $script . '.js');
 
         if (isset($assigns)) {
-            wp_localize_script($script, 'assigns', $assigns);
+            wp_localize_script($scriptHash, 'assigns', $assigns);
         }
 
         return $this;

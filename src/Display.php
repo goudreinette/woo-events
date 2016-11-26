@@ -85,5 +85,4 @@ class Display
             $this->view->render($template, $assigns);
         }
     }
-
 }
