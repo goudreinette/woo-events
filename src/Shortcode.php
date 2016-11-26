@@ -16,8 +16,7 @@ class Shortcode
         $events       = Model::getEvents();
         $sorted       = EventUtils::sortEvents(EventUtils::prepareEvents($events), $options['order']);
         $withCategory = EventUtils::selectEventsByCategories($categories, $sorted);
-        $filtered     = EventUtils::filterExpiredEvents($options['expired'], $withCategory);
-        $limited      = Utils::takeIf($options['enable-limit'], $options['limit'], $filtered);
+        $limited      = Utils::takeIf($options['enable-limit'], $options['limit'], $withCategory);
 
         /**
          * Translations
@@ -68,13 +67,6 @@ class Shortcode
                 'param_name'  => 'categories',
                 'save_always' => true,
                 'value'       => WooUtils::getProductCategories()
-            ],
-            [
-                'group'      => 'Query',
-                'type'       => 'dropdown',
-                'heading'    => 'Expired',
-                'param_name' => 'expired',
-                'value'      => ['Show', 'Hide', 'Only']
             ],
             [
                 'group'      => 'Query',
