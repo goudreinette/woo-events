@@ -26,17 +26,16 @@ class Admin
         global $post;
         $meta = Model::getMeta($post->ID) ?: Model::$defaults;
 
-        $assigns = [
-            'key'           => Model::$key,
-            'enable'        => $meta['enable'] ? 'checked' : '',
-            'has-end'       => $meta['has-end'] ? 'checked' : '',
-            'start-time'    => DateUtils::formatTime($meta['start-time']),
-            'end-time'      => DateUtils::formatTime($meta['end-time']),
-            'start-date'    => DateUtils::formatDate($meta['start-date']),
-            'end-date'      => DateUtils::formatDate($meta['end-date']),
-            'external-link' => $meta['external-link'],
-            'subtitle'      => $meta['subtitle']
-        ];
+        $assigns = array_merge($meta, [
+            'key'              => Model::$key,
+            'enable'           => $meta['enable'] ? 'checked' : '',
+            'has-end'          => $meta['has-end'] ? 'checked' : '',
+            'hide-add-to-cart' => $meta['hide-add-to-cart'] ? 'checked' : '',
+            'start-time'       => DateUtils::formatTime($meta['start-time']),
+            'end-time'         => DateUtils::formatTime($meta['end-time']),
+            'start-date'       => DateUtils::formatDate($meta['start-date']),
+            'end-date'         => DateUtils::formatDate($meta['end-date'])
+        ]);
 
         $this->view->enqueueStyle('admin');
         $this->view->enqueueStyle('datepicker/datepicker');
