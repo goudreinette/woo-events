@@ -72,7 +72,7 @@ class Model
             $categories = wp_get_object_terms($event->ID, 'product_cat', ['fields' => 'ids']);
 
             if (EventUtils::isExpired($meta))
-                $categories = array_merge($categories, [$expiredCategory]);
+                $categories = [$expiredCategory];
             else
                 $categories = array_diff($categories, [$expiredCategory]);
 
