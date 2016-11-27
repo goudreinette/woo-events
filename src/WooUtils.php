@@ -1,5 +1,7 @@
 <?php namespace WooEvents;
 
+use Utils\Utils;
+
 class WooUtils
 {
 

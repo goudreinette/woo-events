@@ -1,5 +1,7 @@
 <?php namespace WooEvents;
 
+use Utils;
+
 class EventUtils
 {
 
@@ -73,7 +75,7 @@ class EventUtils
             $meta                          = Model::getMeta($event->ID);
             $eventArray                    = array_merge((array)$event, $meta);
             $product                       = wc_get_product($eventArray['ID']);
-            $eventArray['start-date-only'] = DateUtils::formatDate($eventArray['start-date']);
+            $eventArray['start-date-only'] = Utils\Date::formatDate($eventArray['start-date']);
             $eventArray['start-date']      = WooUtils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']);
             $eventArray['end-date']        = WooUtils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time']);
             $eventArray['price']           = $product->get_price_html();

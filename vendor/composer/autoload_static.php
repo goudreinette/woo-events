@@ -11,12 +11,20 @@ class ComposerStaticInit11357f2705d3501f77bc813ad02d4e24
         array (
             'WooEvents\\' => 10,
         ),
+        'U' => 
+        array (
+            'Utils\\' => 6,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'WooEvents\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Utils\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/reinvdwoerd/utils',
         ),
     );
 

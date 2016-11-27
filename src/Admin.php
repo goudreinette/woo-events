@@ -4,7 +4,7 @@ use Utils;
 
 class Admin
 {
-    function __construct(View $view)
+    function __construct(Utils\View $view)
     {
         $this->view = $view;
         add_filter('woocommerce_product_data_tabs', [$this, 'registerTab']);
@@ -33,10 +33,10 @@ class Admin
             'enable'           => $meta['enable'] ? 'checked' : '',
             'has-end'          => $meta['has-end'] ? 'checked' : '',
             'hide-add-to-cart' => $meta['hide-add-to-cart'] ? 'checked' : '',
-            'start-time'       => DateUtils::formatTime($meta['start-time']),
-            'end-time'         => DateUtils::formatTime($meta['end-time']),
-            'start-date'       => DateUtils::formatDate($meta['start-date']),
-            'end-date'         => DateUtils::formatDate($meta['end-date'])
+            'start-time'       => Utils\Date::formatTime($meta['start-time']),
+            'end-time'         => Utils\Date::formatTime($meta['end-time']),
+            'start-date'       => Utils\Date::formatDate($meta['start-date']),
+            'end-date'         => Utils\Date::formatDate($meta['end-date'])
         ]);
 
         $this->view->enqueueStyle('admin');

@@ -1,5 +1,7 @@
 <?php namespace WooEvents;
 
+use Utils\View;
+
 class Display
 {
     function __construct(View $view)

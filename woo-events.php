@@ -1,5 +1,7 @@
 <?php namespace WooEvents;
 
+use Utils\View;
+
 /*
 Plugin Name: WooEvents
 Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates

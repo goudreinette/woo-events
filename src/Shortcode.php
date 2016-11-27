@@ -1,5 +1,7 @@
 <?php namespace WooEvents;
 
+use Utils\Utils;
+use Utils\View;
 
 class Shortcode
 {
