@@ -57,16 +57,24 @@ class Model
      */
     static function updateExpired()
     {
-        $expiredCategory = self::getCategories(['name' => 'expired', 'fields' => 'ids']);
+        $expiredCategory = get_term_by('name', 'Expired', 'product_cat', ARRAY_A)['term_id'];
+
+
+        /**
+         * Create the term if it doesn't exist.
+         */
+        if (!$expiredCategory) {
+            $expiredCategory = wp_insert_term('Expired', 'product_cat')['term_id'];
+        }
 
         foreach (self::getEvents() as $event) {
             $meta       = self::getMeta($event->ID);
-            $categories = wp_get_object_terms([$event->ID], 'product_cat', ['fields' => 'ids']);
+            $categories = wp_get_object_terms($event->ID, 'product_cat', ['fields' => 'ids']);
 
             if (EventUtils::isExpired($meta))
-                $categories = array_merge($categories, $expiredCategory);
+                $categories = array_merge($categories, [$expiredCategory]);
             else
-                $categories = array_diff($categories, $expiredCategory);
+                $categories = array_diff($categories, [$expiredCategory]);
 
             wp_set_post_terms($event->ID, $categories, 'product_cat');
         }
