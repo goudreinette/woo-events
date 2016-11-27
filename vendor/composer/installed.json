@@ -77,5 +77,54 @@
                 "email": "reinvanderwoerd@me.com"
             }
         ]
+    },
+    {
+        "name": "tightenco/collect",
+        "version": "v5.3.23",
+        "version_normalized": "5.3.23.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tightenco/collect.git",
+            "reference": "bd8b80d4c8f7cc61dc150ab2f01a98dca04b0f7c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tightenco/collect/zipball/bd8b80d4c8f7cc61dc150ab2f01a98dca04b0f7c",
+            "reference": "bd8b80d4c8f7cc61dc150ab2f01a98dca04b0f7c",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.6.4"
+        },
+        "require-dev": {
+            "mockery/mockery": "~0.9.4",
+            "phpunit/phpunit": "~4.1"
+        },
+        "time": "2016-11-18 16:30:02",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "src/Illuminate/Support/helpers.php"
+            ],
+            "psr-4": {
+                "Illuminate\\": "src/Illuminate"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Taylor Otwell",
+                "email": "taylorotwell@gmail.com"
+            }
+        ],
+        "description": "Collect - Illuminate Collections as a separate package.",
+        "keywords": [
+            "collection",
+            "laravel"
+        ]
     }
 ]

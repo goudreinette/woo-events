@@ -8,4 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'WooEvents\\' => array($baseDir . '/src'),
     'Utils\\' => array($vendorDir . '/reinvdwoerd/utils'),
+    'Illuminate\\' => array($vendorDir . '/tightenco/collect/src/Illuminate'),
 );
