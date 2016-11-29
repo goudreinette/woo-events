@@ -11,7 +11,7 @@
   ],
   "require": {
     "mustache/mustache": "^2.11",
-    "reinvdwoerd/utils": "*",
+    "reinvdwoerd/utils": "@dev",
     "tightenco/collect": "^5.3"
   },
   "autoload": {
