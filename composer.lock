@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "65dc81e66523f1c07ff1b7afa6a7dd97",
-    "content-hash": "1cd5cc69d80a1632b106480d93e99958",
+    "hash": "3ab4d7e8cfee9b9ea2602526a5ba9e22",
+    "content-hash": "e3648fe7787181df8cbf018abe5c2f2d",
     "packages": [
         {
             "name": "mustache/mustache",
@@ -59,12 +59,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/reinvdwoerd/php-utils.git",
-                "reference": "49f2ebcea04915218a956637a39eade0f304abc1"
+                "reference": "f756484bf04b1a90a9c8c332e4c196ce22f7dc94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reinvdwoerd/php-utils/zipball/49f2ebcea04915218a956637a39eade0f304abc1",
-                "reference": "49f2ebcea04915218a956637a39eade0f304abc1",
+                "url": "https://api.github.com/repos/reinvdwoerd/php-utils/zipball/f756484bf04b1a90a9c8c332e4c196ce22f7dc94",
+                "reference": "f756484bf04b1a90a9c8c332e4c196ce22f7dc94",
                 "shasum": ""
             },
             "type": "library",
@@ -80,7 +80,7 @@
                     "email": "reinvanderwoerd@me.com"
                 }
             ],
-            "time": "2016-11-27 11:12:49"
+            "time": "2016-11-27 11:23:49"
         },
         {
             "name": "tightenco/collect",
@@ -133,7 +133,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "reinvdwoerd/utils": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

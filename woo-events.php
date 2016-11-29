@@ -20,7 +20,10 @@ $assetsDir = plugin_dir_url(__FILE__);
 /**
  * Initialize
  */
+use Utils\View;
 
+global $view;
+$view = new View($assetsDir);
 
 new Admin($view);
 new Display($view);
