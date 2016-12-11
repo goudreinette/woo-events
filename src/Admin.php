@@ -31,6 +31,7 @@ class Admin
         $assigns = array_merge($meta, [
             'key'              => Model::$key,
             'enable'           => $meta['enable'] ? 'checked' : '',
+            'hide-button'      => $meta['hide-button'] ? 'checked' : '',
             'has-end'          => $meta['has-end'] ? 'checked' : '',
             'hide-add-to-cart' => $meta['hide-add-to-cart'] ? 'checked' : '',
             'start-time'       => Utils\Date::formatTime($meta['start-time']),

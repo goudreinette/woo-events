@@ -9,7 +9,7 @@ jQuery(function ($) {
         day.addClass('has-event')
     })
 
-    $(document).on('click', '.day', function () {
+    $(document).on('click touchstart', '.day', function () {
         var startDate = $(this).data('start-date')
         $('.day').removeClass('active')
         $(this).addClass('active')

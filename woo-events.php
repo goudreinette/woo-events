@@ -1,5 +1,6 @@
 <?php namespace WooEvents;
 
+use Utils\View;
 
 /*
 Plugin Name: WooEvents
@@ -14,14 +15,13 @@ Text Domain: woo-events
 
 
 require "vendor/autoload.php";
+require "src/CalendarWidget.php";
 
 $assetsDir = plugin_dir_url(__FILE__);
 
 /**
  * Initialize
  */
-use Utils\View;
-
 global $view;
 $view = new View($assetsDir);
 
