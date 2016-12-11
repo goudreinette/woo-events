@@ -1,5 +1,11 @@
 jQuery(function ($) {
-    $('form.cart button').text(assigns['external-link-text'])
+
+    if (assigns['hide-button']) {
+        $('form.cart button').remove()
+    } else {
+        $('form.cart button').text(assigns['external-link-text'])
+    }
+
     $('.quantity, .add_to_wishlist, .price-container').remove()
 
     $('form.cart button').click(function (e) {
