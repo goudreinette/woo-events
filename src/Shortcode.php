@@ -18,8 +18,8 @@ class Shortcode
         $options      = vc_map_get_attributes(Model::$key, $options);
         $categories   = explode(',', $options['categories']);
         $events       = Model::getEvents();
-        $sorted       = EventUtils::sortEvents(EventUtils::prepareEvents($events), $options['order']);
-        $withCategory = EventUtils::selectEventsByCategories($categories, $sorted);
+        $sorted       = Events::sortEvents(Events::prepareEvents($events), $options['order']);
+        $withCategory = Events::selectEventsByCategories($categories, $sorted);
         $limited      = Utils::array_take_if($options['enable-limit'], $options['limit'], $withCategory);
 
         /**

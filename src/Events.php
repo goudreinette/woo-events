@@ -3,7 +3,7 @@
 use Utils\WooUtils;
 use Utils\Date;
 
-class EventUtils
+class Events
 {
 
     /**

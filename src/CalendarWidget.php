@@ -32,7 +32,7 @@ class CalendarWidget extends \WP_Widget
         $monthRange      = Date::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
         $monthRangeArray = Date::monthRangeToArray($monthRange);
         $rawEvents       = Model::getEvents();
-        $events          = EventUtils::selectEventsByCategories($categories, EventUtils::prepareEvents($rawEvents));
+        $events          = Events::selectEventsByCategories($categories, Events::prepareEvents($rawEvents));
 
         $assigns = ['months' => $monthRangeArray, 'events' => $events];
 
