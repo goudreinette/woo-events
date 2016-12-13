@@ -91,6 +91,8 @@ class Events
         $eventArray['product_cat']     = wp_get_post_terms($post->ID, 'product_cat')[0]->name;
         $eventArray['permalink']       = get_permalink($post->ID);
         $eventArray['add_to_cart_url'] = $product->add_to_cart_url();
+
+        return $eventArray;
     }
 
     public static function getEvents()
