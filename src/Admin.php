@@ -1,10 +1,11 @@
 <?php namespace WooEvents;
 
-use Utils;
+use Utils\Date;
+use Utils\View;
 
 class Admin
 {
-    function __construct(Utils\View $view)
+    function __construct(View $view)
     {
         $this->view = $view;
         add_filter('woocommerce_product_data_tabs', [$this, 'registerTab']);
@@ -34,10 +35,10 @@ class Admin
             'hide-button'      => $meta['hide-button'] ? 'checked' : '',
             'has-end'          => $meta['has-end'] ? 'checked' : '',
             'hide-add-to-cart' => $meta['hide-add-to-cart'] ? 'checked' : '',
-            'start-time'       => Utils\Date::formatTime($meta['start-time']),
-            'end-time'         => Utils\Date::formatTime($meta['end-time']),
-            'start-date'       => Utils\Date::formatDate($meta['start-date']),
-            'end-date'         => Utils\Date::formatDate($meta['end-date'])
+            'start-time'       => Date::formatTime($meta['start-time']),
+            'end-time'         => Date::formatTime($meta['end-time']),
+            'start-date'       => Date::formatDate($meta['start-date']),
+            'end-date'         => Date::formatDate($meta['end-date'])
         ]);
 
         $this->view->enqueueStyle('admin');
