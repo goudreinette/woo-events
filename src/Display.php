@@ -1,6 +1,7 @@
 <?php namespace WooEvents;
 
 use Utils\View;
+use Utils\WooUtils;
 
 class Display
 {
