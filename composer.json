@@ -11,8 +11,7 @@
   ],
   "require": {
     "mustache/mustache": "^2.11",
-    "reinvdwoerd/utils": "*",
-    "tightenco/collect": "^5.3"
+    "reinvdwoerd/utils": "*"M
   },
   "autoload": {
     "psr-4": {

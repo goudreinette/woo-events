@@ -19,7 +19,7 @@ jQuery(function ($) {
             $('#event-list li').toggleClass('hide', false)
         } else {
             $('#event-list li').toggleClass('hide', true)
-            $('#event-list li[data-category=' + category + ']').toggleClass('hide', false)
+            $('#event-list li[data-category="' + category + '"]').toggleClass('hide', false)
         }
     })
 

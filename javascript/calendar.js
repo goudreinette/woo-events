@@ -38,7 +38,7 @@ jQuery(function ($) {
      * Start with current month
      */
     var now = new Date()
-    var day = now.getDate()
+    var day = pad(now.getDate())
     var month = now.getMonth() + 1
     var year = now.getFullYear()
 
@@ -51,3 +51,9 @@ jQuery(function ($) {
     var today = year + '-' + month + '-' + day
     $('[data-start-date=' + today + ']').addClass('today')
 });
+
+
+function pad(num) {
+    var s = "0" + num;
+    return s.substr(s.length - 2);
+}

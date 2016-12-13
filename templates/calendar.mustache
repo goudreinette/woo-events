@@ -3,9 +3,13 @@
         {{#months}}
             <div class="month" data-month="{{month}}" data-year="{{year}}">
                 <nav>
-                    <button id="previous">Previous</button>
+                    <button id="previous">
+                        <i class="ion-chevron-left"></i>
+                    </button>
                     <div class="month-year">{{localised}} {{year}}</div>
-                    <button id="next">Next</button>
+                    <button id="next">
+                        <i class="ion-chevron-right"></i>
+                    </button>
                 </nav>
 
                 <table id="calendar">
@@ -19,7 +23,8 @@
                     {{#days}}
                         <tr>
                             {{#.}}
-                                <td class="day" align="center" colspan="7" data-start-date="{{year}}-{{month}}-{{.}}">
+                                <td class="day {{.}}" align="center" colspan="7"
+                                    data-start-date="{{year}}-{{month}}-{{.}}">
                                     {{.}}
                                 </td>
                             {{/.}}

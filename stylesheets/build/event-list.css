@@ -1,30 +1,32 @@
 /* @override http://test.hansvanderwoerd.eu/wp-content/plugins/woo-events/stylesheets/build/event-list.css?ver=4.6.1 */
 
+/* @override http://test.hansvanderwoerd.eu/wp-content/plugins/woo-events/stylesheets/build/event-list.css?ver=4.6.1 */
+
 /**
  * Customer Fixes
  */
 
 span.woocommerce-Price-amount.amount span.woocommerce-Price-currencySymbol {
-	text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 h4.price ins.h2 {
-	text-decoration: none!important;
-	font-size: 16px;
-font-weight: 400!important;
-color: #555!important;
-margin-top: 0px;
+    text-decoration: none !important;
+    font-size: 16px;
+    font-weight: 400 !important;
+    color: #555 !important;
+    margin-top: 0px;
 }
 
 ins.h2 ins {
-	text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 h4.price {
-font-weight: 400!important;
-	text-decoration: none;
-	font-variant: normal;
-	text-transform: none;
+    font-weight: 400 !important;
+    text-decoration: none;
+    font-variant: normal;
+    text-transform: none;
 }
 
 #woo-event-list ~ .single-internal-gutter {
@@ -37,6 +39,7 @@ font-weight: 400!important;
 #woo-event-list {
     position: relative;
     z-index: 2;
+    height: 100vh !important;
 }
 
 #woo-event-list > * {
@@ -84,14 +87,14 @@ font-weight: 400!important;
     min-height: 350px;
     -webkit-transition: all 1s;
     transition: all 1s;
-    width:  100%!important;
+    width: 100% !important;
+    height: 99vh !important;
 }
 
 #woo-event-list #event-list li {
-     padding-top: 18px;
+    padding-top: 18px;
     padding-bottom: 18px;
     padding-left: 18px;
-      padding-right: px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -114,8 +117,6 @@ font-weight: 400!important;
     transition: all 0.5s;
     cursor: pointer;
     min-height: 220px !important;
-    height: 100% !important;
-    display: ;
 }
 
 #woo-event-list #event-list li .image .inner {
@@ -150,11 +151,13 @@ font-weight: 400!important;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    line-height: 1.3em!important;
+    line-height: 1.3em !important;
     font-size: 14px;
-	display: block!important;
-	padding-bottom: 10px
-	;
+    display: n !important;
+    padding-bottom: 10px;
+	font-weight: 400;
+	font-family: 'AvenirNext-Regular'!important;
+	color:  #555;
 }
 
 #woo-event-list .right .bottom {
@@ -165,7 +168,7 @@ font-weight: 400!important;
     background: #fff;
     border: 1px solid #f98e8e;
     padding: 8px 12px;
-    margin-left: 10px;
+    margin-left: 0px;
     font-size: 80%;
     color: inherit;
     text-decoration: none;
@@ -174,6 +177,7 @@ font-weight: 400!important;
 #woo-event-list .order:first-child {
     margin-left: 0px;
     border: 1px solid #ccc;
+    display: none;
 }
 
 #woo-event-list .order:hover {
@@ -185,9 +189,10 @@ font-weight: 400!important;
     position: absolute;
     left: 25px;
     top: 10px;
-    color: grey;
+    color: #444;
     font-weight: normal;
     font-size: 14px;
+	font-family: 'AvenirNext-Medium'!important;
 }
 
 #woo-event-list .date br {
@@ -199,10 +204,12 @@ font-weight: 400!important;
 }
 
 #woo-event-list h3 {
-    margin: 20px 10px 2px 0;
+    margin: 10px 10px 2px 0;
     cursor: pointer;
-    line-height: 1em!important;
-    font-size: 22px;
+    line-height: 1.2em !important;
+    font-size: 20px;
+	font-family: 'AvenirNext-Heavy'!important;
+	font-weight: 400;
 }
 
 #woo-event-list h3 a {
@@ -210,34 +217,33 @@ font-weight: 400!important;
 }
 
 #woo-event-list h4 {
-	margin: 0px 0px 9px;
-	color: grey;
-	    font-size: 15px;
-	
+    margin: 0px 0px 9px;
+    color: grey;
+    font-size: 15px;
+	font-family: 'AvenirNext-Medium'!important;
+	font-weight: 400;
 }
 
 #woo-event-list h4.price {
-margin-bottom: 15px;
+    margin-bottom: 17px;
 }
 
-
-
 #woo-event-list .price {
- /*   display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    font-size: 120%;
-    margin: 0 15px 0 0;
-    margin-right: auto;
-	position: absolute;
-	left: 0
-*/
+    /*   display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+       -webkit-box-align: center;
+       -ms-flex-align: center;
+       align-items: center;
+       font-size: 120%;
+       margin: 0 15px 0 0;
+       margin-right: auto;
+       position: absolute;
+       left: 0
+   */
 }
 
 #woo-event-list .hide {
@@ -254,7 +260,6 @@ margin-bottom: 15px;
 
 #woo-event-list li.List .image {
     width: 35%;
-    height: 100% !important;
 }
 
 #woo-event-list li .image .featured {
@@ -277,20 +282,18 @@ margin-bottom: 15px;
     top: 5px;
     left: 5px;
     z-index: 2;
-    margin-top: ;
+    margin-top:;
 }
-
 
 #woo-event-list li .image .featured.sale {
     background-color: rgba(69, 200, 171, 0.9);
-font-size: 16px;
+    font-size: 16px;
 }
 
 td.day.today {
-    background-color: rgba(69, 200, 171, 0.9)!important;
-color: #fff;	
+    background-color: rgba(69, 200, 171, 0.9) !important;
+    color: #fff;
 }
-
 
 #woo-event-list .List .right {
     border-left: 0px solid #eee;
@@ -304,19 +307,19 @@ color: #fff;
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-        padding-bottom: 6px!important;
+    padding-bottom: 6px !important;
 }
 
 #woo-event-list .List .right .bottom {
-    display: block!important;
-	-webkit-box-orient: horizontal;
+    display: block !important;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-  
+
     margin-top: 0px;
     bottom: 7px;
-    
+
 }
 
 #woo-event-list .List .right .bottom {
@@ -335,12 +338,18 @@ color: #fff;
 #woo-event-list li .bottom div {
 }
 
-
-
 /**
  * Grid
  */
 @media (max-width: 500px) {
+    #woo-event-list {
+        height: 100vh !important;
+    }
+
+    #woo-event-list ul {
+        height: 99vh !important;
+    }
+
     #woo-event-list li {
         margin: 10px;
         height: auto;
@@ -369,7 +378,7 @@ color: #fff;
     }
 
     #woo-event-list li .image {
-        height: 150px;
+        height: auto !important;
         width: 100% !important;
         border-bottom: 1px solid #eee;
     }
@@ -392,7 +401,6 @@ color: #fff;
 
     #woo-event-list li .excerpt {
         height: 66px;
-        line-height: ;
     }
 
     #woo-event-list li .bottom div {
@@ -401,5 +409,6 @@ color: #fff;
         -ms-flex-direction: row;
         flex-direction: row;
         margin-left: auto;
-	}
+    }
 }
+

@@ -35,6 +35,7 @@ new Shortcode($view);
  */
 add_action('init', function () {
     Model::updateExpired();
+    Model::flattenMeta();
 });
 
 /**

@@ -1,5 +1,9 @@
 <?php namespace WooEvents;
 
+use Utils\Date;
+use Utils\Utils;
+use Utils\WooUtils;
+
 class Model
 {
     static $key = "woo-events";
@@ -26,6 +30,24 @@ class Model
 
         if ($meta['enable']) {
             self::updatePublicationDate($productId, $meta['start-date'], $meta['start-time']);
+        }
+    }
+
+    static function flattenMeta()
+    {
+        $eventIds = Utils::array_pluck(self::getEvents(), 'ID');
+
+        foreach ($eventIds as $eventId) {
+            $meta      = self::getMeta($eventId);
+            $extraMeta = [
+                'full-start-date' => WooUtils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']),
+                'full-end-date'   => WooUtils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time'])
+            ];
+
+            foreach (array_merge($meta, $extraMeta) as $subKey => $subValue) {
+                $fullKey = self::$key . "-" . $subKey;
+                update_post_meta($eventId, $fullKey, $subValue);
+            }
         }
     }
 

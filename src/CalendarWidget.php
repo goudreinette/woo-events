@@ -1,6 +1,8 @@
 <?php namespace WooEvents;
 
 use Utils\Date;
+use Utils\View;
+use Utils\WooUtils;
 
 class CalendarWidget extends \WP_Widget
 {
@@ -36,6 +38,7 @@ class CalendarWidget extends \WP_Widget
 
         $this->enqueue();
         $this->view->render('calendar', $assigns);
+        wp_enqueue_style('ionicons', 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
     }
 
     function mergeCategories($all, $selectedIds)
