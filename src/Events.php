@@ -67,28 +67,30 @@ class Events
     }
 
     /**
-     * @param $events Array of products with woo-events meta
+     * @param $posts Array of posts that have woo-events meta
      * @return Array of extended events
      */
-    static function prepareEvents($events)
+    static function prepareEvents($posts)
     {
-        return array_map(function ($event) {
-            $meta                          = Meta::getMeta($event->ID);
-            $eventArray                    = array_merge((array)$event, $meta);
-            $product                       = wc_get_product($eventArray['ID']);
-            $eventArray['start-date-only'] = Date::formatDate($eventArray['start-date']);
-            $eventArray['start-date']      = WooUtils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']);
-            $eventArray['end-date']        = WooUtils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time']);
-            $eventArray['price']           = $product->get_price_html();
-            $eventArray['image']           = wp_get_attachment_image_src(get_post_thumbnail_id($event->ID), 'medium')[0];
-            $eventArray['featured']        = WooUtils::featuredText($product);
-            $eventArray['post_excerpt']    = substr($product->post->post_excerpt, 0, 100) . "...";
-            $eventArray['product_cat']     = wp_get_post_terms($event->ID, 'product_cat')[0]->name;
-            $eventArray['permalink']       = get_permalink($event->ID);
-            $eventArray['add_to_cart_url'] = $product->add_to_cart_url();
+        return array_map('self::getEvent', $posts);
+    }
 
-            return $eventArray;
-        }, $events);
+    static function getEvent($post)
+    {
+        $meta       = Meta::getMeta($post->ID);
+        $eventArray = array_merge((array)$post, $meta);
+        $product    = wc_get_product($eventArray['ID']);
+
+        $eventArray['start-date-only'] = Date::formatDate($eventArray['start-date']);
+        $eventArray['start-date']      = WooUtils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']);
+        $eventArray['end-date']        = WooUtils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time']);
+        $eventArray['price']           = $product->get_price_html();
+        $eventArray['image']           = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium')[0];
+        $eventArray['featured']        = WooUtils::featuredText($product);
+        $eventArray['post_excerpt']    = substr($product->post->post_excerpt, 0, 100) . "...";
+        $eventArray['product_cat']     = wp_get_post_terms($post->ID, 'product_cat')[0]->name;
+        $eventArray['permalink']       = get_permalink($post->ID);
+        $eventArray['add_to_cart_url'] = $product->add_to_cart_url();
     }
 
     public static function getEvents()
