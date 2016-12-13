@@ -72,7 +72,8 @@ class Events
      */
     static function prepareEvents($posts)
     {
-        return array_map('self::getEvent', $posts);
+        $result = array_map('self::getEvent', $posts);
+        return $result;
     }
 
     static function getEvent($post)
