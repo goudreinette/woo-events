@@ -1,8 +1,5 @@
 <?php namespace WooEvents;
 
-use Utils\View;
-use WooEvents\Events;
-
 /*
 Plugin Name: WooEvents
 Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
@@ -23,6 +20,8 @@ $assetsDir = plugin_dir_url(__FILE__);
 /**
  * Initialize
  */
+use Utils\View;
+
 global $view;
 $view = new View($assetsDir);
 
