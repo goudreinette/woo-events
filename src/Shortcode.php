@@ -75,7 +75,7 @@ class Shortcode
             ],
             [
                 'group'      => 'Query',
-                'type'       => 'checkbox',
+                'type'       => 'checked',
                 'heading'    => 'Enable Limit',
                 'param_name' => 'enable-limit'
             ],

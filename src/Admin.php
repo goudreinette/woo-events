@@ -31,10 +31,10 @@ class Admin
 
         $assigns = array_merge($meta, [
             'key'              => Meta::$key,
-            'enable'           => $meta['enable'] ? 'checked' : '',
-            'hide-button'      => $meta['hide-button'] ? 'checked' : '',
-            'has-end'          => $meta['has-end'] ? 'checked' : '',
-            'hide-add-to-cart' => $meta['hide-add-to-cart'] ? 'checked' : '',
+            'enable'           => $this->checked($meta['enable']),
+            'hide-button'      => $this->checked($meta['hide-button']),
+            'has-end'          => $this->checked($meta['has-end']),
+            'hide-add-to-cart' => $this->checked($meta['hide-add-to-cart']),
             'start-time'       => Date::formatTime($meta['start-time']),
             'end-time'         => Date::formatTime($meta['end-time']),
             'start-date'       => Date::formatDate($meta['start-date']),
@@ -46,6 +46,11 @@ class Admin
         $this->view->enqueueScript('datepicker/datepicker');
         $this->view->enqueueScript('datepicker/en');
         $this->view->render('admin', $assigns);
+    }
+
+    function checked($condition)
+    {
+        return $condition ? 'checked' : '';
     }
 
     function handleSave($productId)
