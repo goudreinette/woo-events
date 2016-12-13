@@ -36,7 +36,7 @@ class Display
     function singleProduct($item)
     {
         global $product;
-        $meta = Model::getMeta($product->id);
+        $meta = Meta::getMeta($product->id);
         $this->display($product->id);
 
         if ($meta && $meta['external-link'] || $meta['hide-button']) {
@@ -51,7 +51,7 @@ class Display
      */
     function cart($name, $item)
     {
-        $meta = Model::getMeta($item['product_id']);
+        $meta = Meta::getMeta($item['product_id']);
 
         if ($meta && $meta['enable']) {
             $assigns = array_merge($meta, [
@@ -76,7 +76,7 @@ class Display
 
     function display($product_id, $template = 'display')
     {
-        $meta = Model::getMeta($product_id);
+        $meta = Meta::getMeta($product_id);
 
         if ($meta && $meta['enable']) {
             $assigns = array_merge($meta, [

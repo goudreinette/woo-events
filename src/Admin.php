@@ -14,10 +14,10 @@ class Admin
 
     function registerTab($tabs)
     {
-        $tabs[Model::$key] = [
-            'label'    => Model::$name,
+        $tabs[Meta::$key] = [
+            'label'    => Meta::$name,
             'priority' => 50,
-            'target'   => Model::$key
+            'target'   => Meta::$key
         ];
 
         return $tabs;
@@ -26,10 +26,10 @@ class Admin
     function render()
     {
         global $post;
-        $meta = Model::getMeta($post->ID) ?: Model::$defaults;
+        $meta = Meta::getMeta($post->ID) ?: Meta::$defaults;
 
         $assigns = array_merge($meta, [
-            'key'              => Model::$key,
+            'key'              => Meta::$key,
             'enable'           => $meta['enable'] ? 'checked' : '',
             'hide-button'      => $meta['hide-button'] ? 'checked' : '',
             'has-end'          => $meta['has-end'] ? 'checked' : '',
@@ -52,10 +52,10 @@ class Admin
         // Avoid infinite loop
         remove_action('save_post', [$this, 'handleSave']);
 
-        $key  = Model::$key;
+        $key  = Meta::$key;
         $meta = $this->processDateMeta($_POST[$key]);
 
-        Model::update($productId, $meta);
+        Meta::update($productId, $meta);
     }
 
     function processDateMeta($meta)

@@ -9,15 +9,15 @@ class Shortcode
     function __construct(View $view)
     {
         $this->view = $view;
-        add_shortcode(Model::$key, [$this, 'shortcode']);
+        add_shortcode(Meta::$key, [$this, 'shortcode']);
         add_action('vc_before_init', [$this, 'vc']);
     }
 
     function shortcode($options)
     {
-        $options      = vc_map_get_attributes(Model::$key, $options);
+        $options      = vc_map_get_attributes(Meta::$key, $options);
         $categories   = explode(',', $options['categories']);
-        $events       = Model::getEvents();
+        $events       = Events::getEvents();
         $sorted       = Events::sortEvents(Events::prepareEvents($events), $options['order']);
         $withCategory = Events::selectEventsByCategories($categories, $sorted);
         $limited      = Utils::array_take_if($options['enable-limit'], $options['limit'], $withCategory);
@@ -55,7 +55,7 @@ class Shortcode
         vc_add_shortcode_param('chosen', [$this, 'chosenParamType']);
         vc_map([
             'name'     => 'WooCommerce Event List',
-            'base'     => Model::$key,
+            'base'     => Meta::$key,
             'class'    => '',
             'category' => 'WooCommerce',
             'params'   => $this->params()

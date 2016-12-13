@@ -31,7 +31,7 @@ class CalendarWidget extends \WP_Widget
         $categories      = WooUtils::getProductCategories(['include' => $instance['categories']]);
         $monthRange      = Date::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
         $monthRangeArray = Date::monthRangeToArray($monthRange);
-        $rawEvents       = Model::getEvents();
+        $rawEvents       = Events::getEvents();
         $events          = Events::selectEventsByCategories($categories, Events::prepareEvents($rawEvents));
 
         $assigns = ['months' => $monthRangeArray, 'events' => $events];
@@ -71,7 +71,7 @@ class CalendarWidget extends \WP_Widget
             'previousmonths_value' => $previousmonths,
             'categories_name'      => $this->get_field_name('categories'),
             'categories_id'        => $this->get_field_id('categories'),
-            'categories'           => $this->mergeCategories(Model::getCategories(), $categories)
+            'categories'           => $this->mergeCategories(Meta::getCategories(), $categories)
         ];
 
         $this->view->render('calendar_admin', $assigns);

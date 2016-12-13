@@ -1,6 +1,7 @@
 <?php namespace WooEvents;
 
 use Utils\View;
+use WooEvents\Events;
 
 /*
 Plugin Name: WooEvents
@@ -34,8 +35,8 @@ new Shortcode($view);
  * Update expired events
  */
 add_action('init', function () {
-    Model::updateExpired();
-    Model::flattenMeta();
+    Events::updateExpired();
+    Meta::flatten();
 });
 
 /**

@@ -4,7 +4,7 @@ use Utils\Date;
 use Utils\Utils;
 use Utils\WooUtils;
 
-class Model
+class Meta
 {
     static $key = "woo-events";
     static $name = "WooEvents";
@@ -33,9 +33,9 @@ class Model
         }
     }
 
-    static function flattenMeta()
+    static function flatten()
     {
-        $eventIds = Utils::array_pluck(self::getEvents(), 'ID');
+        $eventIds = Utils::array_pluck(Events::getEvents(), 'ID');
 
         foreach ($eventIds as $eventId) {
             $meta      = self::getMeta($eventId);
@@ -61,44 +61,5 @@ class Model
     static function getCategories($args = [])
     {
         return get_categories(array_merge(['taxonomy' => 'product_cat'], $args));
-    }
-
-    static function getEvents()
-    {
-        return get_posts([
-            'post_type'        => 'product',
-            'meta_key'         => self::$key,
-            'numberposts'      => -1,
-            'suppress_filters' => true
-        ]);
-    }
-
-    /**
-     * If an event is expired, add the expired category.
-     * Else, remove it
-     */
-    static function updateExpired()
-    {
-        $expiredCategory = get_term_by('name', 'Expired', 'product_cat', ARRAY_A)['term_id'];
-
-
-        /**
-         * Create the term if it doesn't exist.
-         */
-        if (!$expiredCategory) {
-            $expiredCategory = wp_insert_term('Expired', 'product_cat')['term_id'];
-        }
-
-        foreach (self::getEvents() as $event) {
-            $meta       = self::getMeta($event->ID);
-            $categories = wp_get_object_terms($event->ID, 'product_cat', ['fields' => 'ids']);
-
-            if (Events::isExpired($meta['end-date']))
-                $categories = [$expiredCategory];
-            else
-                $categories = array_diff($categories, [$expiredCategory]);
-
-            wp_set_post_terms($event->ID, $categories, 'product_cat');
-        }
     }
 }

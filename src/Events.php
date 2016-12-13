@@ -73,7 +73,7 @@ class Events
     static function prepareEvents($events)
     {
         return array_map(function ($event) {
-            $meta                          = Model::getMeta($event->ID);
+            $meta                          = Meta::getMeta($event->ID);
             $eventArray                    = array_merge((array)$event, $meta);
             $product                       = wc_get_product($eventArray['ID']);
             $eventArray['start-date-only'] = Date::formatDate($eventArray['start-date']);
@@ -89,5 +89,44 @@ class Events
 
             return $eventArray;
         }, $events);
+    }
+
+    public static function getEvents()
+    {
+        return get_posts([
+            'post_type'        => 'product',
+            'meta_key'         => Meta::$key,
+            'numberposts'      => -1,
+            'suppress_filters' => true
+        ]);
+    }
+
+    /**
+     * If an event is expired, add the expired category.
+     * Else, remove it
+     */
+    public static function updateExpired()
+    {
+        $expiredCategory = get_term_by('name', 'Expired', 'product_cat', ARRAY_A)['term_id'];
+
+
+        /**
+         * Create the term if it doesn't exist.
+         */
+        if (!$expiredCategory) {
+            $expiredCategory = wp_insert_term('Expired', 'product_cat')['term_id'];
+        }
+
+        foreach (self::getEvents() as $event) {
+            $meta       = Meta::getMeta($event->ID);
+            $categories = wp_get_object_terms($event->ID, 'product_cat', ['fields' => 'ids']);
+
+            if (Events::isExpired($meta['end-date']))
+                $categories = [$expiredCategory];
+            else
+                $categories = array_diff($categories, [$expiredCategory]);
+
+            wp_set_post_terms($event->ID, $categories, 'product_cat');
+        }
     }
 }
