@@ -26,7 +26,7 @@ class Events
     static function filterExpiredEvents($filter, $events)
     {
         return array_values(array_filter($events, function ($event) use ($filter) {
-            $isExpired = self::isExpired($event);
+            $isExpired = self::isExpired($event['end-date']);
 
             switch ($filter) {
                 case 'Only':
@@ -42,12 +42,12 @@ class Events
     }
 
     /**
-     * @param $event An event with end-date
+     * @param $endDate string
      * @return bool Whether the event is expired
      */
-    static function isExpired($event)
+    static function isExpired($endDate)
     {
-        return time() > strtotime($event['end-date'] . ' +12 hours');
+        return time() > strtotime("$endDate +12 hours");
     }
 
     /**
