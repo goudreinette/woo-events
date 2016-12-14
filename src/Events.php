@@ -90,7 +90,7 @@ class Events
         $eventArray['image']           = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium')[0];
         $eventArray['featured']        = WooUtils::featuredText($product);
         $eventArray['post_excerpt']    = substr($product->post->post_excerpt, 0, 100) . "...";
-        $eventArray['product_cats']    = Utils::array_pluck(wp_get_post_terms($post->ID, 'product_cat'), 'name');
+        $eventArray['product_cats']    = self::getEventCategories($post->ID);
         $eventArray['product_cat']     = $eventArray['product_cats']['0'];
         $eventArray['permalink']       = get_permalink($post->ID);
         $eventArray['add_to_cart_url'] = $product->add_to_cart_url();
@@ -98,7 +98,17 @@ class Events
         return $eventArray;
     }
 
-    public static function getEvents()
+    static function getEventCategories($postId)
+    {
+        $checked     = Utils::array_pluck(wp_get_post_terms($postId, 'product_cat'), 'term_id');
+        $ancestorIds = Utils::array_mapcat('Utils\WooUtils::categoryLegacy', $checked);
+        $ancestors   = Meta::getCategories(['include' => $ancestorIds]);
+        $names       = Utils::array_pluck($ancestors, 'cat_name');
+
+        return array_unique($names);
+    }
+
+    static function getEvents()
     {
         return get_posts([
             'post_type'        => 'product',
@@ -112,7 +122,7 @@ class Events
      * If an event is expired, add the expired category.
      * Else, remove it
      */
-    public static function updateExpired()
+    static function updateExpired()
     {
         $expiredCategory = get_term_by('name', 'Expired', 'product_cat', ARRAY_A)['term_id'];
 
