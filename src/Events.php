@@ -27,7 +27,7 @@ class Events
     static function filterExpiredEvents($filter, $events)
     {
         return array_values(array_filter($events, function ($event) use ($filter) {
-            $isExpired = self::isExpired($event['end-date']);
+            $isExpired = self::isExpired($event);
 
             switch ($filter) {
                 case 'Only':
@@ -46,9 +46,9 @@ class Events
      * @param $endDate string
      * @return bool Whether the event is expired
      */
-    static function isExpired($endDate)
+    static function isExpired($event)
     {
-        return time() > strtotime("$endDate +12 hours");
+        return time() > strtotime($event['end-date'] . " " . $event['end-time'] . " +12 hours");
     }
 
     /**
@@ -101,7 +101,7 @@ class Events
     static function getEventCategories($postId)
     {
         $checked     = Utils::array_pluck(wp_get_post_terms($postId, 'product_cat'), 'term_id');
-        $ancestorIds = Utils::array_mapcat('Utils\WooUtils::categoryLegacy', $checked);
+        $ancestorIds = Utils::array_flatmap('Utils\WooUtils::categoryLegacy', $checked);
         $ancestors   = Meta::getCategories(['include' => $ancestorIds]);
         $names       = Utils::array_pluck($ancestors, 'cat_name');
 
@@ -138,7 +138,7 @@ class Events
             $meta       = Meta::getMeta($event->ID);
             $categories = wp_get_object_terms($event->ID, 'product_cat', ['fields' => 'ids']);
 
-            if (Events::isExpired($meta['end-date']))
+            if (Events::isExpired($meta))
                 $categories = [$expiredCategory];
             else
                 $categories = array_diff($categories, [$expiredCategory]);
