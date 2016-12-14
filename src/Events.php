@@ -102,10 +102,14 @@ class Events
     {
         $checked     = Utils::array_pluck(wp_get_post_terms($postId, 'product_cat'), 'term_id');
         $ancestorIds = Utils::array_flatmap('Utils\WooUtils::categoryLegacy', $checked);
-        $ancestors   = Meta::getCategories(['include' => $ancestorIds]);
-        $names       = Utils::array_pluck($ancestors, 'cat_name');
 
-        return array_unique($names);
+        if (count($ancestorIds) > 0) {
+            $ancestors = Meta::getCategories(['include' => $ancestorIds]);
+            $names     = Utils::array_pluck($ancestors, 'cat_name');
+            return array_unique($names);
+        } else {
+            return [];
+        }
     }
 
     static function getEvents()
