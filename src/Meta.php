@@ -9,14 +9,15 @@ class Meta
     static $key = "woo-events";
     static $name = "WooEvents";
     static $defaults = [
-        'key'           => 'woo-events',
-        'enable'        => '',
-        'has-end'       => '',
-        'start-time'    => null,
-        'end-time'      => null,
-        'start-date'    => null,
-        'end-date'      => null,
-        'external-link' => '',
+        'key'              => 'woo-events',
+        'enable'           => '',
+        'has-end'          => '',
+        'start-time'       => null,
+        'end-time'         => null,
+        'start-date'       => null,
+        'end-date'         => null,
+        'external-link'    => '',
+        'cart-button-text' => '',
     ];
 
     static function getMeta($productId)
@@ -37,6 +38,8 @@ class Meta
     {
         $eventIds = Utils::array_pluck(Events::getEvents(), 'ID');
 
+        WooUtils::flattenMeta($eventIds, self::$key);
+
         foreach ($eventIds as $eventId) {
             $meta      = self::getMeta($eventId);
             $extraMeta = [
@@ -44,7 +47,7 @@ class Meta
                 'full-end-date'   => WooUtils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time'])
             ];
 
-            foreach (array_merge($meta, $extraMeta) as $subKey => $subValue) {
+            foreach ($extraMeta as $subKey => $subValue) {
                 $fullKey = self::$key . "-" . $subKey;
                 update_post_meta($eventId, $fullKey, $subValue);
             }
@@ -60,6 +63,6 @@ class Meta
 
     static function getCategories($args = [])
     {
-        return get_categories(array_merge(['taxonomy' => 'product_cat'], $args));
+        return get_categories(array_merge(['taxonomy' => 'product_cat', 'hierarchical' => true], $args));
     }
 }
