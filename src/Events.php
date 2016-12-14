@@ -1,5 +1,6 @@
 <?php namespace WooEvents;
 
+use Utils\Utils;
 use Utils\WooUtils;
 use Utils\Date;
 
@@ -14,7 +15,7 @@ class Events
     static function selectEventsByCategories($categories, $events)
     {
         return array_values(array_filter($events, function ($event) use ($categories) {
-            return in_array($event['product_cat'], $categories);
+            return count(array_intersect($event['product_cats'], $categories)) > 0;
         }));
     }
 
@@ -89,7 +90,8 @@ class Events
         $eventArray['image']           = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium')[0];
         $eventArray['featured']        = WooUtils::featuredText($product);
         $eventArray['post_excerpt']    = substr($product->post->post_excerpt, 0, 100) . "...";
-        $eventArray['product_cat']     = wp_get_post_terms($post->ID, 'product_cat')[0]->name;
+        $eventArray['product_cats']    = Utils::array_pluck(wp_get_post_terms($post->ID, 'product_cat'), 'name');
+        $eventArray['product_cat']     = $eventArray['product_cats']['0'];
         $eventArray['permalink']       = get_permalink($post->ID);
         $eventArray['add_to_cart_url'] = $product->add_to_cart_url();
 
