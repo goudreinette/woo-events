@@ -27,7 +27,7 @@ class Admin
     function render()
     {
         global $post;
-        $meta = Meta::getMeta($post->ID) ?: Meta::$defaults;
+        $meta = Meta::getMeta($post->ID) ?: Meta::defaults();
 
         $assigns = array_merge($meta, [
             'key'              => Meta::$key,
@@ -38,7 +38,8 @@ class Admin
             'start-time'       => Date::formatTime($meta['start-time']),
             'end-time'         => Date::formatTime($meta['end-time']),
             'start-date'       => Date::formatDate($meta['start-date']),
-            'end-date'         => Date::formatDate($meta['end-date'])
+            'end-date'         => Date::formatDate($meta['end-date']),
+            'cart-button-text' => __('View Event', 'woo-events')
         ]);
 
         $this->view->enqueueStyle('admin');

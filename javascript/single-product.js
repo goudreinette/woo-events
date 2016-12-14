@@ -3,7 +3,7 @@ jQuery(function ($) {
     if (assigns['hide-button']) {
         $('form.cart button').remove()
     } else {
-        $('form.cart button').text(assigns['external-link-text'])
+        $('form.cart button').text(assigns['cart-button-text'])
     }
 
     $('.quantity, .add_to_wishlist, .price-container').remove()

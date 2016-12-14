@@ -8,17 +8,21 @@ class Meta
 {
     static $key = "woo-events";
     static $name = "WooEvents";
-    static $defaults = [
-        'key'              => 'woo-events',
-        'enable'           => '',
-        'has-end'          => '',
-        'start-time'       => null,
-        'end-time'         => null,
-        'start-date'       => null,
-        'end-date'         => null,
-        'external-link'    => '',
-        'cart-button-text' => '',
-    ];
+
+    static function defaults()
+    {
+        return [
+            'key'              => self::$key,
+            'enable'           => '',
+            'has-end'          => '',
+            'start-time'       => null,
+            'end-time'         => null,
+            'start-date'       => null,
+            'end-date'         => null,
+            'external-link'    => '',
+            'cart-button-text' => __('View Event', 'woo-events'),
+        ];
+    }
 
     static function getMeta($productId)
     {

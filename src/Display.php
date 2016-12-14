@@ -39,10 +39,8 @@ class Display
         $meta = Meta::getMeta($product->id);
         $this->display($product->id);
 
-        if ($meta && $meta['external-link'] || $meta['hide-button']) {
-            $this->view->enqueueScript('single-product', array_merge($meta, [
-                'external-link-text' => __('View Event', 'woo-events')
-            ]));
+        if ($meta['external-link'] || $meta['hide-button']) {
+            $this->view->enqueueScript('single-product', $meta);
         }
     }
 
