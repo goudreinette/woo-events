@@ -11,7 +11,7 @@
 
     <ul id="event-list" class="row">
         {{#events}}
-            <li data-category="{{product_cat}}" data-permalink="{{permalink}}" class="List"
+            <li data-category="{{category}}" data-permalink="{{permalink}}" class="List"
                 data-proportion="{{options.image_proportion}}">
                 <div class="image">
                     <div class="overlay"></div>
@@ -23,15 +23,15 @@
                 <div class="right">
                     {{#options.show_date}}
                         <h5 class="date">
-                            {{start-date}}
-                            {{#hasEnd}} - {{end-date}}{{/hasEnd}}
+                            {{startDatePretty}}
+                            {{#hasEnd}} - {{endDatePretty}}{{/hasEnd}}
                         </h5>
                     {{/options.show_date}}
                     <h3>
-                        <a href="{{permalink}}" style="color: {{options.title_color}};">{{post_title}}</a>
+                        <a href="{{permalink}}" style="color: {{options.title_color}};">{{title}}</a>
                     </h3>
-                    <h4 style="color: {{options.subtitle_color}};">{{subtitle}}</h4>
-                    <div class="excerpt">{{{post_excerpt}}}</div>
+                    <h4 style="color: {{options.subtitle_color}};">{{subTitle}}</h4>
+                    <div class="excerpt">{{{excerpt}}}</div>
                     <div class="bottom">
                         {{#price}}
                             {{^externalLink}}

@@ -13,6 +13,7 @@ class Event
     public $enable;
     public $startDate;
     public $endDate;
+    public $subTitle;
 
     function __construct($postId)
     {
@@ -46,7 +47,6 @@ class Event
     {
         $this->updateExpirationStatus();
         $this->updateMeta();
-        $this->flattenMeta();
         WooUtils::flattenMeta($this->postId, $this->key);
         if ($this->enable) $this->updatePublicationDate();
     }
