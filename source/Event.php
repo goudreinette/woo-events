@@ -175,7 +175,7 @@ class Event
     {
         $posts = get_posts([
             'post_type'        => 'product',
-            'meta_key'         => 'woo-events',
+            'meta_key'         => self::$key,
             'numberposts'      => -1,
             'suppress_filters' => true,
             'include'          => $only
@@ -184,5 +184,10 @@ class Event
         return array_map(function ($post) {
             return new Event($post->ID);
         }, $posts);
+    }
+
+    static function get($postId)
+    {
+        return new self($postId);
     }
 }
