@@ -11,11 +11,11 @@
   ],
   "require": {
     "mustache/mustache": "^2.11",
-    "reinvdwoerd/utils": "*"
+    "reinvdwoerd/utils": "dev-master"
   },
   "autoload": {
     "psr-4": {
-      "WooEvents\\": "src/"
+      "WooEvents\\": "source/"
     }
   }
 }
