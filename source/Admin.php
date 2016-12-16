@@ -52,7 +52,7 @@ class Admin
         remove_action('save_post', [$this, 'handleSave']);
 
         // If this isn't a post update, abort
-        if (empty($_POST)) return;
+        if (empty($_POST) || !isset($_POST[Event::$key])) return;
 
         $event    = new Event($productId);
         $formData = $_POST[Event::$key];

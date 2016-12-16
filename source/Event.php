@@ -171,6 +171,10 @@ class Event
     }
 
 
+    /**
+     * @param null $only
+     * @return Event[]
+     */
     static function all($only = null)
     {
         $posts = get_posts([
