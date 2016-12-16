@@ -41,7 +41,7 @@
         /**
          * Show/Hide the end date input
          */
-        var hasEndCheckbox = $('[name="{{key}}[has-end]"]')
+        var hasEndCheckbox = $('[name="{{key}}[hasEnd]"]')
         var endContainer = $('#{{key}} .end')
 
         hasEndCheckbox.change(toggleEnd)
@@ -49,17 +49,18 @@
 
         function toggleEnd() {
             var hasEnd = hasEndCheckbox.is(':checked')
+            var startDate = $('[name="{{key}}[startDate]"]').val()
             endContainer.toggleClass('hide', !hasEnd)
-//
-//            if (!hasEnd) {
-//                endContainer.find('input').val('start-date')
-//            }
+
+            if (!hasEnd) {
+                $('[name="{{key}}[endDate]"]').val(startDate)
+            }
         }
 
         /**
          * Datepicker
          */
-        $('[name="{{key}}[start-date]"], [name="{{key}}[end-date]"]').datepicker({
+        $('[name="{{key}}[startDate]"], [name="{{key}}[endDate]"]').datepicker({
             language: 'en',
             timepicker: 'true',
             timeFormat: 'hh:ii',

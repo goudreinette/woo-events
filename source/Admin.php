@@ -29,7 +29,10 @@ class Admin
         global $post;
 
 
-        $assigns = (array)new Event($post->ID);
+        $assigns               = (array)new Event($post->ID);
+        $assigns['enable']     = $this->checked($assigns['enable']);
+        $assigns['hasEnd']     = $this->checked($assigns['hasEnd']);
+        $assigns['hideButton'] = $this->checked($assigns['hideButton']);
 
         $this->view->enqueueStyle('admin');
         $this->view->enqueueStyle('datepicker/datepicker');
@@ -47,6 +50,9 @@ class Admin
     {
         // Avoid infinite loop
         remove_action('save_post', [$this, 'handleSave']);
+
+        // If this isn't a post update, abort
+        if (empty($_POST)) return;
 
         $event    = new Event($productId);
         $formData = $_POST[$event->key];

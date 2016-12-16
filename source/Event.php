@@ -45,7 +45,7 @@ class Event
 
     private function getMeta($postId)
     {
-        return array_merge(get_post_meta($postId, $this->key, true), [
+        return array_merge([
             'key'            => $this->key,
             'enable'         => '',
             'hasEnd'         => '',
@@ -53,7 +53,7 @@ class Event
             'endDate'        => Date::formatDate(),
             'externalLink'   => '',
             'cartButtonText' => __('View Event', 'woo-events'),
-        ]);
+        ], get_post_meta($postId, $this->key, true));
     }
 
     private function updateMeta()
@@ -106,5 +106,68 @@ class Event
             $categories = array_diff($categories, [$expiredCategory]);
 
         wp_set_post_terms($this->postId, $categories, 'product_cat');
+    }
+
+    /**
+     * @param $categories Array[String] of category names
+     * @param $events     Event[]
+     * @return Event[]
+     */
+    static function selectEventsByCategories($categories, $events)
+    {
+        return array_values(array_filter($events, function ($event) use ($categories) {
+            return count(array_intersect($event->categories, $categories)) > 0;
+        }));
+    }
+
+    /**
+     * @param $filter 'Show' or 'Only' or 'Hide'
+     * @param $events Array of events with end-date
+     * @return Filtered Array of events
+     */
+    static function filterExpiredEvents($filter, $events)
+    {
+        return array_values(array_filter($events, function ($event) use ($filter) {
+            $isExpired = self::isExpired($event);
+
+            switch ($filter) {
+                case 'Only':
+                    return $isExpired;
+                case 'Hide':
+                    return !$isExpired;
+                case 'Show':
+                    return true;
+                default:
+                    return true;
+            }
+        }));
+    }
+
+    /**
+     * @param $events Event[]
+     * @param $order  'Ascending' or 'Descending'
+     * @return Sorted Array of events
+     */
+    static function sortEvents($events, $order)
+    {
+        $orderModifier = $order == 'Ascending' ? 1 : -1;
+
+        usort($events, function ($a, $b) use ($orderModifier) {
+            return (strtotime($a->startDate) - strtotime($b->startDate)) * $orderModifier;
+        });
+
+        return $events;
+    }
+
+
+    static function all($only = null)
+    {
+        return get_posts([
+            'post_type'        => 'product',
+            'meta_key'         => 'woo-events',
+            'numberposts'      => -1,
+            'suppress_filters' => true,
+            'include'          => $only
+        ]);
     }
 }
