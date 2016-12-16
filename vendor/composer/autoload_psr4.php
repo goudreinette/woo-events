@@ -6,6 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WooEvents\\' => array($baseDir . '/src'),
+    'WooEvents\\' => array($baseDir . '/source'),
     'Utils\\' => array($vendorDir . '/reinvdwoerd/utils'),
 );

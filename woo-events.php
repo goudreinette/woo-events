@@ -13,7 +13,7 @@ Text Domain: woo-events
 
 
 require "vendor/autoload.php";
-require "src/CalendarWidget.php";
+require "source/CalendarWidget.php";
 
 $assetsDir = plugin_dir_url(__FILE__);
 

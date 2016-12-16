@@ -27,20 +27,9 @@ class Admin
     function render()
     {
         global $post;
-        $meta = Meta::getMeta($post->ID) ?: Meta::defaults();
 
-        $assigns = array_merge($meta, [
-            'key'              => Meta::$key,
-            'enable'           => $this->checked($meta['enable']),
-            'hide-button'      => $this->checked($meta['hide-button']),
-            'has-end'          => $this->checked($meta['has-end']),
-            'hide-add-to-cart' => $this->checked($meta['hide-add-to-cart']),
-            'start-time'       => Date::formatTime($meta['start-time']),
-            'end-time'         => Date::formatTime($meta['end-time']),
-            'start-date'       => Date::formatDate($meta['start-date']),
-            'end-date'         => Date::formatDate($meta['end-date']),
-            'cart-button-text' => __('View Event', 'woo-events')
-        ]);
+
+        $assigns = (array)new Event($post->ID);
 
         $this->view->enqueueStyle('admin');
         $this->view->enqueueStyle('datepicker/datepicker');
@@ -59,28 +48,12 @@ class Admin
         // Avoid infinite loop
         remove_action('save_post', [$this, 'handleSave']);
 
-        $key  = Meta::$key;
-        $meta = $this->processDateMeta($_POST[$key]);
+        $event    = new Event($productId);
+        $formData = $_POST[$event->key];
 
-        Meta::update($productId, $meta);
-    }
+        foreach ($formData as $key => $value)
+            $event->$key = $value;
 
-    function processDateMeta($meta)
-    {
-        $start = explode(" ", $meta['start-date']);
-        $end   = explode(" ", $meta['end-date']);
-
-        $meta['start-date'] = $start[0];
-        $meta['start-time'] = $start[1];
-
-        if (!$meta['has-end']) {
-            $meta['end-date'] = $start[0];
-            $meta['end-time'] = $start[1];
-        } else {
-            $meta['end-date'] = $end[0];
-            $meta['end-time'] = $end[1];
-        }
-
-        return $meta;
+        return;
     }
 }
