@@ -9,13 +9,13 @@ class Shortcode
     function __construct(View $view)
     {
         $this->view = $view;
-        add_shortcode(Meta::$key, [$this, 'shortcode']);
+        add_shortcode(Event::$key, [$this, 'shortcode']);
         add_action('vc_before_init', [$this, 'vc']);
     }
 
     function shortcode($options)
     {
-        $options      = vc_map_get_attributes(Meta::$key, $options);
+        $options      = vc_map_get_attributes(Event::$key, $options);
         $categories   = explode(',', $options['categories']);
         $events       = Event::all();
         $sorted       = Event::sort($options['order'], $events);
@@ -55,7 +55,7 @@ class Shortcode
         vc_add_shortcode_param('chosen', [$this, 'chosenParamType']);
         vc_map([
             'name'     => 'WooCommerce Event List',
-            'base'     => Meta::$key,
+            'base'     => Event::$key,
             'class'    => '',
             'category' => 'WooCommerce',
             'params'   => $this->params()

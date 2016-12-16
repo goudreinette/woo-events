@@ -15,10 +15,10 @@ class Admin
 
     function registerTab($tabs)
     {
-        $tabs[Meta::$key] = [
-            'label'    => Meta::$name,
+        $tabs[Event::$key] = [
+            'label'    => Event::$name,
             'priority' => 50,
-            'target'   => Meta::$key
+            'target'   => Event::$key
         ];
 
         return $tabs;
@@ -55,7 +55,7 @@ class Admin
         if (empty($_POST)) return;
 
         $event    = new Event($productId);
-        $formData = $_POST[$event->key];
+        $formData = $_POST[Event::$key];
 
         foreach ($formData as $key => $value)
             $event->$key = $value;

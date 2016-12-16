@@ -6,7 +6,8 @@ use Utils\Date;
 
 class Event
 {
-    public $key = 'woo-events';
+    static $key = 'woo-events';
+    static $name = 'WooEvents';
     public $externalLink;
     public $hasEnd;
     public $hideButton;
@@ -48,7 +49,7 @@ class Event
     {
         $this->updateExpirationStatus();
         $this->updateMeta();
-        WooUtils::flattenMeta($this->postId, $this->key);
+        WooUtils::flattenMeta($this->postId, self::$key);
         if ($this->enable) $this->updatePublicationDate();
     }
 
@@ -62,13 +63,13 @@ class Event
 
     private function getMeta($postId)
     {
-        return get_post_meta($postId, $this->key, true);
+        return get_post_meta($postId, self::$key, true);
     }
 
     private function updateMeta()
     {
         $array = (array)$this;
-        update_post_meta($this->postId, $this->key, $array);
+        update_post_meta($this->postId, self::$key, $array);
     }
 
     private function updatePublicationDate()
