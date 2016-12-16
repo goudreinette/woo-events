@@ -29,7 +29,7 @@ class CalendarWidget extends \WP_Widget
         /**
          * The range of months that the calendar will cover.
          */
-        $categories = WooUtils::getProductCategories(['include' => $instance['categories']]);
+        $categories = WooUtils::getProductCategoryNames(['include' => $instance['categories']]);
         $monthRange = Date::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
         $events     = Event::selectByCategories($categories, Event::all());
 
@@ -70,7 +70,7 @@ class CalendarWidget extends \WP_Widget
             'previousmonths_value' => $previousmonths,
             'categories_name'      => $this->get_field_name('categories'),
             'categories_id'        => $this->get_field_id('categories'),
-            'categories'           => $this->mergeCategories(WooUtils::getCategories(), $categories)
+            'categories'           => $this->mergeCategories(WooUtils::getProductCategories(), $categories)
         ];
 
         $this->view->render('calendar_admin', $assigns);

@@ -71,7 +71,7 @@ class Shortcode
                 'heading'     => 'Product Categories',
                 'param_name'  => 'categories',
                 'save_always' => true,
-                'value'       => WooUtils::getProductCategories()
+                'value'       => WooUtils::getProductCategoryNames()
             ],
             [
                 'group'      => 'Query',

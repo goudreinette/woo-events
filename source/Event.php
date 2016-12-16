@@ -85,7 +85,7 @@ class Event
         $ancestorIds = Utils::array_flatmap('Utils\WooUtils::categoryLegacy', $checked);
 
         if (count($ancestorIds) > 0) {
-            $ancestors = WooUtils::getCategories(['include' => $ancestorIds]);
+            $ancestors = WooUtils::getProductCategories(['include' => $ancestorIds]);
             $names     = Utils::array_pluck($ancestors, 'cat_name');
             return array_unique($names);
         } else {
