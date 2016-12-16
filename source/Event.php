@@ -30,8 +30,9 @@ class Event
         $product               = wc_get_product($postId);
         $this->postId          = $postId;
         $this->title           = $product->post->post_title;
-        $this->startDate       = $this->startDate ?: Date::formatDate();
-        $this->endDate         = $this->endDate ?: Date::formatDate();
+        $this->startDate       = $this->startDate ?: Date::formatDateTime();
+        $this->startDateOnly   = Date::formatDate($this->startDate);
+        $this->endDate         = $this->endDate ?: Date::formatDateTime();
         $this->cartButtonText  = __('View Event', 'woo-events');
         $this->startDatePretty = WooUtils::formatDateTimeWoocommerce($this->startDate);
         $this->endDatePretty   = WooUtils::formatDateTimeWoocommerce($this->endDate);
