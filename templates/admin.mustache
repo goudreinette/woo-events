@@ -45,13 +45,18 @@
         var endContainer = $('#{{key}} .end')
 
         hasEndCheckbox.change(toggleEnd)
+        hasEndCheckbox.mouseup(toggleEnd)
         toggleEnd()
 
         function toggleEnd() {
             var hasEnd = hasEndCheckbox.is(':checked')
-            var startDate = $('[name="{{key}}[startDate]"]').val()
             endContainer.toggleClass('hide', !hasEnd)
+            updateEnd()
+        }
 
+        function updateEnd() {
+            var hasEnd = hasEndCheckbox.is(':checked')
+            var startDate = $('[name="{{key}}[startDate]"]').val()
             if (!hasEnd) {
                 $('[name="{{key}}[endDate]"]').val(startDate)
             }
