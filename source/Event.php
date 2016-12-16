@@ -11,8 +11,6 @@ class Event
     public $hasEnd;
     public $hideButton;
     public $enable;
-    public $startDate;
-    public $endDate;
     public $subTitle;
 
     function __construct($postId)
@@ -31,8 +29,11 @@ class Event
         $product               = wc_get_product($postId);
         $this->postId          = $postId;
         $this->title           = $product->post->post_title;
-        $this->startDatePretty = WooUtils::formatDateTimeWoocommerce($meta['startDate']);
-        $this->endDatePretty   = WooUtils::formatDateTimeWoocommerce($meta['endDate']);
+        $this->startDate       = $this->startDate ?: Date::formatDate();
+        $this->endDate         = $this->endDate ?: Date::formatDate();
+        $this->cartButtonText  = __('View Event', 'woo-events');
+        $this->startDatePretty = WooUtils::formatDateTimeWoocommerce($this->startDate);
+        $this->endDatePretty   = WooUtils::formatDateTimeWoocommerce($this->endDate);
         $this->price           = $product->get_price_html();
         $this->image           = wp_get_attachment_image_src(get_post_thumbnail_id($postId), 'medium')[0];
         $this->featured        = WooUtils::featuredText($product);
@@ -61,11 +62,7 @@ class Event
 
     private function getMeta($postId)
     {
-        return array_merge([
-            'startDate'      => Date::formatDate(),
-            'endDate'        => Date::formatDate(),
-            'cartButtonText' => __('View Event', 'woo-events'),
-        ], get_post_meta($postId, $this->key, true));
+        return get_post_meta($postId, $this->key, true);
     }
 
     private function updateMeta()
