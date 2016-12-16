@@ -1,5 +1,7 @@
 <div class="woo-events-date">
-    <span class="start">{{startDate}}</span>
+    <span class="start">{{startDatePretty}}</span>
     -<br/>
-    <span class="end">{{endDate}}</span>
+    {{#hasEnd}}
+        <span class="end">{{endDatePretty}}</span>
+    {{/hasEnd}}
 </div>
