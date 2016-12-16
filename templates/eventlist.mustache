@@ -24,7 +24,7 @@
                     {{#options.show_date}}
                         <h5 class="date">
                             {{start-date}}
-                            {{#has-end}} - {{end-date}}{{/has-end}}
+                            {{#hasEnd}} - {{end-date}}{{/hasEnd}}
                         </h5>
                     {{/options.show_date}}
                     <h3>
@@ -34,16 +34,16 @@
                     <div class="excerpt">{{{post_excerpt}}}</div>
                     <div class="bottom">
                         {{#price}}
-                            {{^external-link}}
+                            {{^externalLink}}
                                 <h4 class="price">{{{price}}}</h4>
-                            {{/external-link}}
+                            {{/externalLink}}
                         {{/price}}
                         <div>
-                            {{^external-link}}
+                            {{^externalLink}}
                                 <a class="order"
                                    href="{{permalink}}?add-to-cart={{ID}}">{{options.add_to_cart_text}}
                                 </a>
-                            {{/external-link}}
+                            {{/externalLink}}
                             <a class="order" href="{{permalink}}">{{options.order_text}}</a>
                         </div>
                     </div>

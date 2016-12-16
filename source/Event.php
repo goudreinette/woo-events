@@ -7,15 +7,29 @@ use Utils\Date;
 class Event
 {
     public $key = 'woo-events';
+    public $externalLink;
+    public $hasEnd;
+    public $hideButton;
+    public $enable;
+    public $startDate;
+    public $endDate;
 
     function __construct($postId)
     {
-        $meta                  = $this->getMeta($postId);
+        /**
+         * Direct Meta
+         */
+        $meta = $this->getMeta($postId);
+        foreach ($meta as $key => $value) {
+            $this->$key = $value;
+        }
+
+        /**
+         * Other
+         */
         $product               = wc_get_product($postId);
         $this->postId          = $postId;
-        $this->enable          = $meta['enable'];
-        $this->startDate       = $meta['startDate'];
-        $this->endDate         = $meta['endDate'];
+        $this->title           = $product->post->post_title;
         $this->startDatePretty = WooUtils::formatDateTimeWoocommerce($meta['startDate']);
         $this->endDatePretty   = WooUtils::formatDateTimeWoocommerce($meta['endDate']);
         $this->price           = $product->get_price_html();
@@ -32,6 +46,8 @@ class Event
     {
         $this->updateExpirationStatus();
         $this->updateMeta();
+        $this->flattenMeta();
+        WooUtils::flattenMeta($this->postId, $this->key);
         if ($this->enable) $this->updatePublicationDate();
     }
 
@@ -46,12 +62,8 @@ class Event
     private function getMeta($postId)
     {
         return array_merge([
-            'key'            => $this->key,
-            'enable'         => '',
-            'hasEnd'         => '',
             'startDate'      => Date::formatDate(),
             'endDate'        => Date::formatDate(),
-            'externalLink'   => '',
             'cartButtonText' => __('View Event', 'woo-events'),
         ], get_post_meta($postId, $this->key, true));
     }
@@ -113,7 +125,7 @@ class Event
      * @param $events     Event[]
      * @return Event[]
      */
-    static function selectEventsByCategories($categories, $events)
+    static function selectByCategories($categories, $events)
     {
         return array_values(array_filter($events, function ($event) use ($categories) {
             return count(array_intersect($event->categories, $categories)) > 0;
@@ -125,7 +137,7 @@ class Event
      * @param $events Array of events with end-date
      * @return Filtered Array of events
      */
-    static function filterExpiredEvents($filter, $events)
+    static function filterExpired($filter, $events)
     {
         return array_values(array_filter($events, function ($event) use ($filter) {
             $isExpired = self::isExpired($event);
@@ -144,11 +156,11 @@ class Event
     }
 
     /**
-     * @param $events Event[]
      * @param $order  'Ascending' or 'Descending'
+     * @param $events Event[]
      * @return Sorted Array of events
      */
-    static function sortEvents($events, $order)
+    static function sort($order, $events)
     {
         $orderModifier = $order == 'Ascending' ? 1 : -1;
 
@@ -162,12 +174,16 @@ class Event
 
     static function all($only = null)
     {
-        return get_posts([
+        $posts = get_posts([
             'post_type'        => 'product',
             'meta_key'         => 'woo-events',
             'numberposts'      => -1,
             'suppress_filters' => true,
             'include'          => $only
         ]);
+
+        return array_map(function ($post) {
+            return new Event($post->ID);
+        }, $posts);
     }
 }

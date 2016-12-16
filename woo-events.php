@@ -30,12 +30,8 @@ new Display($view);
 new Shortcode($view);
 
 
-/**
- * Update expired events
- */
 add_action('init', function () {
-    Events::updateExpired();
-    Meta::flatten();
+
 });
 
 /**

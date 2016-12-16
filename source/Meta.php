@@ -14,12 +14,12 @@ class Meta
         return [
             'key'              => self::$key,
             'enable'           => '',
-            'has-end'          => '',
+            'hasEnd'          => '',
             'start-time'       => null,
             'end-time'         => null,
             'start-date'       => null,
             'end-date'         => null,
-            'external-link'    => '',
+            'externalLink'    => '',
             'cart-button-text' => __('View Event', 'woo-events'),
         ];
     }

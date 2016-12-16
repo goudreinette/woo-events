@@ -1,6 +1,6 @@
 jQuery(function ($) {
 
-    if (assigns['hide-button']) {
+    if (assigns['hideButton']) {
         $('form.cart button').remove()
     } else {
         $('form.cart button').text(assigns['cart-button-text'])
@@ -11,7 +11,7 @@ jQuery(function ($) {
     $('form.cart button').click(function (e) {
         e.preventDefault()
         e.stopPropagation()
-        location.assign(assigns['external-link'])
+        location.assign(assigns['externalLink'])
     })
 
     /**

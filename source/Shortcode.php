@@ -17,9 +17,9 @@ class Shortcode
     {
         $options      = vc_map_get_attributes(Meta::$key, $options);
         $categories   = explode(',', $options['categories']);
-        $events       = Events::getEvents();
-        $sorted       = Events::sortEvents(Events::prepareEvents($events), $options['order']);
-        $withCategory = Events::selectEventsByCategories($categories, $sorted);
+        $events       = Event::all();
+        $sorted       = Event::sort($options['order'], $events);
+        $withCategory = Event::selectByCategories($categories, $sorted);
         $limited      = Utils::array_take_if($options['enable-limit'], $options['limit'], $withCategory);
 
         /**
@@ -33,7 +33,7 @@ class Shortcode
 
         $assigns = [
             'categories' => $categories,
-            'events'     => $limited,
+            'events'     => Utils::toArray($limited),
             'options'    => $options
         ];
 

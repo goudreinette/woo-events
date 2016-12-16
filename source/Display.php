@@ -36,11 +36,11 @@ class Display
     function singleProduct($item)
     {
         global $product;
-        $meta = Meta::getMeta($product->id);
+        $event = new Event($product->id);
         $this->display($product->id);
 
-        if ($meta['external-link'] || $meta['hide-button']) {
-            $this->view->enqueueScript('single-product', $meta);
+        if ($event->externalLink || $event->hideButton) {
+            $this->view->enqueueScript('single-product', (array)$event);
         }
     }
 
@@ -49,16 +49,11 @@ class Display
      */
     function cart($name, $item)
     {
-        $meta = Meta::getMeta($item['product_id']);
+        $event       = new Event($item['product_id']);
+        $event->name = $name;
 
-        if ($meta && $meta['enable']) {
-            $assigns = array_merge($meta, [
-                'start-date' => WooUtils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']),
-                'end-date'   => WooUtils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time']),
-                'name'       => $name
-            ]);
-
-            return $this->view->renderString('cart', $assigns);
+        if ($event->enable) {
+            return $this->view->renderString('cart', (array)$event);
         } else {
             return $name;
         }
@@ -74,15 +69,10 @@ class Display
 
     function display($product_id, $template = 'display')
     {
-        $meta = Meta::getMeta($product_id);
+        $event = new Event($product_id);
 
-        if ($meta && $meta['enable']) {
-            $assigns = array_merge($meta, [
-                'start-date' => WooUtils::formatDateTimeWoocommerce($meta['start-date'], $meta['start-time']),
-                'end-date'   => WooUtils::formatDateTimeWoocommerce($meta['end-date'], $meta['end-time'])
-            ]);
-
-            $this->view->render($template, $assigns);
+        if ($event->enable) {
+            $this->view->render($template, (array)$event);
         }
     }
 }
