@@ -1,11 +1,12 @@
+/* @override http://test.hansvanderwoerd.eu/wp-content/plugins/woo-events/stylesheets/build/calendar.css?ver=4.6.1 */
+
 /* Wrap, Nav */
 #calendar-wrap {
     margin-top: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+
 }
 
 #calendar-wrap nav {
@@ -66,11 +67,17 @@
     height: 15%;
     border: 1px solid lightgrey;
     width: 1%;
-    cursor: default;
+    cursor: pointer;
     background: white;
     padding: 10px;
     text-align: center;
     font-weight: normal;
+}
+
+#calendar .day.x {
+    background: none !important;
+    color: transparent !important;
+    cursor: default !important;
 }
 
 #calendar .day.today {
@@ -136,6 +143,10 @@
 
 #calendar-wrap .event .right .date {
     color: #595959;
+    margin-top: 0px;
+    line-height: 1.2em;
+    padding-top: 10px;
+    padding-right: 17px !important;
 }
 
 #calendar-wrap .event .right h5 {
