@@ -1,0 +1,24 @@
+<div>
+    <input type="text" name="{{settings.param_name}}" style="display: none" class="wpb_vc_param_value"
+           value="{{value}}">
+    <select id="{{settings.param_name}}" multiple>
+        {{#settings.value}}
+            <option value="{{.}}">{{.}}</option>
+        {{/settings.value}}
+    </select>
+    <script>
+        jQuery(function ($) {
+
+            $('#{{settings.param_name}}').find('option').each(function (i, el) {
+                const value = $(el).val()
+                if ($('input[name={{settings.param_name}}]').attr('value').includes(value))
+                    $(el).attr('selected', true)
+            })
+
+            $('#{{settings.param_name}}').change(function () {
+                const value = $(this).val().join(',')
+                $('input[name={{settings.param_name}}]').attr('value', value)
+            })
+        })
+    </script>
+</div>

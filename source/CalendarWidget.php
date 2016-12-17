@@ -31,7 +31,8 @@ class CalendarWidget extends \WP_Widget
          */
         $categories = WooUtils::getProductCategoryNames(['include' => $instance['categories']]);
         $monthRange = Date::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
-        $events     = Event::selectByCategories($categories, Event::all());
+        $all        = Event::all();
+        $events     = Event::selectByCategories($categories, $all);
 
         $assigns = ['months' => $monthRange, 'events' => Utils::toArray($events)];
 
