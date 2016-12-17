@@ -1,7 +1,9 @@
 <?php namespace WooEvents;
 
 use Utils\Date;
+use Utils\Utils;
 use Utils\View;
+use Utils\WooUtils;
 
 class Admin
 {
@@ -28,12 +30,13 @@ class Admin
     {
         global $post;
 
-
-        $assigns               = (array)new Event($post->ID);
-        $assigns['key']        = Event::$key;
-        $assigns['enable']     = $this->checked($assigns['enable']);
-        $assigns['hasEnd']     = $this->checked($assigns['hasEnd']);
-        $assigns['hideButton'] = $this->checked($assigns['hideButton']);
+        $event                           = new Event($post->ID);
+        $assigns                         = (array)$event;
+        $assigns['key']                  = Event::$key;
+        $assigns['enable']               = $this->checked($assigns['enable']);
+        $assigns['hasEnd']               = $this->checked($assigns['hasEnd']);
+        $assigns['hideButton']           = $this->checked($assigns['hideButton']);
+        $assigns['notExpiredCategories'] = Utils::array_exclude_value(WooUtils::getProductCategoryNames(true), $event->expiredCategoryName);
 
         $this->view->enqueueStyle('admin');
         $this->view->enqueueStyle('datepicker/datepicker');

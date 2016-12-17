@@ -13,6 +13,7 @@ class Event
     public $hideButton;
     public $enable;
     public $subTitle;
+    public $expiredCategoryName = 'Expired';
 
     function __construct($postId)
     {
@@ -86,7 +87,7 @@ class Event
         $ancestorIds = Utils::array_flatmap('Utils\WooUtils::categoryLegacy', $checked);
 
         if (count($ancestorIds) > 0) {
-            $ancestors = WooUtils::getProductCategories(['include' => $ancestorIds]);
+            $ancestors = WooUtils::getUsedProductCategories(['include' => $ancestorIds]);
             $names     = Utils::array_pluck($ancestors, 'cat_name');
             return array_unique($names);
         } else {
@@ -100,21 +101,19 @@ class Event
         /**
          * Create the term if it doesn't exist.
          */
-        $expiredCategory = get_term_by('name', 'Expired', 'product_cat', ARRAY_A)['term_id'];
-        if (!$expiredCategory) {
-            $expiredCategory = wp_insert_term('Expired', 'product_cat')['term_id'];
-        }
+        $expiredCategory = get_term_by('name', $this->expiredCategoryName, 'product_cat', ARRAY_A)['term_id'] ?:
+            wp_insert_term($this->expiredCategoryName, 'product_cat')['term_id'];
 
         $categories = wp_get_object_terms($this->postId, 'product_cat', ['fields' => 'ids']);
 
         /**
          * If the event is expired, remove all other categories and add the
-         * 'Expired' category.
+         * expired category. Else, remove the expired category
          */
         if ($this->isExpired())
             $categories = [$expiredCategory];
         else
-            $categories = array_diff($categories, [$expiredCategory]);
+            $categories = Utils::array_exclude_value($categories, $expiredCategory);
 
         wp_set_post_terms($this->postId, $categories, 'product_cat');
     }

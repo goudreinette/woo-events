@@ -15,6 +15,15 @@
         <span>End Date</span>
         <input name='{{key}}[endDate]' type='text' value='{{endDate}}'>
     </div>
+    <div>
+        <span>Expired Category</span>
+        <select name='{{key}}[expiredCategoryName]' type='text'>
+            {{#notExpiredCategories}}
+                <option value="{{.}}">{{.}}</option>
+            {{/notExpiredCategories}}
+            <option value="{{expiredCategoryName}}" selected>{{expiredCategoryName}}</option>
+        </select>
+    </div>
 
     <br>
 

@@ -71,7 +71,7 @@ class CalendarWidget extends \WP_Widget
             'previousmonths_value' => $previousmonths,
             'categories_name'      => $this->get_field_name('categories'),
             'categories_id'        => $this->get_field_id('categories'),
-            'categories'           => $this->markSelectedCategories(WooUtils::getProductCategories(), $categories)
+            'categories'           => $this->markSelectedCategories(WooUtils::getUsedProductCategories(), $categories)
         ];
 
         $this->view->render('calendar_admin', $assigns);
