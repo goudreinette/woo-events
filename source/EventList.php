@@ -4,7 +4,7 @@ use Utils\Utils;
 use Utils\View;
 use Utils\WooUtils;
 
-class Shortcode
+class EventList
 {
     function __construct(View $view)
     {

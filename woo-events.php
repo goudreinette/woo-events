@@ -27,7 +27,7 @@ $view = new View($assetsDir);
 
 new Admin($view);
 new Display($view);
-new Shortcode($view);
+new EventList($view);
 
 
 add_action('init', function () {
