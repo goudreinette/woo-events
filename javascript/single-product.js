@@ -13,9 +13,4 @@ jQuery(function ($) {
         e.stopPropagation()
         location.assign(assigns['externalLink'])
     })
-
-    /**
-     * Uncode fixes
-     */
-    $('.uncont > .date').insertBefore($('.uncont .product_title'))
 })
