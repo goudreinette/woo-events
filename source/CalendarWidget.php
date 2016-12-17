@@ -41,7 +41,7 @@ class CalendarWidget extends \WP_Widget
         wp_enqueue_style('ionicons', 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
     }
 
-    function mergeCategories($all, $selectedIds)
+    function markSelectedCategories($all, $selectedIds)
     {
         return array_values(array_map(function ($category) use ($selectedIds) {
             return [
@@ -71,7 +71,7 @@ class CalendarWidget extends \WP_Widget
             'previousmonths_value' => $previousmonths,
             'categories_name'      => $this->get_field_name('categories'),
             'categories_id'        => $this->get_field_id('categories'),
-            'categories'           => $this->mergeCategories(WooUtils::getProductCategories(), $categories)
+            'categories'           => $this->markSelectedCategories(WooUtils::getProductCategories(), $categories)
         ];
 
         $this->view->render('calendar_admin', $assigns);
