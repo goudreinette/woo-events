@@ -30,6 +30,7 @@ class Admin
 
 
         $assigns               = (array)new Event($post->ID);
+        $assigns['key']        = Event::$key;
         $assigns['enable']     = $this->checked($assigns['enable']);
         $assigns['hasEnd']     = $this->checked($assigns['hasEnd']);
         $assigns['hideButton'] = $this->checked($assigns['hideButton']);
