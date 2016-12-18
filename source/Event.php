@@ -37,6 +37,7 @@ class Event
         $this->cartButtonText  = $this->cartButtonText ?: __('View Event', 'woo-events');
         $this->startDatePretty = WooUtils::formatDateTimeWoocommerce($this->startDate, !$this->hasEnd);
         $this->endDatePretty   = WooUtils::formatDateTimeWoocommerce($this->endDate, !$this->hasEnd);
+        $this->fullDate        = "$this->startDatePretty - $this->endDatePretty";
         $this->price           = $product->get_price_html();
         $this->image           = wp_get_attachment_image_src(get_post_thumbnail_id($postId), 'medium')[0];
         $this->featured        = WooUtils::featuredText($product);
