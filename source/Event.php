@@ -37,7 +37,7 @@ class Event
         $this->cartButtonText  = $this->cartButtonText ?: __('View Event', 'woo-events');
         $this->startDatePretty = WooUtils::formatDateTimeWoocommerce($this->startDate, !$this->hasEnd);
         $this->endDatePretty   = WooUtils::formatDateTimeWoocommerce($this->endDate, !$this->hasEnd);
-        $this->fullDate        = "$this->startDatePretty - $this->endDatePretty";
+        $this->fullDate        = $this->fullDate();
         $this->price           = $product->get_price_html();
         $this->image           = wp_get_attachment_image_src(get_post_thumbnail_id($postId), 'medium')[0];
         $this->featured        = WooUtils::featuredText($product);
@@ -46,6 +46,15 @@ class Event
         $this->category        = $this->categories[0];
         $this->permalink       = get_permalink($postId);
         $this->addToCartUrl    = $product->add_to_cart_url();
+    }
+
+    function fullDate()
+    {
+        if ($this->hasEnd) {
+            return "$this->startDatePretty - $this->endDatePretty";
+        } else {
+            return $this->startDatePretty;
+        }
     }
 
     function __destruct()
