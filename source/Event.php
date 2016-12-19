@@ -20,7 +20,7 @@ class Event
         /**
          * Direct Meta
          */
-        $meta = $this->getMeta($postId);
+        $meta = $this->getMeta($postId) ?: [];
         foreach ($meta as $key => $value) {
             $this->$key = $value;
         }
