@@ -58,8 +58,9 @@ class Admin
         // If this isn't a post update, abort
         if (empty($_POST) || !isset($_POST[Event::$key])) return;
 
-        $event    = new Event($productId);
-        $formData = $_POST[Event::$key];
+        $event              = new Event($productId);
+        $formData           = $_POST[Event::$key];
+        $formData['enable'] = !!$formData['enable'];
 
         foreach ($formData as $key => $value)
             $event->$key = $value;
