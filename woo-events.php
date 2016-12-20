@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: WooEvents
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
+Plugin URI:  https://github.com/reinvdwoerd/woo-events
 Description: .
 Version: 1.0
 Author: reinvdwoerd
@@ -31,7 +31,7 @@ new EventList($view);
 
 
 add_action('init', function () {
-    
+
 });
 
 /**
