@@ -17,6 +17,7 @@ require "source/CalendarWidget.php";
 
 $assetsDir = plugin_dir_url(__FILE__);
 
+
 /**
  * Initialize
  */
