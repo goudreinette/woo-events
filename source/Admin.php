@@ -1,7 +1,9 @@
 <?php namespace WooEvents;
 
 use Utils\Date;
+use Utils\Utils;
 use Utils\View;
+use Utils\WooUtils;
 
 class Admin
 {
@@ -15,10 +17,10 @@ class Admin
 
     function registerTab($tabs)
     {
-        $tabs[Meta::$key] = [
-            'label'    => Meta::$name,
+        $tabs[Event::$key] = [
+            'label'    => Event::$name,
             'priority' => 50,
-            'target'   => Meta::$key
+            'target'   => Event::$key
         ];
 
         return $tabs;
@@ -27,20 +29,14 @@ class Admin
     function render()
     {
         global $post;
-        $meta = Meta::getMeta($post->ID) ?: Meta::defaults();
 
-        $assigns = array_merge($meta, [
-            'key'              => Meta::$key,
-            'enable'           => $this->checked($meta['enable']),
-            'hide-button'      => $this->checked($meta['hide-button']),
-            'has-end'          => $this->checked($meta['has-end']),
-            'hide-add-to-cart' => $this->checked($meta['hide-add-to-cart']),
-            'start-time'       => Date::formatTime($meta['start-time']),
-            'end-time'         => Date::formatTime($meta['end-time']),
-            'start-date'       => Date::formatDate($meta['start-date']),
-            'end-date'         => Date::formatDate($meta['end-date']),
-            'cart-button-text' => __('View Event', 'woo-events')
-        ]);
+        $event                           = new Event($post->ID);
+        $assigns                         = (array)$event;
+        $assigns['key']                  = Event::$key;
+        $assigns['enable']               = $this->checked($assigns['enable']);
+        $assigns['hasEnd']               = $this->checked($assigns['hasEnd']);
+        $assigns['hideButton']           = $this->checked($assigns['hideButton']);
+        $assigns['notExpiredCategories'] = Utils::array_exclude_value(WooUtils::getProductCategoryNames(true), $event->expiredCategoryName);
 
         $this->view->enqueueStyle('admin');
         $this->view->enqueueStyle('datepicker/datepicker');
@@ -59,28 +55,14 @@ class Admin
         // Avoid infinite loop
         remove_action('save_post', [$this, 'handleSave']);
 
-        $key  = Meta::$key;
-        $meta = $this->processDateMeta($_POST[$key]);
+        // If this isn't a post update, abort
+        if (empty($_POST) || !isset($_POST[Event::$key])) return;
 
-        Meta::update($productId, $meta);
-    }
+        $event              = new Event($productId);
+        $formData           = $_POST[Event::$key];
+        $formData['enable'] = !!$formData['enable'];
 
-    function processDateMeta($meta)
-    {
-        $start = explode(" ", $meta['start-date']);
-        $end   = explode(" ", $meta['end-date']);
-
-        $meta['start-date'] = $start[0];
-        $meta['start-time'] = $start[1];
-
-        if (!$meta['has-end']) {
-            $meta['end-date'] = $start[0];
-            $meta['end-time'] = $start[1];
-        } else {
-            $meta['end-date'] = $end[0];
-            $meta['end-time'] = $end[1];
-        }
-
-        return $meta;
+        foreach ($formData as $key => $value)
+            $event->$key = $value;
     }
 }

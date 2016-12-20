@@ -1,9 +1,9 @@
 jQuery(function ($) {
 
-    if (assigns['hide-button']) {
+    if (assigns['hideButton']) {
         $('form.cart button').remove()
     } else {
-        $('form.cart button').text(assigns['cart-button-text'])
+        $('form.cart button').text(assigns['cartButtonText'])
     }
 
     $('.quantity, .add_to_wishlist, .price-container').remove()
@@ -11,11 +11,6 @@ jQuery(function ($) {
     $('form.cart button').click(function (e) {
         e.preventDefault()
         e.stopPropagation()
-        location.assign(assigns['external-link'])
+        location.assign(assigns['externalLink'])
     })
-
-    /**
-     * Uncode fixes
-     */
-    $('.uncont > .date').insertBefore($('.uncont .product_title'))
 })

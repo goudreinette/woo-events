@@ -1,7 +1,17 @@
 <h3 class="date">
-    <span class='start'>{{start-date}}</span>
-    {{#has-end}}
-        <span class='end'> - {{end-date}}</span>
-    {{/has-end}}
+    <span class='start'>{{startDatePretty}}</span>
+    {{#hasEnd}}
+        <span class='end'> - {{endDatePretty}}</span>
+    {{/hasEnd}}
 </h3>
-<h5 class="subtitle">{{subtitle}}</h5>
+<h5 class="subtitle">{{subTitle}}</h5>
+
+
+<script>
+    jQuery(function ($) {
+        /**
+         * Uncode fixes
+         */
+        $('.uncont > .date').insertBefore($('.uncont .product_title'))
+    })
+</script>

@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: WooEvents
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
+Plugin URI:  https://github.com/reinvdwoerd/woo-events
 Description: .
 Version: 1.0
 Author: reinvdwoerd
@@ -13,9 +13,10 @@ Text Domain: woo-events
 
 
 require "vendor/autoload.php";
-require "src/CalendarWidget.php";
+require "source/CalendarWidget.php";
 
 $assetsDir = plugin_dir_url(__FILE__);
+
 
 /**
  * Initialize
@@ -27,15 +28,11 @@ $view = new View($assetsDir);
 
 new Admin($view);
 new Display($view);
-new Shortcode($view);
+new EventList($view);
 
 
-/**
- * Update expired events
- */
 add_action('init', function () {
-    Events::updateExpired();
-    Meta::flatten();
+
 });
 
 /**

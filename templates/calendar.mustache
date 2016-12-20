@@ -36,11 +36,11 @@
     </div>
     <div class="events">
         {{#events}}
-            <div class="event" data-start-date="{{start-date-only}}">
+            <div class="event" data-start-date="{{startDateOnly}}">
                 <div class="image" style="background-image: url({{image}})"></div>
                 <div class="right">
-                    <p class="date">{{start-date}} <br/>{{#has-end}}{{end-date}}{{/has-end}}</p>
-                    <h5><a href="{{permalink}}">{{post_title}}</a></h5>
+                    <p class="date">{{startDatePretty}} <br/>{{#hasEnd}}{{endDatePretty}}{{/hasEnd}}</p>
+                    <h5><a href="{{permalink}}">{{title}}</a></h5>
                 </div>
             </div>
         {{/events}}

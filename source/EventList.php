@@ -4,22 +4,22 @@ use Utils\Utils;
 use Utils\View;
 use Utils\WooUtils;
 
-class Shortcode
+class EventList
 {
     function __construct(View $view)
     {
         $this->view = $view;
-        add_shortcode(Meta::$key, [$this, 'shortcode']);
+        add_shortcode(Event::$key, [$this, 'shortcode']);
         add_action('vc_before_init', [$this, 'vc']);
     }
 
     function shortcode($options)
     {
-        $options      = vc_map_get_attributes(Meta::$key, $options);
+        $options      = vc_map_get_attributes(Event::$key, $options);
         $categories   = explode(',', $options['categories']);
-        $events       = Events::getEvents();
-        $sorted       = Events::sortEvents(Events::prepareEvents($events), $options['order']);
-        $withCategory = Events::selectEventsByCategories($categories, $sorted);
+        $events       = Event::all();
+        $sorted       = Event::sort($options['order'], $events);
+        $withCategory = Event::selectByCategories($categories, $sorted);
         $limited      = Utils::array_take_if($options['enable-limit'], $options['limit'], $withCategory);
 
         /**
@@ -33,7 +33,7 @@ class Shortcode
 
         $assigns = [
             'categories' => $categories,
-            'events'     => $limited,
+            'events'     => Utils::toArray($limited),
             'options'    => $options
         ];
 
@@ -45,17 +45,15 @@ class Shortcode
 
     function chosenParamType($settings, $value)
     {
-        return $this->view->renderString('chosen', ['settings' => $settings, 'value' => $value]);
+        return $this->view->renderString('multiselect', ['settings' => $settings, 'value' => $value]);
     }
 
     function vc()
     {
-        $this->view->enqueueScript('chosen');
-        $this->view->enqueueStyle('chosen');
-        vc_add_shortcode_param('chosen', [$this, 'chosenParamType']);
+        vc_add_shortcode_param('multiselect', [$this, 'chosenParamType']);
         vc_map([
             'name'     => 'WooCommerce Event List',
-            'base'     => Meta::$key,
+            'base'     => Event::$key,
             'class'    => '',
             'category' => 'WooCommerce',
             'params'   => $this->params()
@@ -67,15 +65,15 @@ class Shortcode
         return [
             [
                 'group'       => 'Query',
-                'type'        => 'chosen',
+                'type'        => 'multiselect',
                 'heading'     => 'Product Categories',
                 'param_name'  => 'categories',
                 'save_always' => true,
-                'value'       => WooUtils::getProductCategories()
+                'value'       => WooUtils::getProductCategoryNames()
             ],
             [
                 'group'      => 'Query',
-                'type'       => 'checked',
+                'type'       => 'checkbox',
                 'heading'    => 'Enable Limit',
                 'param_name' => 'enable-limit'
             ],

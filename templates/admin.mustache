@@ -5,34 +5,43 @@
     </div>
     <div>
         <span>Has End Date</span>
-        <input name='{{key}}[has-end]' type='checkbox' {{has-end}}>
+        <input name='{{key}}[hasEnd]' type='checkbox' {{hasEnd}}>
     </div>
     <div>
         <span>Start Date</span>
-        <input name='{{key}}[start-date]' type='text' value='{{start-date}} {{start-time}}'>
+        <input name='{{key}}[startDate]' type='text' value='{{startDate}}'>
     </div>
     <div class="end">
         <span>End Date</span>
-        <input name='{{key}}[end-date]' type='text' value='{{end-date}} {{end-time}}'>
+        <input name='{{key}}[endDate]' type='text' value='{{endDate}}'>
+    </div>
+    <div>
+        <span>Expired Category</span>
+        <select name='{{key}}[expiredCategoryName]' type='text'>
+            {{#notExpiredCategories}}
+                <option value="{{.}}">{{.}}</option>
+            {{/notExpiredCategories}}
+            <option value="{{expiredCategoryName}}" selected>{{expiredCategoryName}}</option>
+        </select>
     </div>
 
     <br>
 
     <div>
         <span>External link</span>
-        <input name='{{key}}[external-link]' type='url' value='{{external-link}}'>
+        <input name='{{key}}[externalLink]' type='url' value='{{externalLink}}'>
     </div>
     <div>
         <span>Hide Button</span>
-        <input name='{{key}}[hide-button]' type='checkbox' {{hide-button}}>
+        <input name='{{key}}[hideButton]' type='checkbox' {{hideButton}}>
     </div>
     <div>
         <span>Button Text</span>
-        <input name='{{key}}[cart-button-text]' type='text' value='{{cart-button-text}}'>
+        <input name='{{key}}[cartButtonText]' type='text' value='{{cartButtonText}}'>
     </div>
     <div>
         <span>Subtitle</span>
-        <input name='{{key}}[subtitle]' type='text' value='{{subtitle}}'>
+        <input name='{{key}}[subTitle]' type='text' value='{{subTitle}}'>
     </div>
 </div>
 
@@ -41,25 +50,31 @@
         /**
          * Show/Hide the end date input
          */
-        var hasEndCheckbox = $('[name="{{key}}[has-end]"]')
+        var hasEndCheckbox = $('[name="{{key}}[hasEnd]"]')
         var endContainer = $('#{{key}} .end')
 
         hasEndCheckbox.change(toggleEnd)
+        hasEndCheckbox.mouseup(toggleEnd)
         toggleEnd()
 
         function toggleEnd() {
             var hasEnd = hasEndCheckbox.is(':checked')
             endContainer.toggleClass('hide', !hasEnd)
-//
-//            if (!hasEnd) {
-//                endContainer.find('input').val('start-date')
-//            }
+            updateEnd()
+        }
+
+        function updateEnd() {
+            var hasEnd = hasEndCheckbox.is(':checked')
+            var startDate = $('[name="{{key}}[startDate]"]').val()
+            if (!hasEnd) {
+                $('[name="{{key}}[endDate]"]').val(startDate)
+            }
         }
 
         /**
          * Datepicker
          */
-        $('[name="{{key}}[start-date]"], [name="{{key}}[end-date]"]').datepicker({
+        $('[name="{{key}}[startDate]"], [name="{{key}}[endDate]"]').datepicker({
             language: 'en',
             timepicker: 'true',
             timeFormat: 'hh:ii',

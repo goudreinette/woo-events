@@ -1,5 +1,6 @@
 <?php namespace WooEvents;
 
+use Utils\Utils;
 use Utils\Date;
 use Utils\View;
 use Utils\WooUtils;
@@ -28,20 +29,19 @@ class CalendarWidget extends \WP_Widget
         /**
          * The range of months that the calendar will cover.
          */
-        $categories      = WooUtils::getProductCategories(['include' => $instance['categories']]);
-        $monthRange      = Date::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
-        $monthRangeArray = Date::monthRangeToArray($monthRange);
-        $rawEvents       = Events::getEvents();
-        $events          = Events::selectEventsByCategories($categories, Events::prepareEvents($rawEvents));
+        $categories = WooUtils::getProductCategoryNames(['include' => $instance['categories']]);
+        $monthRange = Date::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
+        $all        = Event::all();
+        $events     = Event::selectByCategories($categories, $all);
 
-        $assigns = ['months' => $monthRangeArray, 'events' => $events];
+        $assigns = ['months' => $monthRange, 'events' => Utils::toArray($events)];
 
         $this->enqueue();
         $this->view->render('calendar', $assigns);
         wp_enqueue_style('ionicons', 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
     }
 
-    function mergeCategories($all, $selectedIds)
+    function markSelectedCategories($all, $selectedIds)
     {
         return array_values(array_map(function ($category) use ($selectedIds) {
             return [
@@ -71,7 +71,7 @@ class CalendarWidget extends \WP_Widget
             'previousmonths_value' => $previousmonths,
             'categories_name'      => $this->get_field_name('categories'),
             'categories_id'        => $this->get_field_id('categories'),
-            'categories'           => $this->mergeCategories(Meta::getCategories(), $categories)
+            'categories'           => $this->markSelectedCategories(WooUtils::getUsedProductCategories(), $categories)
         ];
 
         $this->view->render('calendar_admin', $assigns);
