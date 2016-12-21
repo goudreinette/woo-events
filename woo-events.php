@@ -12,12 +12,12 @@ Text Domain: woo-events
 */
 
 
-
 require "vendor/autoload.php";
 require "source/CalendarWidget.php";
 
 $assetsDir = plugin_dir_url(__FILE__);
 
+echo "<h1>Hello, World!</h1>";
 
 /**
  * Initialize
