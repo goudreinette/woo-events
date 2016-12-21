@@ -12,6 +12,7 @@ Text Domain: woo-events
 */
 
 
+
 require "vendor/autoload.php";
 require "source/CalendarWidget.php";
 
