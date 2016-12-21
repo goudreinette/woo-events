@@ -2,7 +2,7 @@
 
 /*
 Plugin Name: WooEvents
-Plugin URI:  https://github.com/reinvdwoerd/woo-events
+Plugin URI: https://github.com/reinvdwoerd/woo-events
 Description: .
 Version: 1.0
 Author: reinvdwoerd
@@ -16,8 +16,6 @@ require "vendor/autoload.php";
 require "source/CalendarWidget.php";
 
 $assetsDir = plugin_dir_url(__FILE__);
-
-echo "<h1>Hello, World!</h1>";
 
 /**
  * Initialize
