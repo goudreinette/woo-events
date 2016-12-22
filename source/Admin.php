@@ -44,6 +44,7 @@ class Admin
         $this->view->enqueueScript('datepicker/en');
         $this->view->render('admin', $assigns);
     }
+    
 
     function checked($condition)
     {
