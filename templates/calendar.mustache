@@ -13,13 +13,9 @@
                 </nav>
 
                 <table id="calendar">
-                    <td colspan="7" align="center">Ma</td>
-                    <td colspan="7" align="center">Di</td>
-                    <td colspan="7" align="center">Wo</td>
-                    <td colspan="7" align="center">Do</td>
-                    <td colspan="7" align="center">Vr</td>
-                    <td colspan="7" align="center">Za</td>
-                    <td colspan="7" align="center">Zo</td>
+                    {{#weekdays}}
+                        <td colspan="7" align="center">{{.}}</td>
+                    {{/weekdays}}
                     {{#days}}
                         <tr>
                             {{#.}}

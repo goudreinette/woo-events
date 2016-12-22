@@ -34,11 +34,28 @@ class CalendarWidget extends \WP_Widget
         $all        = Event::all();
         $events     = Event::selectByCategories($categories, $all);
 
-        $assigns = ['months' => $monthRange, 'events' => Utils::toArray($events)];
+        $assigns = [
+            'months'   => $monthRange,
+            'events'   => Utils::toArray($events),
+            'weekdays' => $this->weekdaysTranslations()
+        ];
 
         $this->enqueue();
         $this->view->render('calendar', $assigns);
         wp_enqueue_style('ionicons', 'http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+    }
+
+    function weekdaysTranslations()
+    {
+        return [
+            __('Mo', 'woo-events'),
+            __('Tu', 'woo-events'),
+            __('We', 'woo-events'),
+            __('Th', 'woo-events'),
+            __('Fr', 'woo-events'),
+            __('Sa', 'woo-events'),
+            __('Su', 'woo-events')
+        ];
     }
 
     function markSelectedCategories($all, $selectedIds)
