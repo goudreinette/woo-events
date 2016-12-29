@@ -9,9 +9,9 @@ class Event
 {
     use MetaPersist;
 
-    public $id;
     static $key = 'woo-events';
     static $name = 'WooEvents';
+    public $id;
     public $externalLink;
     public $hasEnd;
     public $hideButton;
