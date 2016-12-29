@@ -15,28 +15,11 @@ Text Domain: woo-events
 require "vendor/autoload.php";
 require "source/CalendarWidget.php";
 
-$assetsDir = plugin_dir_url(__FILE__);
+use Utils\PluginContext;
 
-/**
- * Initialize
- */
-use Utils\View;
+class WooEvents extends PluginContext
+{
+    public $base = 'woo-events';
+}
 
-global $view;
-$view = new View($assetsDir);
-
-new Admin($view);
-new Display($view);
-new EventList($view);
-
-
-add_action('init', function () {
-
-});
-
-/**
- * Translations
- */
-add_action('plugins_loaded', function () {
-    load_plugin_textdomain('woo-events', false, dirname(plugin_basename(__FILE__)));
-});
+new WooEvents();

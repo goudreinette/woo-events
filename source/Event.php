@@ -3,9 +3,13 @@
 use Utils\Utils;
 use Utils\WooUtils;
 use Utils\Date;
+use Utils\MetaPersist;
 
 class Event
 {
+    use MetaPersist;
+
+    public $id;
     static $key = 'woo-events';
     static $name = 'WooEvents';
     public $externalLink;
@@ -14,27 +18,22 @@ class Event
     public $enable;
     public $subTitle;
     public $expiredCategoryName = 'Expired';
+    public $cartButtonText;
+    public $startDate;
+    public $endDate;
 
     function __construct($postId)
     {
-        /**
-         * Direct Meta
-         */
-        $meta = $this->getMeta($postId) ?: [];
-        foreach ($meta as $key => $value) {
-            $this->$key = $value;
-        }
+        $this->restore($postId);
 
         /**
-         * Other
+         * Non-declared (computed, denormalized) properties.
+         * Won't be persisted.
          */
         $product               = wc_get_product($postId);
-        $this->postId          = $postId;
+        $this->id              = $postId;
         $this->title           = $product->post->post_title;
-        $this->startDate       = $this->startDate ?: Date::formatDateTime();
         $this->startDateOnly   = Date::formatDate($this->startDate);
-        $this->endDate         = $this->endDate ?: Date::formatDateTime();
-        $this->cartButtonText  = $this->cartButtonText ?: __('View Event', 'woo-events');
         $this->startDatePretty = WooUtils::formatDateTimeWoocommerce($this->startDate, !$this->hasEnd);
         $this->endDatePretty   = WooUtils::formatDateTimeWoocommerce($this->endDate, !$this->hasEnd);
         $this->fullDate        = $this->fullDate();
@@ -60,8 +59,8 @@ class Event
     function __destruct()
     {
         $this->updateExpirationStatus();
-        $this->updateMeta();
-        WooUtils::flattenMeta($this->postId, self::$key);
+        $this->persist();
+        WooUtils::flattenMeta($this->id, self::$key);
         if ($this->enable) $this->updatePublicationDate();
     }
 
@@ -73,20 +72,9 @@ class Event
         return time() > strtotime("$this->endDate +12 hours");
     }
 
-    private function getMeta($postId)
-    {
-        return get_post_meta($postId, self::$key, true);
-    }
-
-    private function updateMeta()
-    {
-        $array = (array)$this;
-        update_post_meta($this->postId, self::$key, $array);
-    }
-
     private function updatePublicationDate()
     {
-        $post              = get_post($this->postId, ARRAY_A);
+        $post              = get_post($this->id, ARRAY_A);
         $post['post_date'] = $this->startDate;
         wp_update_post($post);
     }
@@ -118,7 +106,7 @@ class Event
         $expiredCategory = get_term_by('name', $this->expiredCategoryName, 'product_cat', ARRAY_A)['term_id'] ?:
             wp_insert_term($this->expiredCategoryName, 'product_cat')['term_id'];
 
-        $categories = wp_get_object_terms($this->postId, 'product_cat', ['fields' => 'ids']);
+        $categories = wp_get_object_terms($this->id, 'product_cat', ['fields' => 'ids']);
 
         /**
          * If the event is expired, remove all other categories and add the
@@ -129,7 +117,7 @@ class Event
         else
             $categories = Utils::array_exclude_value($categories, $expiredCategory);
 
-        wp_set_post_terms($this->postId, $categories, 'product_cat');
+        wp_set_post_terms($this->id, $categories, 'product_cat');
     }
 
     /**
@@ -206,5 +194,13 @@ class Event
     static function get($postId)
     {
         return new self($postId);
+    }
+
+    function assignDefaults()
+    {
+        $this->startDate      = Date::formatDateTime();
+        $this->endDate        = Date::formatDateTime();
+        $this->cartButtonText = __('View Event', 'woo-events');
+        $this->fullDate       = $this->fullDate();
     }
 }

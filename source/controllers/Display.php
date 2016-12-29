@@ -1,13 +1,23 @@
 <?php namespace WooEvents;
 
+use Utils\PluginContext;
 use Utils\View;
 use Utils\WooUtils;
 
 class Display
 {
-    function __construct(View $view)
+    /**
+     * @var View;
+     */
+    public $view;
+
+    /**
+     * @var PluginContext
+     */
+    public $context;
+
+    function __construct()
     {
-        $this->view = $view;
         add_action('woocommerce_after_shop_loop', [$this, 'style']);
         add_action('woocommerce_before_shop_loop_item_title', [$this, 'shopLoop']);
         add_action('woocommerce_single_product_summary', [$this, 'singleProduct']);
