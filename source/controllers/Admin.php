@@ -1,15 +1,24 @@
 <?php namespace WooEvents;
 
-use Utils\Date;
+use Utils\PluginContext;
 use Utils\Utils;
 use Utils\View;
 use Utils\WooUtils;
 
 class Admin
 {
-    function __construct(View $view)
+    /**
+     * @var View;
+     */
+    public $view;
+
+    /**
+     * @var PluginContext
+     */
+    public $context;
+
+    function __construct()
     {
-        $this->view = $view;
         add_filter('woocommerce_product_data_tabs', [$this, 'registerTab']);
         add_filter('woocommerce_product_data_panels', [$this, 'render']);
         add_action('save_post', [$this, 'handleSave']);
@@ -44,7 +53,7 @@ class Admin
         $this->view->enqueueScript('datepicker/en');
         $this->view->render('admin', $assigns);
     }
-    
+
 
     function checked($condition)
     {

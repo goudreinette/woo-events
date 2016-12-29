@@ -2,13 +2,23 @@
 
 use Utils\Utils;
 use Utils\View;
+use Utils\PluginContext;
 use Utils\WooUtils;
 
 class EventList
 {
-    function __construct(View $view)
+    /**
+     * @var View;
+     */
+    public $view;
+
+    /**
+     * @var PluginContext
+     */
+    public $context;
+
+    function __construct()
     {
-        $this->view = $view;
         add_shortcode(Event::$key, [$this, 'shortcode']);
         add_action('vc_before_init', [$this, 'vc']);
     }
