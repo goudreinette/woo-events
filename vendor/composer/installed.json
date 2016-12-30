@@ -54,15 +54,15 @@
         "source": {
             "type": "git",
             "url": "https://github.com/reinvdwoerd/php-utils.git",
-            "reference": "49f2ebcea04915218a956637a39eade0f304abc1"
+            "reference": "18c75efd76133edd2d243bf2244676cc3c9490dd"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/reinvdwoerd/php-utils/zipball/49f2ebcea04915218a956637a39eade0f304abc1",
-            "reference": "49f2ebcea04915218a956637a39eade0f304abc1",
+            "url": "https://api.github.com/repos/reinvdwoerd/php-utils/zipball/18c75efd76133edd2d243bf2244676cc3c9490dd",
+            "reference": "18c75efd76133edd2d243bf2244676cc3c9490dd",
             "shasum": ""
         },
-        "time": "2016-11-27 11:12:49",
+        "time": "2016-12-29 13:29:16",
         "type": "library",
         "installation-source": "source",
         "autoload": {

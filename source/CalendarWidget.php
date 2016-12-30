@@ -12,8 +12,8 @@ class CalendarWidget extends \WP_Widget
 
     function __construct()
     {
-        global $view;
-        $this->view = $view;
+        $path       = plugin_dir_url(__DIR__);
+        $this->view = new View($path);
         parent::__construct($this->key, $this->title, $this->title);
     }
 
