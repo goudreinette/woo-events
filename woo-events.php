@@ -11,7 +11,6 @@ License: A "Slug" license name e.g. GPL2
 Text Domain: woo-events
 */
 
-echo "<h1>Hello, World!</h1>";
 
 require "vendor/autoload.php";
 require "source/CalendarWidget.php";
