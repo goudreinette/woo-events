@@ -5,6 +5,8 @@ use Utils\WooUtils;
 use Utils\Date;
 use Utils\MetaPersist;
 
+echo "<h1>Hello World!</h1>";
+
 class Event
 {
     use MetaPersist;
