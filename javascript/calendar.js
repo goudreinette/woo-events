@@ -39,7 +39,7 @@ jQuery(function ($) {
      */
     var now = new Date()
     var day = pad(now.getDate())
-    var month = now.getMonth() + 1
+    var month = pad(now.getMonth() + 1)
     var year = now.getFullYear()
 
     $('[data-month=' + month + ']' + '[data-year=' + year + ']')
