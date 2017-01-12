@@ -49,9 +49,18 @@ class Display
         $event = new Event($product->id);
         $this->display($product->id);
 
-        if ($event->externalLink || $event->hideButton) {
-            $this->view->enqueueScript('single-product', (array)$event);
-        }
+        /**
+         * Always enqueue the script.
+         * Script behaviour is parameterized by;
+         *  - hide button
+         *  - button text
+         *  - external link
+         */
+        $this->view->enqueueScript('single-product', [
+            'cartButtonText' => $event->cartButtonText,
+            'hideButton'     => $event->hideButton,
+            'externalLink'   => $event->externalLink
+        ]);
     }
 
     /**
