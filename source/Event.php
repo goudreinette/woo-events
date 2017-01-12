@@ -22,6 +22,7 @@ class Event
     public $cartButtonText;
     public $startDate;
     public $endDate;
+    public $fullDate;
 
     function __construct($postId)
     {
