@@ -1,22 +1,22 @@
 <div id='{{key}}' class='panel woocommerce_options_panel hidden'>
     <div>
-        <span>Enable</span>
+        <span>Event?</span>
         <input name='{{key}}[enable]' type='checkbox' {{enable}}>
     </div>
     <div>
-        <span>Has End Date</span>
+        <span>Heeft einddatum?</span>
         <input name='{{key}}[hasEnd]' type='checkbox' {{hasEnd}}>
     </div>
     <div>
-        <span>Start Date</span>
+        <span>Start datum/tijd</span>
         <input name='{{key}}[startDate]' type='text' value='{{startDate}}'>
     </div>
     <div class="end">
-        <span>End Date</span>
+        <span>Eind datum/tijd</span>
         <input name='{{key}}[endDate]' type='text' value='{{endDate}}'>
     </div>
     <div>
-        <span>Expired Category</span>
+        <span>Categorie na verstrijken</span>
         <select name='{{key}}[expiredCategoryName]' type='text'>
             {{#notExpiredCategories}}
                 <option value="{{.}}">{{.}}</option>
@@ -28,19 +28,19 @@
     <br>
 
     <div>
-        <span>External link</span>
+        <span>Externe link (geen verkoop)</span>
         <input name='{{key}}[externalLink]' type='url' value='{{externalLink}}'>
     </div>
     <div>
-        <span>Hide Button</span>
+        <span>Button verbergen</span>
         <input name='{{key}}[hideButton]' type='checkbox' {{hideButton}}>
     </div>
     <div>
-        <span>Button Text</span>
+        <span>Button tekst</span>
         <input name='{{key}}[cartButtonText]' type='text' value='{{cartButtonText}}'>
     </div>
     <div>
-        <span>Subtitle</span>
+        <span>Subtitel</span>
         <input name='{{key}}[subTitle]' type='text' value='{{subTitle}}'>
     </div>
 </div>
