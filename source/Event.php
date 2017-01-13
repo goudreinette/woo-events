@@ -71,7 +71,7 @@ class Event
      */
     function isExpired()
     {
-        return time() > strtotime("$this->endDate +12 hours");
+        return time() > strtotime("$this->endDate +8 hours");
     }
 
     private function updatePublicationDate()
