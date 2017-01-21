@@ -56,11 +56,13 @@ class Display
          *  - button text
          *  - external link
          */
-        $this->view->enqueueScript('single-product', [
-            'cartButtonText' => $event->cartButtonText,
-            'hideButton'     => $event->hideButton,
-            'externalLink'   => $event->externalLink
-        ]);
+        if ($event->enable) {
+            $this->view->enqueueScript('single-product', [
+                'cartButtonText' => $event->cartButtonText,
+                'hideButton'     => $event->hideButton,
+                'externalLink'   => $event->externalLink
+            ]);
+        }
     }
 
     /**
