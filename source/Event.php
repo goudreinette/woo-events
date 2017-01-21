@@ -188,9 +188,15 @@ class Event
             'include'          => $only
         ]);
 
-        return array_map(function ($post) {
+        $events = array_map(function ($post) {
             return new Event($post->ID);
         }, $posts);
+
+        $active = array_filter($events, function (Event $event) {
+            return $event->enable;
+        });
+
+        return $active;
     }
 
     static function get($postId)
