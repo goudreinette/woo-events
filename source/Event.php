@@ -58,12 +58,17 @@ class Event
         }
     }
 
-    function __destruct()
+    function save()
     {
         $this->updateExpirationStatus();
         $this->persist();
         WooUtils::flattenMeta($this->id, self::$key);
         if ($this->enable) $this->updatePublicationDate();
+    }
+
+    function __destruct()
+    {
+        $this->updateExpirationStatus();
     }
 
     /**

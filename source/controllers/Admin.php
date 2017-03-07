@@ -74,5 +74,7 @@ class Admin
 
         foreach ($formData as $key => $value)
             $event->$key = $value;
+
+        $event->save();
     }
 }
