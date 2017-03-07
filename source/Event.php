@@ -71,7 +71,7 @@ class Event
      */
     function isExpired()
     {
-        return time() > strtotime("$this->endDate +8 hours");
+        return time() > strtotime("$this->endDate +12 hours");
     }
 
     private function updatePublicationDate()
@@ -188,15 +188,9 @@ class Event
             'include'          => $only
         ]);
 
-        $events = array_map(function ($post) {
+        return array_map(function ($post) {
             return new Event($post->ID);
         }, $posts);
-
-        $active = array_filter($events, function (Event $event) {
-            return $event->enable;
-        });
-
-        return $active;
     }
 
     static function get($postId)

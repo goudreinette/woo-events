@@ -29,11 +29,11 @@ class CalendarWidget extends \WP_Widget
         /**
          * The range of months that the calendar will cover.
          */
-        $categories = WooUtils::getProductCategories(['include' => $instance['categories'], 'fields' => 'names']);
+        $categories = WooUtils::getProductCategoryNames(['include' => $instance['categories']]);
         $monthRange = Date::createMonthRange($instance['previousmonths'], $instance['nextmonths']);
         $all        = Event::all();
         $events     = Event::selectByCategories($categories, $all);
-        
+
         $assigns = [
             'months'   => $monthRange,
             'events'   => Utils::toArray($events),

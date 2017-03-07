@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooEvents\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-28 18:17+0000\n"
-"PO-Revision-Date: 2016-12-04 22:21+0000\n"
+"POT-Creation-Date: 2017-01-12 22:10+0000\n"
+"PO-Revision-Date: 2017-01-12 22:11+0000\n"
 "Last-Translator: admin <hansvanderwoerd@me.com>\n"
 "Language-Team: Dutch\n"
 "Language: nl-NL\n"
@@ -13,21 +13,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: src/Shortcode.php:28
-msgid "All"
-msgstr "Alles"
+#: source/CalendarWidget.php:51
+msgid "Mo"
+msgstr "Ma"
 
-#: src/Shortcode.php:29
-msgid "Order"
-msgstr "Informatie"
+#: source/CalendarWidget.php:52
+msgid "Tu"
+msgstr "Di"
 
-#: src/Shortcode.php:30
-msgid "Add to Cart"
-msgstr "In winkelmand"
+#: source/CalendarWidget.php:53
+msgid "We"
+msgstr "Wo"
 
-#: src/Display.php:44
-msgid "View Event"
-msgstr ""
+#: source/CalendarWidget.php:54
+msgid "Th"
+msgstr "Do"
+
+#: source/CalendarWidget.php:55
+msgid "Fr"
+msgstr "Vr"
+
+#: source/CalendarWidget.php:56
+msgid "Sa"
+msgstr "Za"
+
+#: source/CalendarWidget.php:57
+msgid "Su"
+msgstr "Zo"
+
+#: vendor/reinvdwoerd/utils/WooUtils.php:50
+msgid "hrs"
+msgstr "uur"
 
 #. Name of the plugin
 msgid "WooEvents"
@@ -38,7 +54,7 @@ msgid "."
 msgstr ""
 
 #. URI of the plugin
-msgid "http://URI_Of_Page_Describing_Plugin_and_Updates"
+msgid "https://github.com/reinvdwoerd/woo-events"
 msgstr ""
 
 #. Author of the plugin
@@ -48,3 +64,22 @@ msgstr ""
 #. Author URI of the plugin
 msgid "reinvdwoerd.herokuapp.com"
 msgstr ""
+
+#: source/EventList.php:29 src/Shortcode.php:29
+#: source/controllers/EventList.php:39
+msgid "All"
+msgstr "Alles"
+
+#: source/EventList.php:30 src/Shortcode.php:30
+#: source/controllers/EventList.php:40
+msgid "Order"
+msgstr "Informatie"
+
+#: source/EventList.php:31 src/Shortcode.php:31
+#: source/controllers/EventList.php:41
+msgid "Add to Cart"
+msgstr "In winkelmand"
+
+#: source/Event.php:205 src/Display.php:43
+msgid "View Event"
+msgstr "Meer informatie"
