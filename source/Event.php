@@ -40,7 +40,7 @@ class Event
         $this->endDatePretty   = WooUtils::formatDateTimeWoocommerce($this->endDate, !$this->hasEnd);
         $this->fullDate        = $this->fullDate();
         $this->price           = $product->get_price_html();
-        $this->image           = wp_get_attachment_image_src(get_post_thumbnail_id($postId), 'medium')[0];
+        $this->image           = wp_get_attachment_image_src(get_post_thumbnail_id($postId), 'thumbnail')[0];
         $this->featured        = WooUtils::featuredText($product);
         $this->excerpt         = substr($product->post->post_excerpt, 0, 100) . "...";
         $this->categories      = $this->getCategories($postId);
