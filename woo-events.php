@@ -22,4 +22,8 @@ class WooEvents extends PluginContext
     public $base = 'woo-events';
 }
 
+add_action('init', function () {
+    Event::all();
+});
+
 new WooEvents();
